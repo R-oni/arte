@@ -12,10 +12,11 @@
     --text-dark: #ffffff;
     --text-light: #b0b0b0;
     --white: #ffffff;
+    --font-arno: 'Perpetua', 'Crimson Pro', serif;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--font-arno);
     line-height: 1.6;
     color: var(--text-dark);
     background-color: var(--dark-bg);
@@ -158,6 +159,15 @@ body {
     gap: 2rem;
 }
 
+.portfolio-hint {
+    text-align: center;
+    font-size: 1.2 rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    font-style: italic;
+    opacity: 0.8;
+}
+
 .portfolio-item {
     background-color: #2d2d2d;
     border-radius: 10px;
@@ -165,6 +175,7 @@ body {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid #3a3a3a;
+    cursor: pointer;
 }
 
 .portfolio-item:hover {
@@ -177,13 +188,17 @@ body {
     height: 250px;
     overflow: hidden;
     background-color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .portfolio-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: transform 0.3s ease;
+    background-color: #1a1a1a;
 }
 
 .portfolio-item:hover .portfolio-image img {
@@ -221,6 +236,21 @@ body {
     line-height: 1.8;
 }
 
+.sobre-image {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.sobre-image img {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    object-fit: cover;
+}
+
 .sobre-skills h3 {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
@@ -241,10 +271,8 @@ body {
 
 .sobre-skills li:before {
     content: "✓";
-    color: #ffffff;
-    font-weight: bold;
     margin-right: 1rem;
-    font-size: 1.2rem;
+    color: var(--primary-color);
 }
 
 /* Contato Section */
@@ -290,6 +318,28 @@ body {
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.social-icon-img {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-icon-img img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+}
+
+.social-icon-img:hover {
+    transform: scale(1.1);
+}
+
+.contact-email {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--primary-color);
 }
 
 .social-icon {
@@ -308,12 +358,90 @@ body {
     transform: translateY(-3px);
 }
 
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    animation: fadeInModal 0.3s ease;
+}
+
+@keyframes fadeInModal {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    position: relative;
+    width: 95vw;
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal-image {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 1001;
+    background: none;
+    border: none;
+}
+
+.close:hover,
+.close:focus {
+    color: #c0c0c0;
+}
+
 /* Rodapé */
 .footer {
     background-color: #000000;
     color: var(--primary-color);
     text-align: center;
     padding: 2rem;
+    font-family: 'Arial', sans-serif;
 }
 
 /* Responsivo */

@@ -63,3 +63,45 @@ document.querySelectorAll('.portfolio-item').forEach(item => {
     item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(item);
 });
+
+// Modal para imagens do portfolio
+const modal = document.getElementById('imageModal');
+const modalImage = document.querySelector('.modal-image');
+const closeBtn = document.querySelector('.close');
+
+if (modal && modalImage && closeBtn) {
+    // Adicionar evento de clique às imagens do portfolio
+    document.querySelectorAll('.portfolio-item').forEach(item => {
+        const portfolioImage = item.querySelector('.portfolio-image');
+        if (portfolioImage) {
+            portfolioImage.addEventListener('click', function() {
+                const imageSrc = item.dataset.image;
+                modalImage.src = imageSrc;
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        }
+    });
+
+    // Fechar modal ao clicar no X
+    closeBtn.addEventListener('click', function() {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    });
+
+    // Fechar modal ao clicar fora da imagem
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    // Fechar modal com tecla ESC
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    });
+}
