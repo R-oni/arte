@@ -105,3 +105,12 @@ if (modal && modalImage && closeBtn) {
         }
     });
 }
+
+// Controlar vídeo de assinatura
+const assinaturaVideo = document.getElementById('assinatura-video');
+if (assinaturaVideo) {
+    assinaturaVideo.addEventListener('ended', function() {
+        this.currentTime = this.duration;
+        this.pause();
+    });
+}
