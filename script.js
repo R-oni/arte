@@ -67,6 +67,8 @@ document.querySelectorAll('.portfolio-item').forEach(item => {
 // Modal para imagens do portfolio
 const modal = document.getElementById('imageModal');
 const modalImage = document.querySelector('.modal-image');
+const modalTitle = document.getElementById('modalTitle');
+const modalDescription = document.getElementById('modalDescription');
 const closeBtn = document.querySelector('.close');
 
 if (modal && modalImage && closeBtn) {
@@ -76,7 +78,13 @@ if (modal && modalImage && closeBtn) {
         if (portfolioImage) {
             portfolioImage.addEventListener('click', function() {
                 const imageSrc = item.dataset.image;
+                const title = item.querySelector('h3')?.textContent || '';
+                const descriptions = Array.from(item.querySelectorAll('p')).map(p => p.textContent).filter(p => p.trim());
+                const fullDescription = descriptions.join('\n\n');
+                
                 modalImage.src = imageSrc;
+                modalTitle.textContent = title;
+                modalDescription.textContent = fullDescription;
                 modal.classList.add('active');
                 document.body.style.overflow = 'hidden';
             });
@@ -102,8 +110,38 @@ if (modal && modalImage && closeBtn) {
         if (e.key === 'Escape' && modal.classList.contains('active')) {
             modal.classList.remove('active');
             document.body.style.overflow = 'auto';
+            modalImage.style.transform = 'scale(1)';
         }
     });
+
+    // Scroll para zoom na desktop
+    let currentZoom = 1;
+    const maxZoom = 3;
+    const minZoom = 1;
+    const zoomStep = 0.1;
+    
+    modal.addEventListener('wheel', function(e) {
+        if (modal.classList.contains('active') && window.innerWidth > 768) {
+            e.preventDefault();
+            
+            if (e.deltaY < 0) {
+                // Scroll up - aumentar zoom
+                currentZoom = Math.min(currentZoom + zoomStep, maxZoom);
+            } else {
+                // Scroll down - diminuir zoom
+                currentZoom = Math.max(currentZoom - zoomStep, minZoom);
+            }
+            
+            modalImage.style.transform = `scale(${currentZoom})`;
+            
+            // Ocultar dica de scroll após primeiro zoom
+            const scrollHint = document.querySelector('.scroll-hint');
+            if (scrollHint && currentZoom > 1.05) {
+                scrollHint.style.opacity = '0';
+                scrollHint.style.pointerEvents = 'none';
+            }
+        }
+    }, { passive: false });
 }
 
 // Controlar vídeo de assinatura
