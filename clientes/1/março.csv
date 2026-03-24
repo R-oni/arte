@@ -1,0 +1,50 @@
+data,servico,cliente,valor,pagamento,observacao,mes
+2026-03-01,progressiva,Fernanda,180,PIX,,Marco
+2026-03-01,escova,Maria,45,DINHEIRO,,Marco
+2026-03-02,coloracao,Patricia,120,PIX,,Marco
+2026-03-02,manicure,Ana,30,DINHEIRO,,Marco
+2026-03-03,corte + escova,Juliana S.,85,PIX,,Marco
+2026-03-03,hidratacao,Carla,60,CREDITO,,Marco
+2026-03-04,sobrancelha,Lucia,25,DINHEIRO,,Marco
+2026-03-04,corte,Carlos,40,DINHEIRO,,Marco
+2026-03-05,progressiva,Roberta,180,PIX,,Marco
+2026-03-05,escova,Michele,45,PIX,,Marco
+2026-03-06,manicure + pedicure,Sandra,55,DINHEIRO,,Marco
+2026-03-07,coloracao + hidrat,Mariana,200,CREDITO,,Marco
+2026-03-07,corte infantil,Cliente Nova,35,DINHEIRO,,Marco
+2026-03-08,escova,Beatriz,45,PIX,,Marco
+2026-03-09,progressiva,Vanessa,180,PIX,,Marco
+2026-03-09,sobrancelha,Tania,25,DINHEIRO,,Marco
+2026-03-10,corte + escova,Renata,85,PIX,,Marco
+2026-03-10,manicure,Denise,30,DINHEIRO,,Marco
+2026-03-11,coloracao,Camila,120,CREDITO,,Marco
+2026-03-11,hidratacao,Fernanda,60,PIX,,Marco
+2026-03-12,escova,Maria,45,DINHEIRO,,Marco
+2026-03-13,progressiva,Bruna,180,PIX,,Marco
+2026-03-13,corte,Jorge,40,DINHEIRO,,Marco
+2026-03-14,manicure + pedicure,Carla,55,PIX,,Marco
+2026-03-14,sobrancelha,Ana,25,DINHEIRO,,Marco
+2026-03-15,corte + escova,Juliana S.,85,PIX,,Marco
+2026-03-16,coloracao,Ana Paula,130,CREDITO,,Marco
+2026-03-17,progressiva,Patricia,180,PIX,,Marco
+2026-03-17,escova,Vanessa,45,DINHEIRO,,Marco
+2026-03-18,manicure,Lucia,30,DINHEIRO,,Marco
+2026-03-19,hidratacao,Sandra,60,PIX,,Marco
+2026-03-20,corte infantil,Cliente Nova,35,DINHEIRO,,Marco
+2026-03-20,coloracao + hidrat,Michele,200,CREDITO,,Marco
+2026-03-21,progressiva,Roberta,180,PIX,,Marco
+2026-03-21,escova,Renata,45,PIX,,Marco
+2026-03-22,corte,Paulo,40,DINHEIRO,,Marco
+2026-03-23,manicure + pedicure,Beatriz,55,PIX,,Marco
+2026-03-23,sobrancelha,Tania,25,DINHEIRO,,Marco
+2026-03-24,coloracao,Camila,120,PIX,,Marco
+2026-03-25,progressiva,Denise,180,PIX,,Marco
+2026-03-25,escova,Maria,45,DINHEIRO,,Marco
+2026-03-26,corte + escova,Mariana,85,PIX,,Marco
+2026-03-27,hidratacao,Juliana S.,60,PIX,,Marco
+2026-03-28,manicure,Ana,30,DINHEIRO,,Marco
+2026-03-28,coloracao,Patricia,120,CREDITO,,Marco
+2026-03-29,progressiva,Fernanda,180,PIX,,Marco
+2026-03-30,corte,Carlos,40,DINHEIRO,,Marco
+2026-03-31,escova,Sandra,45,PIX,,Marco
+2026-03-31,manicure + pedicure,Lucia,55,DINHEIRO,,Marco

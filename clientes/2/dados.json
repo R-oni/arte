@@ -1,0 +1,230 @@
+{
+  "janeiro": {
+    "faturamento": 3365.0,
+    "vendas": 26,
+    "clientes": 26,
+    "changeVendas": 0,
+    "changeFaturamento": 0,
+    "changeTicket": 0,
+    "changeClientes": 0,
+    "servicos": [
+      {
+        "nome": "Banho Completo",
+        "faturamento": 970.0
+      },
+      {
+        "nome": "Consulta Veterinária",
+        "faturamento": 730.0
+      },
+      {
+        "nome": "Tosa Estética",
+        "faturamento": 610.0
+      },
+      {
+        "nome": "Tosa Higiênica",
+        "faturamento": 575.0
+      },
+      {
+        "nome": "Vacinação",
+        "faturamento": 245.0
+      },
+      {
+        "nome": "Limpeza de Ouvidos",
+        "faturamento": 185.0
+      },
+      {
+        "nome": "Manutenção de Unhas",
+        "faturamento": 50.0
+      }
+    ],
+    "formas_pagamento": [
+      {
+        "nome": "PIX",
+        "valor": 1550.0
+      },
+      {
+        "nome": "CREDITO",
+        "valor": 975.0
+      },
+      {
+        "nome": "DINHEIRO",
+        "valor": 575.0
+      },
+      {
+        "nome": "DEBITO",
+        "valor": 265.0
+      }
+    ]
+  },
+  "fevereiro": {
+    "faturamento": 2440.0,
+    "vendas": 19,
+    "clientes": 19,
+    "changeVendas": -26.9,
+    "changeFaturamento": -27.5,
+    "changeTicket": -0.8,
+    "changeClientes": -26.9,
+    "servicos": [
+      {
+        "nome": "Banho Completo",
+        "faturamento": 725.0
+      },
+      {
+        "nome": "Consulta Veterinária",
+        "faturamento": 545.0
+      },
+      {
+        "nome": "Tosa Higiênica",
+        "faturamento": 425.0
+      },
+      {
+        "nome": "Tosa Estética",
+        "faturamento": 405.0
+      },
+      {
+        "nome": "Vacinação",
+        "faturamento": 165.0
+      },
+      {
+        "nome": "Limpeza de Ouvidos",
+        "faturamento": 125.0
+      },
+      {
+        "nome": "Manutenção de Unhas",
+        "faturamento": 50.0
+      }
+    ],
+    "formas_pagamento": [
+      {
+        "nome": "PIX",
+        "valor": 880.0
+      },
+      {
+        "nome": "CREDITO",
+        "valor": 675.0
+      },
+      {
+        "nome": "DINHEIRO",
+        "valor": 640.0
+      },
+      {
+        "nome": "DEBITO",
+        "valor": 245.0
+      }
+    ]
+  },
+  "março": {
+    "faturamento": 3535.0,
+    "vendas": 26,
+    "clientes": 26,
+    "changeVendas": 36.8,
+    "changeFaturamento": 44.9,
+    "changeTicket": 5.9,
+    "changeClientes": 36.8,
+    "servicos": [
+      {
+        "nome": "Consulta Veterinária",
+        "faturamento": 940.0
+      },
+      {
+        "nome": "Banho Completo",
+        "faturamento": 850.0
+      },
+      {
+        "nome": "Tosa Estética",
+        "faturamento": 645.0
+      },
+      {
+        "nome": "Tosa Higiênica",
+        "faturamento": 590.0
+      },
+      {
+        "nome": "Vacinação",
+        "faturamento": 260.0
+      },
+      {
+        "nome": "Limpeza de Ouvidos",
+        "faturamento": 140.0
+      },
+      {
+        "nome": "Manutenção de Unhas",
+        "faturamento": 110.0
+      }
+    ],
+    "formas_pagamento": [
+      {
+        "nome": "PIX",
+        "valor": 1575.0
+      },
+      {
+        "nome": "CREDITO",
+        "valor": 830.0
+      },
+      {
+        "nome": "DINHEIRO",
+        "valor": 770.0
+      },
+      {
+        "nome": "DEBITO",
+        "valor": 360.0
+      }
+    ]
+  },
+  "abril": {
+    "faturamento": 3575.0,
+    "vendas": 26,
+    "clientes": 26,
+    "changeVendas": 0.0,
+    "changeFaturamento": 1.1,
+    "changeTicket": 1.1,
+    "changeClientes": 0.0,
+    "servicos": [
+      {
+        "nome": "Consulta Veterinária",
+        "faturamento": 955.0
+      },
+      {
+        "nome": "Banho Completo",
+        "faturamento": 850.0
+      },
+      {
+        "nome": "Tosa Estética",
+        "faturamento": 655.0
+      },
+      {
+        "nome": "Tosa Higiênica",
+        "faturamento": 600.0
+      },
+      {
+        "nome": "Vacinação",
+        "faturamento": 265.0
+      },
+      {
+        "nome": "Limpeza de Ouvidos",
+        "faturamento": 140.0
+      },
+      {
+        "nome": "Manutenção de Unhas",
+        "faturamento": 110.0
+      }
+    ],
+    "formas_pagamento": [
+      {
+        "nome": "PIX",
+        "valor": 1590.0
+      },
+      {
+        "nome": "CREDITO",
+        "valor": 970.0
+      },
+      {
+        "nome": "DINHEIRO",
+        "valor": 720.0
+      },
+      {
+        "nome": "DEBITO",
+        "valor": 295.0
+      }
+    ]
+  }
+}

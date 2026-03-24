@@ -1,0 +1,20 @@
+data,servico,cliente,valor,forma_pagamento
+01/02/2026,Banho Completo,Maria Silva,120,PIX
+02/02/2026,Tosa Higiênica,João Santos,140,DINHEIRO
+03/02/2026,Consulta Veterinária,Ana Costa,180,CREDITO
+04/02/2026,Vacinação,Carlos Lima,80,PIX
+05/02/2026,Banho Completo,Fernanda Rocha,120,CREDITO
+06/02/2026,Tosa Estética,Roberto Alves,200,DINHEIRO
+07/02/2026,Limpeza de Ouvidos,Beatriz Santos,60,PIX
+08/02/2026,Banho Completo,Márcia Gomes,125,DEBITO
+09/02/2026,Consulta Veterinária,Lucas Oliveira,185,CREDITO
+10/02/2026,Tosa Higiênica,Juliana Pereira,145,PIX
+11/02/2026,Banho Completo,Gabriel Costa,120,DINHEIRO
+12/02/2026,Vacinação,Patricia Martins,85,PIX
+13/02/2026,Manutenção de Unhas,Rodrigo Mendes,50,CREDITO
+14/02/2026,Tosa Estética,Cecília Silva,205,PIX
+15/02/2026,Consulta Veterinária,Henrique Rocha,180,DINHEIRO
+16/02/2026,Banho Completo,Natália Lima,120,DEBITO
+17/02/2026,Limpeza de Ouvidos,Fábio Santos,65,PIX
+18/02/2026,Tosa Higiênica,Camila Oliveira,140,CREDITO
+19/02/2026,Banho Completo,Hugo Ferreira,120,PIX

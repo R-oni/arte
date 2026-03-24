@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Seu Negócio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Signature Section -->
+        <section class="signature-section">
+            <div class="signature-container">
+                <img src="assinatura.gif" alt="Assinatura" class="signature-img" style="display: block;">
+                <p class="tagline">Informação é <span class="gold-text">Ouro</span></p>
+                <div class="client-logo-box">
+                    <img id="clientLogo" class="client-logo" src="" alt="Logo do cliente">
+                </div>
+            </div>
+        </section>
+
+        <!-- Header -->
+        <header class="header">
+            <div class="header-info">
+                <p class="last-update" id="lastUpdate"></p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <!-- KPI Cards -->
+            <section class="kpi-grid">
+                <div class="kpi-mini fade-in">
+                    <div class="kpi-mini-label">Faturamento</div>
+                    <div class="kpi-mini-value" id="kpi-faturamento">R$ 0</div>
+                    <div class="kpi-mini-change" id="change-faturamento">+12.5%</div>
+                </div>
+
+                <div class="kpi-mini fade-in" style="animation-delay: 0.1s">
+                    <div class="kpi-mini-label">Vendas</div>
+                    <div class="kpi-mini-value" id="kpi-vendas">0</div>
+                    <div class="kpi-mini-change" id="change-vendas">+8.3%</div>
+                </div>
+
+                <div class="kpi-mini fade-in" style="animation-delay: 0.2s">
+                    <div class="kpi-mini-label">Ticket Médio</div>
+                    <div class="kpi-mini-value" id="kpi-ticket">R$ 0</div>
+                    <div class="kpi-mini-change" id="change-ticket">+4.2%</div>
+                </div>
+
+                <div class="kpi-mini fade-in" style="animation-delay: 0.3s">
+                    <div class="kpi-mini-label">Clientes</div>
+                    <div class="kpi-mini-value" id="kpi-clientes">0</div>
+                    <div class="kpi-mini-change" id="change-clientes">+6.7%</div>
+                </div>
+            </section>
+
+            <!-- Month Selector -->
+            <section class="selector-section fade-in" style="animation-delay: 0.4s">
+                <label for="month-select">Selecione o mês:</label>
+                <select id="month-select" class="month-select">
+                    <option value="janeiro">Janeiro</option>
+                    <option value="fevereiro">Fevereiro</option>
+                    <option value="março" selected >Março</option>
+                    <option value="abril">Abril</option>
+                    <option value="maio">Maio</option>
+                    <option value="junho">Junho</option>
+                </select>
+            </section>
+
+            <!-- Charts -->
+            <section class="charts-grid" id="charts-container">
+                <!-- Renderizado dinamicamente por renderCustomCharts() -->
+            </section>
+
+            <!-- Comentários Gerais -->
+            <section class="comentarios-gerais fade-in" style="animation-delay: 0.8s">
+                <div class="chart-mini">
+                    <h3>Comentários Gerais</h3>
+                    <p class="comentarios-texto">💡 Março foi um mês sólido. O faturamento cresceu em relação a fevereiro, puxado principalmente pela Progressiva. O número de clientes novos também aumentou, o que é ótimo sinal. Para abril, vale focar em preencher os horários de terça e quarta, que historicamente ficam mais vazios. Qualquer dúvida, estou por aqui!</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Dashboard de Vendas &copy; 2026</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

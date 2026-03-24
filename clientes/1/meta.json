@@ -1,0 +1,58 @@
+{
+  "id": 1,
+  "name": "Salão Beauty Pro",
+  "type": "salao_beleza",
+  "info": "Serviços de Beleza e Estética",
+  "color_theme": "#ec4899",
+  "logo": "logo-cinza-rosa.png",
+  "ativo": true,
+  "charts": [
+    {
+      "id": "chart6",
+      "tipo": "bar",
+      "titulo": "Comparativo: Mês e Anterior",
+      "dataSource": "comparativo_faturamento",
+      "cor": "rgba(34, 197, 94, 0.8)",
+      "posicao": "full"
+    },
+    {
+      "id": "chart1",
+      "tipo": "bar",
+      "titulo": "Top Serviços (Faturamento)",
+      "dataSource": "servicos",
+      "cor": "rgba(236, 72, 153, 0.8)",
+      "posicao": "esquerda"
+    },
+    {
+      "id": "chart2",
+      "tipo": "doughnut",
+      "titulo": "Forma de Pagamento",
+      "dataSource": "formas_pagamento",
+      "posicao": "direita"
+    },
+    {
+      "id": "chart3",
+      "tipo": "line",
+      "titulo": "Evolução de Faturamento",
+      "dataSource": "faturamento_mes",
+      "cor": "rgba(236, 72, 153, 1)",
+      "posicao": "full"
+    },
+    {
+      "id": "chart4",
+      "tipo": "bar",
+      "titulo": "Ticket Médio por Serviço",
+      "dataSource": "ticket_medio_servico",
+      "cor": "rgba(168, 85, 247, 0.8)",
+      "posicao": "esquerda"
+    },
+    {
+      "id": "chart5",
+      "tipo": "bar",
+      "titulo": "Taxa de Recorrência por Serviço (%)",
+      "dataSource": "taxa_recorrencia",
+      "cor": "rgba(59, 130, 246, 0.8)",
+      "posicao": "direita"
+    }
+  ]
+}

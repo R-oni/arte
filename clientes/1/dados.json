@@ -1,0 +1,290 @@
+{
+  "janeiro": {
+    "faturamento": 2760.0,
+    "vendas": 37,
+    "clientes": 26,
+    "changeVendas": 0,
+    "changeFaturamento": 0,
+    "changeTicket": 0,
+    "changeClientes": 0,
+    "servicos": [
+      {
+        "nome": "Progressiva",
+        "faturamento": 890.0
+      },
+      {
+        "nome": "Coloração",
+        "faturamento": 370.0
+      },
+      {
+        "nome": "escova",
+        "faturamento": 315.0
+      },
+      {
+        "nome": "Corte + escova",
+        "faturamento": 255.0
+      },
+      {
+        "nome": "coloração + hidrat",
+        "faturamento": 200.0
+      },
+      {
+        "nome": "hidratação",
+        "faturamento": 180.0
+      },
+      {
+        "nome": "corte",
+        "faturamento": 120.0
+      },
+      {
+        "nome": "manicure + pedicure",
+        "faturamento": 110.0
+      },
+      {
+        "nome": "manicure",
+        "faturamento": 90.0
+      },
+      {
+        "nome": "sobrancelha",
+        "faturamento": 75.0
+      },
+      {
+        "nome": "corte infantil",
+        "faturamento": 70.0
+      },
+      {
+        "nome": "corte + barba",
+        "faturamento": 50.0
+      },
+      {
+        "nome": "pedicure",
+        "faturamento": 35.0
+      }
+    ],
+    "formas_pagamento": [
+      {
+        "nome": "PIX",
+        "valor": 1440.0
+      },
+      {
+        "nome": "CREDITO",
+        "valor": 600.0
+      },
+      {
+        "nome": "DINHEIRO",
+        "valor": 540.0
+      },
+      {
+        "nome": "DEBITO",
+        "valor": 180.0
+      }
+    ]
+  },
+  "fevereiro": {
+    "faturamento": 2180.0,
+    "vendas": 26,
+    "clientes": 22,
+    "changeVendas": -29.7,
+    "changeFaturamento": -21.0,
+    "changeTicket": 12.4,
+    "changeClientes": -15.4,
+    "servicos": [
+      {
+        "nome": "Progressiva",
+        "faturamento": 720.0
+      },
+      {
+        "nome": "Coloração",
+        "faturamento": 370.0
+      },
+      {
+        "nome": "Corte + escova",
+        "faturamento": 255.0
+      },
+      {
+        "nome": "coloração + hidrat",
+        "faturamento": 200.0
+      },
+      {
+        "nome": "escova",
+        "faturamento": 180.0
+      },
+      {
+        "nome": "hidratação",
+        "faturamento": 120.0
+      },
+      {
+        "nome": "manicure + pedicure",
+        "faturamento": 110.0
+      },
+      {
+        "nome": "corte",
+        "faturamento": 80.0
+      },
+      {
+        "nome": "manicure",
+        "faturamento": 60.0
+      },
+      {
+        "nome": "sobrancelha",
+        "faturamento": 50.0
+      },
+      {
+        "nome": "corte infantil",
+        "faturamento": 35.0
+      }
+    ],
+    "formas_pagamento": [
+      {
+        "nome": "PIX",
+        "valor": 1275.0
+      },
+      {
+        "nome": "CREDITO",
+        "valor": 535.0
+      },
+      {
+        "nome": "DINHEIRO",
+        "valor": 370.0
+      }
+    ]
+  },
+  "março": {
+    "faturamento": 4060.0,
+    "vendas": 49,
+    "clientes": 23,
+    "changeVendas": 88.5,
+    "changeFaturamento": 86.2,
+    "changeTicket": -1.2,
+    "changeClientes": 4.5,
+    "servicos": [
+      {
+        "nome": "progressiva",
+        "faturamento": 1440.0
+      },
+      {
+        "nome": "coloracao",
+        "faturamento": 610.0
+      },
+      {
+        "nome": "coloracao + hidrat",
+        "faturamento": 400.0
+      },
+      {
+        "nome": "escova",
+        "faturamento": 360.0
+      },
+      {
+        "nome": "corte + escova",
+        "faturamento": 340.0
+      },
+      {
+        "nome": "hidratacao",
+        "faturamento": 240.0
+      },
+      {
+        "nome": "manicure + pedicure",
+        "faturamento": 220.0
+      },
+      {
+        "nome": "corte",
+        "faturamento": 160.0
+      },
+      {
+        "nome": "manicure",
+        "faturamento": 120.0
+      },
+      {
+        "nome": "sobrancelha",
+        "faturamento": 100.0
+      },
+      {
+        "nome": "corte infantil",
+        "faturamento": 70.0
+      }
+    ],
+    "formas_pagamento": [
+      {
+        "nome": "PIX",
+        "valor": 2490.0
+      },
+      {
+        "nome": "CREDITO",
+        "valor": 830.0
+      },
+      {
+        "nome": "DINHEIRO",
+        "valor": 740.0
+      }
+    ]
+  },
+  "abril": {
+    "faturamento": 4050.0,
+    "vendas": 49,
+    "clientes": 23,
+    "changeVendas": 0.0,
+    "changeFaturamento": -0.2,
+    "changeTicket": -0.2,
+    "changeClientes": 0.0,
+    "servicos": [
+      {
+        "nome": "progressiva",
+        "faturamento": 1430.0
+      },
+      {
+        "nome": "coloracao",
+        "faturamento": 620.0
+      },
+      {
+        "nome": "coloracao + hidrat",
+        "faturamento": 390.0
+      },
+      {
+        "nome": "escova",
+        "faturamento": 360.0
+      },
+      {
+        "nome": "corte + escova",
+        "faturamento": 340.0
+      },
+      {
+        "nome": "hidratacao",
+        "faturamento": 240.0
+      },
+      {
+        "nome": "manicure + pedicure",
+        "faturamento": 220.0
+      },
+      {
+        "nome": "corte",
+        "faturamento": 160.0
+      },
+      {
+        "nome": "manicure",
+        "faturamento": 120.0
+      },
+      {
+        "nome": "sobrancelha",
+        "faturamento": 100.0
+      },
+      {
+        "nome": "corte infantil",
+        "faturamento": 70.0
+      }
+    ],
+    "formas_pagamento": [
+      {
+        "nome": "PIX",
+        "valor": 2540.0
+      },
+      {
+        "nome": "CREDITO",
+        "valor": 770.0
+      },
+      {
+        "nome": "DINHEIRO",
+        "valor": 740.0
+      }
+    ]
+  }
+}

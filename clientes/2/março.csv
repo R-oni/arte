@@ -1,0 +1,27 @@
+data,servico,cliente,valor,forma_pagamento
+01/03/2026,Banho Completo,Maria Silva,120,PIX
+02/03/2026,Tosa Higiênica,João Santos,145,DINHEIRO
+03/03/2026,Consulta Veterinária,Ana Costa,190,CREDITO
+04/03/2026,Tosa Estética,Carlos Lima,210,PIX
+05/03/2026,Banho Completo,Fernanda Rocha,125,CREDITO
+06/03/2026,Vacinação,Roberto Alves,85,DINHEIRO
+07/03/2026,Consulta Veterinária,Beatriz Santos,190,PIX
+08/03/2026,Banho Completo,Márcia Gomes,120,DEBITO
+09/03/2026,Tosa Higiênica,Lucas Oliveira,150,CREDITO
+10/03/2026,Limpeza de Ouvidos,Juliana Pereira,70,PIX
+11/03/2026,Banho Completo,Gabriel Costa,120,DINHEIRO
+12/03/2026,Tosa Estética,Patricia Martins,220,PIX
+13/03/2026,Manutenção de Unhas,Rodrigo Mendes,55,CREDITO
+14/03/2026,Consulta Veterinária,Cecília Silva,185,PIX
+15/03/2026,Banho Completo,Henrique Rocha,120,DINHEIRO
+16/03/2026,Vacinação,Natália Lima,90,DEBITO
+17/03/2026,Tosa Higiênica,Fábio Santos,145,PIX
+18/03/2026,Consulta Veterinária,Camila Oliveira,190,CREDITO
+19/03/2026,Banho Completo,Hugo Ferreira,125,PIX
+20/03/2026,Tosa Estética,Elisa Barbosa,215,DINHEIRO
+21/03/2026,Limpeza de Ouvidos,Tomás Rodrigues,70,PIX
+22/03/2026,Banho Completo,Isabela Sousa,120,CREDITO
+23/03/2026,Consulta Veterinária,Mateus Costa,185,PIX
+24/03/2026,Vacinação,Sofia Andrade,85,DINHEIRO
+25/03/2026,Tosa Higiênica,Gustavo Lopes,150,DEBITO
+26/03/2026,Manutenção de Unhas,Adriana Marques,55,PIX

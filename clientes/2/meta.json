@@ -1,0 +1,57 @@
+{
+  "id": 2,
+  "name": "PetCare Plus",
+  "type": "petshop",
+  "info": "Banho, Tosa e Consultoria em Saúde Animal",
+  "color_theme": "#8b5cf6",
+  "logo": null,
+  "ativo": true,
+  "charts": [
+    {
+      "id": "chart6",
+      "tipo": "bar",
+      "titulo": "Comparativo: Mês e Anterior",
+      "dataSource": "comparativo_faturamento",
+      "cor": "rgba(34, 197, 94, 0.8)",
+      "posicao": "full"
+    },
+    {
+      "id": "chart1",
+      "tipo": "bar",
+      "titulo": "Serviços Mais Procurados",
+      "dataSource": "servicos",
+      "cor": "rgba(139, 92, 246, 0.8)",
+      "posicao": "esquerda"
+    },
+    {
+      "id": "chart2",
+      "tipo": "doughnut",
+      "titulo": "Método de Pagamento",
+      "dataSource": "formas_pagamento",
+      "posicao": "direita"
+    },
+    {
+      "id": "chart3",
+      "tipo": "line",
+      "titulo": "Tendência de Faturamento",
+      "dataSource": "faturamento_mes",
+      "cor": "rgba(139, 92, 246, 1)",
+      "posicao": "full"
+    },
+    {
+      "id": "chart4",
+      "tipo": "doughnut",
+      "titulo": "Distribuição por Tamanho de Animal",
+      "dataSource": "tamanho_animal",
+      "posicao": "direita"
+    },
+    {
+      "id": "chart5",
+      "tipo": "bar",
+      "titulo": "Clientes Novos vs Recorrentes",
+      "dataSource": "clientes_novos_recorrentes",
+      "cor": "rgba(16, 185, 129, 0.8)",
+      "posicao": "direita"
+    }
+  ]
+}

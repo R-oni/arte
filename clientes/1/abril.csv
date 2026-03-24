@@ -1,0 +1,50 @@
+data,servico,cliente,valor,pagamento,observacao,mes
+2026-04-01,progressiva,Camila,180,PIX,,Abril
+2026-04-01,escova,Maria,45,DINHEIRO,,Abril
+2026-04-02,coloracao,Ana Paula,130,CREDITO,,Abril
+2026-04-02,manicure,Lucia,30,DINHEIRO,,Abril
+2026-04-03,corte + escova,Beatriz,85,PIX,,Abril
+2026-04-03,hidratacao,Fernanda,60,PIX,,Abril
+2026-04-04,sobrancelha,Tania,25,DINHEIRO,,Abril
+2026-04-04,corte,Jorge,40,DINHEIRO,,Abril
+2026-04-05,progressiva,Patricia,180,PIX,,Abril
+2026-04-06,escova,Renata,45,PIX,,Abril
+2026-04-07,manicure + pedicure,Sandra,55,DINHEIRO,,Abril
+2026-04-07,coloracao + hidrat,Mariana,200,CREDITO,,Abril
+2026-04-08,corte infantil,Cliente Nova,35,DINHEIRO,,Abril
+2026-04-08,escova,Michele,45,PIX,,Abril
+2026-04-09,progressiva,Bruna,170,PIX,,Abril
+2026-04-09,sobrancelha,Ana,25,DINHEIRO,,Abril
+2026-04-10,corte + escova,Juliana S.,85,PIX,,Abril
+2026-04-10,manicure,Denise,30,DINHEIRO,,Abril
+2026-04-11,coloracao,Camila,120,PIX,,Abril
+2026-04-12,hidratacao,Carla,60,PIX,,Abril
+2026-04-13,escova,Maria,45,DINHEIRO,,Abril
+2026-04-14,progressiva,Vanessa,180,PIX,,Abril
+2026-04-14,corte,Paulo,40,DINHEIRO,,Abril
+2026-04-15,manicure + pedicure,Lucia,55,PIX,,Abril
+2026-04-15,sobrancelha,Tania,25,DINHEIRO,,Abril
+2026-04-16,corte + escova,Roberta,85,PIX,,Abril
+2026-04-16,coloracao,Patricia,120,CREDITO,,Abril
+2026-04-17,progressiva,Fernanda,180,PIX,,Abril
+2026-04-17,escova,Sandra,45,DINHEIRO,,Abril
+2026-04-18,manicure,Ana,30,DINHEIRO,,Abril
+2026-04-19,hidratacao,Michele,60,PIX,,Abril
+2026-04-20,corte infantil,Cliente Nova,35,DINHEIRO,,Abril
+2026-04-20,coloracao + hidrat,Mariana,190,CREDITO,,Abril
+2026-04-21,progressiva,Bruna,180,PIX,,Abril
+2026-04-21,escova,Renata,45,PIX,,Abril
+2026-04-22,corte,Carlos,40,DINHEIRO,,Abril
+2026-04-22,manicure + pedicure,Beatriz,55,PIX,,Abril
+2026-04-23,sobrancelha,Lucia,25,DINHEIRO,,Abril
+2026-04-23,coloracao,Camila,120,PIX,,Abril
+2026-04-24,progressiva,Patricia,180,PIX,,Abril
+2026-04-25,escova,Maria,45,DINHEIRO,,Abril
+2026-04-25,corte + escova,Juliana S.,85,PIX,,Abril
+2026-04-26,hidratacao,Fernanda,60,PIX,,Abril
+2026-04-27,manicure,Ana,30,DINHEIRO,,Abril
+2026-04-28,coloracao,Ana Paula,130,CREDITO,,Abril
+2026-04-28,progressiva,Roberta,180,PIX,,Abril
+2026-04-29,corte,Jorge,40,DINHEIRO,,Abril
+2026-04-30,escova,Sandra,45,PIX,,Abril
+2026-04-30,manicure + pedicure,Carla,55,DINHEIRO,,Abril
