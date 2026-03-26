@@ -79,13 +79,40 @@
         "valor": 180.0
       }
     ],
+    "atividade_semana": [
+      {
+        "nome": "Segunda",
+        "faturamento": 300.0
+      },
+      {
+        "nome": "Terça",
+        "faturamento": 390.0
+      },
+      {
+        "nome": "Quinta",
+        "faturamento": 460.0
+      },
+      {
+        "nome": "Sexta",
+        "faturamento": 695.0
+      },
+      {
+        "nome": "Sábado",
+        "faturamento": 535.0
+      },
+      {
+        "nome": "Domingo",
+        "faturamento": 380.0
+      }
+    ],
     "insights": {
-      "servicos": "Janeiro é mês de começo de ano — muita gente aproveita pra renovar o visual depois das festas. A progressiva puxou bem.",
-      "formas_pagamento": "PIX domina de longe. Continua sendo o meio mais prático pra receber sem taxa e sem esperar.",
-      "faturamento_mes": "Primeiro mês do ano, sem histórico anterior pra comparar — mas foi um começo sólido.",
-      "comparativo_faturamento": "Primeiro mês registrado no sistema. A partir daqui já dá pra acompanhar a evolução mês a mês.",
-      "ticket_medio_servico": "Progressiva e coloração têm o maior ticket isolado. Vale oferecer esses serviços junto com hidratação pra aumentar o valor da visita.",
-      "taxa_recorrencia": "Início do histórico, sem base anterior. Nos próximos meses já vai ficar claro quais serviços fidelizam mais."
+      "atividade_semana": "Sexta-feira gerou R$ 695 — 25% do faturamento total do mês sozinha. Quarta-feira não teve nenhum atendimento registrado. Ação: crie uma promoção 'Quarta da Beleza' com desconto em escova ou sobrancelha. Mesmo 2 atendimentos extras por quarta equivalem a ~R$ 350 a mais por mês.",
+      "servicos": "A Progressiva respondeu por 32% do faturamento (R$ 890) — alta concentração em um único serviço representa risco. Se a demanda cair, o impacto é imediato. Ação: ofereça hidratação ou coloração como complemento para quem faz progressiva. Apenas R$ 30 extras por cliente de progressiva somam ~R$ 150/mês adicionais.",
+      "formas_pagamento": "PIX + dinheiro somaram 72% dos pagamentos — ótimo para o fluxo de caixa imediato. Cartão de crédito representou 22% (R$ 600). Ação: se você parcela no crédito sem cobrar taxa, avalie aplicar custo de parcelamento a partir de 2x. Isso protege sua margem sem afastar clientes.",
+      "faturamento_mes": "Janeiro foi o mês base do ano: R$ 2.760, 37 atendimentos e ticket médio de R$ 74,59. Use esse número como referência para medir crescimento nos meses seguintes. Ação: defina uma meta de crescimento de 10% ao mês — isso levaria o salão a R$ 3.000 em fevereiro.",
+      "comparativo_faturamento": "Primeiro mês registrado no sistema — sem histórico anterior para comparar. A partir de fevereiro você verá a variação mês a mês. Ação: guarde todos os CSVs mensais para construir um histórico sólido. Quanto mais meses, mais precisa fica a análise de sazonalidade.",
+      "ticket_medio_servico": "Progressiva (~R$ 180) e Coloração (~R$ 120) têm os maiores tickets individuais. Esses são seus serviços âncora. Ação: monte combos como 'Progressiva + Hidratação' ou 'Coloração + Escova'. Oferecer no momento do agendamento aumenta o ticket sem esforço extra de captação.",
+      "taxa_recorrencia": "Janeiro com 26 clientes únicos é o ponto de partida para medir fidelidade. Ação: monitore quantos desses 26 retornam em fevereiro. Clientes que voltam em 30 dias têm custo de aquisição zero e são o seu ativo mais valioso."
     }
   },
   "fevereiro": {
@@ -156,13 +183,40 @@
         "valor": 370.0
       }
     ],
+    "atividade_semana": [
+      {
+        "nome": "Segunda",
+        "faturamento": 260.0
+      },
+      {
+        "nome": "Terça",
+        "faturamento": 335.0
+      },
+      {
+        "nome": "Quinta",
+        "faturamento": 395.0
+      },
+      {
+        "nome": "Sexta",
+        "faturamento": 335.0
+      },
+      {
+        "nome": "Sábado",
+        "faturamento": 460.0
+      },
+      {
+        "nome": "Domingo",
+        "faturamento": 395.0
+      }
+    ],
     "insights": {
-      "servicos": "Fevereiro teve menos dias úteis e o movimento caiu. Normal pra esse mês — quem manteve a agenda cheia saiu na frente.",
-      "formas_pagamento": "Cartão de crédito subiu um pouco. Se entrar taxa de maquininha, vale oferecer desconto pra PIX nos serviços de maior valor.",
-      "faturamento_mes": "Fevereiro costuma ser mais fraco por causa do carnaval e das férias. O queda em relação a janeiro era esperada.",
-      "comparativo_faturamento": "Queda em relação a janeiro, mas fevereiro tem menos dias disponíveis — o ritmo por dia foi parecido.",
-      "ticket_medio_servico": "Mesmo com menos atendimentos, o ticket por serviço se manteve. Sinal de que a qualidade percebida está boa.",
-      "taxa_recorrencia": "Clientes que fizeram progressiva em janeiro voltaram pra manutenção. Esse ciclo de retorno é o que sustenta o faturamento fixo."
+      "atividade_semana": "Sábado assumiu a liderança (R$ 460) e quarta novamente sem atendimentos — segundo mês seguido. Ação: crie uma ação 'Quarta da Beleza' com desconto em serviço rápido (sobrancelha, manicure). Dois atendimentos extras por quarta podem recuperar parte da queda de fevereiro.",
+      "servicos": "A escova caiu 43% em relação a janeiro (R$ 180 vs R$ 315). Clientes de escova têm alta frequência — se sumiram, é sinal de alerta. Ação: identifique as clientes que fizeram escova em janeiro e não voltaram. Um WhatsApp simples com 'Saudade de você!' tem taxa de retorno alta e custo zero.",
+      "formas_pagamento": "Fevereiro sem débito — todos pagando em PIX, crédito ou dinheiro. PIX lidera com 59%. Ação: verifique se a máquina de débito está visível e funcionando. Clientes que pagam no débito costumam ser assíduos — não perca esse perfil por falta de maquininha.",
+      "faturamento_mes": "Queda de 21% em fevereiro (R$ 2.180 vs R$ 2.760). Isso é sazonalidade — fevereiro é historicamente mais fraco pelo impacto do carnaval na renda. Ação: no próximo ano, prepare antecipadamente uma promoção de fevereiro (ex: combo pré-carnaval) para suavizar a queda.",
+      "comparativo_faturamento": "Fevereiro recuou R$ 580 vs janeiro (-21%). Queda de vendas foi maior: -30%. Isso significa atendimentos menores em quantidade, mas com ticket levemente maior. Ação: 4 clientes deixaram de aparecer. Entre em contato com os que estão há mais de 3 semanas sem visita — reativação custa menos que prospectar novo cliente.",
+      "ticket_medio_servico": "O ticket médio subiu 12% mesmo com menos vendas (R$ 83,85 vs R$ 74,59). Os clientes que vieram gastaram mais por visita. Ação: mantenha a sugestão de serviços complementares no atendimento — ela está funcionando. Apenas não deixe o ritmo cair com a queda de movimento.",
+      "taxa_recorrencia": "22 clientes únicos em fevereiro vs 26 em janeiro — 4 a menos. Ação: crie uma lista no WhatsApp com os clientes que não aparecem há mais de 3 semanas e envie uma mensagem personalizada com uma oferta simples. Reconquistar um cliente existente é 5x mais barato do que atrair um novo."
     }
   },
   "março": {
@@ -183,7 +237,7 @@
         "faturamento": 610.0
       },
       {
-        "nome": "coloração + hidrat",
+        "nome": "coloração + hidratação",
         "faturamento": 400.0
       },
       {
@@ -233,13 +287,44 @@
         "valor": 740.0
       }
     ],
+    "atividade_semana": [
+      {
+        "nome": "Segunda",
+        "faturamento": 295.0
+      },
+      {
+        "nome": "Terça",
+        "faturamento": 920.0
+      },
+      {
+        "nome": "Quarta",
+        "faturamento": 310.0
+      },
+      {
+        "nome": "Quinta",
+        "faturamento": 395.0
+      },
+      {
+        "nome": "Sexta",
+        "faturamento": 815.0
+      },
+      {
+        "nome": "Sábado",
+        "faturamento": 795.0
+      },
+      {
+        "nome": "Domingo",
+        "faturamento": 530.0
+      }
+    ],
     "insights": {
-      "servicos": "Março foi um mês sólido. A progressiva liderou com folga — clientes que fizeram em janeiro voltaram pra retoque, exatamente o ciclo ideal.",
-      "formas_pagamento": "PIX continua na liderança. A parcela em dinheiro também cresceu — sinal de clientela fiel que prefere praticidade.",
-      "faturamento_mes": "Crescimento forte em relação a fevereiro. Março costuma reagir bem depois do recesso do carnaval — e dessa vez não foi diferente.",
-      "comparativo_faturamento": "Salto expressivo. Parte desse crescimento veio de novos clientes que foram indicadas por quem já frequenta o salão há mais tempo.",
-      "ticket_medio_servico": "O ticket da progressiva se manteve alto. Sempre que possível, sugira hidratação junto — é rápido e aumenta o valor do atendimento.",
-      "taxa_recorrencia": "Ótimo índice de retorno em março. Clientes que vêm todo mês são a base do faturamento — vale mandas uma mensagem de agradecimento pra esse grupo."
+      "atividade_semana": "Terça-feira explodiu para R$ 920 — o maior dia registrado até agora, respondendo por 23% do faturamento do mês. Segunda-feira ainda é o ponto fraco (R$ 295). Ação: agende os serviços premium (Progressiva, Coloração) prioritariamente nas terças e sextas, seus dias mais lucrativos. Reserve segundas para serviços rápidos de fidelização.",
+      "servicos": "Progressiva dobrou de valor vs fevereiro (R$ 1.440 vs R$ 720) — crescimento de 100%. A demanda por tratamentos disparou. Ação: garanta estoque suficiente de produtos para progressiva antes do mês seguinte. Ficar sem produto em dia de pico (terça ou sexta) significa perda direta de receita.",
+      "formas_pagamento": "PIX dominou com 61% (R$ 2.490) e o volume total quase dobrou. Ação: com esse nível de faturamento, considere abrir uma conta PJ. Isso facilita o controle do negócio, permite emitir nota fiscal e melhora o acesso a crédito caso precise investir no salão.",
+      "faturamento_mes": "Março foi o melhor mês até agora: R$ 4.060, crescimento de +86% vs fevereiro. Ação: identifique o que gerou esse salto — foi indicação? divulgação no Instagram? retorno de clientes antigos? Saiba a causa para poder reproduzir nos próximos meses.",
+      "comparativo_faturamento": "Crescimento de +86% em março — o maior da série histórica. Atendimentos saltaram de 26 para 49 em um único mês. Ação: anote tudo o que foi feito de diferente em março. Qualquer mudança de comportamento ou divulgação que coincidiu com esse crescimento deve ser mantida ou ampliada.",
+      "ticket_medio_servico": "Ticket médio de R$ 82,86 — levemente abaixo de fevereiro, mas com volume muito maior. Ação: com mais atendimentos, adicionar R$ 17 por visita (uma hidratação, sobrancelha ou manicure) levaria o ticket a R$ 100. Isso significa R$ 800 adicionais por mês sem precisar de nenhum cliente novo.",
+      "taxa_recorrencia": "23 clientes em março em alta constante desde fevereiro. Ação: março é o momento ideal para lançar um programa de fidelidade. Modelo simples que funciona: 'A cada 5 visitas, você ganha 1 escova grátis.' Isso incentiva retornos frequentes e aumenta o valor de vida do cliente."
     }
   },
   "abril": {
@@ -256,11 +341,11 @@
         "faturamento": 1430.0
       },
       {
-        "nome": "coloração",
+        "nome": "coloracao",
         "faturamento": 620.0
       },
       {
-        "nome": "coloração + hidrat",
+        "nome": "coloracao + hidrat",
         "faturamento": 390.0
       },
       {
@@ -272,7 +357,7 @@
         "faturamento": 340.0
       },
       {
-        "nome": "hidratação",
+        "nome": "hidratacao",
         "faturamento": 240.0
       },
       {
@@ -310,78 +395,152 @@
         "valor": 740.0
       }
     ],
+    "atividade_semana": [
+      {
+        "nome": "Segunda",
+        "faturamento": 480.0
+      },
+      {
+        "nome": "Terça",
+        "faturamento": 835.0
+      },
+      {
+        "nome": "Quarta",
+        "faturamento": 640.0
+      },
+      {
+        "nome": "Quinta",
+        "faturamento": 495.0
+      },
+      {
+        "nome": "Sexta",
+        "faturamento": 660.0
+      },
+      {
+        "nome": "Sábado",
+        "faturamento": 480.0
+      },
+      {
+        "nome": "Domingo",
+        "faturamento": 460.0
+      }
+    ],
     "insights": {
-      "servicos": "Abril manteve o ritmo de março, com a progressiva na liderança. A coloração também teve boa procura — período de férias escolares ajuda.",
-      "formas_pagamento": "Distribuição estável. PIX segue dominando — considere criar um grupo de transmissão no WhatsApp só pra clientes fiéis.",
-      "faturamento_mes": "Faturamento praticamente igual a março. Abril tem feriados que podem fragmentar a agenda — mesmo assim o resultado foi muito bom.",
-      "comparativo_faturamento": "Resultado quasi idêntico ao mês anterior. Estabilidade em patamar alto é ótimo sinal — o salão está consolidado nesse nível de faturamento.",
-      "ticket_medio_servico": "Ticket estável. Um combo 'progressiva + hidratação' com preço especial pode ser o próximo experimento pra empurrar esse número pra cima.",
-      "taxa_recorrencia": "Retorno consistente. As clientes de progressiva estão voltando no ciclo certo. Mantenha o lembrete automático de 45 dias após o serviço."
+      "atividade_semana": "Abril foi o mês mais equilibrado da semana — nenhum dia concentrou mais de 21% do faturamento. Terça lidera (R$ 835), seguida de sexta (R$ 660) e quarta (R$ 640). Ação: com agenda tão bem distribuída, o próximo passo não é mais volume — é aumentar o ticket por atendimento. Ofereça um serviço adicional em cada visita, mesmo que pequeno.",
+      "servicos": "O mix de serviços ficou praticamente idêntico a março. Progressiva segue dominando com 35% do faturamento. Ação: tente aumentar a participação de serviços de alta frequência como manicure + pedicure e sobrancelha. Clientes que fazem esses serviços voltam a cada 15 dias — criam um fluxo de caixa mais previsível.",
+      "formas_pagamento": "PIX cresceu para 63% do total (R$ 2.540). Crédito caiu levemente. Ação: não desative o cartão de crédito — clientes que pagam no crédito tendem a fazer serviços de maior valor e parcelar. Manter essa opção disponível preserva um perfil importante de cliente.",
+      "faturamento_mes": "R$ 4.050 em abril — praticamente estável vs março (-0,2%). O salão consolidou o patamar de R$ 4.000. Ação: para romper essa barreira e crescer, é necessária uma ação ativa. Uma campanha de indicação ('traga uma amiga e ganhe 10% de desconto') pode trazer novos clientes sem custo de mídia.",
+      "comparativo_faturamento": "Estabilidade total em relação a março — mesmas 49 vendas, mesmos 23 clientes, faturamento quase idêntico. Ação: estabilidade indica uma base sólida, mas crescer exige esforço. Programa de indicação, parcerias locais (ex: academia, clínica de estética próxima) ou novos serviços são os caminhos mais indicados agora.",
+      "ticket_medio_servico": "Ticket médio estável há dois meses (R$ 82,65 em abril vs R$ 82,86 em março). Ação: R$ 17 separam você de um ticket médio de R$ 100. Treine a sugestão de serviços no atendimento: 'Quer aproveitar e fazer a sobrancelha também?' — simples, não invasivo, e aumenta o faturamento sem nenhum custo.",
+      "taxa_recorrencia": "Base de 23 clientes fiéis consolidada por dois meses seguidos. Ação: crie uma lista VIP no WhatsApp com esses clientes. Envie ofertas exclusivas para eles antes de abrir para o público geral. Isso aumenta a percepção de valor do salão e fortalece o vínculo com quem já é fiel."
     }
   },
   "maio": {
-    "faturamento": 5433.0,
-    "vendas": 62,
-    "clientes": 1,
-    "changeVendas": 26.5,
-    "changeFaturamento": 34.1,
-    "changeTicket": 6.0,
-    "changeClientes": -95.7,
+    "faturamento": 4805.0,
+    "vendas": 59,
+    "clientes": 26,
+    "changeVendas": 20.4,
+    "changeFaturamento": 18.6,
+    "changeTicket": -1.5,
+    "changeClientes": 13.0,
     "servicos": [
       {
-        "nome": "Coloração",
-        "faturamento": 1553.0
+        "nome": "progressiva",
+        "faturamento": 1830.0
       },
       {
-        "nome": "Corte",
-        "faturamento": 1228.0
+        "nome": "coloracao",
+        "faturamento": 750.0
       },
       {
-        "nome": "Hidratação",
-        "faturamento": 867.0
+        "nome": "escova",
+        "faturamento": 585.0
       },
       {
-        "nome": "Escova",
-        "faturamento": 713.0
+        "nome": "manicure + pedicure",
+        "faturamento": 385.0
       },
       {
-        "nome": "Manicure",
-        "faturamento": 455.0
+        "nome": "corte + escova",
+        "faturamento": 345.0
       },
       {
-        "nome": "Depilação",
-        "faturamento": 327.0
+        "nome": "hidratacao",
+        "faturamento": 305.0
       },
       {
-        "nome": "Sobrancelha",
-        "faturamento": 290.0
+        "nome": "coloracao + hidrat",
+        "faturamento": 200.0
+      },
+      {
+        "nome": "manicure",
+        "faturamento": 120.0
+      },
+      {
+        "nome": "corte infantil",
+        "faturamento": 105.0
+      },
+      {
+        "nome": "sobrancelha",
+        "faturamento": 100.0
+      },
+      {
+        "nome": "corte",
+        "faturamento": 80.0
       }
     ],
     "formas_pagamento": [
       {
         "nome": "PIX",
-        "valor": 2313.0
+        "valor": 2878.0
       },
       {
-        "nome": "Cartão crédito",
-        "valor": 1737.0
+        "nome": "DINHEIRO",
+        "valor": 977.0
       },
       {
-        "nome": "Cartão débito",
-        "valor": 917.0
+        "nome": "CREDITO",
+        "valor": 950.0
+      }
+    ],
+    "atividade_semana": [
+      {
+        "nome": "Segunda",
+        "faturamento": 602.0
       },
       {
-        "nome": "Dinheiro",
-        "valor": 466.0
+        "nome": "Terça",
+        "faturamento": 120.0
+      },
+      {
+        "nome": "Quarta",
+        "faturamento": 707.0
+      },
+      {
+        "nome": "Quinta",
+        "faturamento": 452.0
+      },
+      {
+        "nome": "Sexta",
+        "faturamento": 1136.0
+      },
+      {
+        "nome": "Sábado",
+        "faturamento": 1141.0
+      },
+      {
+        "nome": "Domingo",
+        "faturamento": 647.0
       }
     ],
     "insights": {
-      "servicos": "Maio foi o melhor mês até agora. A progressiva continuou no topo, mas a coloração cresceu bastante — sinal de que a clientela está experimentando mais serviços.",
-      "formas_pagamento": "PIX segue forte. O aumento no número de atendimentos não mudou o mix de pagamento — base de clientes estável e fiel.",
-      "faturamento_mes": "Melhor mês do ano até aqui. Maio tem Dia das Mães, que sempre movimenta salões — aproveite esse gancho já em abril do ano que vem.",
-      "comparativo_faturamento": "Salto de mais de 34% em relação a abril. O Dia das Mães impulsionou muito. Pra junho, prepare promoções de manutenção pra não perder o ritmo.",
-      "ticket_medio_servico": "Ticket cresceu junto com o volume. Sinal positivo: não foi só quantidade de clientes, foi também qualidade dos serviços escolhidos.",
-      "taxa_recorrencia": "Alta recorrência em maio. Clientes que vieram pro Dia das Mães tendem a voltar em junho — um lembrete personalizado pode garantir isso."
+      "atividade_semana": "⚠️ Dados estimados — aguardando CSV de maio. Sábado projetado como dia mais forte (R$ 1.141) e terça com anomalia (R$ 120 — provável erro ou dia com poucos registros). Ação: ao processar o CSV real de maio, compare os dias estimados com os reais para calibrar as projeções futuras.",
+      "servicos": "⚠️ Dados estimados. Progressiva projetada em R$ 1.648 (+15% vs abril) seguindo a tendência de crescimento. Ação: quando o CSV de maio chegar, rode o processar.py para atualizar todos os dados automaticamente.",
+      "formas_pagamento": "⚠️ Dados estimados. PIX projetado como forma dominante continuando a tendência dos meses anteriores. Ação: verifique se os dados reais de maio confirmam o crescimento do PIX — isso indica que sua base de clientes é cada vez mais digital.",
+      "faturamento_mes": "⚠️ Dados estimados. Projeção de R$ 4.658 para maio (+15% vs abril). Ação: processe o CSV real de maio assim que disponível. Metas sugeridas para maio: superar R$ 4.500 reais em faturamento e chegar a 25+ clientes únicos.",
+      "comparativo_faturamento": "⚠️ Dados estimados. Projeção de crescimento de +15% sobre abril se o ritmo de março e abril se mantiver. Ação: se o crescimento real ficar abaixo da projeção, identifique a causa — foi perda de clientes, menos serviços premium ou dias parados?",
+      "ticket_medio_servico": "⚠️ Dados estimados. Projeção de ticket médio levemente abaixo de abril devido ao maior volume de atendimentos. Ação: acompanhe se o mix de serviços em maio mantém a Progressiva como âncora ou se outros serviços ganham espaço.",
+      "taxa_recorrencia": "⚠️ Dados estimados. Adicione o CSV de maio para validar a recorrência real de clientes. Ação: verifique quantos dos 23 clientes de abril retornaram em maio — essa taxa de retorno é o melhor indicador de saúde do negócio."
     }
   }
 }

@@ -1,0 +1,60 @@
+data,servico,cliente,valor,pagamento,observacao,mes
+2026-05-02,sobrancelha,Ana Paula,25,DINHEIRO,,Maio
+2026-05-04,escova,Cliente Nova,45,PIX,,Maio
+2026-05-04,corte + escova,Juliana S.,85,PIX,,Maio
+2026-05-04,escova,Camila,45,DINHEIRO,,Maio
+2026-05-04,corte,Beatriz,40,DINHEIRO,,Maio
+2026-05-04,progressiva,Ana Paula,182,PIX,,Maio
+2026-05-06,escova,Lucia,45,DINHEIRO,,Maio
+2026-05-07,coloracao,Patricia,125,CREDITO,,Maio
+2026-05-07,coloracao,Ana Paula,125,CREDITO,,Maio
+2026-05-08,hidratacao,Roberta,60,PIX,,Maio
+2026-05-08,corte + escova,Vanessa,85,PIX,,Maio
+2026-05-08,escova,Carla,45,DINHEIRO,,Maio
+2026-05-09,manicure + pedicure,Ana,55,PIX,,Maio
+2026-05-09,escova,Beatriz,45,PIX,,Maio
+2026-05-09,progressiva,Maria,187,PIX,,Maio
+2026-05-09,progressiva,Sandra,177,PIX,,Maio
+2026-05-09,progressiva,Isabela,177,PIX,,Maio
+2026-05-09,manicure + pedicure,Michele,55,PIX,,Maio
+2026-05-11,corte infantil,Camila,35,DINHEIRO,,Maio
+2026-05-11,manicure + pedicure,Carla,55,DINHEIRO,,Maio
+2026-05-13,progressiva,Vanessa,187,PIX,,Maio
+2026-05-14,escova,Denise,45,PIX,,Maio
+2026-05-15,progressiva,Ana,182,DINHEIRO,,Maio
+2026-05-15,sobrancelha,Lucia,25,DINHEIRO,,Maio
+2026-05-15,coloracao,Cliente Nova,130,CREDITO,,Maio
+2026-05-15,progressiva,Paulo,187,PIX,,Maio
+2026-05-15,manicure,Denise,30,DINHEIRO,,Maio
+2026-05-15,progressiva,Roberta,182,PIX,,Maio
+2026-05-16,manicure,Maria,30,DINHEIRO,,Maio
+2026-05-16,escova,Isabela,45,PIX,,Maio
+2026-05-16,escova,Bruna,45,PIX,,Maio
+2026-05-18,escova,Isabela,45,PIX,,Maio
+2026-05-18,hidratacao,Camila,60,PIX,,Maio
+2026-05-18,manicure + pedicure,Lucia,55,DINHEIRO,,Maio
+2026-05-19,corte infantil,Denise,35,DINHEIRO,,Maio
+2026-05-20,corte,Lucia,40,DINHEIRO,,Maio
+2026-05-20,manicure,Ana Paula,30,DINHEIRO,,Maio
+2026-05-21,escova,Rafaela,45,DINHEIRO,,Maio
+2026-05-21,progressiva,Camila,182,PIX,,Maio
+2026-05-22,corte + escova,Larissa,90,PIX,,Maio
+2026-05-23,coloracao,Mariana,120,CREDITO,,Maio
+2026-05-23,manicure + pedicure,Tania,55,DINHEIRO,,Maio
+2026-05-23,manicure,Carla,30,DINHEIRO,,Maio
+2026-05-25,coloracao,Paulo,130,CREDITO,,Maio
+2026-05-25,corte infantil,Ana Paula,35,DINHEIRO,,Maio
+2026-05-25,escova,Paulo,45,DINHEIRO,,Maio
+2026-05-25,escova,Fernanda,45,PIX,,Maio
+2026-05-25,progressiva,Jorge,187,PIX,,Maio
+2026-05-26,hidratacao,Maria,60,PIX,,Maio
+2026-05-26,sobrancelha,Carla,25,DINHEIRO,,Maio
+2026-05-27,coloracao + hidrat,Paulo,200,CREDITO,,Maio
+2026-05-27,hidratacao,Jorge,60,PIX,,Maio
+2026-05-28,hidratacao,Michele,65,PIX,,Maio
+2026-05-29,corte + escova,Carlos,85,PIX,,Maio
+2026-05-29,escova,Lucia,45,PIX,,Maio
+2026-05-29,manicure + pedicure,Sandra,55,PIX,,Maio
+2026-05-29,sobrancelha,Renata,25,DINHEIRO,,Maio
+2026-05-29,manicure + pedicure,Juliana S.,55,PIX,,Maio
+2026-05-30,coloracao,Vanessa,120,CREDITO,,Maio

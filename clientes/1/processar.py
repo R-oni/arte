@@ -44,6 +44,17 @@ def processar_cliente():
         'Dezembro': 'dezembro',
     }
     
+    DIAS_SEMANA = ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo']
+    DIAS_PT_MAP = {
+        'segunda-feira': 0,
+        'terca-feira': 1, 'terça-feira': 1,
+        'quarta-feira': 2,
+        'quinta-feira': 3,
+        'sexta-feira': 4,
+        'sabado': 5, 'sábado': 5,
+        'domingo': 6
+    }
+    
     # Dataframe consolidado
     df_consolidado = pd.DataFrame()
     
@@ -62,7 +73,8 @@ def processar_cliente():
         'quantidade': 0,
         'clientes_unicos': set(),
         'formas_pagamento': defaultdict(float),
-        'servicos': defaultdict(float)
+        'servicos': defaultdict(float),
+        'atividade_semana': defaultdict(float)
     })
     
     # Preparar mapeamento numérico para meses (para arquivos com coluna 'data')
@@ -118,6 +130,29 @@ def processar_cliente():
         
         # Agrupar serviços
         dados_por_mes[mes_chave]['servicos'][str(servico).strip()] += float(valor)
+        
+        # Agrupar por dia da semana
+        data_val = row.get('data') if 'data' in df_consolidado.columns else None
+        if data_val is not None and pd.notna(data_val):
+            data_str = str(data_val).strip()
+            dia_idx = None
+            if ',' in data_str:
+                # Formato PT: "sexta-feira, 2 de janeiro de 2026"
+                nome_dia = data_str.split(',')[0].strip().lower()
+                dia_idx = DIAS_PT_MAP.get(nome_dia)
+                if dia_idx is None:
+                    nome_ascii = nome_dia.encode('ascii', 'ignore').decode()
+                    dia_idx = DIAS_PT_MAP.get(nome_ascii)
+            else:
+                # Formato ISO: "2026-03-01"
+                try:
+                    dt = pd.to_datetime(data_str, dayfirst=True, errors='coerce')
+                    if not pd.isna(dt):
+                        dia_idx = int(dt.weekday())  # 0=Segunda ... 6=Domingo
+                except Exception:
+                    pass
+            if dia_idx is not None:
+                dados_por_mes[mes_chave]['atividade_semana'][dia_idx] += float(valor)
     
     # Formatar para dashboard
     dados_dashboard = {}
@@ -186,6 +221,11 @@ def processar_cliente():
             'formas_pagamento': [
                 {'nome': nome, 'valor': round(valor, 2)} 
                 for nome, valor in sorted(formas_pg.items(), key=lambda x: x[1], reverse=True)
+            ],
+            'atividade_semana': [
+                {'nome': DIAS_SEMANA[i], 'faturamento': round(dados_mes['atividade_semana'].get(i, 0), 2)}
+                for i in range(7)
+                if dados_mes['atividade_semana'].get(i, 0) > 0
             ]
         }
         
@@ -198,6 +238,17 @@ def processar_cliente():
         print(f"  Top Serviços: {top_3}") 
         print(f"  Formas de Pagamento: {list(formas_pg.keys())}")
     
+    # Preservar insights manuais do JSON anterior (se existir)
+    if DADOS_JSON.exists():
+        try:
+            with open(DADOS_JSON, 'r', encoding='utf-8') as f:
+                dados_anteriores = json.load(f)
+            for mes, dados_mes in dados_dashboard.items():
+                if mes in dados_anteriores and 'insights' in dados_anteriores[mes]:
+                    dados_mes['insights'] = dados_anteriores[mes]['insights']
+        except Exception:
+            pass
+
     # Salvar JSON
     with open(DADOS_JSON, 'w', encoding='utf-8') as f:
         json.dump(dados_dashboard, f, indent=2, ensure_ascii=False)

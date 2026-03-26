@@ -64,6 +64,11 @@ function loadClient() {
     
     currentClient = clients[clientId];
 
+    // Título da aba: cliente 1 = nome do cliente, demais = número
+    document.title = clientId === '1'
+        ? (currentClient.name || 'Dashboard')
+        : `Cliente ${clientId} — Dashboard`;
+
     const logoEl = document.getElementById('clientLogo');
     if (logoEl) {
         if (currentClient.logo) {
@@ -90,6 +95,11 @@ function loadClient() {
         const option = document.createElement('option');
         option.value = mes;
         option.textContent = mes.charAt(0).toUpperCase() + mes.slice(1);
+        // Para o cliente 1, bloquear todos os meses exceto março
+        if (clientId === '1' && mes !== 'março') {
+            option.disabled = true;
+            option.title = 'Bloqueado temporariamente';
+        }
         selectMes.appendChild(option);
     });
     selectMes.value = primeiroMes;
@@ -357,6 +367,13 @@ function getDataForChart(dataSource) {
                 data: [novos, recorrentes]
             };
         
+        case 'atividade_semana':
+            if (!dataAtual.atividade_semana) return null;
+            return {
+                labels: dataAtual.atividade_semana.map(d => d.nome),
+                data: dataAtual.atividade_semana.map(d => d.faturamento)
+            };
+
         case 'pedidos_hora':
             if (!dataAtual.pedidos_hora) return null;
             return {
@@ -477,6 +494,16 @@ function generateInsight(chartConfig, chartData, dataSource) {
             }
             return [`💡 Taxa média de recorrência: ${media}%.`];
         },
+        'atividade_semana': () => {
+            const dias = chartData.labels;
+            const vals = chartData.data;
+            const maxIdx = vals.indexOf(Math.max(...vals));
+            const minIdx = vals.indexOf(Math.min(...vals));
+            const melhorDia = dias[maxIdx];
+            const melhorVal = vals[maxIdx];
+            const piorDia = dias[minIdx];
+            return [`💡 ${melhorDia} é o dia mais lucrativo (média R$ ${melhorVal.toLocaleString('pt-BR')}). ${piorDia} tem o menor movimento.`];
+        },
         'tamanho_animal': () => {
             const topSize = chartData.labels[0];
             return [`💡 O porte mais atendido é: ${topSize}.`];
@@ -594,15 +621,29 @@ function createChartConfig(chartConfig, chartData) {
             'cartão crédito': '#06b6d4',
             'cartao credito': '#06b6d4',
             'credito': '#06b6d4',
-            'cartão débito': '#06b6d4',
-            'cartao debito': '#06b6d4',
-            'debito': '#06b6d4'
+            'cartão débito': '#10b981',
+            'cartao debito': '#10b981',
+            'debito': '#10b981'
         };
         const cores = chartData.labels.map((lbl, i) => {
             const key = String(lbl).toLowerCase();
             return paymentMap[key] || fallback[i % fallback.length];
         });
         configBase.data.datasets[0].backgroundColor = cores;
+        // Tooltip: para formas_pagamento do cliente 1, exibir moeda (R$) ao invés do número cru
+        configBase.options.plugins.tooltip = {
+            callbacks: {
+                label: function(context) {
+                    const val = context.parsed !== undefined ? context.parsed : (context.raw || 0);
+                    const params = new URLSearchParams(window.location.search);
+                    const clientId = params.get('c') || '1';
+                    if (chartConfig.dataSource === 'formas_pagamento' && clientId === '1') {
+                        return 'R$ ' + Number(val).toLocaleString('pt-BR');
+                    }
+                    return (typeof val === 'number') ? val.toLocaleString('pt-BR') : String(val);
+                }
+            }
+        };
     } else if (chartConfig.tipo === 'line') {
         configBase.data.datasets[0].borderColor = corPrincipalSolida;
         configBase.data.datasets[0].backgroundColor = corPrincipal.replace('0.8', '0.1');
@@ -624,15 +665,44 @@ function createChartConfig(chartConfig, chartData) {
             'cartão crédito': '#06b6d4',
             'cartao credito': '#06b6d4',
             'credito': '#06b6d4',
-            'cartão débito': '#06b6d4',
-            'cartao debito': '#06b6d4',
-            'debito': '#06b6d4'
+            'cartão débito': '#10b981',
+            'cartao debito': '#10b981',
+            'debito': '#10b981'
         };
         const cores = chartData.labels.map((lbl, i) => {
             const key = String(lbl).toLowerCase();
             return paymentMap[key] || fallback[i % fallback.length];
         });
         configBase.data.datasets[0].backgroundColor = cores;
+    }
+
+    // Tooltip global: para certos dataSources mostre apenas o valor em R$ para o cliente 1
+    try {
+        const params = new URLSearchParams(window.location.search);
+        const clientId = params.get('c') || '1';
+        const currencyDatasources = new Set(['formas_pagamento', 'comparativo_faturamento', 'faturamento_mes', 'atividade_semana']);
+
+        const existingTooltip = (configBase.options && configBase.options.plugins && configBase.options.plugins.tooltip) || {};
+        configBase.options.plugins.tooltip = {
+            ...existingTooltip,
+            callbacks: {
+                ...(existingTooltip.callbacks || {}),
+                label: function(context) {
+                    const raw = context.raw !== undefined ? context.raw : (context.parsed !== undefined ? context.parsed : 0);
+                    const val = Array.isArray(raw) ? raw[0] : raw;
+                    if (clientId === '1' && currencyDatasources.has(chartConfig.dataSource)) {
+                        return 'R$ ' + Number(val).toLocaleString('pt-BR');
+                    }
+                    if (existingTooltip.callbacks && typeof existingTooltip.callbacks.label === 'function') {
+                        return existingTooltip.callbacks.label(context);
+                    }
+                    return (typeof val === 'number') ? val.toLocaleString('pt-BR') : String(val);
+                }
+            }
+        };
+    } catch (e) {
+        // se algo falhar, não bloquear a criação do gráfico
+        console.warn('Erro ao configurar tooltip global:', e);
     }
 
     return configBase;
