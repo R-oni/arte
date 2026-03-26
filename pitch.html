@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitch — Roni Ricardo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0a0a;
+            color: #e5e5e5;
+            min-height: 100vh;
+            padding: 2rem 1rem 4rem;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        header {
+            text-align: center;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #2a2a2a;
+        }
+
+        header h1 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #fbbf24;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            font-size: 0.85rem;
+            color: #555;
+            margin-top: 0.4rem;
+        }
+
+        .card {
+            background: #141414;
+            border: 1px solid #272727;
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .card-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #555;
+        }
+
+        /* Bloco de texto fixo (pitch) */
+        .pitch-block {
+            background: #1a1a1a;
+            border-left: 3px solid #fbbf24;
+            border-radius: 6px;
+            padding: 1rem 1.25rem;
+            font-size: 1rem;
+            line-height: 1.75;
+            color: #e5e5e5;
+            white-space: pre-wrap;
+        }
+
+        .pill {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 0.2rem 0.6rem;
+            border-radius: 99px;
+            background: rgba(251,191,36,0.12);
+            color: #fbbf24;
+            margin-bottom: 0.25rem;
+        }
+
+        .pill.green  { background: rgba(74,222,128,0.1);  color: #4ade80; }
+        .pill.blue   { background: rgba(96,165,250,0.1);  color: #60a5fa; }
+        .pill.red    { background: rgba(248,113,113,0.1); color: #f87171; }
+
+        /* Textarea persistente */
+        textarea {
+            width: 100%;
+            background: #0d0d0d;
+            border: 1px solid #2a2a2a;
+            border-radius: 8px;
+            color: #e5e5e5;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            line-height: 1.65;
+            padding: 0.85rem 1rem;
+            resize: vertical;
+            min-height: 90px;
+            outline: none;
+            transition: border-color 0.2s;
+            overflow: hidden; /* evitar barra de rolagem interna */
+        }
+
+        textarea:focus {
+            border-color: #fbbf24;
+        }
+
+        textarea::placeholder {
+            color: #3a3a3a;
+        }
+
+        .saved-badge {
+            font-size: 0.7rem;
+            color: #3a3a3a;
+            text-align: right;
+            transition: color 0.3s;
+        }
+
+        .saved-badge.flash { color: #4ade80; }
+
+        /* Separador interno */
+        .divider {
+            border: none;
+            border-top: 1px solid #222;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <h1>📋 Caderno de Pitch</h1>
+        <p>Notas salvas automaticamente no navegador</p>
+        <div style="margin-top:0.8rem;">
+            <button id="add-box-btn" style="background:#fbbf24;border:none;padding:0.45rem 0.85rem;border-radius:8px;color:#000;font-weight:700;cursor:pointer">+ Adicionar caixa</button>
+        </div>
+    </header>
+
+    <!-- ABERTURA -->
+    <div class="card">
+        <span class="card-label">Abertura — primeiro contato (WhatsApp / presencial)</span>
+        <span class="pill">⭐ Principal</span>
+        <div class="pitch-block">"Fala, vi vocês aqui no Maps. Sou formado em física na USP e tenho olhado dados de pequenos negócios da região — vocês acompanham as vendas de alguma forma ou vai mais no dia a dia?"</div>
+        <hr class="divider">
+        <span class="card-label">Por que funciona</span>
+        <div class="pitch-block" style="border-left-color: #4ade80; font-size: 0.9rem; color: #a0a0a0;">Credencial real (USP) sem forçar. Pergunta aberta que não intimida. Deixa o dono falar primeiro. Não parece venda — parece curiosidade genuína.</div>
+        <hr class="divider">
+        <span class="card-label">Minhas variações / refinamentos</span>
+        <textarea id="abertura-variacoes" placeholder="Escreva aqui variações que você foi testando..."></textarea>
+        <span class="saved-badge" id="badge-abertura-variacoes">—</span>
+    </div>
+
+    <!-- QUALIFICAÇÃO -->
+    <div class="card">
+        <span class="card-label">Qualificação — após a abertura</span>
+        <span class="pill blue">Perguntas</span>
+        <div class="pitch-block" style="font-size: 0.9rem;">Após a resposta deles, uma dessas:
+
+• "Você usa planilha, caderninho ou algum sistema?"
+• "Você sabe qual serviço deu mais dinheiro esse mês?"
+• "Se eu te mostrasse isso num gráfico, você acharia útil?"</div>
+        <hr class="divider">
+        <span class="card-label">Notas de campo (o que eles respondem na prática)</span>
+        <textarea id="qualificacao-notas" placeholder="Respostas reais que você foi ouvindo..."></textarea>
+        <span class="saved-badge" id="badge-qualificacao-notas">—</span>
+    </div>
+
+    <!-- DEMO -->
+    <div class="card">
+        <span class="card-label">Demo — quando demonstrar interesse</span>
+        <span class="pill green">Conversão</span>
+        <div class="pitch-block" style="font-size: 0.9rem;">"Deixa eu te mostrar como ficaria pro seu negócio. Tenho aqui um exemplo de salão — é só pra você ver o visual."
+
+[mostra dashboard.html?c=1 no celular]
+
+"Pra fazer o seu, é simples: você me manda os dados do mês — pode ser planilha, print do sistema, qualquer coisa — e eu monto pra você em até 2 dias."</div>
+        <hr class="divider">
+        <span class="card-label">O que eu ajusto no texto antes de mostrar</span>
+        <textarea id="demo-ajustes" placeholder="Dicas, adaptações por segmento..."></textarea>
+        <span class="saved-badge" id="badge-demo-ajustes">—</span>
+    </div>
+
+    <!-- OBJEÇÕES -->
+    <div class="card">
+        <span class="card-label">Objeções comuns</span>
+        <span class="pill red">Defesas</span>
+        <div class="pitch-block" style="font-size: 0.9rem;">❓ "Quanto custa?"
+→ "R$ 95 por mês. Você cancela quando quiser."
+
+❓ "Não tenho tempo pra mandar os dados."
+→ "Mando um modelo de planilha — você preenche em 5 minutos, eu faço o resto."
+
+❓ "Já uso sistema X."
+→ "Perfeito — você pode exportar de lá ou me mandar um print. Eu processo."
+
+❓ "Deixa eu pensar."
+→ "Claro! Posso te mandar o link da demo pra você ver com calma. Qual o seu WhatsApp?"</div>
+        <hr class="divider">
+        <span class="card-label">Objeções novas que encontrei</span>
+        <textarea id="objecoes-novas" placeholder="Anote objeções que surgiram e como você respondeu..."></textarea>
+        <span class="saved-badge" id="badge-objecoes-novas">—</span>
+    </div>
+
+    <!-- FOLLOW-UP -->
+    <div class="card">
+        <span class="card-label">Follow-up — após enviar o link da demo</span>
+        <span class="pill blue">Mensagem</span>
+        <div class="pitch-block" style="font-size: 0.9rem;">"Oi [nome], tudo bem? Mandei o link do dashboard de exemplo anteriormente. Dá uma olhada quando puder — fica bem mais fácil de entender do que eu explicando. Qualquer dúvida, é só chamar 👋"</div>
+        <hr class="divider">
+        <span class="card-label">Variações de follow-up</span>
+        <textarea id="followup-variacoes" placeholder="Textos alternativos de follow-up..."></textarea>
+        <span class="saved-badge" id="badge-followup-variacoes">—</span>
+    </div>
+
+    <!-- NOTAS GERAIS -->
+    <div class="card">
+        <span class="card-label">Notas gerais / aprendizados do dia</span>
+        <textarea id="notas-gerais" style="min-height: 160px;" placeholder="Qualquer coisa que você aprendeu prospectando hoje..."></textarea>
+        <span class="saved-badge" id="badge-notas-gerais">—</span>
+    </div>
+
+    <!-- CAIXAS EXTRAS (dinâmicas) -->
+    <div id="extra-boxes-root"></div>
+
+</div>
+
+<script>
+    // Helpers: autosize + attach saving behavior
+    function autosizeTextarea(ta) {
+        ta.style.height = 'auto';
+        ta.style.height = ta.scrollHeight + 'px';
+    }
+
+    function attachTextareaBehavior(ta) {
+        const key = 'pitch_' + ta.id;
+        ta.style.overflow = 'hidden';
+        // carregar
+        const saved = localStorage.getItem(key);
+        if (saved !== null) ta.value = saved;
+        // inicial resize
+        autosizeTextarea(ta);
+
+        ta.addEventListener('input', () => {
+            localStorage.setItem(key, ta.value);
+            // attempt to sync to remote if available
+            if (window.scheduleRemoteSave) window.scheduleRemoteSave(ta.id, ta.value);
+            autosizeTextarea(ta);
+            const badge = document.getElementById('badge-' + ta.id);
+            if (badge) {
+                badge.textContent = 'salvo';
+                badge.classList.add('flash');
+                setTimeout(() => badge.classList.remove('flash'), 1200);
+            }
+        });
+    }
+
+    // Attach behavior to existing static textareas
+    document.querySelectorAll('textarea').forEach(ta => attachTextareaBehavior(ta));
+
+    // --- Extra dynamic boxes ---
+    const extraRoot = document.getElementById('extra-boxes-root');
+    const EXTRA_KEY = 'pitch_extra_boxes'; // stores array of {id,content}
+
+    function loadExtraBoxes() {
+        const raw = localStorage.getItem(EXTRA_KEY);
+        return raw ? JSON.parse(raw) : [];
+    }
+
+    function saveExtraBoxes(arr) {
+        localStorage.setItem(EXTRA_KEY, JSON.stringify(arr));
+    }
+
+    function createExtraBox(item) {
+        const id = item.id;
+        const wrapper = document.createElement('div');
+        wrapper.className = 'card';
+        wrapper.style.marginTop = '1rem';
+        wrapper.innerHTML = `
+            <span class="card-label">Caixa rápida</span>
+            <textarea id="extra-${id}" placeholder="Digite uma nota rápida..."></textarea>
+            <span class="saved-badge" id="badge-extra-${id}">—</span>
+        `;
+        extraRoot.appendChild(wrapper);
+        const ta = wrapper.querySelector('textarea');
+        attachTextareaBehavior(ta);
+        // atualiza arr no localStorage quando for salvo (via attach)
+    }
+
+    function renderExtraBoxes() {
+        extraRoot.innerHTML = '';
+        const arr = loadExtraBoxes();
+        arr.forEach(item => createExtraBox(item));
+    }
+
+    // adicionar nova caixa
+    document.getElementById('add-box-btn').addEventListener('click', () => {
+        const arr = loadExtraBoxes();
+        const id = Date.now();
+        arr.push({ id, content: '' });
+        saveExtraBoxes(arr);
+        renderExtraBoxes();
+        // foco no novo textarea
+        setTimeout(() => document.getElementById('extra-' + id)?.focus(), 50);
+        // push master array to remote if available
+        if (window.saveExtrasMaster) window.saveExtrasMaster(loadExtraBoxes());
+    });
+
+    // Quando qualquer extra textarea mudar, além do attach que salva o valor individual,
+    // atualizamos o array master para refletir conteúdo atual
+    // Observador simples: sempre que a janela perde foco ou antesunload, sincronizamos
+    window.addEventListener('beforeunload', () => {
+        const arr = loadExtraBoxes();
+        const updated = arr.map(item => ({ id: item.id, content: document.getElementById('extra-' + item.id)?.value || '' }));
+        saveExtraBoxes(updated);
+    });
+
+    // Inicializar extras: renderizar e carregar conteúdos salvos
+    (function initExtras() {
+        const arr = loadExtraBoxes();
+        // se existirem itens sem id (migração), ignorar
+        renderExtraBoxes();
+        // preencher conteúdo salvo para cada extra
+        const currentArr = loadExtraBoxes();
+        currentArr.forEach(item => {
+            const ta = document.getElementById('extra-' + item.id);
+            if (ta && item.content) {
+                ta.value = item.content;
+                autosizeTextarea(ta);
+            }
+        });
+    })();
+</script>
+<!-- Firebase real-time sync (anonymous auth + Firestore) -->
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+import { getFirestore, doc, setDoc, updateDoc, onSnapshot, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
+import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
+
+// Firebase config provided (updated per user)
+const firebaseConfig = {
+    apiKey: "AIzaSyB-WI_nUBDmk5wljZWoLPx3ChFLT5jUt2U",
+    authDomain: "fundamentos-omom.firebaseapp.com",
+    databaseURL: "https://fundamentos-omom-default-rtdb.firebaseio.com",
+    projectId: "fundamentos-omom",
+    storageBucket: "fundamentos-omom.firebasestorage.app",
+    messagingSenderId: "402132741780",
+    appId: "1:402132741780:web:3f78aa356a12ef4ea64e81",
+    measurementId: "G-RPG1VPWZ9L"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+signInAnonymously(auth).catch(err => console.error('auth error', err));
+
+let db = null;
+let userDocRef = null;
+
+onAuthStateChanged(auth, async user => {
+    if (!user) return;
+    try {
+        db = getFirestore(app);
+        userDocRef = doc(db, 'pitches', user.uid);
+        await setDoc(userDocRef, { createdAt: serverTimestamp() }, { merge: true });
+
+        // subscribe to remote changes
+        onSnapshot(userDocRef, snap => {
+            const data = snap.data();
+            if (!data) return;
+
+            const fields = data.fields || {};
+            for (const [k, v] of Object.entries(fields)) {
+                const ta = document.getElementById(k);
+                if (ta && document.activeElement !== ta) {
+                    if (ta.value !== (v || '')) {
+                        ta.value = v || '';
+                        try { localStorage.setItem('pitch_' + k, v || ''); } catch(e){}
+                        if (typeof autosizeTextarea === 'function') autosizeTextarea(ta);
+                        const badge = document.getElementById('badge-' + k);
+                        if (badge) { badge.textContent = 'salvo'; badge.classList.add('flash'); setTimeout(()=>badge.classList.remove('flash'), 1200); }
+                    }
+                }
+            }
+
+            const extras = data.extras || [];
+            if (Array.isArray(extras)) {
+                try { saveExtraBoxes(extras); } catch(e){}
+                try { renderExtraBoxes(); } catch(e){}
+                // populate contents
+                extras.forEach(item => {
+                    const ta = document.getElementById('extra-' + item.id);
+                    if (ta && document.activeElement !== ta) {
+                        if (ta.value !== (item.content || '')) {
+                            ta.value = item.content || '';
+                            try { localStorage.setItem('pitch_' + ta.id, item.content || ''); } catch(e){}
+                            if (typeof autosizeTextarea === 'function') autosizeTextarea(ta);
+                            const badge = document.getElementById('badge-' + ta.id);
+                            if (badge) { badge.textContent = 'salvo'; badge.classList.add('flash'); setTimeout(()=>badge.classList.remove('flash'), 1200); }
+                        }
+                    }
+                });
+            }
+        });
+    } catch (err) {
+        console.error('firebase init error', err);
+    }
+});
+
+// debounce map
+const _pending = {};
+function scheduleRemoteSave(id, value) {
+    if (!userDocRef) return;
+    if (_pending[id]) clearTimeout(_pending[id]);
+    _pending[id] = setTimeout(async () => {
+        const fieldKey = 'fields.' + id;
+        const payload = { [fieldKey]: value || '', updatedAt: serverTimestamp() };
+        try { await updateDoc(userDocRef, payload); } catch (err) { console.error('save field', err); }
+        delete _pending[id];
+    }, 800);
+}
+
+function saveExtrasMaster(arr) {
+    if (!userDocRef) return;
+    const payload = { extras: arr.map(x => ({ id: x.id, content: x.content || '' })), updatedAt: serverTimestamp() };
+    updateDoc(userDocRef, payload).catch(err => console.error('save extras', err));
+}
+
+// expose for page script
+window.scheduleRemoteSave = scheduleRemoteSave;
+window.saveExtrasMaster = saveExtrasMaster;
+</script>
+</body>
+</html>

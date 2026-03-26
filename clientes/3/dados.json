@@ -1,0 +1,749 @@
+{
+  "janeiro": {
+    "faturamento": 53816.95,
+    "vendas": 1835,
+    "clientes": 4104,
+    "changeFaturamento": 0,
+    "changeVendas": 0,
+    "changeTicket": 0,
+    "changeClientes": 0,
+    "servicos": [
+      {
+        "nome": "Korean Beef Bowl",
+        "faturamento": 3266.9,
+        "count": 182
+      },
+      {
+        "nome": "Cheeseburger",
+        "faturamento": 2748.15,
+        "count": 197
+      },
+      {
+        "nome": "Spaghetti & Meatballs",
+        "faturamento": 2746.35,
+        "count": 153
+      },
+      {
+        "nome": "Tofu Pad Thai",
+        "faturamento": 2740.5,
+        "count": 189
+      },
+      {
+        "nome": "Hamburger",
+        "faturamento": 2667.7,
+        "count": 206
+      },
+      {
+        "nome": "Steak Torta",
+        "faturamento": 2594.7,
+        "count": 186
+      },
+      {
+        "nome": "Eggplant Parmesan",
+        "faturamento": 2423.85,
+        "count": 143
+      },
+      {
+        "nome": "Orange Chicken",
+        "faturamento": 2409.0,
+        "count": 146
+      },
+      {
+        "nome": "Chicken Parmesan",
+        "faturamento": 2207.85,
+        "count": 123
+      },
+      {
+        "nome": "Pork Ramen",
+        "faturamento": 2189.9,
+        "count": 122
+      },
+      {
+        "nome": "Chicken Burrito",
+        "faturamento": 2149.7,
+        "count": 166
+      },
+      {
+        "nome": "Mushroom Ravioli",
+        "faturamento": 1999.5,
+        "count": 129
+      },
+      {
+        "nome": "Spaghetti",
+        "faturamento": 1943.0,
+        "count": 134
+      },
+      {
+        "nome": "Steak Burrito",
+        "faturamento": 1913.6,
+        "count": 128
+      },
+      {
+        "nome": "Meat Lasagna",
+        "faturamento": 1795.0,
+        "count": 100
+      },
+      {
+        "nome": "California Roll",
+        "faturamento": 1613.25,
+        "count": 135
+      },
+      {
+        "nome": "Chicken Torta",
+        "faturamento": 1589.35,
+        "count": 133
+      },
+      {
+        "nome": "Shrimp Scampi",
+        "faturamento": 1516.2,
+        "count": 76
+      },
+      {
+        "nome": "Salmon Roll",
+        "faturamento": 1509.95,
+        "count": 101
+      },
+      {
+        "nome": "French Fries",
+        "faturamento": 1379.0,
+        "count": 197
+      },
+      {
+        "nome": "Edamame",
+        "faturamento": 1175.0,
+        "count": 235
+      },
+      {
+        "nome": "Fettuccine Alfredo",
+        "faturamento": 1073.0,
+        "count": 74
+      },
+      {
+        "nome": "Chips & Salsa",
+        "faturamento": 1029.0,
+        "count": 147
+      },
+      {
+        "nome": "Cheese Lasagna",
+        "faturamento": 1023.0,
+        "count": 66
+      },
+      {
+        "nome": "Mac & Cheese",
+        "faturamento": 945.0,
+        "count": 135
+      },
+      {
+        "nome": "Steak Tacos",
+        "faturamento": 920.7,
+        "count": 66
+      },
+      {
+        "nome": "Cheese Quesadillas",
+        "faturamento": 829.5,
+        "count": 79
+      },
+      {
+        "nome": "Veggie Burger",
+        "faturamento": 798.0,
+        "count": 76
+      },
+      {
+        "nome": "Chips & Guacamole",
+        "faturamento": 783.0,
+        "count": 87
+      },
+      {
+        "nome": "Hot Dog",
+        "faturamento": 747.0,
+        "count": 83
+      },
+      {
+        "nome": "Potstickers",
+        "faturamento": 684.0,
+        "count": 76
+      },
+      {
+        "nome": "Chicken Tacos",
+        "faturamento": 406.3,
+        "count": 34
+      }
+    ],
+    "formas_pagamento": [
+      {
+        "nome": "Italian",
+        "valor": 16727.75
+      },
+      {
+        "nome": "Asian",
+        "valor": 15588.5
+      },
+      {
+        "nome": "Mexican",
+        "valor": 12215.85
+      },
+      {
+        "nome": "American",
+        "valor": 9284.85
+      }
+    ],
+    "pedidos_hora": [
+      {
+        "nome": "Almoço (11h-14h)",
+        "valor": 670
+      },
+      {
+        "nome": "Tarde (15h-17h)",
+        "valor": 486
+      },
+      {
+        "nome": "Jantar (18h-21h)",
+        "valor": 627
+      },
+      {
+        "nome": "Noite (22h+)",
+        "valor": 52
+      }
+    ],
+    "top_pedidos": [
+      {
+        "nome": "Edamame",
+        "pedidos": 235
+      },
+      {
+        "nome": "Hamburger",
+        "pedidos": 206
+      },
+      {
+        "nome": "Cheeseburger",
+        "pedidos": 197
+      },
+      {
+        "nome": "French Fries",
+        "pedidos": 197
+      },
+      {
+        "nome": "Tofu Pad Thai",
+        "pedidos": 189
+      },
+      {
+        "nome": "Steak Torta",
+        "pedidos": 186
+      },
+      {
+        "nome": "Korean Beef Bowl",
+        "pedidos": 182
+      },
+      {
+        "nome": "Chicken Burrito",
+        "pedidos": 166
+      },
+      {
+        "nome": "Spaghetti & Meatballs",
+        "pedidos": 153
+      },
+      {
+        "nome": "Chips & Salsa",
+        "pedidos": 147
+      }
+    ]
+  },
+  "fevereiro": {
+    "faturamento": 50790.35,
+    "vendas": 1675,
+    "clientes": 3851,
+    "changeFaturamento": -5.6,
+    "changeVendas": -8.7,
+    "changeTicket": 3.4,
+    "changeClientes": -6.2,
+    "servicos": [
+      {
+        "nome": "Korean Beef Bowl",
+        "faturamento": 3482.3,
+        "count": 194
+      },
+      {
+        "nome": "Cheeseburger",
+        "faturamento": 2790.0,
+        "count": 200
+      },
+      {
+        "nome": "Spaghetti & Meatballs",
+        "faturamento": 2746.35,
+        "count": 153
+      },
+      {
+        "nome": "Tofu Pad Thai",
+        "faturamento": 2508.5,
+        "count": 173
+      },
+      {
+        "nome": "Hamburger",
+        "faturamento": 2421.65,
+        "count": 187
+      },
+      {
+        "nome": "Orange Chicken",
+        "faturamento": 2376.0,
+        "count": 144
+      },
+      {
+        "nome": "Eggplant Parmesan",
+        "faturamento": 2356.05,
+        "count": 139
+      },
+      {
+        "nome": "Pork Ramen",
+        "faturamento": 2171.95,
+        "count": 121
+      },
+      {
+        "nome": "Steak Torta",
+        "faturamento": 2148.3,
+        "count": 154
+      },
+      {
+        "nome": "Chicken Parmesan",
+        "faturamento": 1920.65,
+        "count": 107
+      },
+      {
+        "nome": "Chicken Burrito",
+        "faturamento": 1825.95,
+        "count": 141
+      },
+      {
+        "nome": "Spaghetti",
+        "faturamento": 1624.0,
+        "count": 112
+      },
+      {
+        "nome": "Salmon Roll",
+        "faturamento": 1614.6,
+        "count": 108
+      },
+      {
+        "nome": "Mushroom Ravioli",
+        "faturamento": 1612.0,
+        "count": 104
+      },
+      {
+        "nome": "Steak Burrito",
+        "faturamento": 1599.65,
+        "count": 107
+      },
+      {
+        "nome": "Meat Lasagna",
+        "faturamento": 1561.65,
+        "count": 87
+      },
+      {
+        "nome": "Shrimp Scampi",
+        "faturamento": 1456.35,
+        "count": 73
+      },
+      {
+        "nome": "Chicken Torta",
+        "faturamento": 1434.0,
+        "count": 120
+      },
+      {
+        "nome": "California Roll",
+        "faturamento": 1350.35,
+        "count": 113
+      },
+      {
+        "nome": "Fettuccine Alfredo",
+        "faturamento": 1276.0,
+        "count": 88
+      },
+      {
+        "nome": "Steak Tacos",
+        "faturamento": 1185.75,
+        "count": 85
+      },
+      {
+        "nome": "French Fries",
+        "faturamento": 1148.0,
+        "count": 164
+      },
+      {
+        "nome": "Mac & Cheese",
+        "faturamento": 1071.0,
+        "count": 153
+      },
+      {
+        "nome": "Edamame",
+        "faturamento": 1005.0,
+        "count": 201
+      },
+      {
+        "nome": "Chips & Salsa",
+        "faturamento": 994.0,
+        "count": 142
+      },
+      {
+        "nome": "Cheese Lasagna",
+        "faturamento": 992.0,
+        "count": 64
+      },
+      {
+        "nome": "Veggie Burger",
+        "faturamento": 850.5,
+        "count": 81
+      },
+      {
+        "nome": "Cheese Quesadillas",
+        "faturamento": 798.0,
+        "count": 76
+      },
+      {
+        "nome": "Chips & Guacamole",
+        "faturamento": 711.0,
+        "count": 79
+      },
+      {
+        "nome": "Hot Dog",
+        "faturamento": 666.0,
+        "count": 74
+      },
+      {
+        "nome": "Potstickers",
+        "faturamento": 567.0,
+        "count": 63
+      },
+      {
+        "nome": "Chicken Tacos",
+        "faturamento": 525.8,
+        "count": 44
+      }
+    ],
+    "formas_pagamento": [
+      {
+        "nome": "Italian",
+        "valor": 15545.05
+      },
+      {
+        "nome": "Asian",
+        "valor": 15075.7
+      },
+      {
+        "nome": "Mexican",
+        "valor": 11222.45
+      },
+      {
+        "nome": "American",
+        "valor": 8947.15
+      }
+    ],
+    "pedidos_hora": [
+      {
+        "nome": "Almoço (11h-14h)",
+        "valor": 604
+      },
+      {
+        "nome": "Tarde (15h-17h)",
+        "valor": 461
+      },
+      {
+        "nome": "Jantar (18h-21h)",
+        "valor": 557
+      },
+      {
+        "nome": "Noite (22h+)",
+        "valor": 53
+      }
+    ],
+    "top_pedidos": [
+      {
+        "nome": "Edamame",
+        "pedidos": 201
+      },
+      {
+        "nome": "Cheeseburger",
+        "pedidos": 200
+      },
+      {
+        "nome": "Korean Beef Bowl",
+        "pedidos": 194
+      },
+      {
+        "nome": "Hamburger",
+        "pedidos": 187
+      },
+      {
+        "nome": "Tofu Pad Thai",
+        "pedidos": 173
+      },
+      {
+        "nome": "French Fries",
+        "pedidos": 164
+      },
+      {
+        "nome": "Steak Torta",
+        "pedidos": 154
+      },
+      {
+        "nome": "Mac & Cheese",
+        "pedidos": 153
+      },
+      {
+        "nome": "Spaghetti & Meatballs",
+        "pedidos": 153
+      },
+      {
+        "nome": "Orange Chicken",
+        "pedidos": 144
+      }
+    ]
+  },
+  "março": {
+    "faturamento": 54610.6,
+    "vendas": 1833,
+    "clientes": 4142,
+    "changeFaturamento": 7.5,
+    "changeVendas": 9.4,
+    "changeTicket": -1.7,
+    "changeClientes": 7.6,
+    "servicos": [
+      {
+        "nome": "Korean Beef Bowl",
+        "faturamento": 3805.4,
+        "count": 212
+      },
+      {
+        "nome": "Hamburger",
+        "faturamento": 2965.55,
+        "count": 229
+      },
+      {
+        "nome": "Spaghetti & Meatballs",
+        "faturamento": 2943.8,
+        "count": 164
+      },
+      {
+        "nome": "Tofu Pad Thai",
+        "faturamento": 2900.0,
+        "count": 200
+      },
+      {
+        "nome": "Orange Chicken",
+        "faturamento": 2739.0,
+        "count": 166
+      },
+      {
+        "nome": "Cheeseburger",
+        "faturamento": 2594.7,
+        "count": 186
+      },
+      {
+        "nome": "Chicken Parmesan",
+        "faturamento": 2405.3,
+        "count": 134
+      },
+      {
+        "nome": "Eggplant Parmesan",
+        "faturamento": 2339.1,
+        "count": 138
+      },
+      {
+        "nome": "Pork Ramen",
+        "faturamento": 2100.15,
+        "count": 117
+      },
+      {
+        "nome": "Steak Torta",
+        "faturamento": 2078.55,
+        "count": 149
+      },
+      {
+        "nome": "Mushroom Ravioli",
+        "faturamento": 1953.0,
+        "count": 126
+      },
+      {
+        "nome": "Chicken Burrito",
+        "faturamento": 1916.6,
+        "count": 148
+      },
+      {
+        "nome": "Shrimp Scampi",
+        "faturamento": 1795.5,
+        "count": 90
+      },
+      {
+        "nome": "Steak Burrito",
+        "faturamento": 1779.05,
+        "count": 119
+      },
+      {
+        "nome": "Spaghetti",
+        "faturamento": 1754.5,
+        "count": 121
+      },
+      {
+        "nome": "Salmon Roll",
+        "faturamento": 1719.25,
+        "count": 115
+      },
+      {
+        "nome": "Meat Lasagna",
+        "faturamento": 1543.7,
+        "count": 86
+      },
+      {
+        "nome": "Chicken Torta",
+        "faturamento": 1505.7,
+        "count": 126
+      },
+      {
+        "nome": "French Fries",
+        "faturamento": 1470.0,
+        "count": 210
+      },
+      {
+        "nome": "California Roll",
+        "faturamento": 1278.65,
+        "count": 107
+      },
+      {
+        "nome": "Fettuccine Alfredo",
+        "faturamento": 1261.5,
+        "count": 87
+      },
+      {
+        "nome": "Mac & Cheese",
+        "faturamento": 1225.0,
+        "count": 175
+      },
+      {
+        "nome": "Chips & Salsa",
+        "faturamento": 1204.0,
+        "count": 172
+      },
+      {
+        "nome": "Cheese Lasagna",
+        "faturamento": 1193.5,
+        "count": 77
+      },
+      {
+        "nome": "Edamame",
+        "faturamento": 920.0,
+        "count": 184
+      },
+      {
+        "nome": "Hot Dog",
+        "faturamento": 900.0,
+        "count": 100
+      },
+      {
+        "nome": "Steak Tacos",
+        "faturamento": 878.85,
+        "count": 63
+      },
+      {
+        "nome": "Veggie Burger",
+        "faturamento": 850.5,
+        "count": 81
+      },
+      {
+        "nome": "Cheese Quesadillas",
+        "faturamento": 819.0,
+        "count": 78
+      },
+      {
+        "nome": "Chips & Guacamole",
+        "faturamento": 639.0,
+        "count": 71
+      },
+      {
+        "nome": "Potstickers",
+        "faturamento": 594.0,
+        "count": 66
+      },
+      {
+        "nome": "Chicken Tacos",
+        "faturamento": 537.75,
+        "count": 45
+      }
+    ],
+    "formas_pagamento": [
+      {
+        "nome": "Italian",
+        "valor": 17189.9
+      },
+      {
+        "nome": "Asian",
+        "valor": 16056.45
+      },
+      {
+        "nome": "Mexican",
+        "valor": 11358.5
+      },
+      {
+        "nome": "American",
+        "valor": 10005.75
+      }
+    ],
+    "pedidos_hora": [
+      {
+        "nome": "Almoço (11h-14h)",
+        "valor": 669
+      },
+      {
+        "nome": "Tarde (15h-17h)",
+        "valor": 504
+      },
+      {
+        "nome": "Jantar (18h-21h)",
+        "valor": 608
+      },
+      {
+        "nome": "Noite (22h+)",
+        "valor": 52
+      }
+    ],
+    "top_pedidos": [
+      {
+        "nome": "Hamburger",
+        "pedidos": 229
+      },
+      {
+        "nome": "Korean Beef Bowl",
+        "pedidos": 212
+      },
+      {
+        "nome": "French Fries",
+        "pedidos": 210
+      },
+      {
+        "nome": "Tofu Pad Thai",
+        "pedidos": 200
+      },
+      {
+        "nome": "Cheeseburger",
+        "pedidos": 186
+      },
+      {
+        "nome": "Edamame",
+        "pedidos": 184
+      },
+      {
+        "nome": "Mac & Cheese",
+        "pedidos": 175
+      },
+      {
+        "nome": "Chips & Salsa",
+        "pedidos": 172
+      },
+      {
+        "nome": "Orange Chicken",
+        "pedidos": 166
+      },
+      {
+        "nome": "Spaghetti & Meatballs",
+        "pedidos": 164
+      }
+    ]
+  }
+}

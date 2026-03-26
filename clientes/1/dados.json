@@ -286,5 +286,62 @@
         "valor": 740.0
       }
     ]
+  },
+  "maio": {
+    "faturamento": 5433.0,
+    "vendas": 62,
+    "clientes": 1,
+    "changeVendas": 26.5,
+    "changeFaturamento": 34.1,
+    "changeTicket": 6.0,
+    "changeClientes": -95.7,
+    "servicos": [
+      {
+        "nome": "Coloração",
+        "faturamento": 1553.0
+      },
+      {
+        "nome": "Corte",
+        "faturamento": 1228.0
+      },
+      {
+        "nome": "Hidratação",
+        "faturamento": 867.0
+      },
+      {
+        "nome": "Escova",
+        "faturamento": 713.0
+      },
+      {
+        "nome": "Manicure",
+        "faturamento": 455.0
+      },
+      {
+        "nome": "Depilação",
+        "faturamento": 327.0
+      },
+      {
+        "nome": "Sobrancelha",
+        "faturamento": 290.0
+      }
+    ],
+    "formas_pagamento": [
+      {
+        "nome": "PIX",
+        "valor": 2313.0
+      },
+      {
+        "nome": "Cartão crédito",
+        "valor": 1737.0
+      },
+      {
+        "nome": "Cartão débito",
+        "valor": 917.0
+      },
+      {
+        "nome": "Dinheiro",
+        "valor": 466.0
+      }
+    ]
   }
 }

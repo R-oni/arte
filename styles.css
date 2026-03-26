@@ -34,6 +34,7 @@ body {
     display: flex;
     flex-direction: column;
     background: #000000;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 /* ===== SIGNATURE SECTION ===== */
@@ -60,7 +61,7 @@ body {
 }
 
 .tagline {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     color: var(--text);
     font-weight: 600;
     margin: 0.5rem 0 0 0;
@@ -68,7 +69,7 @@ body {
 }
 
 .client-logo-box {
-    min-height: 80px;
+    min-height: 116px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -76,8 +77,8 @@ body {
 }
 
 .client-logo {
-    max-width: 220px;
-    max-height: 80px;
+    max-width: 317px;
+    max-height: 116px;
     width: auto;
     height: auto;
     object-fit: contain;
@@ -86,17 +87,29 @@ body {
 }
 
 .gold-text {
-    color: #fbbf24;
+    /* Efeito de reflexo apenas no texto */
     font-weight: 700;
+    color: transparent;
+    background-image: linear-gradient(90deg, #fbbf24 0%, #fff 50%, #fbbf24 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: goldShine 2.2s linear infinite;
+}
+
+@keyframes goldShine {
+    0% { background-position: 200% center; }
+    50% { background-position: 50% center; }
+    100% { background-position: -200% center; }
 }
 
 /* ===== HEADER ===== */
 .header {
     padding: 1.5rem 1rem;
-    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
-    color: rgb(0, 0, 0);
+    background: transparent;
+    color: var(--text);
     text-align: center;
-    animation: slideDown 0.6s ease-out;
+    animation: none;
 }
 
 .header-info {
@@ -205,7 +218,7 @@ body {
 
 @media (min-width: 800px) {
     .charts-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -343,6 +356,49 @@ body {
 .landing {
     min-height: 100vh;
     background: #000000;
+    position: relative;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* garantir que conteúdo fique acima da marca-d'água */
+.landing > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Marca-d'água de barras sutis (animadas) */
+.bg-bars {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.06;
+    filter: blur(0.6px) saturate(0.6);
+}
+.bg-bars .bar {
+    width: 10px;
+    background: linear-gradient(180deg, #cbd5e1 0%, #94a3b8 100%);
+    border-radius: 3px;
+    display: inline-block;
+    transform-origin: bottom center;
+    animation: barPulse 3.2s ease-in-out infinite;
+}
+.bg-bars .b1 { height: 40px; animation-delay: 0s; }
+.bg-bars .b2 { height: 60px; animation-delay: 0.15s; }
+.bg-bars .b3 { height: 30px; animation-delay: 0.3s; }
+.bg-bars .b4 { height: 80px; animation-delay: 0.45s; }
+.bg-bars .b5 { height: 50px; animation-delay: 0.6s; }
+.bg-bars .b6 { height: 35px; animation-delay: 0.75s; }
+.bg-bars .b7 { height: 70px; animation-delay: 0.9s; }
+
+@keyframes barPulse {
+    0% { transform: scaleY(0.85); opacity: 0.9; }
+    50% { transform: scaleY(1.15); opacity: 1; }
+    100% { transform: scaleY(0.85); opacity: 0.9; }
 }
 
 .landing-hero {
@@ -360,7 +416,7 @@ body {
     width: 120px;
     height: 120px;
     object-fit: contain;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.6rem;
     animation: slideDown 0.6s ease-out;
 }
 
@@ -368,7 +424,7 @@ body {
     font-size: clamp(2rem, 6vw, 3.5rem);
     font-weight: 700;
     color: var(--text);
-    margin-bottom: 1rem;
+    margin-bottom: 0.25rem;
     animation: fadeIn 0.8s ease-out 0.3s both;
 }
 

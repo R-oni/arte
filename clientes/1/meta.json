@@ -2,6 +2,7 @@
   "id": 1,
   "name": "Salão Beauty Pro",
   "type": "salao_beleza",
+  "comentarios": "💡 Março foi um mês sólido. O faturamento cresceu em relação a fevereiro, puxado principalmente pela Progressiva. O número de clientes novos também aumentou, o que é ótimo sinal. Para abril, vale focar em preencher os horários de terça e quarta, que historicamente ficam mais vazios. Qualquer dúvida, estou por aqui!",
   "info": "Serviços de Beleza e Estética",
   "color_theme": "#ec4899",
   "logo": "logo-cinza-rosa.png",
@@ -35,7 +36,7 @@
       "tipo": "line",
       "titulo": "Evolução de Faturamento",
       "dataSource": "faturamento_mes",
-      "cor": "rgba(236, 72, 153, 1)",
+      "cor": "rgba(255, 255, 255, 1)",
       "posicao": "full"
     },
     {
@@ -52,7 +53,8 @@
       "titulo": "Taxa de Recorrência por Serviço (%)",
       "dataSource": "taxa_recorrencia",
       "cor": "rgba(59, 130, 246, 0.8)",
-      "posicao": "direita"
+      "posicao": "esquerda",
+      "label_format": "percent"
     }
   ]
 }

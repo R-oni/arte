@@ -1,0 +1,65 @@
+{
+  "id": 3,
+  "name": "Bella Vista Restaurant",
+  "type": "restaurante",
+  "comentarios": "💡 Janeiro a março de 2023 com dados reais de pedidos. A cozinha Mexican lidera em volume de pedidos, enquanto o cardápio Asian tem o maior faturamento por item. O pico de movimento é no almoço, representando mais da metade dos pedidos do dia — vale garantir equipe completa e estoque abastecido nesse período.",
+  "info": "Restaurante Multicuisine",
+  "color_theme": "#f97316",
+  "logo": "logo-cinza-rosa.png",
+  "ativo": true,
+  "kpi_labels": {
+    "vendas": "Pedidos",
+    "ticket": "Ticket / Pedido",
+    "clientes": "Itens Vendidos"
+  },
+  "charts": [
+    {
+      "id": "chart6",
+      "tipo": "bar",
+      "titulo": "Comparativo: Mês e Anterior",
+      "dataSource": "comparativo_faturamento",
+      "cor": "rgba(249, 115, 22, 0.8)",
+      "posicao": "full"
+    },
+    {
+      "id": "chart1",
+      "tipo": "bar",
+      "titulo": "Top Pratos por Receita",
+      "dataSource": "servicos",
+      "cor": "rgba(249, 115, 22, 0.8)",
+      "posicao": "esquerda"
+    },
+    {
+      "id": "chart2",
+      "tipo": "doughnut",
+      "titulo": "Receita por Categoria",
+      "dataSource": "formas_pagamento",
+      "posicao": "direita"
+    },
+    {
+      "id": "chart3",
+      "tipo": "line",
+      "titulo": "Evolução de Faturamento",
+      "dataSource": "faturamento_mes",
+      "cor": "rgba(249, 115, 22, 1)",
+      "posicao": "full"
+    },
+    {
+      "id": "chart4",
+      "tipo": "bar",
+      "titulo": "Pedidos por Período do Dia",
+      "dataSource": "pedidos_hora",
+      "cor": "rgba(251, 191, 36, 0.8)",
+      "posicao": "full"
+    },
+    {
+      "id": "chart5",
+      "tipo": "bar",
+      "titulo": "Pratos Mais Pedidos (Top 10)",
+      "dataSource": "top_pedidos",
+      "cor": "rgba(16, 185, 129, 0.8)",
+      "posicao": "esquerda",
+      "label_format": "count"
+    }
+  ]
+}

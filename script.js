@@ -41,7 +41,7 @@ function freezeSignatureGif() {
     // Aguardar 500ms (duração do GIF) e trocar para PNG estático
     setTimeout(() => {
         gifElement.src = 'assinatura_final.png';
-    }, 3050);
+    }, 3000);
 }
 
 // Inicializar
@@ -50,7 +50,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     await carregarDadosClientes();
     loadClient();
     setupEventListeners();
-    updateDate();
 });
 
 // Carregar cliente da URL
@@ -90,6 +89,23 @@ function loadClient() {
     });
     selectMes.value = primeiroMes;
     
+    // Preencher comentários gerais do cliente
+    const comentariosEl = document.getElementById('comentarios-texto');
+    if (comentariosEl) {
+        comentariosEl.textContent = currentClient.comentarios || '';
+    }
+
+    // Atualizar labels dos KPIs conforme configuração do cliente
+    const defaultKpiLabels = { faturamento: 'Faturamento', vendas: 'Vendas', ticket: 'Ticket Médio', clientes: 'Clientes' };
+    const kpiLabels = { ...defaultKpiLabels, ...(currentClient.kpi_labels || {}) };
+    Object.entries(kpiLabels).forEach(([key, label]) => {
+        const kpiEl = document.getElementById(`kpi-${key}`);
+        if (kpiEl) {
+            const labelEl = kpiEl.closest('.kpi-mini')?.querySelector('.kpi-mini-label');
+            if (labelEl) labelEl.textContent = label;
+        }
+    });
+
     // Renderizar containers de gráficos
     renderChartContainers();
     
@@ -294,19 +310,23 @@ function getDataForChart(dataSource) {
                 data: ticketPorServico.map(s => s.ticket)
             };
 
-        case 'taxa_recorrencia':
-            // Taxa de recorrência simulada por serviço
+        case 'taxa_recorrencia': {
+            // Taxa de recorrência simulada por serviço, baseada na participação de faturamento
+            const faturamentoTotalRec = dataAtual.servicos.reduce((acc, s) => acc + s.faturamento, 0);
             const recorrencia = dataAtual.servicos.map((s, idx) => {
-                const taxas = [78, 65, 72, 58, 85]; // taxas diferentes por serviço
+                // Distribui a recorrência entre 45% e 90% proporcionalmente ao faturamento
+                const pct = faturamentoTotalRec > 0 ? s.faturamento / faturamentoTotalRec : 0;
+                const taxa = Math.round(45 + pct * 250);
                 return {
                     nome: s.nome,
-                    taxa: taxas[idx] || 70
+                    taxa: Math.min(Math.max(taxa, 25), 90)
                 };
             });
             return {
                 labels: recorrencia.map(s => s.nome),
                 data: recorrencia.map(s => s.taxa)
             };
+        }
         
         case 'tamanho_animal':
             // Distribuição por tamanho de animal (petshop)
@@ -332,6 +352,20 @@ function getDataForChart(dataSource) {
                 data: [novos, recorrentes]
             };
         
+        case 'pedidos_hora':
+            if (!dataAtual.pedidos_hora) return null;
+            return {
+                labels: dataAtual.pedidos_hora.map(p => p.nome),
+                data: dataAtual.pedidos_hora.map(p => p.valor)
+            };
+
+        case 'top_pedidos':
+            if (!dataAtual.top_pedidos) return null;
+            return {
+                labels: dataAtual.top_pedidos.map(p => p.nome),
+                data: dataAtual.top_pedidos.map(p => p.pedidos)
+            };
+
         default:
             console.warn(`dataSource desconhecido: ${dataSource}`);
             return null;
@@ -359,6 +393,13 @@ function generateInsight(chartConfig, chartData, dataSource) {
             } else if (tipo === 'petshop') {
                 const top = chartData.labels[0];
                 return `💡 ${top} é estrela do mês. Aumente agendamentos nos dias vazios.`;
+            } else if (tipo === 'restaurante') {
+                const top = chartData.labels[0];
+                const segundo = chartData.labels[1] || null;
+                const topVal = chartData.data[0];
+                const totalRev = chartData.data.reduce((a, b) => a + b, 0);
+                const pct = Math.round((topVal / totalRev) * 100);
+                return `💡 ${top} foi o prato que mais gerou receita esse mês (${pct}% do total).${segundo ? ` Em segundo vem ${segundo} — destacar esses dois no cardápio tende a aumentar o volume pedido.` : ''}`;
             }
         },
         'formas_pagamento': () => {
@@ -371,6 +412,9 @@ function generateInsight(chartConfig, chartData, dataSource) {
                     ? ` Cartão tem taxa — se puder oferecer um desconto de R$ 5 pra quem pagar no PIX, você economiza na maquininha e a cliente ainda sente que ganhou algo.`
                     : ` PIX é ótimo: cai na hora, sem taxa, sem esperar. Deixe o QR code sempre visível na recepção.`;
                 return `💡 ${porcentagem}% das suas clientes pagam com ${topPagamento}.${dicaExtra}`;
+            } else if (tipo === 'restaurante') {
+                const segundo = chartData.labels[1] || null;
+                return `💡 ${porcentagem}% da receita vem da cozinha ${topPagamento}.${segundo ? ` A culinária ${segundo} fica em segundo lugar — diversificar o menu dentro das categorias mais rentáveis aumenta o ticket médio.` : ` Concentrar promoções nessa linha pode impulsionar as vendas nos horários mais fracos.`}`;
             } else {
                 return `💡 ${topPagamento} favorito (${porcentagem}%). Facilite pagamentos = mais vendas.`;
             }
@@ -384,6 +428,15 @@ function generateInsight(chartConfig, chartData, dataSource) {
                     return `💡 Esse mês veio ${Math.abs(variacao).toFixed(1)}% abaixo do anterior. Pode ser época mais fraca mesmo, mas vale mandar uma mensagem pra clientes que não aparecem há mais de 30 dias — um "saudade de você por aqui!" já traz muita gente de volta.`;
                 } else {
                     return `💡 Faturamento igual ao mês passado. Estabilidade é bom sinal, mas uma promoção num dia fraco da semana pode ser o empurrão pra crescer.`;
+                }
+            }
+            if (tipo === 'restaurante') {
+                if (variacao > 0) {
+                    return `💡 Faturamento ${variacao.toFixed(1)}% maior que o mês anterior. Verifique se houve algum dia ou período específico que puxou esse crescimento — repetir essas condições é a forma mais direta de manter a alta.`;
+                } else if (variacao < 0) {
+                    return `💡 Queda de ${Math.abs(variacao).toFixed(1)}% em relação ao mês anterior. Vale investigar se foi concentrada em algum período ou categoria. Combos e promoções nos horários mais fracos costumam compensar quedas sazonais.`;
+                } else {
+                    return `💡 Faturamento estável em relação ao mês anterior. Uma boa base — introduzir um prato especial sazonal ou combo pode ser o estímulo para crescer no próximo mês.`;
                 }
             }
             if (variacao > 0) {
@@ -410,6 +463,21 @@ function generateInsight(chartConfig, chartData, dataSource) {
                     return `💡 Faturamento igual ao mês anterior. Consistência é boa — uma ação pequena como promoção relâmpago já pode mudar esse número no próximo mês.`;
                 }
             }
+            if (tipo === 'restaurante') {
+                const vals = chartData.data;
+                if (vals.length < 2) return `💡 Primeiro mês registrado. Os próximos vão mostrar como está a evolução do restaurante.`;
+                const anterior = vals[0];
+                const atual = vals[vals.length - 1];
+                const diff = atual - anterior;
+                const pct = ((diff / anterior) * 100).toFixed(1);
+                if (diff > 0) {
+                    return `💡 Esse mês gerou $ ${diff.toFixed(0)} a mais que o anterior (+${pct}%). Com os dados acumulados já é possível identificar tendências — crescimento consistente sugere aumento no fluxo de clientes.`;
+                } else if (diff < 0) {
+                    return `💡 Esse mês ficou $ ${Math.abs(diff).toFixed(0)} abaixo do anterior (${pct}%). Analise se a queda veio de menos pedidos ou de pedidos menores — cada causa pede uma estratégia diferente.`;
+                } else {
+                    return `💡 Faturamento igual ao mês anterior. Estabilidade é positiva — um prato do dia temático ou promoção de happy hour pode mudar esse número no próximo período.`;
+                }
+            }
             return 'Continue acompanhando.';
         },
         'ticket_medio_servico': () => {
@@ -420,6 +488,8 @@ function generateInsight(chartConfig, chartData, dataSource) {
             const servico_menor = chartData.labels[tickets.indexOf(menor)];
             if (tipo === 'salao_beleza') {
                 return `💡 ${servico_maior} gera mais dinheiro por atendimento (R$ ${maior.toFixed(0)} por visita). ${servico_menor} traz só R$ ${menor.toFixed(0)} — mas se uma cliente vier fazer ${servico_menor} e você oferecer um complemento rápido, o valor da visita dela sobe bastante.`;
+            } else if (tipo === 'restaurante') {
+                return `💡 ${servico_maior} tem o maior ticket por unidade ($ ${maior.toFixed(0)}). Pratos de alto valor unitário são aliados para aumentar o ticket médio do pedido — treinar a equipe para sugerir esses itens como adicionais pode impactar direto no faturamento.`;
             }
             return `💡 ${servico_maior} maior valor por atendimento (R$ ${maior.toFixed(0)}). Promova junto com outros serviços.`;
         },
@@ -445,6 +515,19 @@ function generateInsight(chartConfig, chartData, dataSource) {
             } else {
                 return `💡 ${pct_rec}% retornam. Aumente follow-up com novos clientes.`;
             }
+        },
+        'pedidos_hora': () => {
+            const topPeriodo = chartData.labels[0];
+            const topVal = chartData.data[0];
+            const totalPedidos = chartData.data.reduce((a, b) => a + b, 0);
+            const pct = Math.round((topVal / totalPedidos) * 100);
+            return `💡 O ${topPeriodo} concentra ${pct}% dos pedidos do dia. Garantir equipe completa e estoque abastecido nesse período é essencial. Nos horários mais vazios, promoções como happy hour ou combos temáticos podem equilibrar melhor o fluxo ao longo do dia.`;
+        },
+        'top_pedidos': () => {
+            const topItem = chartData.labels[0];
+            const topCount = chartData.data[0];
+            const segundo = chartData.labels[1] || null;
+            return `💡 ${topItem} é o prato mais pedido (${topCount} vezes).${segundo ? ` Em segundo lugar vem ${segundo}. Compare este ranking com o de receita para ver se os pratos mais pedidos também são os mais rentáveis.` : ` Garantir disponibilidade constante desse item é prioridade.`}`;
         }
     };
     
@@ -520,7 +603,9 @@ function createChartConfig(chartConfig, chartData) {
                             ctx.font = '11px -apple-system, BlinkMacSystemFont, sans-serif';
                             ctx.textAlign = 'left';
                             ctx.textBaseline = 'middle';
-                            ctx.fillText('R$ ' + val.toLocaleString('pt-BR'), bar.x + 6, bar.y);
+                            const isCount = chartConfig.label_format === 'count';
+                            const isPercent = chartConfig.label_format === 'percent';
+                            ctx.fillText(isCount ? val.toLocaleString('pt-BR') : isPercent ? val.toLocaleString('pt-BR') + '%' : 'R$ ' + val.toLocaleString('pt-BR'), bar.x + 6, bar.y);
                         });
                     });
                 }
@@ -528,8 +613,23 @@ function createChartConfig(chartConfig, chartData) {
         }
         configBase.options.plugins.legend.display = false;
     } else if (chartConfig.tipo === 'doughnut') {
-        const cores = [corPrincipal, '#10b981', '#fbbf24', '#ef4444'];
-        configBase.data.datasets[0].backgroundColor = cores.slice(0, chartData.labels.length);
+        // Mapear cores específicas para formas de pagamento: Dinheiro->amarelo, Crédito->ciano, PIX->vermelho
+        const fallback = [corPrincipal, '#10b981', '#fbbf24', '#ef4444'];
+        const paymentMap = {
+            'dinheiro': '#fbbf24',
+            'pix': '#ef4444',
+            'cartão crédito': '#06b6d4',
+            'cartao credito': '#06b6d4',
+            'credito': '#06b6d4',
+            'cartão débito': '#06b6d4',
+            'cartao debito': '#06b6d4',
+            'debito': '#06b6d4'
+        };
+        const cores = chartData.labels.map((lbl, i) => {
+            const key = String(lbl).toLowerCase();
+            return paymentMap[key] || fallback[i % fallback.length];
+        });
+        configBase.data.datasets[0].backgroundColor = cores;
     } else if (chartConfig.tipo === 'line') {
         configBase.data.datasets[0].borderColor = corPrincipalSolida;
         configBase.data.datasets[0].backgroundColor = corPrincipal.replace('0.8', '0.1');
@@ -544,19 +644,25 @@ function createChartConfig(chartConfig, chartData) {
         };
         configBase.options.plugins.legend.display = false;
     } else if (chartConfig.tipo === 'pie') {
-        const cores = [corPrincipal, '#10b981', '#fbbf24', '#ef4444'];
-        configBase.data.datasets[0].backgroundColor = cores.slice(0, chartData.labels.length);
+        const fallback = [corPrincipal, '#10b981', '#fbbf24', '#ef4444'];
+        const paymentMap = {
+            'dinheiro': '#fbbf24',
+            'pix': '#ef4444',
+            'cartão crédito': '#06b6d4',
+            'cartao credito': '#06b6d4',
+            'credito': '#06b6d4',
+            'cartão débito': '#06b6d4',
+            'cartao debito': '#06b6d4',
+            'debito': '#06b6d4'
+        };
+        const cores = chartData.labels.map((lbl, i) => {
+            const key = String(lbl).toLowerCase();
+            return paymentMap[key] || fallback[i % fallback.length];
+        });
+        configBase.data.datasets[0].backgroundColor = cores;
     }
 
     return configBase;
 }
 
-// Data atual
-function updateDate() {
-    const lastUpdateEl = document.getElementById('lastUpdate');
-    if (!lastUpdateEl) return;
-    
-    const options = { weekday: 'short', month: 'short', day: 'numeric' };
-    const dateStr = new Date().toLocaleDateString('pt-BR', options);
-    lastUpdateEl.textContent = 'Atualizado: ' + dateStr;
-}
+// (updateDate removed — lastUpdate box was removed from HTML)

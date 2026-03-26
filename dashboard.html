@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Seu Negócio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -13,7 +16,7 @@
         <section class="signature-section">
             <div class="signature-container">
                 <img src="assinatura.gif" alt="Assinatura" class="signature-img" style="display: block;">
-                <p class="tagline">Informação é <span class="gold-text">Ouro</span></p>
+                <p class="tagline">Informação é <span class="gold-text">Ouro!</span></p>
                 <div class="client-logo-box">
                     <img id="clientLogo" class="client-logo" src="" alt="Logo do cliente">
                 </div>
@@ -22,9 +25,7 @@
 
         <!-- Header -->
         <header class="header">
-            <div class="header-info">
-                <p class="last-update" id="lastUpdate"></p>
-            </div>
+            <div class="header-info"></div>
         </header>
 
         <!-- Main Content -->
@@ -78,7 +79,7 @@
             <section class="comentarios-gerais fade-in" style="animation-delay: 0.8s">
                 <div class="chart-mini">
                     <h3>Comentários Gerais</h3>
-                    <p class="comentarios-texto">💡 Março foi um mês sólido. O faturamento cresceu em relação a fevereiro, puxado principalmente pela Progressiva. O número de clientes novos também aumentou, o que é ótimo sinal. Para abril, vale focar em preencher os horários de terça e quarta, que historicamente ficam mais vazios. Qualquer dúvida, estou por aqui!</p>
+                    <p class="comentarios-texto" id="comentarios-texto"></p>
                 </div>
             </section>
         </main>

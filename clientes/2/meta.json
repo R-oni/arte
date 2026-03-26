@@ -2,6 +2,7 @@
   "id": 2,
   "name": "PetCare Plus",
   "type": "petshop",
+  "comentarios": "💡 Escreva aqui os comentários gerais do mês para este cliente.",
   "info": "Banho, Tosa e Consultoria em Saúde Animal",
   "color_theme": "#8b5cf6",
   "logo": null,

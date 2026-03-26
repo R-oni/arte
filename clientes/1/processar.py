@@ -65,29 +65,55 @@ def processar_cliente():
         'servicos': defaultdict(float)
     })
     
-    # Processar linhas
+    # Preparar mapeamento numérico para meses (para arquivos com coluna 'data')
+    num_mes_map = {
+        1: 'Janeiro', 2: 'Fevereiro', 3: 'Março', 4: 'Abril', 5: 'Maio', 6: 'Junho',
+        7: 'Julho', 8: 'Agosto', 9: 'Setembro', 10: 'Outubro', 11: 'Novembro', 12: 'Dezembro'
+    }
+
+    # Processar linhas (suporta tanto CSVs com coluna 'mes' quanto com 'data')
     for idx, row in df_consolidado.iterrows():
-        mes_raw = row['mes']
-        valor = row['valor']
-        servico = row['servico']
-        cliente = row['cliente'] if pd.notna(row['cliente']) else 'Sem nome'
-        pagamento = row['pagamento']
+        # Determinar mês: preferir coluna 'mes', senão tentar extrair de 'data' (DD/MM/YYYY)
+        mes_raw = None
+        if 'mes' in df_consolidado.columns and pd.notna(row.get('mes')):
+            mes_raw = row.get('mes')
+        elif 'data' in df_consolidado.columns and pd.notna(row.get('data')):
+            try:
+                dt = pd.to_datetime(row.get('data'), dayfirst=True, errors='coerce')
+                if not pd.isna(dt):
+                    mes_raw = num_mes_map.get(int(dt.month))
+            except Exception:
+                mes_raw = None
+
+        # Valores e campos flexíveis (aceita 'pagamento' ou 'forma_pagamento')
+        valor = row.get('valor', 0)
+        servico = row.get('servico', 'Desconhecido')
+        cliente = row.get('cliente') if 'cliente' in df_consolidado.columns and pd.notna(row.get('cliente')) else 'Sem nome'
+        pagamento = None
+        if 'pagamento' in df_consolidado.columns and pd.notna(row.get('pagamento')):
+            pagamento = row.get('pagamento')
+        elif 'forma_pagamento' in df_consolidado.columns and pd.notna(row.get('forma_pagamento')):
+            pagamento = row.get('forma_pagamento')
         
-        # Converter para minúsculo
-        mes_chave = mes_map.get(mes_raw, mes_raw.lower())
-        
+        # Se não foi possível determinar mês, pular linha
+        if not mes_raw:
+            continue
+
+        # Converter chave do mês para formato usado (ex: 'Maio' -> 'maio')
+        mes_chave = mes_map.get(mes_raw, str(mes_raw).lower())
+
         # Adicionar venda
         dados_por_mes[mes_chave]['vendas'].append({
             'servico': str(servico).strip(),
             'valor': float(valor),
-            'pagamento': str(pagamento).strip() if pd.notna(pagamento) else 'Desconhecido'
+            'pagamento': str(pagamento).strip() if pagamento is not None else 'Desconhecido'
         })
         dados_por_mes[mes_chave]['total'] += float(valor)
         dados_por_mes[mes_chave]['quantidade'] += 1
         dados_por_mes[mes_chave]['clientes_unicos'].add(str(cliente).strip())
         
         # Agrupar forma de pagamento
-        if pd.notna(pagamento):
+        if pagamento is not None and pd.notna(pagamento):
             dados_por_mes[mes_chave]['formas_pagamento'][str(pagamento).strip()] += float(valor)
         
         # Agrupar serviços
