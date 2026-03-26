@@ -79,7 +79,14 @@
         "valor": 180.0
       }
     ],
-    "insights": {}
+    "insights": {
+      "servicos": "Janeiro é mês de começo de ano — muita gente aproveita pra renovar o visual depois das festas. A progressiva puxou bem.",
+      "formas_pagamento": "PIX domina de longe. Continua sendo o meio mais prático pra receber sem taxa e sem esperar.",
+      "faturamento_mes": "Primeiro mês do ano, sem histórico anterior pra comparar — mas foi um começo sólido.",
+      "comparativo_faturamento": "Primeiro mês registrado no sistema. A partir daqui já dá pra acompanhar a evolução mês a mês.",
+      "ticket_medio_servico": "Progressiva e coloração têm o maior ticket isolado. Vale oferecer esses serviços junto com hidratação pra aumentar o valor da visita.",
+      "taxa_recorrencia": "Início do histórico, sem base anterior. Nos próximos meses já vai ficar claro quais serviços fidelizam mais."
+    }
   },
   "fevereiro": {
     "faturamento": 2180.0,
@@ -149,7 +156,14 @@
         "valor": 370.0
       }
     ],
-    "insights": {}
+    "insights": {
+      "servicos": "Fevereiro teve menos dias úteis e o movimento caiu. Normal pra esse mês — quem manteve a agenda cheia saiu na frente.",
+      "formas_pagamento": "Cartão de crédito subiu um pouco. Se entrar taxa de maquininha, vale oferecer desconto pra PIX nos serviços de maior valor.",
+      "faturamento_mes": "Fevereiro costuma ser mais fraco por causa do carnaval e das férias. O queda em relação a janeiro era esperada.",
+      "comparativo_faturamento": "Queda em relação a janeiro, mas fevereiro tem menos dias disponíveis — o ritmo por dia foi parecido.",
+      "ticket_medio_servico": "Mesmo com menos atendimentos, o ticket por serviço se manteve. Sinal de que a qualidade percebida está boa.",
+      "taxa_recorrencia": "Clientes que fizeram progressiva em janeiro voltaram pra manutenção. Esse ciclo de retorno é o que sustenta o faturamento fixo."
+    }
   },
   "março": {
     "faturamento": 4060.0,
@@ -219,7 +233,14 @@
         "valor": 740.0
       }
     ],
-    "insights": {}
+    "insights": {
+      "servicos": "Março foi um mês sólido. A progressiva liderou com folga — clientes que fizeram em janeiro voltaram pra retoque, exatamente o ciclo ideal.",
+      "formas_pagamento": "PIX continua na liderança. A parcela em dinheiro também cresceu — sinal de clientela fiel que prefere praticidade.",
+      "faturamento_mes": "Crescimento forte em relação a fevereiro. Março costuma reagir bem depois do recesso do carnaval — e dessa vez não foi diferente.",
+      "comparativo_faturamento": "Salto expressivo. Parte desse crescimento veio de novos clientes que foram indicadas por quem já frequenta o salão há mais tempo.",
+      "ticket_medio_servico": "O ticket da progressiva se manteve alto. Sempre que possível, sugira hidratação junto — é rápido e aumenta o valor do atendimento.",
+      "taxa_recorrencia": "Ótimo índice de retorno em março. Clientes que vêm todo mês são a base do faturamento — vale mandas uma mensagem de agradecimento pra esse grupo."
+    }
   },
   "abril": {
     "faturamento": 4050.0,
@@ -289,7 +310,14 @@
         "valor": 740.0
       }
     ],
-    "insights": {}
+    "insights": {
+      "servicos": "Abril manteve o ritmo de março, com a progressiva na liderança. A coloração também teve boa procura — período de férias escolares ajuda.",
+      "formas_pagamento": "Distribuição estável. PIX segue dominando — considere criar um grupo de transmissão no WhatsApp só pra clientes fiéis.",
+      "faturamento_mes": "Faturamento praticamente igual a março. Abril tem feriados que podem fragmentar a agenda — mesmo assim o resultado foi muito bom.",
+      "comparativo_faturamento": "Resultado quasi idêntico ao mês anterior. Estabilidade em patamar alto é ótimo sinal — o salão está consolidado nesse nível de faturamento.",
+      "ticket_medio_servico": "Ticket estável. Um combo 'progressiva + hidratação' com preço especial pode ser o próximo experimento pra empurrar esse número pra cima.",
+      "taxa_recorrencia": "Retorno consistente. As clientes de progressiva estão voltando no ciclo certo. Mantenha o lembrete automático de 45 dias após o serviço."
+    }
   },
   "maio": {
     "faturamento": 5433.0,
@@ -347,6 +375,13 @@
         "valor": 466.0
       }
     ],
-    "insights": {"foco": "Preencher horários de terça e quarta"}
+    "insights": {
+      "servicos": "Maio foi o melhor mês até agora. A progressiva continuou no topo, mas a coloração cresceu bastante — sinal de que a clientela está experimentando mais serviços.",
+      "formas_pagamento": "PIX segue forte. O aumento no número de atendimentos não mudou o mix de pagamento — base de clientes estável e fiel.",
+      "faturamento_mes": "Melhor mês do ano até aqui. Maio tem Dia das Mães, que sempre movimenta salões — aproveite esse gancho já em abril do ano que vem.",
+      "comparativo_faturamento": "Salto de mais de 34% em relação a abril. O Dia das Mães impulsionou muito. Pra junho, prepare promoções de manutenção pra não perder o ritmo.",
+      "ticket_medio_servico": "Ticket cresceu junto com o volume. Sinal positivo: não foi só quantidade de clientes, foi também qualidade dos serviços escolhidos.",
+      "taxa_recorrencia": "Alta recorrência em maio. Clientes que vieram pro Dia das Mães tendem a voltar em junho — um lembrete personalizado pode garantir isso."
+    }
   }
 }

@@ -391,82 +391,68 @@ function generateInsight(chartConfig, chartData, dataSource) {
         'servicos': () => {
             if (tipo === 'salao_beleza') {
                 const top = chartData.labels[0];
-                const segundo = chartData.labels[1] || null;
-                const narr = segundo
-                    ? `Oferecer ${top} junto com ${segundo} no mesmo dia pode aumentar o valor do atendimento sem precisar de uma cliente a mais.`
-                    : `Garanta que a agenda sempre tenha horários vagos pra ele, especialmente nas sextas e sábados.`;
-                return [`💡 ${top} foi o serviço que mais trouxe dinheiro esse mês.`, narr];
+                return [`💡 ${top} foi o serviço que mais trouxe dinheiro esse mês.`];
             } else if (tipo === 'petshop') {
                 const top = chartData.labels[0];
-                return [`💡 ${top} é o serviço campeão do mês.`, `Aumente os agendamentos nos dias mais vazios.`];
+                return [`💡 ${top} é o serviço campeão do mês.`];
             } else if (tipo === 'restaurante') {
                 const top = chartData.labels[0];
-                const segundo = chartData.labels[1] || null;
                 const topVal = chartData.data[0];
                 const totalRev = chartData.data.reduce((a, b) => a + b, 0);
                 const pct = Math.round((topVal / totalRev) * 100);
-                const narr = segundo ? `Em segundo vem ${segundo} — destacar esses dois no cardápio tende a aumentar o volume pedido.` : '';
-                return [`💡 ${top} foi o item que mais gerou receita esse mês (${pct}% do total).`, narr];
+                return [`💡 ${top} foi o item que mais gerou receita esse mês (${pct}% do total).`];
             }
-            return [`💡 ${chartData.labels[0]} lidera o faturamento do mês.`, ''];
+            return [`💡 ${chartData.labels[0]} lidera o faturamento do mês.`];
         },
         'formas_pagamento': () => {
             const topPagamento = chartData.labels[0];
             const totalValor = chartData.data.reduce((a, b) => a + b, 0);
             const porcentagem = Math.round((chartData.data[0] / totalValor) * 100);
             if (tipo === 'salao_beleza') {
-                const temCartao = chartData.labels.some(l => l.toUpperCase().includes('CREDITO') || l.toUpperCase().includes('CRÉDITO') || l.toUpperCase().includes('DEBITO') || l.toUpperCase().includes('DÉBITO'));
-                const narr = temCartao
-                    ? `Cartão tem taxa — se puder oferecer um desconto de R$ 5 pra quem pagar no PIX, você economiza na maquininha e a cliente ainda sente que ganhou algo.`
-                    : `PIX é ótimo: cai na hora, sem taxa, sem esperar. Deixe o QR code sempre visível na recepção.`;
-                return [`💡 ${porcentagem}% das suas clientes pagam com ${topPagamento}.`, narr];
+                return [`💡 ${porcentagem}% das suas clientes pagam com ${topPagamento}.`];
             } else if (tipo === 'restaurante') {
-                const segundo = chartData.labels[1] || null;
-                const narr = segundo
-                    ? `A culinária ${segundo} fica em segundo lugar — diversificar o menu dentro das categorias mais rentáveis aumenta o ticket médio.`
-                    : `Concentrar promoções nessa linha pode impulsionar as vendas nos horários mais fracos.`;
-                return [`💡 ${porcentagem}% da receita vem de ${topPagamento}.`, narr];
+                return [`💡 ${porcentagem}% da receita vem de ${topPagamento}.`];
             }
-            return [`💡 ${topPagamento} é o favorito (${porcentagem}%).`, `Facilitar os meios de pagamento pode aumentar as vendas.`];
+            return [`💡 ${topPagamento} é o favorito (${porcentagem}%).`];
         },
         'faturamento_mes': () => {
             const variacao = dataAtual.changeFaturamento;
             if (tipo === 'salao_beleza') {
-                if (variacao > 0)  return [`💡 Você faturou ${variacao.toFixed(1)}% a mais que o mês passado.`, `Tente lembrar o que fez diferente esse mês: mais agendamentos, alguma promoção, um serviço novo? Repetir isso nos próximos meses é o caminho pra continuar crescendo.`];
-                if (variacao < 0)  return [`💡 Esse mês veio ${Math.abs(variacao).toFixed(1)}% abaixo do anterior.`, `Pode ser época mais fraca mesmo, mas vale mandar uma mensagem pra clientes que não aparecem há mais de 30 dias.`];
-                return [`💡 Faturamento igual ao mês passado.`, `Estabilidade é bom sinal, mas uma promoção num dia fraco da semana pode ser o empurrão pra crescer.`];
+                if (variacao > 0) return [`💡 Você faturou ${variacao.toFixed(1)}% a mais que o mês passado.`];
+                if (variacao < 0) return [`💡 Esse mês veio ${Math.abs(variacao).toFixed(1)}% abaixo do anterior.`];
+                return [`💡 Faturamento igual ao mês passado.`];
             }
             if (tipo === 'restaurante') {
-                if (variacao > 0)  return [`💡 Faturamento ${variacao.toFixed(1)}% maior que o mês anterior.`, `Verifique se houve algum dia ou período específico que puxou esse crescimento — repetir essas condições é a forma mais direta de manter a alta.`];
-                if (variacao < 0)  return [`💡 Queda de ${Math.abs(variacao).toFixed(1)}% em relação ao mês anterior.`, `Vale investigar se foi concentrada em algum período ou categoria. Combos e promoções nos horários mais fracos costumam compensar quedas sazonais.`];
-                return [`💡 Faturamento estável em relação ao mês anterior.`, `Uma boa base — introduzir um prato especial sazonal ou combo pode ser o estímulo para crescer no próximo mês.`];
+                if (variacao > 0) return [`💡 Faturamento ${variacao.toFixed(1)}% maior que o mês anterior.`];
+                if (variacao < 0) return [`💡 Queda de ${Math.abs(variacao).toFixed(1)}% em relação ao mês anterior.`];
+                return [`💡 Faturamento estável em relação ao mês anterior.`];
             }
-            if (variacao > 0)  return [`💡 Crescimento de ${variacao.toFixed(1)}% no faturamento.`, `Mantenha a estratégia.`];
-            if (variacao < 0)  return [`💡 Queda de ${Math.abs(variacao).toFixed(1)}% no faturamento.`, `Aumente promoções e reative clientes inativos.`];
-            return [`💡 Faturamento estável.`, `Base sólida para crescimento.`];
+            if (variacao > 0) return [`💡 Crescimento de ${variacao.toFixed(1)}% no faturamento.`];
+            if (variacao < 0) return [`💡 Queda de ${Math.abs(variacao).toFixed(1)}% no faturamento.`];
+            return [`💡 Faturamento estável.`];
         },
         'comparativo_faturamento': () => {
             if (tipo === 'salao_beleza') {
                 const vals = chartData.data;
-                if (vals.length < 2) return [`💡 Primeiro mês registrado.`, `Os próximos vão mostrar como está a evolução.`];
+                if (vals.length < 2) return [`💡 Primeiro mês registrado.`];
                 const anterior = vals[0], atual = vals[vals.length - 1];
                 const diff = atual - anterior;
                 const pct = ((diff / anterior) * 100).toFixed(1);
-                if (diff > 0)  return [`💡 Esse mês você faturou R$ ${diff.toLocaleString('pt-BR')} a mais que o anterior (+${pct}%).`, `Cada real a mais vem de mais atendimentos ou de serviços de maior valor — continue nessa direção.`];
-                if (diff < 0)  return [`💡 Esse mês ficou R$ ${Math.abs(diff).toLocaleString('pt-BR')} abaixo do anterior (${pct}%).`, `Meses mais fracos acontecem — o mais importante é não deixar a agenda com buracos longos sem tentar preencher com retornos ou indicações.`];
-                return [`💡 Faturamento igual ao mês anterior.`, `Consistência é boa — uma ação pequena como promoção relâmpago já pode mudar esse número no próximo mês.`];
+                if (diff > 0) return [`💡 Esse mês você faturou R$ ${diff.toLocaleString('pt-BR')} a mais que o anterior (+${pct}%).`];
+                if (diff < 0) return [`💡 Esse mês ficou R$ ${Math.abs(diff).toLocaleString('pt-BR')} abaixo do anterior (${pct}%).`];
+                return [`💡 Faturamento igual ao mês anterior.`];
             }
             if (tipo === 'restaurante') {
                 const vals = chartData.data;
-                if (vals.length < 2) return [`💡 Primeiro mês registrado.`, `Os próximos vão mostrar como está a evolução do restaurante.`];
+                if (vals.length < 2) return [`💡 Primeiro mês registrado.`];
                 const anterior = vals[0], atual = vals[vals.length - 1];
                 const diff = atual - anterior;
                 const pct = ((diff / anterior) * 100).toFixed(1);
-                if (diff > 0)  return [`💡 Esse mês gerou R$ ${diff.toFixed(0)} a mais que o anterior (+${pct}%).`, `Com os dados acumulados já é possível identificar tendências — crescimento consistente sugere aumento no fluxo de clientes.`];
-                if (diff < 0)  return [`💡 Esse mês ficou R$ ${Math.abs(diff).toFixed(0)} abaixo do anterior (${pct}%).`, `Analise se a queda veio de menos pedidos ou de pedidos menores — cada causa pede uma estratégia diferente.`];
-                return [`💡 Faturamento igual ao mês anterior.`, `Estabilidade é positiva — um prato do dia temático ou promoção de happy hour pode mudar esse número no próximo período.`];
+                if (diff > 0) return [`💡 Esse mês gerou R$ ${diff.toFixed(0)} a mais que o anterior (+${pct}%).`];
+                if (diff < 0) return [`💡 Esse mês ficou R$ ${Math.abs(diff).toFixed(0)} abaixo do anterior (${pct}%).`];
+                return [`💡 Faturamento igual ao mês anterior.`];
             }
-            return [`Continue acompanhando.`, ''];
+            return [`💡 Continue acompanhando.`];
         },
         'ticket_medio_servico': () => {
             const tickets = chartData.data;
@@ -475,17 +461,11 @@ function generateInsight(chartConfig, chartData, dataSource) {
             const menor = Math.min(...tickets);
             const servico_menor = chartData.labels[tickets.indexOf(menor)];
             if (tipo === 'salao_beleza') {
-                return [
-                    `💡 ${servico_maior} gera mais dinheiro por atendimento (R$ ${maior.toFixed(0)}). ${servico_menor} traz R$ ${menor.toFixed(0)} por visita.`,
-                    `Se uma cliente vier fazer ${servico_menor} e você oferecer um complemento rápido, o valor da visita dela sobe bastante.`
-                ];
+                return [`💡 ${servico_maior} gera mais dinheiro por atendimento (R$ ${maior.toFixed(0)}). ${servico_menor} traz R$ ${menor.toFixed(0)} por visita.`];
             } else if (tipo === 'restaurante') {
-                return [
-                    `💡 ${servico_maior} tem o maior ticket por unidade (R$ ${maior.toFixed(0)}).`,
-                    `Pratos de alto valor unitário são aliados para aumentar o ticket médio do pedido — treinar a equipe para sugerir esses itens como adicionais pode impactar direto no faturamento.`
-                ];
+                return [`💡 ${servico_maior} tem o maior ticket por unidade (R$ ${maior.toFixed(0)}).`];
             }
-            return [`💡 Maior valor por atendimento: ${servico_maior} (R$ ${maior.toFixed(0)}).`, `Promova junto com outros serviços.`];
+            return [`💡 Maior valor por atendimento: ${servico_maior} (R$ ${maior.toFixed(0)}).`];
         },
         'taxa_recorrencia': () => {
             const taxas = chartData.data;
@@ -493,47 +473,37 @@ function generateInsight(chartConfig, chartData, dataSource) {
             if (tipo === 'salao_beleza') {
                 const topIdx = taxas.indexOf(Math.max(...taxas));
                 const topServico = chartData.labels[topIdx];
-                return [
-                    `💡 Em média, ${media}% das clientes de cada serviço voltam no mês seguinte. ${topServico} tem a melhor fidelidade.`,
-                    `Quem faz esse serviço costuma marcar de novo sem precisar ser lembrada. Mandar uma mensagem pra quem não voltou no último mês é a forma mais rápida de recuperar receita.`
-                ];
+                return [`💡 Em média, ${media}% das clientes de cada serviço voltam no mês seguinte. ${topServico} tem a melhor fidelidade.`];
             }
-            return [`💡 Taxa média de recorrência: ${media}%.`, `Reter 40% dos inativos pode representar +50% no faturamento.`];
+            return [`💡 Taxa média de recorrência: ${media}%.`];
         },
         'tamanho_animal': () => {
             const topSize = chartData.labels[0];
-            return [`💡 O porte mais atendido é: ${topSize}.`, `Ajuste agenda e estoque para a demanda real.`];
+            return [`💡 O porte mais atendido é: ${topSize}.`];
         },
         'clientes_novos_recorrentes': () => {
             const dados = chartData.data;
             const pct_rec = Math.round((dados[1] / (dados[0] + dados[1])) * 100);
-            const narr = pct_rec > 65 ? `Retenção excelente! Aproveite para pedir indicações.` : `Aumente o follow-up com novos clientes para melhorar a retenção.`;
-            return [`💡 ${pct_rec}% dos clientes retornam.`, narr];
+            return [`💡 ${pct_rec}% dos clientes retornam.`];
         },
         'pedidos_hora': () => {
             const topPeriodo = chartData.labels[0];
             const topVal = chartData.data[0];
             const totalPedidos = chartData.data.reduce((a, b) => a + b, 0);
             const pct = Math.round((topVal / totalPedidos) * 100);
-            return [
-                `💡 O ${topPeriodo} concentra ${pct}% dos pedidos do dia.`,
-                `Garantir equipe completa e estoque abastecido nesse período é essencial. Nos horários mais vazios, promoções como happy hour ou combos temáticos podem equilibrar melhor o fluxo ao longo do dia.`
-            ];
+            return [`💡 O ${topPeriodo} concentra ${pct}% dos pedidos do dia.`];
         },
         'top_pedidos': () => {
             const topItem = chartData.labels[0];
             const topCount = chartData.data[0];
             const segundo = chartData.labels[1] || null;
-            const narr = segundo
-                ? `Compare este ranking com o de receita para ver se os pratos mais pedidos também são os mais rentáveis.`
-                : `Garantir disponibilidade constante desse item é prioridade.`;
-            return [`💡 ${topItem} é o item mais pedido (${topCount} vezes).${segundo ? ` Em segundo: ${segundo}.` : ''}`, narr];
+            return [`💡 ${topItem} é o item mais pedido (${topCount} vezes).${segundo ? ` Em segundo: ${segundo}.` : ''}`];
         }
     };
 
-    const [stat, defaultNarrative] = insightMap[dataSource]?.() ?? ['Continue acompanhando.', ''];
-    // Se houver override manual no dados.json, substitui a narrativa padrão
-    const narrative = dataAtual?.insights?.[dataSource] ?? defaultNarrative;
+    const [stat] = insightMap[dataSource]?.() ?? ['Continue acompanhando.'];
+    // Narrativa vem APENAS do que foi escrito manualmente em dados.json
+    const narrative = dataAtual?.insights?.[dataSource] ?? '';
     return narrative ? `${stat}<br>${narrative}` : stat;
 }
 
