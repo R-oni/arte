@@ -76,7 +76,12 @@ function loadClient() {
 
     // Usar o último mês disponível (mais recente)
     const mesesDisponiveis = Object.keys(currentClient.data);
-    const primeiroMes = mesesDisponiveis.length > 0 ? mesesDisponiveis[mesesDisponiveis.length - 2] : 'janeiro';
+    let primeiroMes = mesesDisponiveis.length > 0 ? mesesDisponiveis[mesesDisponiveis.length - 2] : 'janeiro';
+    // Observação: o código originalmente usa -2, resultando no penúltimo mês (ex: 'abril').
+    // Para o cliente 1, forçar março quando disponível.
+    if (clientId === '1' && mesesDisponiveis.includes('março')) {
+        primeiroMes = 'março';
+    }
     
     // Atualizar o seletor com os meses disponíveis
     const selectMes = document.getElementById('month-select');
