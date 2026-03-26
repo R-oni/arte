@@ -246,7 +246,8 @@
         "nome": "Chips & Salsa",
         "pedidos": 147
       }
-    ]
+    ],
+    "insights": {}
   },
   "fevereiro": {
     "faturamento": 50790.35,
@@ -495,7 +496,8 @@
         "nome": "Orange Chicken",
         "pedidos": 144
       }
-    ]
+    ],
+    "insights": {}
   },
   "março": {
     "faturamento": 54610.6,
@@ -744,6 +746,7 @@
         "nome": "Spaghetti & Meatballs",
         "pedidos": 164
       }
-    ]
+    ],
+    "insights": {}
   }
 }

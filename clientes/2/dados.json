@@ -54,7 +54,8 @@
         "nome": "DEBITO",
         "valor": 265.0
       }
-    ]
+    ],
+    "insights": {}
   },
   "fevereiro": {
     "faturamento": 2440.0,
@@ -111,7 +112,8 @@
         "nome": "DEBITO",
         "valor": 245.0
       }
-    ]
+    ],
+    "insights": {}
   },
   "março": {
     "faturamento": 3535.0,
@@ -168,7 +170,8 @@
         "nome": "DEBITO",
         "valor": 360.0
       }
-    ]
+    ],
+    "insights": {}
   },
   "abril": {
     "faturamento": 3575.0,
@@ -225,6 +228,7 @@
         "nome": "DEBITO",
         "valor": 295.0
       }
-    ]
+    ],
+    "insights": {}
   }
 }

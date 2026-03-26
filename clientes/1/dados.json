@@ -78,7 +78,8 @@
         "nome": "DEBITO",
         "valor": 180.0
       }
-    ]
+    ],
+    "insights": {}
   },
   "fevereiro": {
     "faturamento": 2180.0,
@@ -147,7 +148,8 @@
         "nome": "DINHEIRO",
         "valor": 370.0
       }
-    ]
+    ],
+    "insights": {}
   },
   "março": {
     "faturamento": 4060.0,
@@ -163,11 +165,11 @@
         "faturamento": 1440.0
       },
       {
-        "nome": "coloracao",
+        "nome": "coloração",
         "faturamento": 610.0
       },
       {
-        "nome": "coloracao + hidrat",
+        "nome": "coloração + hidrat",
         "faturamento": 400.0
       },
       {
@@ -179,7 +181,7 @@
         "faturamento": 340.0
       },
       {
-        "nome": "hidratacao",
+        "nome": "hidratação",
         "faturamento": 240.0
       },
       {
@@ -216,7 +218,8 @@
         "nome": "DINHEIRO",
         "valor": 740.0
       }
-    ]
+    ],
+    "insights": {}
   },
   "abril": {
     "faturamento": 4050.0,
@@ -232,11 +235,11 @@
         "faturamento": 1430.0
       },
       {
-        "nome": "coloracao",
+        "nome": "coloração",
         "faturamento": 620.0
       },
       {
-        "nome": "coloracao + hidrat",
+        "nome": "coloração + hidrat",
         "faturamento": 390.0
       },
       {
@@ -248,7 +251,7 @@
         "faturamento": 340.0
       },
       {
-        "nome": "hidratacao",
+        "nome": "hidratação",
         "faturamento": 240.0
       },
       {
@@ -285,7 +288,8 @@
         "nome": "DINHEIRO",
         "valor": 740.0
       }
-    ]
+    ],
+    "insights": {}
   },
   "maio": {
     "faturamento": 5433.0,
@@ -342,6 +346,7 @@
         "nome": "Dinheiro",
         "valor": 466.0
       }
-    ]
+    ],
+    "insights": {"foco": "Preencher horários de terça e quarta"}
   }
 }
