@@ -95,8 +95,8 @@ function loadClient() {
         const option = document.createElement('option');
         option.value = mes;
         option.textContent = mes.charAt(0).toUpperCase() + mes.slice(1);
-        // Para o cliente 1, bloquear todos os meses exceto março
-        if (clientId === '1' && mes !== 'março') {
+        // Para o cliente 1, bloquear todos os meses exceto março e fevereiro
+        if (clientId === '1' && mes !== 'março' && mes !== 'fevereiro') {
             option.disabled = true;
             option.title = 'Bloqueado temporariamente';
         }
@@ -455,7 +455,7 @@ function generateInsight(chartConfig, chartData, dataSource) {
                 const anterior = vals[0], atual = vals[vals.length - 1];
                 const diff = atual - anterior;
                 const pct = ((diff / anterior) * 100).toFixed(1);
-                if (diff > 0) return [`💡 Esse mês você faturou R$ ${diff.toLocaleString('pt-BR')} a mais que o anterior (+${pct}%).`];
+                if (diff > 0) return [`💡 Letícia, esse mês você faturou R$ ${diff.toLocaleString('pt-BR')} a mais que o anterior (+${pct}%).`];
                 if (diff < 0) return [`💡 Esse mês ficou R$ ${Math.abs(diff).toLocaleString('pt-BR')} abaixo do anterior (${pct}%).`];
                 return [`💡 Faturamento igual ao mês anterior.`];
             }

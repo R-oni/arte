@@ -116,13 +116,13 @@
     }
   },
   "fevereiro": {
-    "faturamento": 2180.0,
-    "vendas": 26,
-    "clientes": 22,
-    "changeVendas": -29.7,
-    "changeFaturamento": -21.0,
-    "changeTicket": 12.4,
-    "changeClientes": -15.4,
+    "faturamento": 2250.0,
+    "vendas": 28,
+    "clientes": 24,
+    "changeVendas": -24.3,
+    "changeFaturamento": -18.5,
+    "changeTicket": 7.7,
+    "changeClientes": -7.7,
     "servicos": [
       {
         "nome": "Progressiva",
@@ -153,6 +153,10 @@
         "faturamento": 110.0
       },
       {
+        "nome": "corte infantil",
+        "faturamento": 105.0
+      },
+      {
         "nome": "corte",
         "faturamento": 80.0
       },
@@ -163,10 +167,6 @@
       {
         "nome": "sobrancelha",
         "faturamento": 50.0
-      },
-      {
-        "nome": "corte infantil",
-        "faturamento": 35.0
       }
     ],
     "formas_pagamento": [
@@ -180,7 +180,7 @@
       },
       {
         "nome": "DINHEIRO",
-        "valor": 370.0
+        "valor": 440.0
       }
     ],
     "atividade_semana": [
@@ -202,7 +202,7 @@
       },
       {
         "nome": "Sábado",
-        "faturamento": 460.0
+        "faturamento": 530.0
       },
       {
         "nome": "Domingo",
@@ -210,34 +210,34 @@
       }
     ],
     "insights": {
-      "atividade_semana": "Sábado assumiu a liderança (R$ 460) e quarta novamente sem atendimentos — segundo mês seguido. Ação: crie uma ação 'Quarta da Beleza' com desconto em serviço rápido (sobrancelha, manicure). Dois atendimentos extras por quarta podem recuperar parte da queda de fevereiro.",
-      "servicos": "A escova caiu 43% em relação a janeiro (R$ 180 vs R$ 315). Clientes de escova têm alta frequência — se sumiram, é sinal de alerta. Ação: identifique as clientes que fizeram escova em janeiro e não voltaram. Um WhatsApp simples com 'Saudade de você!' tem taxa de retorno alta e custo zero.",
-      "formas_pagamento": "Fevereiro sem débito — todos pagando em PIX, crédito ou dinheiro. PIX lidera com 59%. Ação: verifique se a máquina de débito está visível e funcionando. Clientes que pagam no débito costumam ser assíduos — não perca esse perfil por falta de maquininha.",
-      "faturamento_mes": "Queda de 21% em fevereiro (R$ 2.180 vs R$ 2.760). Isso é sazonalidade — fevereiro é historicamente mais fraco pelo impacto do carnaval na renda. Ação: no próximo ano, prepare antecipadamente uma promoção de fevereiro (ex: combo pré-carnaval) para suavizar a queda.",
-      "comparativo_faturamento": "Fevereiro recuou R$ 580 vs janeiro (-21%). Queda de vendas foi maior: -30%. Isso significa atendimentos menores em quantidade, mas com ticket levemente maior. Ação: 4 clientes deixaram de aparecer. Entre em contato com os que estão há mais de 3 semanas sem visita — reativação custa menos que prospectar novo cliente.",
-      "ticket_medio_servico": "O ticket médio subiu 12% mesmo com menos vendas (R$ 83,85 vs R$ 74,59). Os clientes que vieram gastaram mais por visita. Ação: mantenha a sugestão de serviços complementares no atendimento — ela está funcionando. Apenas não deixe o ritmo cair com a queda de movimento.",
-      "taxa_recorrencia": "22 clientes únicos em fevereiro vs 26 em janeiro — 4 a menos. Ação: crie uma lista no WhatsApp com os clientes que não aparecem há mais de 3 semanas e envie uma mensagem personalizada com uma oferta simples. Reconquistar um cliente existente é 5x mais barato do que atrair um novo."
+      "atividade_semana": "Sábado concentrou R$ 460 — 21% do faturamento do mês em um único dia. Quarta-feira registrou zero atendimentos pelo segundo mês seguido, confirmando um padrão, não um acidente. Os dados sugerem que há capacidade ociosa na quarta: qualquer atendimento nesse dia é receita que não existe hoje.",
+      "servicos": "Escova caiu de R$ 315 (janeiro) para R$ 180 (fevereiro) — queda de 43% em um serviço de alta frequência. A Progressiva também recuou, mas proporcionalmente menos. Quando um serviço de retorno rápido cai mais do que os de ciclo longo, geralmente indica que as clientes regulares reduziram a frequência de visita — não que pararam de vir.",
+      "formas_pagamento": "Vale tentar um desconto no PIX para reforçar mais o uso deste. Débito zerou em fevereiro — não aparece nem um registro. Nos dois meses anteriores havia algum volume. Isso pode ser ausência real de clientes nesse perfil ou uma indisponibilidade pontual da maquininha.",
+      "faturamento_mes": "Fevereiro fechou em R$ 2.180 — queda de 21% frente a janeiro. O volume de atendimentos caiu mais (30%) do que o faturamento, o que pode indicar a queda sazonal do carnaval como comentado. A queda foi de volume, não de qualidade de atendimento.",
+      "comparativo_faturamento": "Janeiro: R$ 2.760 → Fevereiro: R$ 2.180. Diferença de R$ 580 negativos. Parte expressiva dessa queda vem dos 11 atendimentos a menos provavelmente devido ao carnaval (férias) — sem eles, o faturamento estaria próximo de janeiro.",
+      "ticket_medio_servico": "Ticket médio subiu de R$ 74,59 para R$ 83,85 (+12%) mesmo com menos atendimentos. Isso é matematicamente consistente: menos clientes, mas os que vieram fizeram serviços mais caros (como Progressiva e Coloração). O mix de serviços em fevereiro foi mais concentrado em itens de alto valor.",
+      "taxa_recorrencia": "26 clientes únicos em janeiro, 22 em fevereiro — redução de 4 pessoas. Com ticket médio de R$ 84, cada cliente representa em média R$ 84–168 por mês dependendo da frequência. A queda de 4 clientes explica sozinha boa parte dos R$ 580 de diferença entre os dois meses."
     }
   },
   "março": {
     "faturamento": 4060.0,
     "vendas": 49,
     "clientes": 23,
-    "changeVendas": 88.5,
-    "changeFaturamento": 86.2,
-    "changeTicket": -1.2,
-    "changeClientes": 4.5,
+    "changeVendas": 75.0,
+    "changeFaturamento": 80.4,
+    "changeTicket": 3.1,
+    "changeClientes": -4.2,
     "servicos": [
       {
         "nome": "progressiva",
         "faturamento": 1440.0
       },
       {
-        "nome": "coloração",
+        "nome": "coloracao",
         "faturamento": 610.0
       },
       {
-        "nome": "coloração + hidratação",
+        "nome": "coloracao + hidrat",
         "faturamento": 400.0
       },
       {
@@ -249,7 +249,7 @@
         "faturamento": 340.0
       },
       {
-        "nome": "hidratação",
+        "nome": "hidratacao",
         "faturamento": 240.0
       },
       {
@@ -318,13 +318,13 @@
       }
     ],
     "insights": {
-      "atividade_semana": "Terça-feira explodiu para R$ 920 — o maior dia registrado até agora, respondendo por 23% do faturamento do mês. Segunda-feira ainda é o ponto fraco (R$ 295). Ação: agende os serviços premium (Progressiva, Coloração) prioritariamente nas terças e sextas, seus dias mais lucrativos. Reserve segundas para serviços rápidos de fidelização.",
-      "servicos": "Progressiva dobrou de valor vs fevereiro (R$ 1.440 vs R$ 720) — crescimento de 100%. A demanda por tratamentos disparou. Ação: garanta estoque suficiente de produtos para progressiva antes do mês seguinte. Ficar sem produto em dia de pico (terça ou sexta) significa perda direta de receita.",
-      "formas_pagamento": "PIX dominou com 61% (R$ 2.490) e o volume total quase dobrou. Ação: com esse nível de faturamento, considere abrir uma conta PJ. Isso facilita o controle do negócio, permite emitir nota fiscal e melhora o acesso a crédito caso precise investir no salão.",
-      "faturamento_mes": "Março foi o melhor mês até agora: R$ 4.060, crescimento de +86% vs fevereiro. Ação: identifique o que gerou esse salto — foi indicação? divulgação no Instagram? retorno de clientes antigos? Saiba a causa para poder reproduzir nos próximos meses.",
-      "comparativo_faturamento": "Crescimento de +86% em março — o maior da série histórica. Atendimentos saltaram de 26 para 49 em um único mês. Ação: anote tudo o que foi feito de diferente em março. Qualquer mudança de comportamento ou divulgação que coincidiu com esse crescimento deve ser mantida ou ampliada.",
-      "ticket_medio_servico": "Ticket médio de R$ 82,86 — levemente abaixo de fevereiro, mas com volume muito maior. Ação: com mais atendimentos, adicionar R$ 17 por visita (uma hidratação, sobrancelha ou manicure) levaria o ticket a R$ 100. Isso significa R$ 800 adicionais por mês sem precisar de nenhum cliente novo.",
-      "taxa_recorrencia": "23 clientes em março em alta constante desde fevereiro. Ação: março é o momento ideal para lançar um programa de fidelidade. Modelo simples que funciona: 'A cada 5 visitas, você ganha 1 escova grátis.' Isso incentiva retornos frequentes e aumenta o valor de vida do cliente."
+      "atividade_semana": "Terça-feira respondeu por R$ 920 — 23% do faturamento do mês em um único dia, mais que qualquer sexta ou sábado registrado até agora. Sexta (R$ 815) e sábado (R$ 795) ficam logo atrás, formando um bloco de três dias que juntos concentram 62% do faturamento. Segunda-feira (R$ 295) é o dia mais fraco da semana — 3x menos que a terça.",
+      "servicos": "Progressiva saiu de R$ 720 (fevereiro) para R$ 1.440 (março) — exatamente o dobro. Sozinha representa 35% do faturamento total do mês. Coloração também cresceu: de R$ 370 para R$ 610. Os dois serviços juntos somam R$ 2.050 — mais da metade do faturamento de março vem de apenas dois itens dos serviços oferecidos.",
+      "formas_pagamento": "PIX recebeu R$ 2.490 — 61% do total. O aumento comparado a fevereiro pode ser resultado do desconto que comentamos no mês anterior que você aplicou. Dinheiro caiu para terceiro lugar (R$ 740), ultrapassado pelo cartão de crédito (R$ 830). O crescimento do crédito é coerente com o aumento de serviços premium: Progressiva e Coloração têm ticket mais alto e é comum o cliente preferir parcelar nesses casos.",
+      "faturamento_mes": "R$ 4.060 em março — maior valor registrado na série. A variação de +86% frente a fevereiro é expressiva, mas parte dela é recuperação natural após a queda sazonal do carnaval. Comparando com janeiro (R$ 2.760), o crescimento real é de +47% — ainda assim, o melhor desempenho registrado.",
+      "comparativo_faturamento": "Fevereiro: R$ 2.180 → Março: R$ 4.060. Salto de R$ 1.880. Os atendimentos quase dobraram: de 26 para 49. O número de clientes únicos, porém, cresceu pouco — de 22 para 23. Conclusão: o crescimento veio de atendimentos por cliente, não de clientes novos. As mesmas pessoas voltaram mais vezes. Vamos continuar acompanhando.",
+      "ticket_medio_servico": "Ticket médio de R$ 82,86 — levemente abaixo de fevereiro (R$ 83,85), mas com o dobro de atendimentos. A queda é pequena e esperada: com mais volume, o mix tende a se diversificar e incluir serviços de menor valor. O dado relevante é que o ticket se manteve acima de R$ 80 mesmo escalando o volume.",
+      "taxa_recorrencia": "23 clientes únicos em março vs 22 em fevereiro — praticamente a mesma base. Com 49 atendimentos, isso equivale a uma média de 2,1 visitas por cliente no mês. Em fevereiro essa média era de 1,2. O crescimento de março foi quase inteiro puxado por frequência, não por aquisição de novos clientes."
     }
   },
   "abril": {

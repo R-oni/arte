@@ -62,3 +62,5 @@ data,servico,cliente,valor,pagamento,observacao,mes
 "sexta-feira, 27 de fevereiro de 2026",manicure + pedicure,Lucia,55,DINHEIRO,,Fevereiro
 "sábado, 28 de fevereiro de 2026",Progressiva,Patrícia,180,PIX,,Fevereiro
 "sábado, 28 de fevereiro de 2026",corte infantil,Cliente Nova,35,DINHEIRO,,Fevereiro
+"sábado, 28 de fevereiro de 2026",corte infantil,Cliente Novas,35,DINHEIRO,,Fevereiro
+"sábado, 28 de fevereiro de 2026",corte infantil,Cliente Novab,35,DINHEIRO,,Fevereiro
