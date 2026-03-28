@@ -245,7 +245,7 @@ function renderCustomCharts() {
         const insightText = generateInsight(chartConfig, chartData, chartConfig.dataSource);
         const insightEl = container.closest('.chart-mini').querySelector('.chart-insight');
         if (insightEl) {
-            insightEl.innerHTML = insightText;
+            insightEl.innerHTML = insightText.replace(/(Ação:[\s\S]*)$/, '<u>$1</u>');
         }
     });
 }
