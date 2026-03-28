@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /clientes/
+Disallow: /dashboard.html
+Disallow: /pitch.html
+
+Sitemap: https://roniricardo.com/sitemap.xml

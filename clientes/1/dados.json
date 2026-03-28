@@ -112,7 +112,9 @@
       "faturamento_mes": "Janeiro foi o mês base do ano: R$ 2.760, 37 atendimentos e ticket médio de R$ 74,59. Use esse número como referência para medir crescimento nos meses seguintes. Ação: defina uma meta de crescimento de 10% ao mês — isso levaria o salão a R$ 3.000 em fevereiro.",
       "comparativo_faturamento": "Primeiro mês registrado no sistema — sem histórico anterior para comparar. A partir de fevereiro você verá a variação mês a mês. Ação: guarde todos os CSVs mensais para construir um histórico sólido. Quanto mais meses, mais precisa fica a análise de sazonalidade.",
       "ticket_medio_servico": "Progressiva (~R$ 180) e Coloração (~R$ 120) têm os maiores tickets individuais. Esses são seus serviços âncora. Ação: monte combos como 'Progressiva + Hidratação' ou 'Coloração + Escova'. Oferecer no momento do agendamento aumenta o ticket sem esforço extra de captação.",
-      "taxa_recorrencia": "Janeiro com 26 clientes únicos é o ponto de partida para medir fidelidade. Ação: monitore quantos desses 26 retornam em fevereiro. Clientes que voltam em 30 dias têm custo de aquisição zero e são o seu ativo mais valioso."
+      "taxa_recorrencia": "Janeiro com 26 clientes únicos é o ponto de partida para medir fidelidade. Ação: monitore quantos desses 26 retornam em fevereiro. Clientes que voltam em 30 dias têm custo de aquisição zero e são o seu ativo mais valioso.",
+      "executive": "Janeiro — mês base: use R$ 2.760 e 26 clientes como referência para medir evolução.",
+      "kpi_churn": "0%"
     }
   },
   "fevereiro": {
@@ -216,7 +218,9 @@
       "faturamento_mes": "Fevereiro fechou em R$ 2.180 — queda de 21% frente a janeiro. O volume de atendimentos caiu mais (30%) do que o faturamento, o que pode indicar a queda sazonal do carnaval como comentado. A queda foi de volume, não de qualidade de atendimento.",
       "comparativo_faturamento": "Janeiro: R$ 2.760 → Fevereiro: R$ 2.180. Diferença de R$ 580 negativos. Parte expressiva dessa queda vem dos 11 atendimentos a menos provavelmente devido ao carnaval (férias) — sem eles, o faturamento estaria próximo de janeiro.",
       "ticket_medio_servico": "Ticket médio subiu de R$ 74,59 para R$ 83,85 (+12%) mesmo com menos atendimentos. Isso é matematicamente consistente: menos clientes, mas os que vieram fizeram serviços mais caros (como Progressiva e Coloração). O mix de serviços em fevereiro foi mais concentrado em itens de alto valor.",
-      "taxa_recorrencia": "26 clientes únicos em janeiro, 22 em fevereiro — redução de 4 pessoas. Com ticket médio de R$ 84, cada cliente representa em média R$ 84–168 por mês dependendo da frequência. A queda de 4 clientes explica sozinha boa parte dos R$ 580 de diferença entre os dois meses."
+      "taxa_recorrencia": "26 clientes únicos em janeiro, 22 em fevereiro — redução de 4 pessoas. Com ticket médio de R$ 84, cada cliente representa em média R$ 84–168 por mês dependendo da frequência. A queda de 4 clientes explica sozinha boa parte dos R$ 580 de diferença entre os dois meses.",
+      "executive": "Fevereiro — perda de 7.7% da base (26→24): prioridade recuperar frequência e clientes perdidos com campanha de recorrência.",
+      "kpi_churn": "7.7%"
     }
   },
   "março": {
@@ -324,7 +328,9 @@
       "faturamento_mes": "R$ 4.060 em março — maior valor registrado na série. A variação de +86% frente a fevereiro é expressiva, mas parte dela é recuperação natural após a queda sazonal do carnaval. Comparando com janeiro (R$ 2.760), o crescimento real é de +47% — ainda assim, o melhor desempenho registrado.",
       "comparativo_faturamento": "Fevereiro: R$ 2.180 → Março: R$ 4.060. Salto de R$ 1.880. Os atendimentos quase dobraram: de 26 para 49. O número de clientes únicos, porém, cresceu pouco — de 22 para 23. Conclusão: o crescimento veio de atendimentos por cliente, não de clientes novos. As mesmas pessoas voltaram mais vezes. Vamos continuar acompanhando.",
       "ticket_medio_servico": "Ticket médio de R$ 82,86 — levemente abaixo de fevereiro (R$ 83,85), mas com o dobro de atendimentos. A queda é pequena e esperada: com mais volume, o mix tende a se diversificar e incluir serviços de menor valor. O dado relevante é que o ticket se manteve acima de R$ 80 mesmo escalando o volume.",
-      "taxa_recorrencia": "23 clientes únicos em março vs 22 em fevereiro — praticamente a mesma base. Com 49 atendimentos, isso equivale a uma média de 2,1 visitas por cliente no mês. Em fevereiro essa média era de 1,2. O crescimento de março foi quase inteiro puxado por frequência, não por aquisição de novos clientes."
+      "taxa_recorrencia": "23 clientes únicos em março vs 22 em fevereiro — praticamente a mesma base. Com 49 atendimentos, isso equivale a uma média de 2,1 visitas por cliente no mês. Em fevereiro essa média era de 1,2. O crescimento de março foi quase inteiro puxado por frequência, não por aquisição de novos clientes.",
+      "executive": "Março — forte recuperação por aumento de frequência; crescimento veio das mesmas clientes visitando mais vezes, não por aquisição.",
+      "kpi_churn": "4.2%"
     }
   },
   "abril": {
@@ -432,7 +438,9 @@
       "faturamento_mes": "R$ 4.050 em abril — praticamente estável vs março (-0,2%). O salão consolidou o patamar de R$ 4.000. Ação: para romper essa barreira e crescer, é necessária uma ação ativa. Uma campanha de indicação ('traga uma amiga e ganhe 10% de desconto') pode trazer novos clientes sem custo de mídia.",
       "comparativo_faturamento": "Estabilidade total em relação a março — mesmas 49 vendas, mesmos 23 clientes, faturamento quase idêntico. Ação: estabilidade indica uma base sólida, mas crescer exige esforço. Programa de indicação, parcerias locais (ex: academia, clínica de estética próxima) ou novos serviços são os caminhos mais indicados agora.",
       "ticket_medio_servico": "Ticket médio estável há dois meses (R$ 82,65 em abril vs R$ 82,86 em março). Ação: R$ 17 separam você de um ticket médio de R$ 100. Treine a sugestão de serviços no atendimento: 'Quer aproveitar e fazer a sobrancelha também?' — simples, não invasivo, e aumenta o faturamento sem nenhum custo.",
-      "taxa_recorrencia": "Base de 23 clientes fiéis consolidada por dois meses seguidos. Ação: crie uma lista VIP no WhatsApp com esses clientes. Envie ofertas exclusivas para eles antes de abrir para o público geral. Isso aumenta a percepção de valor do salão e fortalece o vínculo com quem já é fiel."
+      "taxa_recorrencia": "Base de 23 clientes fiéis consolidada por dois meses seguidos. Ação: crie uma lista VIP no WhatsApp com esses clientes. Envie ofertas exclusivas para eles antes de abrir para o público geral. Isso aumenta a percepção de valor do salão e fortalece o vínculo com quem já é fiel.",
+      "executive": "Abril — base consolidada em R$ 4.050; prioridade: aumentar ticket por atendimento para romper o patamar.",
+      "kpi_churn": "0%"
     }
   },
   "maio": {
@@ -540,7 +548,9 @@
       "faturamento_mes": "⚠️ Dados estimados. Projeção de R$ 4.658 para maio (+15% vs abril). Ação: processe o CSV real de maio assim que disponível. Metas sugeridas para maio: superar R$ 4.500 reais em faturamento e chegar a 25+ clientes únicos.",
       "comparativo_faturamento": "⚠️ Dados estimados. Projeção de crescimento de +15% sobre abril se o ritmo de março e abril se mantiver. Ação: se o crescimento real ficar abaixo da projeção, identifique a causa — foi perda de clientes, menos serviços premium ou dias parados?",
       "ticket_medio_servico": "⚠️ Dados estimados. Projeção de ticket médio levemente abaixo de abril devido ao maior volume de atendimentos. Ação: acompanhe se o mix de serviços em maio mantém a Progressiva como âncora ou se outros serviços ganham espaço.",
-      "taxa_recorrencia": "⚠️ Dados estimados. Adicione o CSV de maio para validar a recorrência real de clientes. Ação: verifique quantos dos 23 clientes de abril retornaram em maio — essa taxa de retorno é o melhor indicador de saúde do negócio."
+      "taxa_recorrencia": "⚠️ Dados estimados. Adicione o CSV de maio para validar a recorrência real de clientes. Ação: verifique quantos dos 23 clientes de abril retornaram em maio — essa taxa de retorno é o melhor indicador de saúde do negócio.",
+      "executive": "Maio — projeções indicam crescimento; processe CSV real para validar e converter projeção em ação prioritária.",
+      "kpi_churn": "0%"
     }
   }
 }

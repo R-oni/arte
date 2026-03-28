@@ -141,6 +141,11 @@
         <div style="margin-top:0.8rem;">
             <button id="add-box-btn" style="background:#fbbf24;border:none;padding:0.45rem 0.85rem;border-radius:8px;color:#000;font-weight:700;cursor:pointer">+ Adicionar caixa</button>
         </div>
+        <!-- Audio timer controls for pitch page -->
+        <div style="margin-top:0.8rem;">
+            <button id="bi-start" style="background:#ef4444;border:none;padding:0.45rem 0.85rem;border-radius:8px;color:#fff;font-weight:700;cursor:pointer">Start Alarme</button>
+            <button id="bi-stop" style="background:#374151;border:none;padding:0.45rem 0.85rem;border-radius:8px;color:#fff;font-weight:700;cursor:pointer;margin-left:8px">Stop</button>
+        </div>
     </header>
 
     <!-- ABERTURA -->
@@ -249,8 +254,6 @@
 
         ta.addEventListener('input', () => {
             localStorage.setItem(key, ta.value);
-            // attempt to sync to remote if available
-            if (window.scheduleRemoteSave) window.scheduleRemoteSave(ta.id, ta.value);
             autosizeTextarea(ta);
             const badge = document.getElementById('badge-' + ta.id);
             if (badge) {
@@ -308,8 +311,6 @@
         renderExtraBoxes();
         // foco no novo textarea
         setTimeout(() => document.getElementById('extra-' + id)?.focus(), 50);
-        // push master array to remote if available
-        if (window.saveExtrasMaster) window.saveExtrasMaster(loadExtraBoxes());
     });
 
     // Quando qualquer extra textarea mudar, além do attach que salva o valor individual,
@@ -337,103 +338,18 @@
         });
     })();
 </script>
-<!-- Firebase real-time sync (anonymous auth + Firestore) -->
-<script type="module">
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
-import { getFirestore, doc, setDoc, updateDoc, onSnapshot, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
-import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
 
-// Firebase config provided (updated per user)
-const firebaseConfig = {
-    apiKey: "AIzaSyB-WI_nUBDmk5wljZWoLPx3ChFLT5jUt2U",
-    authDomain: "fundamentos-omom.firebaseapp.com",
-    databaseURL: "https://fundamentos-omom-default-rtdb.firebaseio.com",
-    projectId: "fundamentos-omom",
-    storageBucket: "fundamentos-omom.firebasestorage.app",
-    messagingSenderId: "402132741780",
-    appId: "1:402132741780:web:3f78aa356a12ef4ea64e81",
-    measurementId: "G-RPG1VPWZ9L"
-};
-
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-signInAnonymously(auth).catch(err => console.error('auth error', err));
-
-let db = null;
-let userDocRef = null;
-
-onAuthStateChanged(auth, async user => {
-    if (!user) return;
-    try {
-        db = getFirestore(app);
-        userDocRef = doc(db, 'pitches', user.uid);
-        await setDoc(userDocRef, { createdAt: serverTimestamp() }, { merge: true });
-
-        // subscribe to remote changes
-        onSnapshot(userDocRef, snap => {
-            const data = snap.data();
-            if (!data) return;
-
-            const fields = data.fields || {};
-            for (const [k, v] of Object.entries(fields)) {
-                const ta = document.getElementById(k);
-                if (ta && document.activeElement !== ta) {
-                    if (ta.value !== (v || '')) {
-                        ta.value = v || '';
-                        try { localStorage.setItem('pitch_' + k, v || ''); } catch(e){}
-                        if (typeof autosizeTextarea === 'function') autosizeTextarea(ta);
-                        const badge = document.getElementById('badge-' + k);
-                        if (badge) { badge.textContent = 'salvo'; badge.classList.add('flash'); setTimeout(()=>badge.classList.remove('flash'), 1200); }
-                    }
-                }
-            }
-
-            const extras = data.extras || [];
-            if (Array.isArray(extras)) {
-                try { saveExtraBoxes(extras); } catch(e){}
-                try { renderExtraBoxes(); } catch(e){}
-                // populate contents
-                extras.forEach(item => {
-                    const ta = document.getElementById('extra-' + item.id);
-                    if (ta && document.activeElement !== ta) {
-                        if (ta.value !== (item.content || '')) {
-                            ta.value = item.content || '';
-                            try { localStorage.setItem('pitch_' + ta.id, item.content || ''); } catch(e){}
-                            if (typeof autosizeTextarea === 'function') autosizeTextarea(ta);
-                            const badge = document.getElementById('badge-' + ta.id);
-                            if (badge) { badge.textContent = 'salvo'; badge.classList.add('flash'); setTimeout(()=>badge.classList.remove('flash'), 1200); }
-                        }
-                    }
-                });
-            }
-        });
-    } catch (err) {
-        console.error('firebase init error', err);
-    }
-});
-
-// debounce map
-const _pending = {};
-function scheduleRemoteSave(id, value) {
-    if (!userDocRef) return;
-    if (_pending[id]) clearTimeout(_pending[id]);
-    _pending[id] = setTimeout(async () => {
-        const fieldKey = 'fields.' + id;
-        const payload = { [fieldKey]: value || '', updatedAt: serverTimestamp() };
-        try { await updateDoc(userDocRef, payload); } catch (err) { console.error('save field', err); }
-        delete _pending[id];
-    }, 800);
-}
-
-function saveExtrasMaster(arr) {
-    if (!userDocRef) return;
-    const payload = { extras: arr.map(x => ({ id: x.id, content: x.content || '' })), updatedAt: serverTimestamp() };
-    updateDoc(userDocRef, payload).catch(err => console.error('save extras', err));
-}
-
-// expose for page script
-window.scheduleRemoteSave = scheduleRemoteSave;
-window.saveExtrasMaster = saveExtrasMaster;
+<!-- Inline audio timer script (random 3–5.5 minutes). Requires user gesture (click Start). -->
+<script>
+(function(){
+    let ctx=null; let timerId=null;
+    function initAudio(){ if(ctx) return; ctx=new (window.AudioContext||window.webkitAudioContext)(); }
+    function playBeep(durationMs=2000,gainLevel=1.5,freq=880){ if(!ctx) initAudio(); const o=ctx.createOscillator(); const g=ctx.createGain(); o.type='square'; o.frequency.value=freq; g.gain.value=gainLevel; o.connect(g); g.connect(ctx.destination); const now=ctx.currentTime; o.start(now); g.gain.setValueAtTime(gainLevel, now); g.gain.exponentialRampToValueAtTime(0.001, now + durationMs/1000); setTimeout(()=>o.stop(), durationMs+50); }
+    function randomDelayMs(){ const min=3*60*1000; const max=5.5*60*1000; return Math.floor(Math.random()*(max-min+1)+min); }
+    function scheduleNext(){ const delay=randomDelayMs(); console.log('Próximo som em (s):', Math.round(delay/1000)); timerId=setTimeout(()=>{ playBeep(2000,1.5,880); scheduleNext(); }, delay); }
+    document.getElementById('bi-start').addEventListener('click', ()=>{ initAudio(); if(timerId) clearTimeout(timerId); playBeep(500,1.2,1200); scheduleNext(); });
+    document.getElementById('bi-stop').addEventListener('click', ()=>{ if(timerId){ clearTimeout(timerId); timerId=null; console.log('Timer parado'); } });
+})();
 </script>
 </body>
 </html>
