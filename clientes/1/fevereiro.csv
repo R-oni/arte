@@ -1,0 +1,170 @@
+data,servico,cliente,valor,pagamento,observacao,mes
+2026-02-01,manicure,Sandra,35,PIX,,Fevereiro
+2026-02-01,corte,Andre,35,PIX,,Fevereiro
+2026-02-01,escova,Juliana S.,45,PIX,,Fevereiro
+2026-02-01,corte infantil,Kelly,30,PIX,,Fevereiro
+2026-02-01,sobrancelha,Debora,30,DINHEIRO,,Fevereiro
+2026-02-01,pedicure,Raquel,30,DINHEIRO,,Fevereiro
+2026-02-01,progressiva,Denise,190,PIX,,Fevereiro
+2026-02-02,manicure + pedicure,Camila,50,DINHEIRO,,Fevereiro
+2026-02-02,escova,Mariana,40,PIX,,Fevereiro
+2026-02-02,hidratacao,Renata,65,PIX,,Fevereiro
+2026-02-02,manicure + pedicure,Cliente Nova,55,PIX,,Fevereiro
+2026-02-02,coloracao + hidrat,Debora,190,PIX,,Fevereiro
+2026-02-03,corte + escova,Jessica,80,PIX,,Fevereiro
+2026-02-03,escova,Roberta,50,DINHEIRO,,Fevereiro
+2026-02-03,coloracao,Roberta,120,CREDITO,,Fevereiro
+2026-02-03,corte + escova,Beatriz,90,PIX,,Fevereiro
+2026-02-03,progressiva,Ana Paula,180,DINHEIRO,,Fevereiro
+2026-02-03,coloracao + hidrat,Helena,210,CREDITO,,Fevereiro
+2026-02-03,corte + escova,Ana,80,PIX,,Fevereiro
+2026-02-04,coloracao,Fernanda,130,PIX,,Fevereiro
+2026-02-04,coloracao,Camila,140,DINHEIRO,,Fevereiro
+2026-02-04,hidratacao,Maria,60,PIX,,Fevereiro
+2026-02-04,corte + escova,Fernanda,80,PIX,,Fevereiro
+2026-02-04,corte,Andre,35,DINHEIRO,,Fevereiro
+2026-02-04,corte,Roberto,45,PIX,,Fevereiro
+2026-02-05,hidratacao,Denise,60,PIX,,Fevereiro
+2026-02-05,corte,Michele,45,PIX,,Fevereiro
+2026-02-05,pedicure,Kelly,30,PIX,,Fevereiro
+2026-02-05,corte infantil,Cliente Nova,35,PIX,,Fevereiro
+2026-02-05,corte,Jorge,35,DINHEIRO,,Fevereiro
+2026-02-05,escova,Sandra,45,PIX,,Fevereiro
+2026-02-06,corte,Gabriela,35,DINHEIRO,,Fevereiro
+2026-02-06,escova,Larissa,45,PIX,,Fevereiro
+2026-02-06,progressiva,Tania,180,CREDITO,,Fevereiro
+2026-02-06,progressiva,Debora,180,PIX,,Fevereiro
+2026-02-06,progressiva,Lucia,180,PIX,,Fevereiro
+2026-02-06,corte infantil,Tania,35,PIX,,Fevereiro
+2026-02-07,coloracao + hidrat,Ana Paula,190,PIX,,Fevereiro
+2026-02-07,corte,Michele,45,CREDITO,,Fevereiro
+2026-02-07,progressiva,Camila,180,CREDITO,,Fevereiro
+2026-02-07,sobrancelha,Natalia,25,PIX,,Fevereiro
+2026-02-07,coloracao + hidrat,Ana Paula,190,DINHEIRO,,Fevereiro
+2026-02-07,corte,Ana,40,PIX,,Fevereiro
+2026-02-07,corte,Jorge,40,PIX,,Fevereiro
+2026-02-08,manicure + pedicure,Sandra,50,PIX,,Fevereiro
+2026-02-08,corte,Fabiana,40,CREDITO,,Fevereiro
+2026-02-08,coloracao + hidrat,Renata,200,CREDITO,,Fevereiro
+2026-02-08,corte,Helena,45,CREDITO,,Fevereiro
+2026-02-08,manicure + pedicure,Ana Paula,50,PIX,,Fevereiro
+2026-02-08,corte,Bruna,40,PIX,,Fevereiro
+2026-02-09,pedicure,Denise,30,PIX,,Fevereiro
+2026-02-09,corte + escova,Cristina,85,CREDITO,,Fevereiro
+2026-02-09,sobrancelha,Carlos,25,DINHEIRO,,Fevereiro
+2026-02-09,hidratacao,Raquel,60,DINHEIRO,,Fevereiro
+2026-02-09,manicure + pedicure,Simone,60,CREDITO,,Fevereiro
+2026-02-09,escova,Michele,50,DINHEIRO,,Fevereiro
+2026-02-10,corte + escova,Juliana S.,80,DINHEIRO,,Fevereiro
+2026-02-10,coloracao,Cristina,140,PIX,,Fevereiro
+2026-02-10,escova,Lucia,50,DINHEIRO,,Fevereiro
+2026-02-10,corte,Roberto,40,CREDITO,,Fevereiro
+2026-02-10,corte infantil,Monica,35,CREDITO,,Fevereiro
+2026-02-11,manicure + pedicure,Michele,60,CREDITO,,Fevereiro
+2026-02-11,coloracao + hidrat,Mariana,210,CREDITO,,Fevereiro
+2026-02-11,pedicure,Raquel,35,PIX,,Fevereiro
+2026-02-11,manicure + pedicure,Vanessa,50,PIX,,Fevereiro
+2026-02-11,coloracao + hidrat,Helena,210,PIX,,Fevereiro
+2026-02-11,sobrancelha,Jorge,25,CREDITO,,Fevereiro
+2026-02-11,hidratacao,Tania,55,DINHEIRO,,Fevereiro
+2026-02-12,pedicure,Jessica,35,PIX,,Fevereiro
+2026-02-12,corte + escova,Denise,90,CREDITO,,Fevereiro
+2026-02-12,corte + escova,Ana Paula,85,PIX,,Fevereiro
+2026-02-12,corte + escova,Gabriela,85,DINHEIRO,,Fevereiro
+2026-02-12,coloracao,Michele,130,PIX,,Fevereiro
+2026-02-13,progressiva,Raquel,190,PIX,,Fevereiro
+2026-02-13,corte infantil,Roberto,30,PIX,,Fevereiro
+2026-02-13,coloracao + hidrat,Kelly,190,DINHEIRO,,Fevereiro
+2026-02-13,sobrancelha,Carlos,25,PIX,,Fevereiro
+2026-02-13,pedicure,Lucia,30,DINHEIRO,,Fevereiro
+2026-02-13,hidratacao,Bruna,65,PIX,,Fevereiro
+2026-02-13,coloracao + hidrat,Simone,190,DINHEIRO,,Fevereiro
+2026-02-14,corte + escova,Simone,80,CREDITO,,Fevereiro
+2026-02-14,progressiva,Carla,170,DINHEIRO,,Fevereiro
+2026-02-14,corte,Camila,40,DINHEIRO,,Fevereiro
+2026-02-14,corte infantil,Andre,35,PIX,,Fevereiro
+2026-02-14,progressiva,Fabiana,180,PIX,,Fevereiro
+2026-02-14,corte + escova,Beatriz,80,PIX,,Fevereiro
+2026-02-15,corte infantil,Kelly,30,PIX,,Fevereiro
+2026-02-15,corte,Tania,45,CREDITO,,Fevereiro
+2026-02-15,corte infantil,Andre,35,PIX,,Fevereiro
+2026-02-15,manicure + pedicure,Larissa,50,DINHEIRO,,Fevereiro
+2026-02-15,corte + escova,Vanessa,85,PIX,,Fevereiro
+2026-02-15,corte + escova,Elaine,90,PIX,,Fevereiro
+2026-02-15,progressiva,Ana Paula,180,PIX,,Fevereiro
+2026-02-16,corte infantil,Roberto,30,DINHEIRO,,Fevereiro
+2026-02-16,escova,Debora,50,DINHEIRO,,Fevereiro
+2026-02-16,corte,Carlos,40,PIX,,Fevereiro
+2026-02-16,pedicure,Raquel,35,PIX,,Fevereiro
+2026-02-16,corte,Tania,40,PIX,,Fevereiro
+2026-02-17,corte,Jorge,40,PIX,,Fevereiro
+2026-02-17,coloracao + hidrat,Cliente Nova,210,PIX,,Fevereiro
+2026-02-17,corte,Carlos,35,PIX,,Fevereiro
+2026-02-17,corte infantil,Paulo,30,DINHEIRO,,Fevereiro
+2026-02-17,sobrancelha,Jorge,25,PIX,,Fevereiro
+2026-02-18,progressiva,Kelly,180,DINHEIRO,,Fevereiro
+2026-02-18,coloracao + hidrat,Monica,210,DINHEIRO,,Fevereiro
+2026-02-18,coloracao,Patricia,140,PIX,,Fevereiro
+2026-02-18,corte infantil,Cliente Nova,30,DINHEIRO,,Fevereiro
+2026-02-18,coloracao,Bruna,140,DINHEIRO,,Fevereiro
+2026-02-18,corte,Carlos,40,DINHEIRO,,Fevereiro
+2026-02-19,coloracao,Fernanda,130,PIX,,Fevereiro
+2026-02-19,pedicure,Lucia,30,DINHEIRO,,Fevereiro
+2026-02-19,progressiva,Raquel,170,PIX,,Fevereiro
+2026-02-19,hidratacao,Patricia,65,CREDITO,,Fevereiro
+2026-02-19,coloracao,Fabiana,130,CREDITO,,Fevereiro
+2026-02-20,manicure,Denise,35,CREDITO,,Fevereiro
+2026-02-20,progressiva,Natalia,190,PIX,,Fevereiro
+2026-02-20,coloracao,Larissa,140,PIX,,Fevereiro
+2026-02-20,corte infantil,Andre,30,PIX,,Fevereiro
+2026-02-20,hidratacao,Denise,60,PIX,,Fevereiro
+2026-02-21,coloracao + hidrat,Elaine,210,DINHEIRO,,Fevereiro
+2026-02-21,manicure + pedicure,Fernanda,60,PIX,,Fevereiro
+2026-02-21,manicure + pedicure,Vanessa,50,PIX,,Fevereiro
+2026-02-21,corte + escova,Raquel,90,PIX,,Fevereiro
+2026-02-21,corte,Paulo,45,PIX,,Fevereiro
+2026-02-21,progressiva,Priscila,180,PIX,,Fevereiro
+2026-02-22,manicure + pedicure,Larissa,55,PIX,,Fevereiro
+2026-02-22,corte infantil,Carlos,35,PIX,,Fevereiro
+2026-02-22,manicure + pedicure,Debora,60,PIX,,Fevereiro
+2026-02-22,coloracao,Jessica,130,PIX,,Fevereiro
+2026-02-22,pedicure,Tania,30,CREDITO,,Fevereiro
+2026-02-23,corte infantil,Larissa,35,PIX,,Fevereiro
+2026-02-23,pedicure,Sandra,35,PIX,,Fevereiro
+2026-02-23,coloracao,Priscila,120,CREDITO,,Fevereiro
+2026-02-23,escova,Fernanda,45,CREDITO,,Fevereiro
+2026-02-23,escova,Renata,40,PIX,,Fevereiro
+2026-02-23,hidratacao,Juliana S.,65,DINHEIRO,,Fevereiro
+2026-02-23,hidratacao,Debora,55,DINHEIRO,,Fevereiro
+2026-02-24,sobrancelha,Bruna,25,PIX,,Fevereiro
+2026-02-24,coloracao,Isabela,120,DINHEIRO,,Fevereiro
+2026-02-24,corte infantil,Andre,30,PIX,,Fevereiro
+2026-02-24,sobrancelha,Kelly,30,DINHEIRO,,Fevereiro
+2026-02-24,coloracao,Fabiana,140,PIX,,Fevereiro
+2026-02-24,corte + escova,Monica,90,DINHEIRO,,Fevereiro
+2026-02-24,progressiva,Sandra,190,PIX,,Fevereiro
+2026-02-25,hidratacao,Maria,55,PIX,,Fevereiro
+2026-02-25,pedicure,Patricia,30,PIX,,Fevereiro
+2026-02-25,corte,Roberto,40,CREDITO,,Fevereiro
+2026-02-25,coloracao,Tania,120,DINHEIRO,,Fevereiro
+2026-02-25,coloracao + hidrat,Jessica,190,DINHEIRO,,Fevereiro
+2026-02-25,hidratacao,Roberta,65,CREDITO,,Fevereiro
+2026-02-25,corte,Paulo,45,PIX,,Fevereiro
+2026-02-26,corte,Paulo,40,CREDITO,,Fevereiro
+2026-02-26,corte + escova,Debora,80,DINHEIRO,,Fevereiro
+2026-02-26,corte + escova,Renata,85,DINHEIRO,,Fevereiro
+2026-02-26,escova,Ana Paula,45,DINHEIRO,,Fevereiro
+2026-02-26,hidratacao,Larissa,65,DINHEIRO,,Fevereiro
+2026-02-26,corte,Tania,45,CREDITO,,Fevereiro
+2026-02-26,coloracao + hidrat,Carla,190,DINHEIRO,,Fevereiro
+2026-02-27,corte infantil,Priscila,30,PIX,,Fevereiro
+2026-02-27,escova,Raquel,50,DINHEIRO,,Fevereiro
+2026-02-27,coloracao,Raquel,120,CREDITO,,Fevereiro
+2026-02-27,sobrancelha,Gabriela,25,PIX,,Fevereiro
+2026-02-27,corte,Andre,45,PIX,,Fevereiro
+2026-02-27,manicure,Patricia,30,PIX,,Fevereiro
+2026-02-28,manicure,Michele,35,CREDITO,,Fevereiro
+2026-02-28,corte + escova,Camila,80,CREDITO,,Fevereiro
+2026-02-28,progressiva,Michele,190,PIX,,Fevereiro
+2026-02-28,corte,Raquel,40,CREDITO,,Fevereiro
+2026-02-28,sobrancelha,Jorge,25,PIX,,Fevereiro

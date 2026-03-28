@@ -18,14 +18,17 @@ DADOS_JSON = SCRIPT_DIR / "dados.json"
 def processar_cliente():
     """Processa todos os CSVs do cliente"""
     
-    # Encontrar CSVs na pasta atual
-    csv_files = list(SCRIPT_DIR.glob("*.csv"))
+    # Encontrar CSVs na pasta atual (excluir despesas)
+    csv_files = [f for f in SCRIPT_DIR.glob("*.csv") if not f.name.startswith("despesas")]
+    despesas_files = list(SCRIPT_DIR.glob("despesas*.csv"))
     
     if not csv_files:
         print(f"[ERRO] Nenhum arquivo CSV encontrado em {SCRIPT_DIR}")
         return
     
-    print(f"[INFO] Encontrados {len(csv_files)} arquivo(s) CSV")
+    print(f"[INFO] Encontrados {len(csv_files)} arquivo(s) CSV de vendas")
+    if despesas_files:
+        print(f"[INFO] Encontrados {len(despesas_files)} arquivo(s) CSV de despesas")
     
     # Mapeamento de meses
     mes_map = {
@@ -248,6 +251,51 @@ def processar_cliente():
                     dados_mes['insights'] = dados_anteriores[mes]['insights']
         except Exception:
             pass
+
+    # Processar despesas
+    if despesas_files:
+        df_despesas = pd.DataFrame()
+        for csv_path in despesas_files:
+            print(f"[LENDO DESPESAS] {csv_path.name}")
+            df = pd.read_csv(csv_path)
+            df_despesas = pd.concat([df_despesas, df], ignore_index=True)
+
+        for idx, row in df_despesas.iterrows():
+            mes_raw = row.get('mes')
+            if not mes_raw:
+                continue
+            mes_chave = mes_map.get(mes_raw, str(mes_raw).lower())
+            if mes_chave not in dados_dashboard:
+                continue
+            categoria = str(row.get('categoria', 'Outros')).strip()
+            valor = float(row.get('valor', 0))
+            if 'despesas_agg' not in dados_dashboard[mes_chave]:
+                dados_dashboard[mes_chave]['despesas_agg'] = defaultdict(float)
+            dados_dashboard[mes_chave]['despesas_agg'][categoria] += valor
+
+        for mes_chave, dados_mes in dados_dashboard.items():
+            agg = dados_mes.pop('despesas_agg', None)
+            if agg:
+                despesas_sorted = sorted(agg.items(), key=lambda x: x[1], reverse=True)
+                dados_mes['despesas'] = [
+                    {'categoria': cat, 'valor': round(val, 2)} for cat, val in despesas_sorted
+                ]
+                dados_mes['total_despesas'] = round(sum(agg.values()), 2)
+                print(f"  [{mes_chave.upper()}] Despesas: R$ {dados_mes['total_despesas']:.2f}")
+
+    # Calcular changeLucro
+    ordem_meses = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho',
+                   'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro']
+    meses_com_dados = [m for m in ordem_meses if m in dados_dashboard]
+    for i, mes_chave in enumerate(meses_com_dados):
+        dm = dados_dashboard[mes_chave]
+        lucro_atual = dm['faturamento'] - dm.get('total_despesas', 0)
+        if i == 0:
+            dm['changeLucro'] = 0
+        else:
+            dm_ant = dados_dashboard[meses_com_dados[i-1]]
+            lucro_ant = dm_ant['faturamento'] - dm_ant.get('total_despesas', 0)
+            dm['changeLucro'] = round(((lucro_atual - lucro_ant) / lucro_ant * 100) if lucro_ant > 0 else 0, 1)
 
     # Salvar JSON
     with open(DADOS_JSON, 'w', encoding='utf-8') as f:

@@ -1,108 +1,104 @@
 {
   "janeiro": {
-    "faturamento": 2760.0,
-    "vendas": 37,
-    "clientes": 26,
+    "faturamento": 15420.0,
+    "vendas": 194,
+    "clientes": 51,
     "changeVendas": 0,
     "changeFaturamento": 0,
     "changeTicket": 0,
     "changeClientes": 0,
     "servicos": [
       {
-        "nome": "Progressiva",
-        "faturamento": 890.0
+        "nome": "coloracao + hidrat",
+        "faturamento": 4030.0
       },
       {
-        "nome": "Coloração",
-        "faturamento": 370.0
+        "nome": "coloracao",
+        "faturamento": 2630.0
       },
       {
-        "nome": "escova",
-        "faturamento": 315.0
+        "nome": "progressiva",
+        "faturamento": 2360.0
       },
       {
-        "nome": "Corte + escova",
-        "faturamento": 255.0
-      },
-      {
-        "nome": "coloração + hidrat",
-        "faturamento": 200.0
-      },
-      {
-        "nome": "hidratação",
-        "faturamento": 180.0
+        "nome": "corte + escova",
+        "faturamento": 2025.0
       },
       {
         "nome": "corte",
-        "faturamento": 120.0
-      },
-      {
-        "nome": "manicure + pedicure",
-        "faturamento": 110.0
-      },
-      {
-        "nome": "manicure",
-        "faturamento": 90.0
-      },
-      {
-        "nome": "sobrancelha",
-        "faturamento": 75.0
+        "faturamento": 1340.0
       },
       {
         "nome": "corte infantil",
-        "faturamento": 70.0
+        "faturamento": 670.0
       },
       {
-        "nome": "corte + barba",
-        "faturamento": 50.0
+        "nome": "sobrancelha",
+        "faturamento": 505.0
+      },
+      {
+        "nome": "manicure + pedicure",
+        "faturamento": 485.0
+      },
+      {
+        "nome": "hidratacao",
+        "faturamento": 415.0
+      },
+      {
+        "nome": "escova",
+        "faturamento": 355.0
+      },
+      {
+        "nome": "manicure",
+        "faturamento": 320.0
       },
       {
         "nome": "pedicure",
-        "faturamento": 35.0
+        "faturamento": 285.0
       }
     ],
     "formas_pagamento": [
       {
         "nome": "PIX",
-        "valor": 1440.0
-      },
-      {
-        "nome": "CREDITO",
-        "valor": 600.0
+        "valor": 6520.0
       },
       {
         "nome": "DINHEIRO",
-        "valor": 540.0
+        "valor": 5375.0
       },
       {
-        "nome": "DEBITO",
-        "valor": 180.0
+        "nome": "CREDITO",
+        "valor": 3525.0
       }
     ],
     "atividade_semana": [
       {
         "nome": "Segunda",
-        "faturamento": 300.0
+        "faturamento": 1615.0
       },
       {
         "nome": "Terça",
-        "faturamento": 390.0
+        "faturamento": 2065.0
+      },
+      {
+        "nome": "Quarta",
+        "faturamento": 2355.0
       },
       {
         "nome": "Quinta",
-        "faturamento": 460.0
+        "faturamento": 2385.0
       },
       {
         "nome": "Sexta",
-        "faturamento": 695.0
+        "faturamento": 2360.0
       },
       {
         "nome": "Sábado",
-        "faturamento": 535.0
+        "faturamento": 2660.0
       },
       {
         "nome": "Domingo",
-        "faturamento": 380.0
+        "faturamento": 1980.0
       }
     ],
     "insights": {
@@ -113,322 +109,460 @@
       "comparativo_faturamento": "Primeiro mês registrado no sistema — sem histórico anterior para comparar. A partir de fevereiro você verá a variação mês a mês. Ação: guarde todos os CSVs mensais para construir um histórico sólido. Quanto mais meses, mais precisa fica a análise de sazonalidade.",
       "ticket_medio_servico": "Progressiva (~R$ 180) e Coloração (~R$ 120) têm os maiores tickets individuais. Esses são seus serviços âncora. Ação: monte combos como 'Progressiva + Hidratação' ou 'Coloração + Escova'. Oferecer no momento do agendamento aumenta o ticket sem esforço extra de captação.",
       "taxa_recorrencia": "Janeiro com 26 clientes únicos é o ponto de partida para medir fidelidade. Ação: monitore quantos desses 26 retornam em fevereiro. Clientes que voltam em 30 dias têm custo de aquisição zero e são o seu ativo mais valioso.",
+      "despesas_categoria": "Aluguel consome 44% das despesas (R$ 800 de R$ 1.818). Produtos somam 18%. Ação: negocie o aluguel — em studios compartilhados, dividir o espaço pode cortar essa linha pela metade.",
+      "resultado_mensal": "Lucro de R$ 942 (margem de 34%). Custos fixos (aluguel + internet + contador) somam R$ 1.110 — 61% das despesas totais. Ação: quando o faturamento cresce, esses custos ficam diluídos. A meta é manter variáveis proporcionais e crescer receita.",
       "executive": "Janeiro — mês base: use R$ 2.760 e 26 clientes como referência para medir evolução.",
       "kpi_churn": "0%"
-    }
+    },
+    "despesas": [
+      {
+        "categoria": "Comissões",
+        "valor": 4850.0
+      },
+      {
+        "categoria": "Aluguel",
+        "valor": 800.0
+      },
+      {
+        "categoria": "Produtos",
+        "valor": 320.0
+      },
+      {
+        "categoria": "Energia",
+        "valor": 245.0
+      },
+      {
+        "categoria": "Contador",
+        "valor": 200.0
+      },
+      {
+        "categoria": "Internet",
+        "valor": 110.0
+      },
+      {
+        "categoria": "Água",
+        "valor": 88.0
+      },
+      {
+        "categoria": "Material descartável",
+        "valor": 55.0
+      }
+    ],
+    "total_despesas": 6668.0,
+    "changeLucro": 0
   },
   "fevereiro": {
-    "faturamento": 2250.0,
-    "vendas": 28,
-    "clientes": 24,
-    "changeVendas": -24.3,
-    "changeFaturamento": -18.5,
-    "changeTicket": 7.7,
-    "changeClientes": -7.7,
-    "servicos": [
-      {
-        "nome": "Progressiva",
-        "faturamento": 720.0
-      },
-      {
-        "nome": "Coloração",
-        "faturamento": 370.0
-      },
-      {
-        "nome": "Corte + escova",
-        "faturamento": 255.0
-      },
-      {
-        "nome": "coloração + hidrat",
-        "faturamento": 200.0
-      },
-      {
-        "nome": "escova",
-        "faturamento": 180.0
-      },
-      {
-        "nome": "hidratação",
-        "faturamento": 120.0
-      },
-      {
-        "nome": "manicure + pedicure",
-        "faturamento": 110.0
-      },
-      {
-        "nome": "corte infantil",
-        "faturamento": 105.0
-      },
-      {
-        "nome": "corte",
-        "faturamento": 80.0
-      },
-      {
-        "nome": "manicure",
-        "faturamento": 60.0
-      },
-      {
-        "nome": "sobrancelha",
-        "faturamento": 50.0
-      }
-    ],
-    "formas_pagamento": [
-      {
-        "nome": "PIX",
-        "valor": 1275.0
-      },
-      {
-        "nome": "CREDITO",
-        "valor": 535.0
-      },
-      {
-        "nome": "DINHEIRO",
-        "valor": 440.0
-      }
-    ],
-    "atividade_semana": [
-      {
-        "nome": "Segunda",
-        "faturamento": 260.0
-      },
-      {
-        "nome": "Terça",
-        "faturamento": 335.0
-      },
-      {
-        "nome": "Quinta",
-        "faturamento": 395.0
-      },
-      {
-        "nome": "Sexta",
-        "faturamento": 335.0
-      },
-      {
-        "nome": "Sábado",
-        "faturamento": 530.0
-      },
-      {
-        "nome": "Domingo",
-        "faturamento": 395.0
-      }
-    ],
-    "insights": {
-      "atividade_semana": "Sábado liderou com R$ 530 (24% do mês). Quarta zerou pelo 2º mês seguido. Ação: teste uma promoção exclusiva de quarta-feira — até 2 atendimentos extras já geram ~R$ 160/mês de receita nova.",
-      "servicos": "Progressiva segue líder (R$ 720, 32%), mas caiu 19% vs janeiro. Escova recuou 43% (R$ 315 → R$ 180). Ação: ofereça combo 'Escova + Hidratação' com desconto leve para recuperar a frequência desse serviço rápido.",
-      "formas_pagamento": "PIX domina com 57% (R$ 1.275). Débito zerou — verifique se a maquininha ficou indisponível. Ação: considere desconto de 3–5% no PIX para reforçar essa tendência e melhorar o fluxo de caixa.",
-      "faturamento_mes": "R$ 2.250 (−18,5% vs jan). Vendas caíram mais que faturamento (−24%), mas ticket subiu 7,7%. Ação: queda sazonal esperada (carnaval) — foque em manter clientes fiéis com follow-up no WhatsApp.",
-      "comparativo_faturamento": "Jan R$ 2.760 → Fev R$ 2.250 (−R$ 510). Atendimentos: 37 → 28. Ação: identifique quais clientes de janeiro não voltaram e envie mensagem personalizada oferecendo agendamento.",
-      "ticket_medio_servico": "Ticket subiu para R$ 80,36 (+7,7%) mesmo com menos volume — quem veio fez serviços mais caros. Ação: sugira complementos no agendamento: 'Já que vai fazer coloração, quer adicionar hidratação por +R$ 30?'",
-      "taxa_recorrencia": "24 clientes únicos vs 26 em janeiro — 2 não retornaram. Média de 1,2 visitas/cliente. Ação: crie um lembrete no WhatsApp para clientes que não aparecem há 30 dias.",
-      "executive": "Fevereiro — perda de 7.7% da base (26→24): prioridade recuperar frequência e clientes perdidos com campanha de recorrência.",
-      "kpi_churn": "7.7%"
-    }
-  },
-  "março": {
-    "faturamento": 4060.0,
-    "vendas": 49,
-    "clientes": 23,
-    "changeVendas": 75.0,
-    "changeFaturamento": 80.4,
-    "changeTicket": 3.1,
-    "changeClientes": -4.2,
+    "faturamento": 13665.0,
+    "vendas": 169,
+    "clientes": 40,
+    "changeVendas": -12.9,
+    "changeFaturamento": -11.4,
+    "changeTicket": 1.7,
+    "changeClientes": -21.6,
     "servicos": [
       {
         "nome": "progressiva",
-        "faturamento": 1440.0
-      },
-      {
-        "nome": "coloracao",
-        "faturamento": 610.0
+        "faturamento": 2910.0
       },
       {
         "nome": "coloracao + hidrat",
-        "faturamento": 400.0
+        "faturamento": 2790.0
       },
       {
-        "nome": "escova",
-        "faturamento": 360.0
+        "nome": "coloracao",
+        "faturamento": 2090.0
       },
       {
         "nome": "corte + escova",
-        "faturamento": 340.0
-      },
-      {
-        "nome": "hidratacao",
-        "faturamento": 240.0
-      },
-      {
-        "nome": "manicure + pedicure",
-        "faturamento": 220.0
+        "faturamento": 1515.0
       },
       {
         "nome": "corte",
-        "faturamento": 160.0
+        "faturamento": 1100.0
       },
       {
-        "nome": "manicure",
-        "faturamento": 120.0
-      },
-      {
-        "nome": "sobrancelha",
-        "faturamento": 100.0
-      },
-      {
-        "nome": "corte infantil",
-        "faturamento": 70.0
-      }
-    ],
-    "formas_pagamento": [
-      {
-        "nome": "PIX",
-        "valor": 2490.0
-      },
-      {
-        "nome": "CREDITO",
-        "valor": 830.0
-      },
-      {
-        "nome": "DINHEIRO",
-        "valor": 740.0
-      }
-    ],
-    "atividade_semana": [
-      {
-        "nome": "Segunda",
-        "faturamento": 295.0
-      },
-      {
-        "nome": "Terça",
-        "faturamento": 920.0
-      },
-      {
-        "nome": "Quarta",
-        "faturamento": 310.0
-      },
-      {
-        "nome": "Quinta",
-        "faturamento": 395.0
-      },
-      {
-        "nome": "Sexta",
-        "faturamento": 815.0
-      },
-      {
-        "nome": "Sábado",
+        "nome": "hidratacao",
         "faturamento": 795.0
       },
       {
-        "nome": "Domingo",
-        "faturamento": 530.0
-      }
-    ],
-    "insights": {
-      "atividade_semana": "Terça surpreendeu: R$ 920 (23% do mês), superando sexta (R$ 815) e sábado (R$ 795). Segunda é o mais fraco (R$ 295). Ação: reforce a agenda de terça com mais horários e crie uma oferta para segunda atrair fluxo.",
-      "servicos": "Progressiva dobrou: R$ 720 → R$ 1.440 (35% do total). Coloração subiu de R$ 370 → R$ 610. Juntos = R$ 2.050. Ação: ofereça combo 'Progressiva + Hidratação' — aumenta o ticket e protege o cabelo da cliente.",
-      "formas_pagamento": "PIX com 61% (R$ 2.490). Crédito ultrapassou dinheiro (R$ 830 vs R$ 740). Ação: mantenha crédito ativo — clientes de serviços premium preferem parcelar.",
-      "faturamento_mes": "R$ 4.060 — recorde. +80% vs fevereiro, +47% vs janeiro. 49 atendimentos, 23 clientes. Ação: defina R$ 4.000 como novo piso e busque R$ 4.500 em abril ampliando a base.",
-      "comparativo_faturamento": "Fev R$ 2.250 → Mar R$ 4.060 (+R$ 1.810). Vendas quase dobraram (28 → 49), mas clientes subiram pouco (24 → 23). Crescimento veio de frequência. Ação: invista em captar novos clientes — indicação com desconto é o caminho mais barato.",
-      "ticket_medio_servico": "Ticket de R$ 82,86 — estável vs fevereiro mesmo com o dobro de volume. Ação: para subir, sugira um serviço adicional em cada visita: sobrancelha, hidratação ou manicure como complemento.",
-      "taxa_recorrencia": "23 clientes, 49 atendimentos = 2,1 visitas/cliente (vs 1,2 em fev). A base frequenta mais. Ação: premie as mais fiéis com cartão de fidelidade simples ('a cada 5 visitas, 1 escova grátis').",
-      "executive": "Março — forte recuperação por aumento de frequência; crescimento veio das mesmas clientes visitando mais vezes, não por aquisição.",
-      "kpi_churn": "4.2%"
-    }
-  },
-  "abril": {
-    "faturamento": 4050.0,
-    "vendas": 49,
-    "clientes": 23,
-    "changeVendas": 0.0,
-    "changeFaturamento": -0.2,
-    "changeTicket": -0.2,
-    "changeClientes": 0.0,
-    "servicos": [
-      {
-        "nome": "progressiva",
-        "faturamento": 1430.0
-      },
-      {
-        "nome": "coloracao",
-        "faturamento": 620.0
-      },
-      {
-        "nome": "coloracao + hidrat",
-        "faturamento": 390.0
+        "nome": "manicure + pedicure",
+        "faturamento": 650.0
       },
       {
         "nome": "escova",
-        "faturamento": 360.0
-      },
-      {
-        "nome": "corte + escova",
-        "faturamento": 340.0
-      },
-      {
-        "nome": "hidratacao",
-        "faturamento": 240.0
-      },
-      {
-        "nome": "manicure + pedicure",
-        "faturamento": 220.0
-      },
-      {
-        "nome": "corte",
-        "faturamento": 160.0
-      },
-      {
-        "nome": "manicure",
-        "faturamento": 120.0
-      },
-      {
-        "nome": "sobrancelha",
-        "faturamento": 100.0
+        "faturamento": 555.0
       },
       {
         "nome": "corte infantil",
-        "faturamento": 70.0
+        "faturamento": 515.0
+      },
+      {
+        "nome": "pedicure",
+        "faturamento": 350.0
+      },
+      {
+        "nome": "sobrancelha",
+        "faturamento": 260.0
+      },
+      {
+        "nome": "manicure",
+        "faturamento": 135.0
       }
     ],
     "formas_pagamento": [
       {
         "nome": "PIX",
-        "valor": 2540.0
-      },
-      {
-        "nome": "CREDITO",
-        "valor": 770.0
+        "valor": 7040.0
       },
       {
         "nome": "DINHEIRO",
-        "valor": 740.0
+        "valor": 3985.0
+      },
+      {
+        "nome": "CREDITO",
+        "valor": 2640.0
       }
     ],
     "atividade_semana": [
       {
         "nome": "Segunda",
-        "faturamento": 480.0
+        "faturamento": 2445.0
       },
       {
         "nome": "Terça",
-        "faturamento": 835.0
+        "faturamento": 1620.0
       },
       {
         "nome": "Quarta",
-        "faturamento": 640.0
+        "faturamento": 2020.0
       },
       {
         "nome": "Quinta",
-        "faturamento": 495.0
+        "faturamento": 2275.0
       },
       {
         "nome": "Sexta",
-        "faturamento": 660.0
+        "faturamento": 2215.0
       },
       {
         "nome": "Sábado",
-        "faturamento": 480.0
+        "faturamento": 1840.0
       },
       {
         "nome": "Domingo",
-        "faturamento": 460.0
+        "faturamento": 1250.0
+      }
+    ],
+    "insights": {
+      "atividade_semana": "Segunda liderou o mes com R$ 2.445 (18% do total). Domingo foi o mais fraco (R$ 1.250 - 9%). Ação: ofereça promoção de domingo para aproveitar a capacidade ociosa — ate 3 atendimentos extras ja somam ~R$ 240.",
+      "servicos": "Progressiva lidera com R$ 2.910 (21% do faturamento), seguida de coloracao+hidrat (R$ 2.790, 20%). Os dois serviços juntos respondem por 41% da receita. Ação: na hora do agendamento da progressiva, ofereça a hidratacao como complemento — quem ja gasta R$ 180 tende a aceitar mais R$ 55.",
+      "formas_pagamento": "PIX domina com 51% (R$ 7.040). Dinheiro com 29% (R$ 3.985) indica boa liquidez imediata. Ação: incentive o PIX com desconto de 3% — reduz o troco, agiliza o caixa e protege o fluxo.",
+      "faturamento_mes": "R$ 13.665 (−11,4% vs janeiro). Clientes cairam 21,6% mas ticket subiu 1,7% — quem veio fez servicos de valor. Ação: fevereiro tem carnaval e menos dias uteis; planeje atendimentos de reativacao logo na 1a semana de marco.",
+      "comparativo_faturamento": "Jan R$ 15.420 → Fev R$ 13.665 (−R$ 1.755, −11,4%). Queda sazonal esperada. Vamos continuar acompanhando. Ação: identifique os 11 clientes que nao voltaram de janeiro — uma mensagem direta no WhatsApp pode reativar ao menos metade.",
+      "ticket_medio_servico": "Ticket medio de R$ 80,86 (+1,7% vs jan). Servicos premium sustentaram o ticket mesmo com menos publico. Ação: sugira hidratacao como add-on na progressiva — R$ 55 extras por cliente eleva o ticket para R$ 135 sem nenhum custo de captacao.",
+      "taxa_recorrencia": "40 clientes unicos em fevereiro vs 51 em janeiro — queda de 21,6%. Ação: crie um lembrete no WhatsApp para clientes ausentes ha 3 semanas. Custo zero, resultado direto em reativacao.",
+      "despesas_categoria": "Comissoes dominam com R$ 4.480 (71% das despesas totais de R$ 6.272). Aluguel R$ 800 (13%). Ação: comissao variavel proteges em meses fracos — mas monitore a margem bruta (receita menos comissoes) para que fique acima de 45%.",
+      "resultado_mensal": "Lucro de R$ 7.393 (margem 54%). Queda de 15,5% vs janeiro, mas margem saudavel mesmo no mes fraco. Ação: foque em recuperar a base de clientes para voltar aos R$ 8.000+ de lucro mensais.",
+      "executive": "Fevereiro — queda de 21,6% na base de clientes (51→40): prioridade reativar clientes perdidos com campanha de retorno no WhatsApp.",
+      "kpi_churn": "21.6%"
+    },
+    "despesas": [
+      {
+        "categoria": "Comissões",
+        "valor": 4480.0
+      },
+      {
+        "categoria": "Aluguel",
+        "valor": 800.0
+      },
+      {
+        "categoria": "Produtos",
+        "valor": 260.0
+      },
+      {
+        "categoria": "Energia",
+        "valor": 215.0
+      },
+      {
+        "categoria": "Contador",
+        "valor": 200.0
+      },
+      {
+        "categoria": "Internet",
+        "valor": 110.0
+      },
+      {
+        "categoria": "Água",
+        "valor": 82.0
+      },
+      {
+        "categoria": "Marketing",
+        "valor": 80.0
+      },
+      {
+        "categoria": "Material descartável",
+        "valor": 45.0
+      }
+    ],
+    "total_despesas": 6272.0,
+    "changeLucro": -15.5
+  },
+  "março": {
+    "faturamento": 15435.0,
+    "vendas": 203,
+    "clientes": 51,
+    "changeVendas": 20.1,
+    "changeFaturamento": 13.0,
+    "changeTicket": -6.0,
+    "changeClientes": 27.5,
+    "servicos": [
+      {
+        "nome": "coloracao + hidrat",
+        "faturamento": 3430.0
+      },
+      {
+        "nome": "progressiva",
+        "faturamento": 2880.0
+      },
+      {
+        "nome": "coloracao",
+        "faturamento": 2060.0
+      },
+      {
+        "nome": "manicure + pedicure",
+        "faturamento": 1470.0
+      },
+      {
+        "nome": "corte",
+        "faturamento": 1190.0
+      },
+      {
+        "nome": "corte + escova",
+        "faturamento": 1175.0
+      },
+      {
+        "nome": "hidratacao",
+        "faturamento": 970.0
+      },
+      {
+        "nome": "escova",
+        "faturamento": 580.0
+      },
+      {
+        "nome": "sobrancelha",
+        "faturamento": 505.0
+      },
+      {
+        "nome": "manicure",
+        "faturamento": 420.0
+      },
+      {
+        "nome": "pedicure",
+        "faturamento": 395.0
+      },
+      {
+        "nome": "corte infantil",
+        "faturamento": 360.0
+      }
+    ],
+    "formas_pagamento": [
+      {
+        "nome": "PIX",
+        "valor": 7780.0
+      },
+      {
+        "nome": "DINHEIRO",
+        "valor": 5120.0
+      },
+      {
+        "nome": "CREDITO",
+        "valor": 2535.0
+      }
+    ],
+    "atividade_semana": [
+      {
+        "nome": "Segunda",
+        "faturamento": 2245.0
+      },
+      {
+        "nome": "Terça",
+        "faturamento": 1955.0
+      },
+      {
+        "nome": "Quarta",
+        "faturamento": 1455.0
+      },
+      {
+        "nome": "Quinta",
+        "faturamento": 2070.0
+      },
+      {
+        "nome": "Sexta",
+        "faturamento": 2415.0
+      },
+      {
+        "nome": "Sábado",
+        "faturamento": 2880.0
+      },
+      {
+        "nome": "Domingo",
+        "faturamento": 2415.0
+      }
+    ],
+    "insights": {
+      "atividade_semana": "Sabado liderou com R$ 2.880 (19% do mes). Quarta foi o dia mais fraco (R$ 1.455 — 9%). Sexta e domingo empatados em R$ 2.415. Ação: reforce a agenda de quarta — 2 progressivas extras trazem R$ 360/semana de receita adicional.",
+      "servicos": "Coloracao+hidrat assumiu a liderança: R$ 3.430 (22% do total). Progressiva em 2o com R$ 2.880 (19%). Manicure+pedicure cresceu para R$ 1.470. Ação: o crescimento de combos mostra que clientes aceitam pacotes — expanda a sugestao para progressiva+hidrat e corte+escova.",
+      "formas_pagamento": "PIX com 50% (R$ 7.780). Dinheiro subiu para 33% (R$ 5.120) refletindo o maior volume de atendimentos. Ação: considere desconto de 5% no PIX para estimular a forma mais rapida de recebimento e melhorar o fluxo de caixa.",
+      "faturamento_mes": "R$ 15.435 (+13% vs fevereiro). 203 atendimentos, 51 clientes unicos. Ticket medio caiu 6% — o crescimento veio de servicos mais baratos. Ação: incentive combos para reequilibrar o ticket. Cada R$ 10 a mais no ticket medio vale R$ 2.030 extras no faturamento.",
+      "comparativo_faturamento": "Fev R$ 13.665 → Mar R$ 15.435 (+R$ 1.770, +13%). Clientes subiram 27,5% (40 → 51) e atendimentos +20%. Vamos continuar acompanhando. Ação: o crescimento de clientes e a melhor noticia — invista em manter essa nova base com follow-up ativo.",
+      "ticket_medio_servico": "Ticket de R$ 76,03 (−6% vs fevereiro). Novos clientes tendem a pedir servicos menores na 1a visita, puxando a media para baixo. Ação: na 1a visita ofereça manicure ou sobrancelha com desconto de boas-vindas — aumenta o ticket e ja fideliza na primeira passagem.",
+      "taxa_recorrencia": "51 clientes unicos, 203 atendimentos = media de 4,0 visitas/cliente. Base cresceu 27,5% vs fevereiro. Ação: dos 51 clientes, identifique os novos e envie mensagem de agradecimento apos a visita — o 2o atendimento e o mais dificil de conquistar.",
+      "despesas_categoria": "Comissoes cresceram com o volume: R$ 4.930 (70% das despesas totais de R$ 7.082). Produtos subiram para R$ 480 acompanhando a demanda. Ação: comissoes variaveis funcionam como protecao natural — quando fatura menos, paga menos. Monitore para que a margem fique acima de 50%.",
+      "resultado_mensal": "Lucro de R$ 8.353 (margem 54%). Alta de 13% vs fevereiro. Ação: reserve 15-20% do lucro (R$ 1.200–1.600) como reserva operacional para cobrir meses sazonais.",
+      "executive": "Marco — recuperacao solida com +27,5% na base de clientes; crescimento veio de novos clientes, nao so de frequencia.",
+      "kpi_churn": "0%"
+    },
+    "despesas": [
+      {
+        "categoria": "Comissões",
+        "valor": 4930.0
+      },
+      {
+        "categoria": "Aluguel",
+        "valor": 800.0
+      },
+      {
+        "categoria": "Produtos",
+        "valor": 480.0
+      },
+      {
+        "categoria": "Energia",
+        "valor": 295.0
+      },
+      {
+        "categoria": "Contador",
+        "valor": 200.0
+      },
+      {
+        "categoria": "Internet",
+        "valor": 110.0
+      },
+      {
+        "categoria": "Marketing",
+        "valor": 100.0
+      },
+      {
+        "categoria": "Água",
+        "valor": 95.0
+      },
+      {
+        "categoria": "Material descartável",
+        "valor": 72.0
+      }
+    ],
+    "total_despesas": 7082.0,
+    "changeLucro": 13.0
+  },
+  "abril": {
+    "faturamento": 15745.0,
+    "vendas": 190,
+    "clientes": 48,
+    "changeVendas": -6.4,
+    "changeFaturamento": 2.0,
+    "changeTicket": 9.0,
+    "changeClientes": -5.9,
+    "servicos": [
+      {
+        "nome": "progressiva",
+        "faturamento": 3780.0
+      },
+      {
+        "nome": "coloracao + hidrat",
+        "faturamento": 3360.0
+      },
+      {
+        "nome": "coloracao",
+        "faturamento": 2750.0
+      },
+      {
+        "nome": "corte",
+        "faturamento": 1045.0
+      },
+      {
+        "nome": "corte + escova",
+        "faturamento": 900.0
+      },
+      {
+        "nome": "hidratacao",
+        "faturamento": 830.0
+      },
+      {
+        "nome": "manicure + pedicure",
+        "faturamento": 795.0
+      },
+      {
+        "nome": "escova",
+        "faturamento": 755.0
+      },
+      {
+        "nome": "corte infantil",
+        "faturamento": 700.0
+      },
+      {
+        "nome": "pedicure",
+        "faturamento": 365.0
+      },
+      {
+        "nome": "sobrancelha",
+        "faturamento": 240.0
+      },
+      {
+        "nome": "manicure",
+        "faturamento": 225.0
+      }
+    ],
+    "formas_pagamento": [
+      {
+        "nome": "PIX",
+        "valor": 6555.0
+      },
+      {
+        "nome": "DINHEIRO",
+        "valor": 5670.0
+      },
+      {
+        "nome": "CREDITO",
+        "valor": 3520.0
+      }
+    ],
+    "atividade_semana": [
+      {
+        "nome": "Segunda",
+        "faturamento": 2380.0
+      },
+      {
+        "nome": "Terça",
+        "faturamento": 1875.0
+      },
+      {
+        "nome": "Quarta",
+        "faturamento": 3325.0
+      },
+      {
+        "nome": "Quinta",
+        "faturamento": 2210.0
+      },
+      {
+        "nome": "Sexta",
+        "faturamento": 1970.0
+      },
+      {
+        "nome": "Sábado",
+        "faturamento": 1720.0
+      },
+      {
+        "nome": "Domingo",
+        "faturamento": 2265.0
       }
     ],
     "insights": {
@@ -439,106 +573,156 @@
       "comparativo_faturamento": "Estabilidade total em relação a março — mesmas 49 vendas, mesmos 23 clientes, faturamento quase idêntico. Ação: estabilidade indica uma base sólida, mas crescer exige esforço. Programa de indicação, parcerias locais (ex: academia, clínica de estética próxima) ou novos serviços são os caminhos mais indicados agora.",
       "ticket_medio_servico": "Ticket médio estável há dois meses (R$ 82,65 em abril vs R$ 82,86 em março). Ação: R$ 17 separam você de um ticket médio de R$ 100. Treine a sugestão de serviços no atendimento: 'Quer aproveitar e fazer a sobrancelha também?' — simples, não invasivo, e aumenta o faturamento sem nenhum custo.",
       "taxa_recorrencia": "Base de 23 clientes fiéis consolidada por dois meses seguidos. Ação: crie uma lista VIP no WhatsApp com esses clientes. Envie ofertas exclusivas para eles antes de abrir para o público geral. Isso aumenta a percepção de valor do salão e fortalece o vínculo com quem já é fiel.",
+      "despesas_categoria": "Manutenção de equipamento apareceu (R$ 150) — gasto novo. Fixos estáveis em R$ 1.110. Total R$ 2.245 (+4% vs março). Ação: crie um fundo de R$ 100/mês para manutenção preventiva. Evitar emergências sai mais barato.",
+      "resultado_mensal": "Lucro de R$ 1.805 (margem de 45%). Despesas cresceram mais que receita por causa da manutenção pontual. Ação: margem acima de 40% é saudável para salão pequeno. Mantenha e busque crescer receita sem inflacionar custos.",
       "executive": "Abril — base consolidada em R$ 4.050; prioridade: aumentar ticket por atendimento para romper o patamar.",
       "kpi_churn": "0%"
-    }
+    },
+    "despesas": [
+      {
+        "categoria": "Comissões",
+        "valor": 5030.0
+      },
+      {
+        "categoria": "Aluguel",
+        "valor": 800.0
+      },
+      {
+        "categoria": "Produtos",
+        "valor": 465.0
+      },
+      {
+        "categoria": "Energia",
+        "valor": 280.0
+      },
+      {
+        "categoria": "Contador",
+        "valor": 200.0
+      },
+      {
+        "categoria": "Manutenção",
+        "valor": 150.0
+      },
+      {
+        "categoria": "Internet",
+        "valor": 110.0
+      },
+      {
+        "categoria": "Água",
+        "valor": 92.0
+      },
+      {
+        "categoria": "Marketing",
+        "valor": 80.0
+      },
+      {
+        "categoria": "Material descartável",
+        "valor": 68.0
+      }
+    ],
+    "total_despesas": 7275.0,
+    "changeLucro": 1.4
   },
   "maio": {
-    "faturamento": 4805.0,
-    "vendas": 59,
-    "clientes": 26,
-    "changeVendas": 20.4,
-    "changeFaturamento": 18.6,
-    "changeTicket": -1.5,
-    "changeClientes": 13.0,
+    "faturamento": 16260.0,
+    "vendas": 223,
+    "clientes": 49,
+    "changeVendas": 17.4,
+    "changeFaturamento": 3.3,
+    "changeTicket": -12.0,
+    "changeClientes": 2.1,
     "servicos": [
       {
+        "nome": "coloracao + hidrat",
+        "faturamento": 3790.0
+      },
+      {
         "nome": "progressiva",
-        "faturamento": 1830.0
+        "faturamento": 2540.0
       },
       {
         "nome": "coloracao",
-        "faturamento": 750.0
-      },
-      {
-        "nome": "escova",
-        "faturamento": 585.0
-      },
-      {
-        "nome": "manicure + pedicure",
-        "faturamento": 385.0
+        "faturamento": 2080.0
       },
       {
         "nome": "corte + escova",
-        "faturamento": 345.0
-      },
-      {
-        "nome": "hidratacao",
-        "faturamento": 305.0
-      },
-      {
-        "nome": "coloracao + hidrat",
-        "faturamento": 200.0
-      },
-      {
-        "nome": "manicure",
-        "faturamento": 120.0
-      },
-      {
-        "nome": "corte infantil",
-        "faturamento": 105.0
-      },
-      {
-        "nome": "sobrancelha",
-        "faturamento": 100.0
+        "faturamento": 1755.0
       },
       {
         "nome": "corte",
-        "faturamento": 80.0
+        "faturamento": 1485.0
+      },
+      {
+        "nome": "manicure + pedicure",
+        "faturamento": 1310.0
+      },
+      {
+        "nome": "escova",
+        "faturamento": 745.0
+      },
+      {
+        "nome": "corte infantil",
+        "faturamento": 695.0
+      },
+      {
+        "nome": "pedicure",
+        "faturamento": 535.0
+      },
+      {
+        "nome": "manicure",
+        "faturamento": 480.0
+      },
+      {
+        "nome": "hidratacao",
+        "faturamento": 430.0
+      },
+      {
+        "nome": "sobrancelha",
+        "faturamento": 415.0
       }
     ],
     "formas_pagamento": [
       {
         "nome": "PIX",
-        "valor": 2878.0
+        "valor": 7540.0
       },
       {
         "nome": "DINHEIRO",
-        "valor": 977.0
+        "valor": 4980.0
       },
       {
         "nome": "CREDITO",
-        "valor": 950.0
+        "valor": 3740.0
       }
     ],
     "atividade_semana": [
       {
         "nome": "Segunda",
-        "faturamento": 602.0
+        "faturamento": 1865.0
       },
       {
         "nome": "Terça",
-        "faturamento": 120.0
+        "faturamento": 1325.0
       },
       {
         "nome": "Quarta",
-        "faturamento": 707.0
+        "faturamento": 2340.0
       },
       {
         "nome": "Quinta",
-        "faturamento": 452.0
+        "faturamento": 3440.0
       },
       {
         "nome": "Sexta",
-        "faturamento": 1136.0
+        "faturamento": 2005.0
       },
       {
         "nome": "Sábado",
-        "faturamento": 1141.0
+        "faturamento": 2755.0
       },
       {
         "nome": "Domingo",
-        "faturamento": 647.0
+        "faturamento": 2530.0
       }
     ],
     "insights": {
@@ -551,6 +735,46 @@
       "taxa_recorrencia": "⚠️ Dados estimados. Adicione o CSV de maio para validar a recorrência real de clientes. Ação: verifique quantos dos 23 clientes de abril retornaram em maio — essa taxa de retorno é o melhor indicador de saúde do negócio.",
       "executive": "Maio — projeções indicam crescimento; processe CSV real para validar e converter projeção em ação prioritária.",
       "kpi_churn": "0%"
-    }
+    },
+    "despesas": [
+      {
+        "categoria": "Comissões",
+        "valor": 5300.0
+      },
+      {
+        "categoria": "Aluguel",
+        "valor": 800.0
+      },
+      {
+        "categoria": "Produtos",
+        "valor": 535.0
+      },
+      {
+        "categoria": "Energia",
+        "valor": 310.0
+      },
+      {
+        "categoria": "Contador",
+        "valor": 200.0
+      },
+      {
+        "categoria": "Marketing",
+        "valor": 120.0
+      },
+      {
+        "categoria": "Internet",
+        "valor": 110.0
+      },
+      {
+        "categoria": "Água",
+        "valor": 98.0
+      },
+      {
+        "categoria": "Material descartável",
+        "valor": 75.0
+      }
+    ],
+    "total_despesas": 7548.0,
+    "changeLucro": 2.9
   }
 }

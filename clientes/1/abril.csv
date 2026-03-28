@@ -1,50 +1,191 @@
 data,servico,cliente,valor,pagamento,observacao,mes
-2026-04-01,progressiva,Camila,180,PIX,,Abril
-2026-04-01,escova,Maria,45,DINHEIRO,,Abril
-2026-04-02,coloracao,Ana Paula,130,CREDITO,,Abril
-2026-04-02,manicure,Lucia,30,DINHEIRO,,Abril
-2026-04-03,corte + escova,Beatriz,85,PIX,,Abril
-2026-04-03,hidratacao,Fernanda,60,PIX,,Abril
-2026-04-04,sobrancelha,Tania,25,DINHEIRO,,Abril
-2026-04-04,corte,Jorge,40,DINHEIRO,,Abril
-2026-04-05,progressiva,Patricia,180,PIX,,Abril
-2026-04-06,escova,Renata,45,PIX,,Abril
-2026-04-07,manicure + pedicure,Sandra,55,DINHEIRO,,Abril
-2026-04-07,coloracao + hidrat,Mariana,200,CREDITO,,Abril
-2026-04-08,corte infantil,Cliente Nova,35,DINHEIRO,,Abril
-2026-04-08,escova,Michele,45,PIX,,Abril
-2026-04-09,progressiva,Bruna,170,PIX,,Abril
-2026-04-09,sobrancelha,Ana,25,DINHEIRO,,Abril
-2026-04-10,corte + escova,Juliana S.,85,PIX,,Abril
-2026-04-10,manicure,Denise,30,DINHEIRO,,Abril
-2026-04-11,coloracao,Camila,120,PIX,,Abril
-2026-04-12,hidratacao,Carla,60,PIX,,Abril
-2026-04-13,escova,Maria,45,DINHEIRO,,Abril
-2026-04-14,progressiva,Vanessa,180,PIX,,Abril
-2026-04-14,corte,Paulo,40,DINHEIRO,,Abril
-2026-04-15,manicure + pedicure,Lucia,55,PIX,,Abril
-2026-04-15,sobrancelha,Tania,25,DINHEIRO,,Abril
-2026-04-16,corte + escova,Roberta,85,PIX,,Abril
-2026-04-16,coloracao,Patricia,120,CREDITO,,Abril
-2026-04-17,progressiva,Fernanda,180,PIX,,Abril
-2026-04-17,escova,Sandra,45,DINHEIRO,,Abril
-2026-04-18,manicure,Ana,30,DINHEIRO,,Abril
-2026-04-19,hidratacao,Michele,60,PIX,,Abril
-2026-04-20,corte infantil,Cliente Nova,35,DINHEIRO,,Abril
-2026-04-20,coloracao + hidrat,Mariana,190,CREDITO,,Abril
-2026-04-21,progressiva,Bruna,180,PIX,,Abril
-2026-04-21,escova,Renata,45,PIX,,Abril
-2026-04-22,corte,Carlos,40,DINHEIRO,,Abril
-2026-04-22,manicure + pedicure,Beatriz,55,PIX,,Abril
-2026-04-23,sobrancelha,Lucia,25,DINHEIRO,,Abril
-2026-04-23,coloracao,Camila,120,PIX,,Abril
-2026-04-24,progressiva,Patricia,180,PIX,,Abril
-2026-04-25,escova,Maria,45,DINHEIRO,,Abril
-2026-04-25,corte + escova,Juliana S.,85,PIX,,Abril
-2026-04-26,hidratacao,Fernanda,60,PIX,,Abril
-2026-04-27,manicure,Ana,30,DINHEIRO,,Abril
-2026-04-28,coloracao,Ana Paula,130,CREDITO,,Abril
-2026-04-28,progressiva,Roberta,180,PIX,,Abril
-2026-04-29,corte,Jorge,40,DINHEIRO,,Abril
-2026-04-30,escova,Sandra,45,PIX,,Abril
-2026-04-30,manicure + pedicure,Carla,55,DINHEIRO,,Abril
+2026-04-01,progressiva,Raquel,190,PIX,,Abril
+2026-04-01,hidratacao,Eduarda,55,PIX,,Abril
+2026-04-01,coloracao + hidrat,Bruna,190,PIX,,Abril
+2026-04-01,coloracao,Michele,120,PIX,,Abril
+2026-04-01,coloracao,Larissa,120,PIX,,Abril
+2026-04-01,escova,Cristina,40,DINHEIRO,,Abril
+2026-04-01,corte infantil,Paulo,30,CREDITO,,Abril
+2026-04-01,corte infantil,Carlos,35,PIX,,Abril
+2026-04-02,hidratacao,Debora,65,PIX,,Abril
+2026-04-02,manicure + pedicure,Raquel,60,DINHEIRO,,Abril
+2026-04-02,hidratacao,Mariana,55,CREDITO,,Abril
+2026-04-02,corte + escova,Juliana S.,80,PIX,,Abril
+2026-04-02,progressiva,Amanda,180,PIX,,Abril
+2026-04-02,escova,Cliente Nova,40,PIX,,Abril
+2026-04-02,coloracao + hidrat,Larissa,210,PIX,,Abril
+2026-04-03,corte,Felipe,45,CREDITO,,Abril
+2026-04-03,manicure,Simone,30,PIX,,Abril
+2026-04-03,corte,Felipe,35,DINHEIRO,,Abril
+2026-04-03,escova,Kelly,45,DINHEIRO,,Abril
+2026-04-03,corte infantil,Maria,30,CREDITO,,Abril
+2026-04-03,hidratacao,Denise,65,CREDITO,,Abril
+2026-04-03,corte + escova,Vanessa,80,PIX,,Abril
+2026-04-03,coloracao,Camila,140,PIX,,Abril
+2026-04-04,coloracao,Denise,120,PIX,,Abril
+2026-04-04,manicure,Priscila,30,PIX,,Abril
+2026-04-04,pedicure,Jessica,35,DINHEIRO,,Abril
+2026-04-04,progressiva,Denise,190,DINHEIRO,,Abril
+2026-04-04,corte,Carlos,35,PIX,,Abril
+2026-04-04,manicure + pedicure,Maria,60,DINHEIRO,,Abril
+2026-04-04,coloracao + hidrat,Gisele,200,DINHEIRO,,Abril
+2026-04-05,manicure,Daniela,35,CREDITO,,Abril
+2026-04-05,progressiva,Simone,170,CREDITO,,Abril
+2026-04-05,corte,Andre,40,DINHEIRO,,Abril
+2026-04-05,progressiva,Roberta,190,CREDITO,,Abril
+2026-04-05,progressiva,Viviane,170,DINHEIRO,,Abril
+2026-04-06,corte + escova,Roberta,80,PIX,,Abril
+2026-04-06,progressiva,Maria,170,DINHEIRO,,Abril
+2026-04-06,corte infantil,Debora,30,CREDITO,,Abril
+2026-04-06,manicure + pedicure,Beatriz,50,PIX,,Abril
+2026-04-06,coloracao + hidrat,Denise,190,CREDITO,,Abril
+2026-04-07,corte,Roberto,35,CREDITO,,Abril
+2026-04-07,sobrancelha,Gabriela,30,CREDITO,,Abril
+2026-04-07,corte infantil,Felipe,35,CREDITO,,Abril
+2026-04-07,corte,Jessica,35,PIX,,Abril
+2026-04-07,corte,Roberto,40,CREDITO,,Abril
+2026-04-07,progressiva,Amanda,180,PIX,,Abril
+2026-04-07,sobrancelha,Simone,25,PIX,,Abril
+2026-04-08,coloracao + hidrat,Debora,200,DINHEIRO,,Abril
+2026-04-08,escova,Bianca,40,PIX,,Abril
+2026-04-08,escova,Helena,40,PIX,,Abril
+2026-04-08,coloracao,Natalia,140,PIX,,Abril
+2026-04-08,corte,Jorge,45,PIX,,Abril
+2026-04-08,escova,Fabiana,50,DINHEIRO,,Abril
+2026-04-09,corte,Juliana S.,45,PIX,,Abril
+2026-04-09,coloracao + hidrat,Patricia,190,CREDITO,,Abril
+2026-04-09,escova,Helena,40,DINHEIRO,,Abril
+2026-04-09,pedicure,Daniela,35,PIX,,Abril
+2026-04-09,manicure + pedicure,Bianca,60,CREDITO,,Abril
+2026-04-09,corte infantil,Elaine,30,PIX,,Abril
+2026-04-10,progressiva,Simone,180,PIX,,Abril
+2026-04-10,pedicure,Eduarda,30,DINHEIRO,,Abril
+2026-04-10,corte,Lucas,35,DINHEIRO,,Abril
+2026-04-10,hidratacao,Monica,60,CREDITO,,Abril
+2026-04-10,coloracao,Cliente Nova,130,PIX,,Abril
+2026-04-11,pedicure,Fabiana,35,DINHEIRO,,Abril
+2026-04-11,sobrancelha,Vanessa,30,DINHEIRO,,Abril
+2026-04-11,escova,Gabriela,50,PIX,,Abril
+2026-04-11,corte,Roberto,40,DINHEIRO,,Abril
+2026-04-11,corte,Eduarda,35,PIX,,Abril
+2026-04-11,coloracao + hidrat,Cristina,200,PIX,,Abril
+2026-04-12,coloracao + hidrat,Cristina,210,CREDITO,,Abril
+2026-04-12,hidratacao,Joana,55,CREDITO,,Abril
+2026-04-12,hidratacao,Debora,60,DINHEIRO,,Abril
+2026-04-12,corte + escova,Larissa,90,PIX,,Abril
+2026-04-12,corte infantil,Jorge,35,CREDITO,,Abril
+2026-04-12,coloracao,Amanda,120,PIX,,Abril
+2026-04-12,sobrancelha,Felipe,25,CREDITO,,Abril
+2026-04-12,corte infantil,Cliente Nova,35,PIX,,Abril
+2026-04-13,progressiva,Cliente Nova,170,PIX,,Abril
+2026-04-13,corte + escova,Ana,80,PIX,,Abril
+2026-04-13,corte + escova,Jessica,80,DINHEIRO,,Abril
+2026-04-13,coloracao,Cristina,130,PIX,,Abril
+2026-04-13,corte,Amanda,35,DINHEIRO,,Abril
+2026-04-13,manicure + pedicure,Viviane,55,PIX,,Abril
+2026-04-14,corte infantil,Paulo,35,PIX,,Abril
+2026-04-14,sobrancelha,Andre,25,PIX,,Abril
+2026-04-14,manicure,Denise,30,CREDITO,,Abril
+2026-04-14,corte infantil,Lucas,30,PIX,,Abril
+2026-04-14,pedicure,Raquel,30,CREDITO,,Abril
+2026-04-15,coloracao + hidrat,Mariana,190,PIX,,Abril
+2026-04-15,manicure + pedicure,Beatriz,60,PIX,,Abril
+2026-04-15,hidratacao,Gisele,60,DINHEIRO,,Abril
+2026-04-15,coloracao + hidrat,Simone,210,PIX,,Abril
+2026-04-15,hidratacao,Ana,60,DINHEIRO,,Abril
+2026-04-15,corte infantil,Felipe,35,PIX,,Abril
+2026-04-15,corte infantil,Paulo,30,CREDITO,,Abril
+2026-04-16,coloracao + hidrat,Ana,200,DINHEIRO,,Abril
+2026-04-16,pedicure,Carla,30,PIX,,Abril
+2026-04-16,hidratacao,Jessica,55,DINHEIRO,,Abril
+2026-04-16,manicure + pedicure,Priscila,60,CREDITO,,Abril
+2026-04-16,coloracao,Flavia,140,CREDITO,,Abril
+2026-04-17,pedicure,Joana,35,PIX,,Abril
+2026-04-17,coloracao + hidrat,Larissa,200,DINHEIRO,,Abril
+2026-04-17,progressiva,Maria,170,DINHEIRO,,Abril
+2026-04-17,corte infantil,Larissa,35,PIX,,Abril
+2026-04-17,coloracao + hidrat,Jessica,210,DINHEIRO,,Abril
+2026-04-18,sobrancelha,Fernanda,25,CREDITO,,Abril
+2026-04-18,corte + escova,Bruna,85,PIX,,Abril
+2026-04-18,escova,Larissa,50,DINHEIRO,,Abril
+2026-04-18,corte + escova,Monica,80,DINHEIRO,,Abril
+2026-04-18,manicure,Isabela,35,DINHEIRO,,Abril
+2026-04-18,coloracao + hidrat,Monica,190,DINHEIRO,,Abril
+2026-04-18,sobrancelha,Lucia,25,CREDITO,,Abril
+2026-04-19,corte + escova,Denise,80,CREDITO,,Abril
+2026-04-19,corte infantil,Paulo,30,CREDITO,,Abril
+2026-04-19,corte infantil,Tatiane,35,PIX,,Abril
+2026-04-19,manicure,Bianca,30,PIX,,Abril
+2026-04-19,hidratacao,Cristina,60,DINHEIRO,,Abril
+2026-04-19,pedicure,Sandra,35,CREDITO,,Abril
+2026-04-19,escova,Larissa,50,PIX,,Abril
+2026-04-19,corte,Bruna,35,PIX,,Abril
+2026-04-20,corte,Felipe,45,PIX,,Abril
+2026-04-20,progressiva,Natalia,190,DINHEIRO,,Abril
+2026-04-20,corte,Patricia,45,DINHEIRO,,Abril
+2026-04-20,escova,Gisele,50,DINHEIRO,,Abril
+2026-04-20,sobrancelha,Felipe,25,PIX,,Abril
+2026-04-20,sobrancelha,Helena,30,CREDITO,,Abril
+2026-04-21,corte,Roberto,40,PIX,,Abril
+2026-04-21,coloracao,Viviane,130,CREDITO,,Abril
+2026-04-21,coloracao,Roberta,120,PIX,,Abril
+2026-04-21,progressiva,Lucia,190,DINHEIRO,,Abril
+2026-04-21,corte infantil,Felipe,35,DINHEIRO,,Abril
+2026-04-22,escova,Priscila,40,PIX,,Abril
+2026-04-22,manicure + pedicure,Gabriela,55,PIX,,Abril
+2026-04-22,progressiva,Michele,180,DINHEIRO,,Abril
+2026-04-22,corte,Lucas,40,DINHEIRO,,Abril
+2026-04-22,hidratacao,Gabriela,55,PIX,,Abril
+2026-04-22,coloracao,Gabriela,140,CREDITO,,Abril
+2026-04-22,corte,Sandra,40,PIX,,Abril
+2026-04-23,coloracao + hidrat,Kelly,190,DINHEIRO,,Abril
+2026-04-23,escova,Bruna,40,PIX,,Abril
+2026-04-23,coloracao,Helena,140,CREDITO,,Abril
+2026-04-23,corte,Helena,40,PIX,,Abril
+2026-04-23,coloracao + hidrat,Kelly,190,CREDITO,,Abril
+2026-04-23,manicure + pedicure,Cliente Nova,55,DINHEIRO,,Abril
+2026-04-23,corte infantil,Lucas,35,PIX,,Abril
+2026-04-24,corte,Carlos,35,CREDITO,,Abril
+2026-04-24,manicure + pedicure,Flavia,55,CREDITO,,Abril
+2026-04-24,manicure,Carla,35,PIX,,Abril
+2026-04-24,escova,Flavia,45,DINHEIRO,,Abril
+2026-04-24,coloracao,Vanessa,120,DINHEIRO,,Abril
+2026-04-25,corte,Beatriz,40,DINHEIRO,,Abril
+2026-04-25,escova,Eduarda,40,PIX,,Abril
+2026-04-25,corte,Gabriela,35,DINHEIRO,,Abril
+2026-04-25,pedicure,Cristina,30,PIX,,Abril
+2026-04-25,pedicure,Amanda,35,PIX,,Abril
+2026-04-26,corte,Priscila,45,PIX,,Abril
+2026-04-26,coloracao,Joana,130,CREDITO,,Abril
+2026-04-26,coloracao,Eduarda,140,PIX,,Abril
+2026-04-26,escova,Amanda,50,DINHEIRO,,Abril
+2026-04-26,coloracao,Michele,140,CREDITO,,Abril
+2026-04-26,progressiva,Isabela,190,PIX,,Abril
+2026-04-27,manicure + pedicure,Helena,60,PIX,,Abril
+2026-04-27,corte + escova,Bianca,85,PIX,,Abril
+2026-04-27,coloracao,Simone,140,CREDITO,,Abril
+2026-04-27,coloracao,Raquel,120,DINHEIRO,,Abril
+2026-04-27,coloracao,Flavia,140,CREDITO,,Abril
+2026-04-27,corte infantil,Kelly,35,DINHEIRO,,Abril
+2026-04-27,progressiva,Joana,180,DINHEIRO,,Abril
+2026-04-27,corte + escova,Helena,80,PIX,,Abril
+2026-04-28,progressiva,Joana,190,PIX,,Abril
+2026-04-28,progressiva,Cristina,170,DINHEIRO,,Abril
+2026-04-28,corte infantil,Flavia,35,PIX,,Abril
+2026-04-28,corte infantil,Carlos,35,PIX,,Abril
+2026-04-28,hidratacao,Patricia,60,DINHEIRO,,Abril
+2026-04-28,progressiva,Gabriela,170,DINHEIRO,,Abril
+2026-04-28,corte infantil,Joana,35,DINHEIRO,,Abril
+2026-04-29,corte,Felipe,35,DINHEIRO,,Abril
+2026-04-29,progressiva,Priscila,180,DINHEIRO,,Abril
+2026-04-29,corte,Jorge,35,PIX,,Abril
+2026-04-29,manicure + pedicure,Eduarda,55,CREDITO,,Abril
+2026-04-29,pedicure,Daniela,35,CREDITO,,Abril
+2026-04-29,manicure + pedicure,Eduarda,50,DINHEIRO,,Abril
+2026-04-29,coloracao + hidrat,Larissa,190,DINHEIRO,,Abril
+2026-04-30,manicure + pedicure,Elaine,60,CREDITO,,Abril
+2026-04-30,corte,Jorge,35,PIX,,Abril
+2026-04-30,progressiva,Michele,180,PIX,,Abril
+2026-04-30,escova,Kelly,45,PIX,,Abril
+2026-04-30,coloracao,Roberta,130,DINHEIRO,,Abril
+2026-04-30,hidratacao,Fabiana,65,PIX,,Abril

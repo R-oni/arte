@@ -1,0 +1,64 @@
+data,categoria,descricao,valor,forma_pagamento,mes
+2026-01-03,Produtos,Coloração e oxidante,180,PIX,Janeiro
+2026-01-03,Material descartável,Luvas e papel alumínio,55,DINHEIRO,Janeiro
+2026-01-05,Aluguel,Aluguel studio janeiro,800,PIX,Janeiro
+2026-01-07,Internet,Plano internet fibra,110,DEBITO,Janeiro
+2026-01-10,Energia,Conta de luz janeiro,245,PIX,Janeiro
+2026-01-10,Água,Conta de água janeiro,88,PIX,Janeiro
+2026-01-15,Produtos,Queratina e shampoo profissional,140,PIX,Janeiro
+2026-01-15,Contador,Honorários contábeis janeiro,200,PIX,Janeiro
+2026-01-31,Comissões,Comissão Juliana (cabeleireira),1800,PIX,Janeiro
+2026-01-31,Comissões,Comissão Carla (cabeleireira),2100,PIX,Janeiro
+2026-01-31,Comissões,Comissão Débora (manicure),950,PIX,Janeiro
+2026-02-02,Produtos,Coloração e oxidante,150,PIX,Fevereiro
+2026-02-02,Material descartável,Luvas e toalhas descartáveis,45,DINHEIRO,Fevereiro
+2026-02-05,Aluguel,Aluguel studio fevereiro,800,PIX,Fevereiro
+2026-02-07,Internet,Plano internet fibra,110,DEBITO,Fevereiro
+2026-02-10,Energia,Conta de luz fevereiro,215,PIX,Fevereiro
+2026-02-10,Água,Conta de água fevereiro,82,PIX,Fevereiro
+2026-02-15,Contador,Honorários contábeis fevereiro,200,PIX,Fevereiro
+2026-02-16,Produtos,Queratina e condicionador,110,PIX,Fevereiro
+2026-02-20,Marketing,Impulsionamento Instagram,80,CREDITO,Fevereiro
+2026-02-28,Comissões,Comissão Juliana (cabeleireira),1800,PIX,Fevereiro
+2026-02-28,Comissões,Comissão Carla (cabeleireira),1850,PIX,Fevereiro
+2026-02-28,Comissões,Comissão Débora (manicure),830,PIX,Fevereiro
+2026-03-03,Produtos,Queratina para progressiva,200,PIX,Marco
+2026-03-03,Material descartável,Luvas alumínio e toucas,72,DINHEIRO,Marco
+2026-03-05,Aluguel,Aluguel studio março,800,PIX,Marco
+2026-03-07,Internet,Plano internet fibra,110,DEBITO,Marco
+2026-03-10,Energia,Conta de luz março,295,PIX,Marco
+2026-03-10,Água,Conta de água março,95,PIX,Marco
+2026-03-12,Marketing,Impulsionamento Instagram,100,CREDITO,Marco
+2026-03-14,Produtos,Coloração tintas variadas,150,PIX,Marco
+2026-03-15,Contador,Honorários contábeis março,200,PIX,Marco
+2026-03-25,Produtos,Shampoo e máscara profissional,130,PIX,Marco
+2026-03-31,Comissões,Comissão Juliana (cabeleireira),1800,PIX,Marco
+2026-03-31,Comissões,Comissão Carla (cabeleireira),2150,PIX,Marco
+2026-03-31,Comissões,Comissão Débora (manicure),980,PIX,Marco
+2026-04-02,Produtos,Coloração e oxidante,180,PIX,Abril
+2026-04-02,Material descartável,Luvas alumínio e toucas,68,DINHEIRO,Abril
+2026-04-05,Aluguel,Aluguel studio abril,800,PIX,Abril
+2026-04-07,Internet,Plano internet fibra,110,DEBITO,Abril
+2026-04-10,Energia,Conta de luz abril,280,PIX,Abril
+2026-04-10,Água,Conta de água abril,92,PIX,Abril
+2026-04-15,Produtos,Queratina e condicionador,155,PIX,Abril
+2026-04-15,Contador,Honorários contábeis abril,200,PIX,Abril
+2026-04-18,Marketing,Impulsionamento Instagram,80,CREDITO,Abril
+2026-04-22,Manutenção,Reparo cadeira hidráulica,150,PIX,Abril
+2026-04-26,Produtos,Shampoo profissional,130,PIX,Abril
+2026-04-30,Comissões,Comissão Juliana (cabeleireira),1850,PIX,Abril
+2026-04-30,Comissões,Comissão Carla (cabeleireira),2180,PIX,Abril
+2026-04-30,Comissões,Comissão Débora (manicure),1000,PIX,Abril
+2026-05-03,Produtos,Coloração oxidante e queratina,210,PIX,Maio
+2026-05-03,Material descartável,Luvas alumínio e toucas,75,DINHEIRO,Maio
+2026-05-05,Aluguel,Aluguel studio maio,800,PIX,Maio
+2026-05-07,Internet,Plano internet fibra,110,DEBITO,Maio
+2026-05-10,Energia,Conta de luz maio,310,PIX,Maio
+2026-05-10,Água,Conta de água maio,98,PIX,Maio
+2026-05-12,Marketing,Impulsionamento Instagram + Google,120,CREDITO,Maio
+2026-05-15,Produtos,Shampoo máscara e finalizador,185,PIX,Maio
+2026-05-15,Contador,Honorários contábeis maio,200,PIX,Maio
+2026-05-20,Produtos,Tintas e descolorante,140,PIX,Maio
+2026-05-31,Comissões,Comissão Juliana (cabeleireira),1950,PIX,Maio
+2026-05-31,Comissões,Comissão Carla (cabeleireira),2300,PIX,Maio
+2026-05-31,Comissões,Comissão Débora (manicure),1050,PIX,Maio

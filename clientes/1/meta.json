@@ -48,12 +48,27 @@
       "posicao": "full"
     },
     {
+      "id": "chart8",
+      "tipo": "bar",
+      "titulo": "Resultado do Mês (R$)",
+      "dataSource": "resultado_mensal",
+      "cor": "rgba(34, 197, 94, 0.8)",
+      "posicao": "full"
+    },
+    {
       "id": "chart4",
       "tipo": "bar",
       "titulo": "Ticket Médio por Serviço",
       "dataSource": "ticket_medio_servico",
       "cor": "rgba(168, 85, 247, 0.8)",
       "posicao": "esquerda"
+    },
+    {
+      "id": "chart9",
+      "tipo": "doughnut",
+      "titulo": "Despesas por Categoria",
+      "dataSource": "despesas_categoria",
+      "posicao": "direita"
     },
     {
       "id": "chart5",

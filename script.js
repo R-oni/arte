@@ -111,7 +111,7 @@ function loadClient() {
     }
 
     // Atualizar labels dos KPIs conforme configuração do cliente
-    const defaultKpiLabels = { faturamento: 'Faturamento', vendas: 'Vendas', ticket: 'Ticket Médio', clientes: 'Clientes' };
+    const defaultKpiLabels = { faturamento: 'Faturamento', lucro: 'Lucro', ticket: 'Ticket Médio', clientes: 'Clientes' };
     const kpiLabels = { ...defaultKpiLabels, ...(currentClient.kpi_labels || {}) };
     Object.entries(kpiLabels).forEach(([key, label]) => {
         const kpiEl = document.getElementById(`kpi-${key}`);
@@ -139,12 +139,13 @@ function updateDashboard(month) {
     const data = currentClient.data[month];
     
     document.getElementById('kpi-faturamento').textContent = formatCurrency(data.faturamento);
-    document.getElementById('kpi-vendas').textContent = data.vendas.toLocaleString('pt-BR');
+    const lucro = data.faturamento - (data.total_despesas || 0);
+    document.getElementById('kpi-lucro').textContent = formatCurrency(lucro);
     document.getElementById('kpi-ticket').textContent = formatCurrency(data.faturamento / data.vendas);
     document.getElementById('kpi-clientes').textContent = data.clientes.toLocaleString('pt-BR');
     
     updateChangeIndicator('change-faturamento', data.changeFaturamento);
-    updateChangeIndicator('change-vendas', data.changeVendas);
+    updateChangeIndicator('change-lucro', data.changeLucro || 0);
     updateChangeIndicator('change-ticket', data.changeTicket);
     updateChangeIndicator('change-clientes', data.changeClientes);
     
@@ -374,6 +375,20 @@ function getDataForChart(dataSource) {
                 data: dataAtual.atividade_semana.map(d => d.faturamento)
             };
 
+        case 'despesas_categoria':
+            if (!dataAtual.despesas) return null;
+            return {
+                labels: dataAtual.despesas.map(d => d.categoria),
+                data: dataAtual.despesas.map(d => d.valor)
+            };
+
+        case 'resultado_mensal':
+            if (!dataAtual.total_despesas) return null;
+            return {
+                labels: ['Receita', 'Despesas', 'Lucro'],
+                data: [dataAtual.faturamento, dataAtual.total_despesas, dataAtual.faturamento - dataAtual.total_despesas]
+            };
+
         case 'pedidos_hora':
             if (!dataAtual.pedidos_hora) return null;
             return {
@@ -504,6 +519,18 @@ function generateInsight(chartConfig, chartData, dataSource) {
             const piorDia = dias[minIdx];
             return [`💡 ${melhorDia} é o dia mais lucrativo (média R$ ${melhorVal.toLocaleString('pt-BR')}). ${piorDia} tem o menor movimento.`];
         },
+        'despesas_categoria': () => {
+            const despesas = dataAtual.despesas;
+            const total = dataAtual.total_despesas;
+            const top = despesas[0];
+            const pct = Math.round((top.valor / total) * 100);
+            return [`💡 ${top.categoria} é o maior custo: R$ ${top.valor.toLocaleString('pt-BR')} (${pct}% das despesas).`];
+        },
+        'resultado_mensal': () => {
+            const lucro = dataAtual.faturamento - dataAtual.total_despesas;
+            const margem = ((lucro / dataAtual.faturamento) * 100).toFixed(0);
+            return [`💡 Lucro de R$ ${lucro.toLocaleString('pt-BR')} — margem de ${margem}% no mês.`];
+        },
         'tamanho_animal': () => {
             const topSize = chartData.labels[0];
             return [`💡 O porte mais atendido é: ${topSize}.`];
@@ -570,6 +597,12 @@ function createChartConfig(chartConfig, chartData) {
     if (chartConfig.tipo === 'bar') {
         configBase.data.datasets[0].backgroundColor = corPrincipal;
         configBase.data.datasets[0].borderColor = corPrincipalSolida;
+        // Resultado mensal: cores individuais por barra (verde/vermelho/azul)
+        if (chartConfig.dataSource === 'resultado_mensal') {
+            configBase.data.datasets[0].backgroundColor = ['#22c55e', '#ef4444', '#3b82f6'];
+            configBase.data.datasets[0].borderColor = ['#16a34a', '#dc2626', '#2563eb'];
+            configBase.data.datasets[0].borderWidth = 1;
+        }
         const isHorizontal = chartConfig.posicao === 'esquerda';
         configBase.options.indexAxis = isHorizontal ? 'y' : 'x';
         configBase.options.scales = {
@@ -614,7 +647,7 @@ function createChartConfig(chartConfig, chartData) {
         configBase.options.plugins.legend.display = false;
     } else if (chartConfig.tipo === 'doughnut') {
         // Mapear cores específicas para formas de pagamento: Dinheiro->amarelo, Crédito->ciano, PIX->vermelho
-        const fallback = [corPrincipal, '#10b981', '#fbbf24', '#ef4444'];
+        const fallback = [corPrincipal, '#10b981', '#fbbf24', '#ef4444', '#8b5cf6', '#f97316', '#06b6d4', '#6366f1', '#94a3b8'];
         const paymentMap = {
             'dinheiro': '#fbbf24',
             'pix': '#ef4444',
@@ -625,9 +658,21 @@ function createChartConfig(chartConfig, chartData) {
             'cartao debito': '#10b981',
             'debito': '#10b981'
         };
+        const despesaMap = {
+            'comissões': '#f43f5e',
+            'aluguel': '#ef4444',
+            'produtos': '#ec4899',
+            'energia': '#fbbf24',
+            'água': '#06b6d4',
+            'internet': '#8b5cf6',
+            'material descartável': '#f97316',
+            'marketing': '#10b981',
+            'contador': '#6366f1',
+            'manutenção': '#94a3b8'
+        };
         const cores = chartData.labels.map((lbl, i) => {
             const key = String(lbl).toLowerCase();
-            return paymentMap[key] || fallback[i % fallback.length];
+            return paymentMap[key] || despesaMap[key] || fallback[i % fallback.length];
         });
         configBase.data.datasets[0].backgroundColor = cores;
         // Tooltip: para formas_pagamento do cliente 1, exibir moeda (R$) ao invés do número cru
@@ -637,7 +682,7 @@ function createChartConfig(chartConfig, chartData) {
                     const val = context.parsed !== undefined ? context.parsed : (context.raw || 0);
                     const params = new URLSearchParams(window.location.search);
                     const clientId = params.get('c') || '1';
-                    if (chartConfig.dataSource === 'formas_pagamento' && clientId === '1') {
+                    if ((chartConfig.dataSource === 'formas_pagamento' || chartConfig.dataSource === 'despesas_categoria') && clientId === '1') {
                         return 'R$ ' + Number(val).toLocaleString('pt-BR');
                     }
                     return (typeof val === 'number') ? val.toLocaleString('pt-BR') : String(val);
@@ -680,7 +725,7 @@ function createChartConfig(chartConfig, chartData) {
     try {
         const params = new URLSearchParams(window.location.search);
         const clientId = params.get('c') || '1';
-        const currencyDatasources = new Set(['formas_pagamento', 'comparativo_faturamento', 'faturamento_mes', 'atividade_semana']);
+        const currencyDatasources = new Set(['formas_pagamento', 'comparativo_faturamento', 'faturamento_mes', 'atividade_semana', 'resultado_mensal', 'despesas_categoria']);
 
         const existingTooltip = (configBase.options && configBase.options.plugins && configBase.options.plugins.tooltip) || {};
         configBase.options.plugins.tooltip = {

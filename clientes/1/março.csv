@@ -1,50 +1,204 @@
 data,servico,cliente,valor,pagamento,observacao,mes
-2026-03-01,progressiva,Fernanda,180,PIX,,Marco
-2026-03-01,escova,Maria,45,DINHEIRO,,Marco
-2026-03-02,coloracao,Patricia,120,PIX,,Marco
-2026-03-02,manicure,Ana,30,DINHEIRO,,Marco
-2026-03-03,corte + escova,Juliana S.,85,PIX,,Marco
-2026-03-03,hidratacao,Carla,60,CREDITO,,Marco
-2026-03-04,sobrancelha,Lucia,25,DINHEIRO,,Marco
-2026-03-04,corte,Carlos,40,DINHEIRO,,Marco
-2026-03-05,progressiva,Roberta,180,PIX,,Marco
-2026-03-05,escova,Michele,45,PIX,,Marco
-2026-03-06,manicure + pedicure,Sandra,55,DINHEIRO,,Marco
-2026-03-07,coloracao + hidrat,Mariana,200,CREDITO,,Marco
-2026-03-07,corte infantil,Cliente Nova,35,DINHEIRO,,Marco
-2026-03-08,escova,Beatriz,45,PIX,,Marco
-2026-03-09,progressiva,Vanessa,180,PIX,,Marco
-2026-03-09,sobrancelha,Tania,25,DINHEIRO,,Marco
-2026-03-10,corte + escova,Renata,85,PIX,,Marco
-2026-03-10,manicure,Denise,30,DINHEIRO,,Marco
-2026-03-11,coloracao,Camila,120,CREDITO,,Marco
-2026-03-11,hidratacao,Fernanda,60,PIX,,Marco
-2026-03-12,escova,Maria,45,DINHEIRO,,Marco
-2026-03-13,progressiva,Bruna,180,PIX,,Marco
-2026-03-13,corte,Jorge,40,DINHEIRO,,Marco
-2026-03-14,manicure + pedicure,Carla,55,PIX,,Marco
-2026-03-14,sobrancelha,Ana,25,DINHEIRO,,Marco
-2026-03-15,corte + escova,Juliana S.,85,PIX,,Marco
-2026-03-16,coloracao,Ana Paula,130,CREDITO,,Marco
-2026-03-17,progressiva,Patricia,180,PIX,,Marco
-2026-03-17,escova,Vanessa,45,DINHEIRO,,Marco
-2026-03-18,manicure,Lucia,30,DINHEIRO,,Marco
-2026-03-19,hidratacao,Sandra,60,PIX,,Marco
-2026-03-20,corte infantil,Cliente Nova,35,DINHEIRO,,Marco
-2026-03-20,coloracao + hidrat,Michele,200,CREDITO,,Marco
-2026-03-21,progressiva,Roberta,180,PIX,,Marco
-2026-03-21,escova,Renata,45,PIX,,Marco
-2026-03-22,corte,Paulo,40,DINHEIRO,,Marco
-2026-03-23,manicure + pedicure,Beatriz,55,PIX,,Marco
-2026-03-23,sobrancelha,Tania,25,DINHEIRO,,Marco
-2026-03-24,coloracao,Camila,120,PIX,,Marco
-2026-03-25,progressiva,Denise,180,PIX,,Marco
-2026-03-25,escova,Maria,45,DINHEIRO,,Marco
-2026-03-26,corte + escova,Mariana,85,PIX,,Marco
-2026-03-27,hidratacao,Juliana S.,60,PIX,,Marco
-2026-03-28,manicure,Ana,30,DINHEIRO,,Marco
-2026-03-28,coloracao,Patricia,120,CREDITO,,Marco
-2026-03-29,progressiva,Fernanda,180,PIX,,Marco
-2026-03-30,corte,Carlos,40,DINHEIRO,,Marco
-2026-03-31,escova,Sandra,45,PIX,,Marco
-2026-03-31,manicure + pedicure,Lucia,55,DINHEIRO,,Marco
+2026-03-01,manicure,Bruna,30,PIX,,Marco
+2026-03-01,coloracao,Lucia,140,DINHEIRO,,Marco
+2026-03-01,hidratacao,Carla,55,PIX,,Marco
+2026-03-01,hidratacao,Maria,60,CREDITO,,Marco
+2026-03-01,manicure + pedicure,Kelly,55,PIX,,Marco
+2026-03-02,manicure + pedicure,Debora,55,PIX,,Marco
+2026-03-02,escova,Debora,45,PIX,,Marco
+2026-03-02,corte,Elaine,40,DINHEIRO,,Marco
+2026-03-02,escova,Larissa,40,DINHEIRO,,Marco
+2026-03-02,corte,Ana Paula,35,PIX,,Marco
+2026-03-02,hidratacao,Patricia,65,DINHEIRO,,Marco
+2026-03-03,corte,Felipe,40,DINHEIRO,,Marco
+2026-03-03,corte,Eduarda,35,PIX,,Marco
+2026-03-03,manicure + pedicure,Tania,55,PIX,,Marco
+2026-03-03,manicure,Mariana,30,PIX,,Marco
+2026-03-03,hidratacao,Bruna,65,DINHEIRO,,Marco
+2026-03-04,sobrancelha,Patricia,25,DINHEIRO,,Marco
+2026-03-04,sobrancelha,Tania,25,PIX,,Marco
+2026-03-04,coloracao + hidrat,Helena,210,PIX,,Marco
+2026-03-04,manicure,Denise,35,DINHEIRO,,Marco
+2026-03-04,corte,Roberto,45,PIX,,Marco
+2026-03-05,coloracao,Carla,120,PIX,,Marco
+2026-03-05,coloracao + hidrat,Mariana,200,PIX,,Marco
+2026-03-05,coloracao + hidrat,Bianca,210,CREDITO,,Marco
+2026-03-05,progressiva,Tatiane,180,PIX,,Marco
+2026-03-05,manicure + pedicure,Simone,55,DINHEIRO,,Marco
+2026-03-05,corte + escova,Jessica,80,CREDITO,,Marco
+2026-03-06,corte,Lucas,45,CREDITO,,Marco
+2026-03-06,escova,Priscila,45,DINHEIRO,,Marco
+2026-03-06,hidratacao,Priscila,60,PIX,,Marco
+2026-03-06,progressiva,Mariana,180,DINHEIRO,,Marco
+2026-03-06,corte,Roberta,35,DINHEIRO,,Marco
+2026-03-07,coloracao,Viviane,140,PIX,,Marco
+2026-03-07,escova,Juliana S.,50,PIX,,Marco
+2026-03-07,corte + escova,Tatiane,80,DINHEIRO,,Marco
+2026-03-07,coloracao + hidrat,Bianca,200,PIX,,Marco
+2026-03-07,sobrancelha,Felipe,25,PIX,,Marco
+2026-03-07,corte,Helena,35,CREDITO,,Marco
+2026-03-08,coloracao,Renata,130,DINHEIRO,,Marco
+2026-03-08,hidratacao,Tatiane,65,PIX,,Marco
+2026-03-08,coloracao,Eduarda,120,PIX,,Marco
+2026-03-08,sobrancelha,Patricia,30,PIX,,Marco
+2026-03-08,pedicure,Bruna,30,PIX,,Marco
+2026-03-08,pedicure,Viviane,35,PIX,,Marco
+2026-03-08,hidratacao,Isabela,60,PIX,,Marco
+2026-03-08,corte,Jessica,40,DINHEIRO,,Marco
+2026-03-09,escova,Ana,45,PIX,,Marco
+2026-03-09,escova,Debora,45,PIX,,Marco
+2026-03-09,coloracao + hidrat,Simone,190,PIX,,Marco
+2026-03-09,coloracao + hidrat,Bruna,210,PIX,,Marco
+2026-03-09,corte infantil,Carlos,35,CREDITO,,Marco
+2026-03-09,progressiva,Flavia,180,PIX,,Marco
+2026-03-09,corte,Felipe,35,PIX,,Marco
+2026-03-09,hidratacao,Monica,55,DINHEIRO,,Marco
+2026-03-10,corte,Fernanda,45,DINHEIRO,,Marco
+2026-03-10,corte infantil,Felipe,35,DINHEIRO,,Marco
+2026-03-10,pedicure,Tatiane,30,PIX,,Marco
+2026-03-10,coloracao,Tania,120,CREDITO,,Marco
+2026-03-10,coloracao,Cristina,120,PIX,,Marco
+2026-03-11,corte + escova,Raquel,80,PIX,,Marco
+2026-03-11,corte,Carlos,35,PIX,,Marco
+2026-03-11,manicure,Joana,30,DINHEIRO,,Marco
+2026-03-11,manicure,Viviane,30,PIX,,Marco
+2026-03-11,sobrancelha,Isabela,25,DINHEIRO,,Marco
+2026-03-11,manicure,Cristina,30,DINHEIRO,,Marco
+2026-03-11,manicure + pedicure,Gisele,60,CREDITO,,Marco
+2026-03-11,progressiva,Juliana S.,180,CREDITO,,Marco
+2026-03-12,manicure,Tania,35,PIX,,Marco
+2026-03-12,corte,Carlos,35,DINHEIRO,,Marco
+2026-03-12,manicure + pedicure,Kelly,60,CREDITO,,Marco
+2026-03-12,manicure + pedicure,Tatiane,60,PIX,,Marco
+2026-03-12,corte,Paulo,45,PIX,,Marco
+2026-03-13,manicure + pedicure,Sandra,55,DINHEIRO,,Marco
+2026-03-13,hidratacao,Debora,55,DINHEIRO,,Marco
+2026-03-13,coloracao,Camila,120,PIX,,Marco
+2026-03-13,progressiva,Bruna,190,PIX,,Marco
+2026-03-13,manicure,Michele,35,PIX,,Marco
+2026-03-14,progressiva,Jessica,180,PIX,,Marco
+2026-03-14,progressiva,Sandra,190,DINHEIRO,,Marco
+2026-03-14,coloracao + hidrat,Sandra,200,PIX,,Marco
+2026-03-14,progressiva,Fabiana,190,DINHEIRO,,Marco
+2026-03-14,escova,Denise,45,DINHEIRO,,Marco
+2026-03-14,corte + escova,Isabela,85,PIX,,Marco
+2026-03-14,corte,Felipe,35,DINHEIRO,,Marco
+2026-03-14,corte infantil,Debora,30,PIX,,Marco
+2026-03-15,corte,Lucia,45,PIX,,Marco
+2026-03-15,corte,Paulo,35,CREDITO,,Marco
+2026-03-15,hidratacao,Renata,65,PIX,,Marco
+2026-03-15,sobrancelha,Helena,30,DINHEIRO,,Marco
+2026-03-15,corte,Felipe,45,DINHEIRO,,Marco
+2026-03-15,sobrancelha,Helena,30,PIX,,Marco
+2026-03-15,corte + escova,Camila,90,DINHEIRO,,Marco
+2026-03-16,corte,Jessica,40,DINHEIRO,,Marco
+2026-03-16,escova,Priscila,40,DINHEIRO,,Marco
+2026-03-16,corte,Paulo,45,PIX,,Marco
+2026-03-16,hidratacao,Fernanda,60,DINHEIRO,,Marco
+2026-03-16,sobrancelha,Gisele,30,DINHEIRO,,Marco
+2026-03-17,manicure + pedicure,Cliente Nova,60,DINHEIRO,,Marco
+2026-03-17,escova,Ana Paula,50,PIX,,Marco
+2026-03-17,corte + escova,Gabriela,90,DINHEIRO,,Marco
+2026-03-17,manicure + pedicure,Fernanda,60,DINHEIRO,,Marco
+2026-03-17,sobrancelha,Amanda,25,CREDITO,,Marco
+2026-03-18,pedicure,Tania,35,PIX,,Marco
+2026-03-18,sobrancelha,Ana Paula,30,PIX,,Marco
+2026-03-18,manicure + pedicure,Denise,60,PIX,,Marco
+2026-03-18,progressiva,Sandra,170,PIX,,Marco
+2026-03-18,coloracao,Monica,130,CREDITO,,Marco
+2026-03-18,hidratacao,Eduarda,60,DINHEIRO,,Marco
+2026-03-18,corte + escova,Denise,85,PIX,,Marco
+2026-03-18,corte,Felipe,40,DINHEIRO,,Marco
+2026-03-19,coloracao + hidrat,Raquel,210,PIX,,Marco
+2026-03-19,coloracao + hidrat,Roberta,210,PIX,,Marco
+2026-03-19,sobrancelha,Gisele,25,CREDITO,,Marco
+2026-03-19,coloracao + hidrat,Priscila,200,CREDITO,,Marco
+2026-03-19,pedicure,Mariana,35,CREDITO,,Marco
+2026-03-19,manicure + pedicure,Denise,55,CREDITO,,Marco
+2026-03-20,coloracao + hidrat,Bruna,190,PIX,,Marco
+2026-03-20,manicure + pedicure,Denise,55,DINHEIRO,,Marco
+2026-03-20,coloracao,Simone,140,PIX,,Marco
+2026-03-20,corte + escova,Gabriela,85,PIX,,Marco
+2026-03-20,sobrancelha,Isabela,30,CREDITO,,Marco
+2026-03-20,hidratacao,Ana,55,DINHEIRO,,Marco
+2026-03-20,progressiva,Amanda,170,DINHEIRO,,Marco
+2026-03-20,manicure + pedicure,Elaine,60,DINHEIRO,,Marco
+2026-03-21,hidratacao,Simone,65,CREDITO,,Marco
+2026-03-21,pedicure,Jessica,30,PIX,,Marco
+2026-03-21,corte infantil,Gisele,35,PIX,,Marco
+2026-03-21,progressiva,Michele,170,DINHEIRO,,Marco
+2026-03-21,progressiva,Gisele,170,PIX,,Marco
+2026-03-21,coloracao + hidrat,Michele,210,PIX,,Marco
+2026-03-21,sobrancelha,Gabriela,25,PIX,,Marco
+2026-03-21,corte,Debora,45,DINHEIRO,,Marco
+2026-03-22,pedicure,Carla,35,PIX,,Marco
+2026-03-22,corte,Ana,40,PIX,,Marco
+2026-03-22,progressiva,Flavia,190,PIX,,Marco
+2026-03-22,corte,Paulo,40,PIX,,Marco
+2026-03-22,escova,Monica,40,PIX,,Marco
+2026-03-22,corte,Camila,35,PIX,,Marco
+2026-03-22,corte + escova,Roberta,80,DINHEIRO,,Marco
+2026-03-22,manicure + pedicure,Maria,60,DINHEIRO,,Marco
+2026-03-23,corte,Paulo,40,PIX,,Marco
+2026-03-23,escova,Cliente Nova,40,PIX,,Marco
+2026-03-23,corte,Jessica,35,PIX,,Marco
+2026-03-23,progressiva,Debora,180,DINHEIRO,,Marco
+2026-03-23,coloracao + hidrat,Lucia,200,DINHEIRO,,Marco
+2026-03-23,corte + escova,Larissa,85,DINHEIRO,,Marco
+2026-03-23,manicure + pedicure,Raquel,55,CREDITO,,Marco
+2026-03-23,coloracao + hidrat,Larissa,200,DINHEIRO,,Marco
+2026-03-24,corte,Felipe,40,DINHEIRO,,Marco
+2026-03-24,corte infantil,Paulo,35,DINHEIRO,,Marco
+2026-03-24,sobrancelha,Natalia,25,PIX,,Marco
+2026-03-24,manicure,Elaine,35,DINHEIRO,,Marco
+2026-03-24,manicure + pedicure,Bianca,55,CREDITO,,Marco
+2026-03-24,coloracao,Vanessa,140,PIX,,Marco
+2026-03-24,manicure,Natalia,30,CREDITO,,Marco
+2026-03-25,coloracao,Maria,140,DINHEIRO,,Marco
+2026-03-25,manicure + pedicure,Denise,60,DINHEIRO,,Marco
+2026-03-25,corte,Raquel,40,DINHEIRO,,Marco
+2026-03-25,corte,Andre,45,DINHEIRO,,Marco
+2026-03-25,manicure + pedicure,Bruna,60,DINHEIRO,,Marco
+2026-03-25,sobrancelha,Vanessa,25,PIX,,Marco
+2026-03-25,hidratacao,Beatriz,60,PIX,,Marco
+2026-03-25,manicure + pedicure,Bruna,50,PIX,,Marco
+2026-03-26,corte + escova,Fabiana,90,DINHEIRO,,Marco
+2026-03-26,escova,Simone,50,DINHEIRO,,Marco
+2026-03-26,manicure + pedicure,Ana,50,PIX,,Marco
+2026-03-26,escova,Natalia,45,PIX,,Marco
+2026-03-26,pedicure,Monica,35,CREDITO,,Marco
+2026-03-26,manicure,Ana,35,CREDITO,,Marco
+2026-03-27,pedicure,Helena,30,PIX,,Marco
+2026-03-27,coloracao,Joana,120,PIX,,Marco
+2026-03-27,manicure + pedicure,Viviane,60,PIX,,Marco
+2026-03-27,corte infantil,Carlos,30,DINHEIRO,,Marco
+2026-03-27,hidratacao,Daniela,65,CREDITO,,Marco
+2026-03-28,manicure + pedicure,Kelly,60,DINHEIRO,,Marco
+2026-03-28,coloracao,Daniela,120,PIX,,Marco
+2026-03-28,sobrancelha,Paulo,25,PIX,,Marco
+2026-03-28,corte + escova,Carla,80,PIX,,Marco
+2026-03-28,corte + escova,Juliana S.,80,PIX,,Marco
+2026-03-28,pedicure,Bianca,35,DINHEIRO,,Marco
+2026-03-28,manicure + pedicure,Ana Paula,50,CREDITO,,Marco
+2026-03-28,manicure,Renata,35,PIX,,Marco
+2026-03-29,corte + escova,Renata,85,DINHEIRO,,Marco
+2026-03-29,coloracao,Juliana S.,120,PIX,,Marco
+2026-03-29,manicure + pedicure,Bianca,50,CREDITO,,Marco
+2026-03-29,corte infantil,Cliente Nova,35,DINHEIRO,,Marco
+2026-03-29,coloracao + hidrat,Natalia,190,PIX,,Marco
+2026-03-29,sobrancelha,Jessica,25,DINHEIRO,,Marco
+2026-03-29,progressiva,Renata,170,DINHEIRO,,Marco
+2026-03-29,pedicure,Beatriz,35,CREDITO,,Marco
+2026-03-30,corte infantil,Paulo,30,DINHEIRO,,Marco
+2026-03-30,coloracao,Natalia,140,CREDITO,,Marco
+2026-03-30,sobrancelha,Debora,25,PIX,,Marco
+2026-03-30,corte infantil,Jorge,35,CREDITO,,Marco
+2026-03-30,progressiva,Helena,190,CREDITO,,Marco
+2026-03-30,sobrancelha,Camila,25,PIX,,Marco
+2026-03-30,corte infantil,Roberto,30,PIX,,Marco
+2026-03-30,coloracao + hidrat,Simone,210,DINHEIRO,,Marco
+2026-03-31,pedicure,Fabiana,30,CREDITO,,Marco
+2026-03-31,manicure + pedicure,Tania,55,CREDITO,,Marco
+2026-03-31,coloracao + hidrat,Ana Paula,190,CREDITO,,Marco
+2026-03-31,manicure,Eduarda,30,PIX,,Marco
+2026-03-31,corte infantil,Fernanda,30,PIX,,Marco
