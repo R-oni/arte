@@ -1,0 +1,2191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso BI — Tudo para ser contratado</title>
+    <meta name="robots" content="noindex, nofollow">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0f1a;
+            --bg2: #111827;
+            --bg3: #1e293b;
+            --bg4: #0f172a;
+            --border: #334155;
+            --text: #e2e8f0;
+            --text2: #94a3b8;
+            --accent: #3b82f6;
+            --accent2: #60a5fa;
+            --green: #34d399;
+            --yellow: #fbbf24;
+            --orange: #fb923c;
+            --red: #f87171;
+            --purple: #a78bfa;
+            --pink: #f472b6;
+            --cyan: #22d3ee;
+            --radius: 12px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        /* ===== NAV ===== */
+        .topnav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 15, 26, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            z-index: 999;
+            padding: 0 2rem;
+        }
+
+        .topnav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 56px;
+        }
+
+        .topnav .logo {
+            font-weight: 800;
+            font-size: 1rem;
+            background: linear-gradient(135deg, var(--accent2), var(--purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .topnav-links {
+            display: flex;
+            gap: 0.25rem;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+
+        .topnav-links::-webkit-scrollbar { display: none; }
+
+        .topnav-links a {
+            color: var(--text2);
+            text-decoration: none;
+            font-size: 0.78rem;
+            padding: 0.4rem 0.7rem;
+            border-radius: 6px;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+
+        .topnav-links a:hover, .topnav-links a.active {
+            color: var(--accent2);
+            background: rgba(59, 130, 246, 0.1);
+        }
+
+        /* ===== LAYOUT ===== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 2rem 4rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+            scroll-margin-top: 70px;
+        }
+
+        h1 { font-size: 2.2rem; font-weight: 800; }
+        h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        h2 .tag {
+            font-size: 0.65rem;
+            background: var(--accent);
+            color: white;
+            padding: 0.15rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+        h3 { font-size: 1.15rem; font-weight: 600; margin-bottom: 0.5rem; }
+
+        p { color: var(--text2); margin-bottom: 1rem; }
+
+        /* ===== CARDS ===== */
+        .card {
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-sm {
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.25rem;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            text-align: center;
+            padding: 3rem 0 2rem;
+        }
+
+        .hero h1 {
+            background: linear-gradient(135deg, var(--accent2), var(--purple), var(--pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.75rem;
+            font-size: 2.5rem;
+        }
+
+        .hero p { font-size: 1.05rem; max-width: 700px; margin: 0 auto 1.5rem; }
+
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat .num {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--accent2);
+        }
+
+        .hero-stat .label {
+            font-size: 0.8rem;
+            color: var(--text2);
+        }
+
+        /* ===== BADGES ===== */
+        .badge {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.72rem;
+            font-weight: 600;
+        }
+        .badge-blue { background: rgba(59,130,246,0.15); color: var(--accent2); }
+        .badge-green { background: rgba(52,211,153,0.15); color: var(--green); }
+        .badge-yellow { background: rgba(251,191,36,0.15); color: var(--yellow); }
+        .badge-red { background: rgba(248,113,113,0.15); color: var(--red); }
+        .badge-purple { background: rgba(167,139,250,0.15); color: var(--purple); }
+
+        /* ===== COMMENT BOXES (meus comentários) ===== */
+        .roni-comment {
+            background: rgba(59, 130, 246, 0.06);
+            border-left: 3px solid var(--accent);
+            border-radius: 0 8px 8px 0;
+            padding: 1rem 1.25rem;
+            margin: 1rem 0;
+        }
+
+        .roni-comment::before {
+            content: '💡 Comentário do Roni';
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--accent2);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 0.4rem;
+        }
+
+        .roni-comment p { color: var(--text); font-size: 0.9rem; }
+        .roni-comment p:last-child { margin-bottom: 0; }
+
+        /* ===== TIP BOX ===== */
+        .tip-box {
+            background: rgba(52, 211, 153, 0.06);
+            border-left: 3px solid var(--green);
+            border-radius: 0 8px 8px 0;
+            padding: 1rem 1.25rem;
+            margin: 1rem 0;
+        }
+
+        .tip-box::before {
+            content: '✅ Dica prática';
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--green);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 0.4rem;
+        }
+
+        .tip-box p { color: var(--text); font-size: 0.9rem; }
+        .tip-box p:last-child { margin-bottom: 0; }
+
+        /* ===== WARNING BOX ===== */
+        .warn-box {
+            background: rgba(251, 191, 36, 0.06);
+            border-left: 3px solid var(--yellow);
+            border-radius: 0 8px 8px 0;
+            padding: 1rem 1.25rem;
+            margin: 1rem 0;
+        }
+
+        .warn-box::before {
+            content: '⚠️ Atenção';
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--yellow);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 0.4rem;
+        }
+
+        .warn-box p { color: var(--text); font-size: 0.9rem; }
+        .warn-box p:last-child { margin-bottom: 0; }
+
+        /* ===== TABLE ===== */
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            margin: 1rem 0;
+        }
+
+        .info-table th {
+            background: var(--bg3);
+            color: var(--accent2);
+            text-align: left;
+            padding: 0.75rem 1rem;
+            font-weight: 600;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .info-table td {
+            padding: 0.65rem 1rem;
+            border-bottom: 1px solid rgba(51,65,85,0.5);
+            color: var(--text2);
+        }
+
+        .info-table tr:hover td { background: rgba(59,130,246,0.04); }
+
+        /* ===== CODE ===== */
+        .code-block {
+            background: var(--bg4);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.82rem;
+            line-height: 1.7;
+            overflow-x: auto;
+            margin: 0.75rem 0;
+            color: var(--text);
+        }
+
+        code {
+            font-family: 'Fira Code', monospace;
+            background: var(--bg3);
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.82rem;
+        }
+
+        .kw { color: var(--purple); font-weight: 500; }
+        .fn { color: var(--cyan); }
+        .str { color: var(--green); }
+        .num { color: var(--orange); }
+        .cm { color: #64748b; font-style: italic; }
+
+        /* ===== CHART CONTAINERS ===== */
+        .chart-section {
+            margin: 1.5rem 0;
+        }
+
+        .chart-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .chart-card {
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+        }
+
+        .chart-card h4 {
+            color: var(--accent2);
+            font-size: 0.9rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .chart-card .chart-desc {
+            color: var(--text2);
+            font-size: 0.78rem;
+            margin-bottom: 1rem;
+        }
+
+        .chart-card canvas {
+            max-height: 300px;
+        }
+
+        .pbi-badge {
+            display: inline-block;
+            background: var(--yellow);
+            color: var(--bg);
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 0.1rem 0.5rem;
+            border-radius: 3px;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
+
+        /* ===== KPI CARDS ===== */
+        .kpi-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .kpi-card {
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.25rem;
+            text-align: center;
+        }
+
+        .kpi-card .kpi-title {
+            font-size: 0.75rem;
+            color: var(--text2);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 0.3rem;
+        }
+
+        .kpi-card .kpi-value {
+            font-size: 2rem;
+            font-weight: 800;
+        }
+
+        .kpi-card .kpi-delta {
+            font-size: 0.8rem;
+            margin-top: 0.2rem;
+        }
+
+        .kpi-card .kpi-delta.up { color: var(--green); }
+        .kpi-card .kpi-delta.down { color: var(--red); }
+
+        /* ===== FLOW DIAGRAM ===== */
+        .flow {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+            justify-content: center;
+        }
+
+        .flow-step {
+            background: var(--bg3);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 0.75rem 1.25rem;
+            text-align: center;
+            min-width: 120px;
+        }
+
+        .flow-step .icon { font-size: 1.5rem; margin-bottom: 0.3rem; }
+        .flow-step .name { font-size: 0.82rem; font-weight: 600; }
+        .flow-step .detail { font-size: 0.7rem; color: var(--text2); }
+
+        .flow-arrow { color: var(--accent2); font-size: 1.2rem; }
+
+        /* ===== ACCORDION ===== */
+        .accordion {
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            margin-bottom: 0.75rem;
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            background: var(--bg2);
+            padding: 1rem 1.25rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background 0.2s;
+        }
+
+        .accordion-header:hover { background: var(--bg3); }
+
+        .accordion-header .arrow {
+            transition: transform 0.2s;
+            font-size: 0.8rem;
+            color: var(--text2);
+        }
+
+        .accordion-header.open .arrow { transform: rotate(180deg); }
+
+        .accordion-body {
+            display: none;
+            padding: 1rem 1.25rem;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+        }
+
+        .accordion-body.open { display: block; }
+
+        /* ===== PROGRESS BAR ===== */
+        .skill-bar {
+            margin: 0.5rem 0;
+        }
+
+        .skill-bar .skill-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.82rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .skill-bar .bar-bg {
+            height: 6px;
+            background: var(--bg3);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .skill-bar .bar-fill {
+            height: 100%;
+            border-radius: 3px;
+            background: var(--accent);
+            transition: width 0.8s ease;
+        }
+
+        /* ===== LIST ===== */
+        .check-list {
+            list-style: none;
+            margin: 0.5rem 0;
+        }
+
+        .check-list li {
+            padding: 0.4rem 0;
+            font-size: 0.9rem;
+            color: var(--text);
+        }
+
+        .check-list li::before {
+            content: '✓';
+            color: var(--green);
+            font-weight: 700;
+            margin-right: 0.5rem;
+        }
+
+        .num-list {
+            list-style: none;
+            counter-reset: numlist;
+            margin: 0.5rem 0;
+        }
+
+        .num-list li {
+            padding: 0.5rem 0;
+            font-size: 0.9rem;
+            color: var(--text);
+            counter-increment: numlist;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .num-list li::before {
+            content: counter(numlist);
+            position: absolute;
+            left: 0;
+            background: var(--accent);
+            color: white;
+            width: 1.4rem;
+            height: 1.4rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.72rem;
+            font-weight: 700;
+            top: 0.55rem;
+        }
+
+        /* ===== COMPARISON ===== */
+        .vs-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        /* ===== TIMELINE ===== */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+            margin: 1rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0.5rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -1.65rem;
+            top: 0.4rem;
+            width: 10px;
+            height: 10px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        .timeline-item.done::before { background: var(--green); }
+
+        .timeline-item .time-label {
+            font-size: 0.72rem;
+            color: var(--accent2);
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .timeline-item h4 { font-size: 0.95rem; margin: 0.15rem 0; }
+        .timeline-item p { font-size: 0.85rem; margin: 0; }
+
+        /* ===== TOGGLE TABS ===== */
+        .tab-container { margin: 1rem 0; }
+
+        .tab-buttons {
+            display: flex;
+            gap: 0.25rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 0.5rem 1rem;
+            background: var(--bg3);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text2);
+            font-size: 0.82rem;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .tab-btn.active {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        .tab-panel { display: none; }
+        .tab-panel.active { display: block; }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 800px) {
+            .topnav-links { display: none; }
+            .container { padding: 70px 1rem 3rem; }
+            .chart-row { grid-template-columns: 1fr; }
+            .card-grid { grid-template-columns: 1fr; }
+            .vs-grid { grid-template-columns: 1fr; }
+            .flow { gap: 0.3rem; }
+            .flow-step { min-width: 90px; padding: 0.5rem 0.75rem; }
+            h1 { font-size: 1.6rem; }
+            h2 { font-size: 1.3rem; }
+            .hero h1 { font-size: 1.8rem; }
+        }
+
+        /* ===== SCROLL ===== */
+        .scroll-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--accent);
+            color: white;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+            z-index: 200;
+        }
+        .scroll-top.visible { display: flex; }
+
+        /* ===== GAUGE ===== */
+        .gauge-container {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+
+        .gauge {
+            width: 150px;
+            text-align: center;
+        }
+
+        .gauge canvas { width: 130px !important; height: 80px !important; }
+
+        .gauge .gauge-label {
+            font-size: 0.78rem;
+            color: var(--text2);
+            margin-top: 0.3rem;
+        }
+
+        .gauge .gauge-val {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="topnav">
+    <div class="topnav-inner">
+        <div class="logo">📊 Curso BI — 80/20</div>
+        <div class="topnav-links">
+            <a href="#mercado">Mercado</a>
+            <a href="#rh">RH</a>
+            <a href="#ecossistema">Ecossistema</a>
+            <a href="#powerbi">Power BI</a>
+            <a href="#dax">DAX</a>
+            <a href="#pq">Power Query</a>
+            <a href="#sql">SQL</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#linkedin">LinkedIn</a>
+            <a href="#roadmap">Roadmap</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <!-- ================================================================ -->
+    <!-- HERO -->
+    <!-- ================================================================ -->
+    <section class="hero" id="top">
+        <h1>Guia 80/20 para BI</h1>
+        <p>Tudo que você precisa saber para ser contratado como Analista de BI — sem enrolação, com foco tático no que o mercado realmente pede.</p>
+        <div class="hero-stats">
+            <div class="hero-stat"><div class="num">10</div><div class="label">Seções</div></div>
+            <div class="hero-stat"><div class="num">80%</div><div class="label">do resultado</div></div>
+            <div class="hero-stat"><div class="num">20%</div><div class="label">do esforço</div></div>
+        </div>
+
+
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- 1. O QUE É BI? -->
+    <!-- ================================================================ -->
+    <section id="mercado">
+        <h2>📈 O que é Business Intelligence <span class="tag">Fundamento</span></h2>
+
+        <div class="card">
+            <h3>Definição que cola na entrevista</h3>
+            <p><strong style="color:var(--text)">Business Intelligence</strong> é o processo de <strong style="color:var(--accent2)">coletar, organizar, analisar e visualizar dados</strong> para transformá-los em informações que apoiam decisões de negócio. Não é uma ferramenta específica — é um <em>conjunto de práticas, ferramentas e cultura</em>.</p>
+
+            <div class="roni-comment">
+                <p>Na prática, o mercado quer alguém que pegue dados bagunçados de várias fontes (planilhas, sistemas, bancos de dados), limpe e organize esses dados, e depois monte dashboards bonitos e úteis para gestores tomarem decisões. É isso. Se você sabe fazer isso, está empregado.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>O mercado de BI em números</h3>
+            <table class="info-table">
+                <tr><th>Fato</th><th>Detalhe</th></tr>
+                <tr><td>Salário médio (Jr)</td><td><strong style="color:var(--green)">R$ 3.500 — R$ 6.000</strong> (CLT, capitais)</td></tr>
+                <tr><td>Salário médio (Pleno)</td><td><strong style="color:var(--green)">R$ 6.000 — R$ 12.000</strong></td></tr>
+                <tr><td>Ferramenta #1 nas vagas</td><td><strong style="color:var(--yellow)">Power BI</strong> (presente em ~75% das vagas BR)</td></tr>
+                <tr><td>Ferramenta #2</td><td>SQL (presente em ~65% das vagas)</td></tr>
+                <tr><td>Ferramenta #3</td><td>Excel avançado / Google Sheets</td></tr>
+                <tr><td>Diferencial</td><td>Python, Looker Studio, Tableau, dbt</td></tr>
+                <tr><td>Crescimento médio</td><td><strong style="color:var(--accent2)">~22% ao ano</strong> em novas vagas</td></tr>
+                <tr><td>Setor que mais contrata</td><td>Varejo, Financeiro, Saúde, Tech</td></tr>
+            </table>
+
+            <div class="roni-comment">
+                <p><strong>Realidade crua:</strong> se você sabe Power BI + SQL + Excel, já passa em 80% dos processos para BI Júnior. Python é diferencial gigante — e é exatamente por isso que esse combo funciona tão bem para você. Não precisa saber tudo. Precisa saber o que pesa.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>BI vs. Engenharia de Dados vs. Ciência de Dados</h3>
+            <table class="info-table">
+                <tr><th>Cargo</th><th>Foco</th><th>Ferramentas</th><th>Dificuldade de entrada</th></tr>
+                <tr>
+                    <td><strong style="color:var(--accent2)">Analista BI</strong></td>
+                    <td>Dashboards, relatórios, KPIs</td>
+                    <td>Power BI, SQL, Excel</td>
+                    <td><span class="badge badge-green">Acessível</span></td>
+                </tr>
+                <tr>
+                    <td>Engenheiro de Dados</td>
+                    <td>Pipelines, ETL, infraestrutura</td>
+                    <td>Python, Spark, Airflow, AWS</td>
+                    <td><span class="badge badge-yellow">Média</span></td>
+                </tr>
+                <tr>
+                    <td>Cientista de Dados</td>
+                    <td>Modelos preditivos, ML, estatística</td>
+                    <td>Python, R, TensorFlow, SQL</td>
+                    <td><span class="badge badge-red">Alta</span></td>
+                </tr>
+            </table>
+
+            <div class="tip-box">
+                <p><strong>Estratégia inteligente:</strong> entre como Analista BI (menor barreira), ganhe experiência com dados reais, e depois migre para Engenharia ou Ciência de Dados se quiser. Muitas empresas pagarão sua evolução.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- 2. O QUE O RH PERGUNTA -->
+    <!-- ================================================================ -->
+    <section id="rh">
+        <h2>🎯 O que o RH pergunta <span class="tag">Entrevista</span></h2>
+
+        <div class="roni-comment">
+            <p>Processos seletivos de BI geralmente têm 3 etapas: (1) triagem de currículo → (2) entrevista com RH/gestor → (3) case técnico. O RH filtra por palavras-chave e "fit cultural". O gestor filtra por competência real. Vou te preparar para os dois.</p>
+        </div>
+
+        <h3>Perguntas mais comuns (com respostas modelo)</h3>
+
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                "O que é BI para você?"
+                <span class="arrow">▼</span>
+            </div>
+            <div class="accordion-body">
+                <p><strong>Resposta modelo:</strong> "BI é o processo de transformar dados brutos em informações visuais e acionáveis para apoiar decisões de negócio. Na prática, eu conecto fontes de dados, faço o tratamento e modelagem, e construo dashboards que permitem ao gestor enxergar KPIs, tendências e pontos de ação — de forma autônoma, sem depender de relatórios manuais."</p>
+                <div class="tip-box">
+                    <p>Mencionou: dados brutos → informação → decisão → autonomia. São as 4 palavras-chave que o entrevistador quer ouvir.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                "Qual sua experiência com Power BI?"
+                <span class="arrow">▼</span>
+            </div>
+            <div class="accordion-body">
+                <p><strong>Resposta modelo:</strong> "Já criei dashboards conectando a diferentes fontes — planilhas Excel, bancos SQL e CSVs. Uso Power Query para ETL (limpeza, transformação, merge de tabelas), modelo dados em esquema estrela no modelo de dados, e construo medidas em DAX para KPIs como faturamento, ticket médio, crescimento MoM, e rank de produtos. Também configuro RLS para controle de acesso por usuário."</p>
+                <div class="tip-box">
+                    <p>Mesmo sem experiência "profissional", você pode falar dos projetos pessoais do GitHub. O entrevistador quer ouvir os termos: Power Query, DAX, modelo estrela, RLS.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                "Me conta um projeto de dados que você fez"
+                <span class="arrow">▼</span>
+            </div>
+            <div class="accordion-body">
+                <p><strong>Resposta modelo (baseada no seu projeto real):</strong> "Criei um sistema de dashboards para pequenos negócios. Cada cliente tem seus dados em CSV, que são processados por scripts Python. O dashboard mostra faturamento, lucro, despesas, funcionários, e gera insights automaticamente comparando mês atual vs. anterior. Tudo hospedado no GitHub Pages e o cliente acessa pelo link direto do domínio."</p>
+                <div class="roni-comment">
+                    <p>Isso é PODEROSO. Você tem um projeto real em produção, com domínio próprio, atendendo clientes. 95% dos candidatos júnior não têm isso. Use esse projeto como âncora em toda entrevista.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                "O que é ETL?"
+                <span class="arrow">▼</span>
+            </div>
+            <div class="accordion-body">
+                <p><strong>Resposta:</strong> "ETL significa Extract, Transform, Load — Extrair dados de fontes diversas, Transformar (limpar, padronizar, enriquecer) e Carregar em um destino (data warehouse, modelo de dados). No Power BI, o Power Query faz esse papel. Em projetos maiores, ferramentas como dbt, Airflow ou SSIS são usadas."</p>
+            </div>
+        </div>
+
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                "O que é esquema estrela?"
+                <span class="arrow">▼</span>
+            </div>
+            <div class="accordion-body">
+                <p><strong>Resposta:</strong> "É a forma de modelar dados para BI: uma tabela fato central (com as métricas — vendas, transações) cercada por tabelas dimensão (cliente, produto, tempo, loja). Isso otimiza performance e torna o modelo lógico para medidas DAX."</p>
+                <div style="background: var(--bg3); border-radius: 8px; padding: 1.5rem; margin: 1rem 0; text-align: center;">
+                    <div style="display: inline-block; background: var(--accent); color: white; padding: 0.75rem 2rem; border-radius: 8px; font-weight: 700; font-size: 1rem; margin-bottom: 1rem;">
+                        📦 FATO_VENDAS<br><span style="font-size: 0.75rem; opacity: 0.8;">id, data_id, cliente_id, produto_id, qtd, valor</span>
+                    </div>
+                    <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                        <div style="background: var(--bg4); border: 1px solid var(--purple); padding: 0.5rem 1rem; border-radius: 6px;">
+                            <span style="color: var(--purple); font-weight: 600;">DIM_TEMPO</span><br>
+                            <span style="font-size: 0.72rem; color: var(--text2);">data, mês, trimestre, ano</span>
+                        </div>
+                        <div style="background: var(--bg4); border: 1px solid var(--green); padding: 0.5rem 1rem; border-radius: 6px;">
+                            <span style="color: var(--green); font-weight: 600;">DIM_CLIENTE</span><br>
+                            <span style="font-size: 0.72rem; color: var(--text2);">nome, cidade, segmento</span>
+                        </div>
+                        <div style="background: var(--bg4); border: 1px solid var(--yellow); padding: 0.5rem 1rem; border-radius: 6px;">
+                            <span style="color: var(--yellow); font-weight: 600;">DIM_PRODUTO</span><br>
+                            <span style="font-size: 0.72rem; color: var(--text2);">nome, categoria, preço</span>
+                        </div>
+                        <div style="background: var(--bg4); border: 1px solid var(--pink); padding: 0.5rem 1rem; border-radius: 6px;">
+                            <span style="color: var(--pink); font-weight: 600;">DIM_LOJA</span><br>
+                            <span style="font-size: 0.72rem; color: var(--text2);">nome, região, UF</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                "Qual a diferença entre medida e coluna calculada?"
+                <span class="arrow">▼</span>
+            </div>
+            <div class="accordion-body">
+                <p><strong>Resposta:</strong></p>
+                <table class="info-table">
+                    <tr><th>Aspecto</th><th>Medida (Measure)</th><th>Coluna Calculada</th></tr>
+                    <tr><td>Quando calcula</td><td>Sob demanda (ao interagir)</td><td>Na atualização dos dados</td></tr>
+                    <tr><td>Contexto</td><td>Depende dos filtros/visuais</td><td>Calculada linha a linha</td></tr>
+                    <tr><td>Ocupa memória</td><td>Não (virtual)</td><td>Sim (persiste na tabela)</td></tr>
+                    <tr><td>Uso ideal</td><td>KPIs, agregações, %</td><td>Classificações, flags, lookups</td></tr>
+                </table>
+                <div class="warn-box">
+                    <p><strong>Regra de ouro:</strong> se pode ser medida, faça como medida. Colunas calculadas são exceção — use só quando precisa do valor por linha. Isso é pergunta de entrevista técnica.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                "O que é RLS no Power BI?"
+                <span class="arrow">▼</span>
+            </div>
+            <div class="accordion-body">
+                <p><strong>Resposta:</strong> "Row-Level Security (RLS) é o controle de acesso por linha de dados. Cada usuário vê só os dados que deve ver. Exemplo: o gerente da loja SP vê só os dados de SP. É configurado no modelo de dados com DAX e atribuído a usuários no Power BI Service."</p>
+                <div class="code-block">
+                    <span class="cm">-- Exemplo de regra RLS em DAX:</span><br>
+                    [regiao] = <span class="fn">USERPRINCIPALNAME</span>()
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                "Como você lida com dados sujos?"
+                <span class="arrow">▼</span>
+            </div>
+            <div class="accordion-body">
+                <p><strong>Resposta:</strong> "Primeiro identifico os problemas: duplicatas, nulos, tipos errados, nomes inconsistentes. Depois trato no Power Query (ou Python/SQL, dependendo do volume). Minhas etapas: remover duplicatas, padronizar maiúsculas/minúsculas, tratar nulos com substituição ou remoção, corrigir tipos de dados, e validar com contagens antes x depois."</p>
+            </div>
+        </div>
+
+        <div class="card" style="margin-top: 1.5rem;">
+            <h3>🎯 Termos que o RH vai filtrar no seu currículo</h3>
+            <p>Coloque esses termos no seu LinkedIn e currículo — recrutadores usam ATS (rastreamento automático) que filtram candidatos por palavras-chave:</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem;">
+                <span class="badge badge-blue">Power BI</span>
+                <span class="badge badge-blue">DAX</span>
+                <span class="badge badge-blue">Power Query</span>
+                <span class="badge badge-blue">SQL</span>
+                <span class="badge badge-blue">ETL</span>
+                <span class="badge badge-blue">Data Warehouse</span>
+                <span class="badge badge-blue">Esquema Estrela</span>
+                <span class="badge badge-green">Python</span>
+                <span class="badge badge-green">Dashboard</span>
+                <span class="badge badge-green">KPI</span>
+                <span class="badge badge-green">Análise de Dados</span>
+                <span class="badge badge-yellow">Excel Avançado</span>
+                <span class="badge badge-yellow">Storytelling com Dados</span>
+                <span class="badge badge-yellow">Automação de Relatórios</span>
+                <span class="badge badge-purple">Modelagem de Dados</span>
+                <span class="badge badge-purple">RLS</span>
+                <span class="badge badge-purple">GitHub</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- 3. ECOSSISTEMA DE BI -->
+    <!-- ================================================================ -->
+    <section id="ecossistema">
+        <h2>🔗 Ecossistema BI — Como tudo se conecta <span class="tag">Arquitetura</span></h2>
+
+        <div class="card">
+            <h3>Pipeline clássico de BI</h3>
+            <div class="flow">
+                <div class="flow-step">
+                    <div class="icon">📁</div>
+                    <div class="name">Fontes</div>
+                    <div class="detail">Excel, CSV, APIs, ERPs, Bancos</div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">
+                    <div class="icon">🔄</div>
+                    <div class="name">ETL</div>
+                    <div class="detail">Power Query, Python, dbt, SSIS</div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">
+                    <div class="icon">🏛️</div>
+                    <div class="name">Data Warehouse</div>
+                    <div class="detail">SQL Server, BigQuery, Snowflake</div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">
+                    <div class="icon">📊</div>
+                    <div class="name">Visualização</div>
+                    <div class="detail">Power BI, Tableau, Looker</div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">
+                    <div class="icon">👔</div>
+                    <div class="name">Decisão</div>
+                    <div class="detail">Gestor, Diretoria, Ação</div>
+                </div>
+            </div>
+
+            <div class="roni-comment">
+                <p>Para vaga júnior, você precisa dominar o ETL (Power Query) e a Visualização (Power BI). O Data Warehouse geralmente é responsabilidade do engenheiro de dados. Mas entender o conceito todo mostra maturidade e impressiona muito.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Como as ferramentas se integram na vida real</h3>
+            <table class="info-table">
+                <tr><th>Cenário</th><th>Fluxo</th><th>Ferramentas</th></tr>
+                <tr>
+                    <td><strong>PME simples</strong></td>
+                    <td>Excel/CSV → Power BI Desktop → Dashboard</td>
+                    <td>Power Query + DAX</td>
+                </tr>
+                <tr>
+                    <td><strong>Empresa média</strong></td>
+                    <td>ERP → SQL Server → Power BI Service → Aplic. SharePoint</td>
+                    <td>SQL + Power Query + Gateway</td>
+                </tr>
+                <tr>
+                    <td><strong>E-commerce</strong></td>
+                    <td>APIs (Shopify) → Python ETL → BigQuery → Looker/Power BI</td>
+                    <td>Python + SQL + BI Tool</td>
+                </tr>
+                <tr>
+                    <td><strong>Startup data-driven</strong></td>
+                    <td>Postgres → dbt (transformação) → Metabase/Looker → Slack alerts</td>
+                    <td>dbt + SQL + API integrations</td>
+                </tr>
+                <tr>
+                    <td><strong>Seu projeto (roniricardo)</strong></td>
+                    <td>CSV → Python → JSON → HTML/Chart.js → GitHub Pages</td>
+                    <td>Python + JS + Git</td>
+                </tr>
+            </table>
+
+            <div class="tip-box">
+                <p>Perceba: em todos os cenários o SQL aparece. Por isso ele é a segunda habilidade mais pedida das vagas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- 4. POWER BI — SIMULADOR VISUAL -->
+    <!-- ================================================================ -->
+    <section id="powerbi">
+        <h2>⚡ Power BI — Simulador Visual <span class="tag">Ferramenta #1</span></h2>
+
+        <div class="roni-comment">
+            <p>Power BI é o que vai estar na sua tela 80% do dia. Vou simular aqui os visuais mais usados usando Chart.js — mesmos tipos de gráfico, dados realistas de um negócio. Isso te dá vocabulário visual para quando for montar os seus.</p>
+        </div>
+
+        <!-- KPI CARDS -->
+        <div class="card">
+            <h3>📋 Cartões de KPI <span class="pbi-badge">POWER BI: Card Visual</span></h3>
+            <p>O visual mais simples e mais usado. Mostra um número grande com contexto (% de variação).</p>
+            <div class="kpi-row">
+                <div class="kpi-card">
+                    <div class="kpi-title">Faturamento</div>
+                    <div class="kpi-value" style="color: var(--accent2);">R$ 284k</div>
+                    <div class="kpi-delta up">▲ 12.3% vs mês anterior</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-title">Ticket Médio</div>
+                    <div class="kpi-value" style="color: var(--green);">R$ 89</div>
+                    <div class="kpi-delta up">▲ 3.1%</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-title">Nº Clientes Ativos</div>
+                    <div class="kpi-value" style="color: var(--purple);">1.247</div>
+                    <div class="kpi-delta down">▼ 2.4%</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-title">Margem Líquida</div>
+                    <div class="kpi-value" style="color: var(--yellow);">18.6%</div>
+                    <div class="kpi-delta up">▲ 1.8pp</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-title">NPS</div>
+                    <div class="kpi-value" style="color: var(--green);">72</div>
+                    <div class="kpi-delta up">▲ 5 pts</div>
+                </div>
+            </div>
+            <div class="roni-comment">
+                <p><strong>No Power BI real:</strong> você usa o visual "Cartão" e conecta a uma medida DAX. Exemplo: cria a medida <code>Faturamento = SUM(vendas[valor])</code> e arrasta pro cartão. Para a variação %, cria outra medida que compara com o mês anterior usando <code>PREVIOUSMONTH()</code>.</p>
+            </div>
+        </div>
+
+        <!-- BAR CHART -->
+        <div class="chart-row">
+            <div class="chart-card">
+                <h4>📊 Faturamento por Categoria <span class="pbi-badge">Gráfico de Barras</span></h4>
+                <p class="chart-desc">O gráfico mais usado no Power BI. Comparação entre categorias.</p>
+                <canvas id="chartBarras"></canvas>
+            </div>
+
+            <div class="chart-card">
+                <h4>📈 Faturamento Mensal <span class="pbi-badge">Gráfico de Linhas</span></h4>
+                <p class="chart-desc">Tendência ao longo do tempo. O segundo mais usado.</p>
+                <canvas id="chartLinhas"></canvas>
+            </div>
+        </div>
+
+        <div class="chart-row">
+            <div class="chart-card">
+                <h4>🍩 Mix de Receita <span class="pbi-badge">Gráfico de Rosca</span></h4>
+                <p class="chart-desc">Distribuição percentual. Use com parcimônia (máx 5-6 fatias).</p>
+                <canvas id="chartRosca"></canvas>
+            </div>
+
+            <div class="chart-card">
+                <h4>📊 Meta vs Realizado <span class="pbi-badge">Gráfico Combinado</span></h4>
+                <p class="chart-desc">Barras + Linha no mesmo gráfico. Muito usado para meta vs. real.</p>
+                <canvas id="chartCombo"></canvas>
+            </div>
+        </div>
+
+        <div class="chart-row">
+            <div class="chart-card">
+                <h4>📊 Faturamento por Região <span class="pbi-badge">Barras Horizontais</span></h4>
+                <p class="chart-desc">Ideal para ranking. Top N regiões, Top N produtos, etc.</p>
+                <canvas id="chartHorizontal"></canvas>
+            </div>
+
+            <div class="chart-card">
+                <h4>📊 Vendas: Produto A vs B vs C <span class="pbi-badge">Barras Empilhadas</span></h4>
+                <p class="chart-desc">Composição + comparação no mesmo visual.</p>
+                <canvas id="chartStacked"></canvas>
+            </div>
+        </div>
+
+        <div class="chart-row">
+            <div class="chart-card">
+                <h4>🏢 Análise de Dispersão <span class="pbi-badge">Scatter Plot</span></h4>
+                <p class="chart-desc">Correlação entre duas variáveis (ex: preço vs volume vendido).</p>
+                <canvas id="chartScatter"></canvas>
+            </div>
+
+            <div class="chart-card">
+                <h4>📈 Área — Evolução Acumulada <span class="pbi-badge">Gráfico de Área</span></h4>
+                <p class="chart-desc">Mostra volume acumulado ao longo do tempo.</p>
+                <canvas id="chartArea"></canvas>
+            </div>
+        </div>
+
+        <div class="chart-row">
+            <div class="chart-card">
+                <h4>🎯 Radar — Perfil do Analista BI <span class="pbi-badge">Gráfico Radar</span></h4>
+                <p class="chart-desc">Comparação multidimensional. Bom para perfis/competências.</p>
+                <canvas id="chartRadar"></canvas>
+            </div>
+
+            <div class="chart-card">
+                <h4>📊 Polar — Distribuição de Despesas <span class="pbi-badge">Gráfico Polar</span></h4>
+                <p class="chart-desc">Variação do Rosca — bom para comparar magnitudes.</p>
+                <canvas id="chartPolar"></canvas>
+            </div>
+        </div>
+
+        <div class="card" style="margin-top: 1.5rem;">
+            <h3>📊 Resumo: Top 10 visuais mais usados no Power BI</h3>
+            <table class="info-table">
+                <tr><th>#</th><th>Visual</th><th>Quando usar</th><th>Frequência</th></tr>
+                <tr><td>1</td><td><strong>Cartão (Card)</strong></td><td>KPIs principais</td><td><span class="badge badge-green">Sempre</span></td></tr>
+                <tr><td>2</td><td><strong>Barra vertical</strong></td><td>Comparação entre categorias</td><td><span class="badge badge-green">Sempre</span></td></tr>
+                <tr><td>3</td><td><strong>Linha</strong></td><td>Tendência ao longo do tempo</td><td><span class="badge badge-green">Sempre</span></td></tr>
+                <tr><td>4</td><td><strong>Barra horizontal</strong></td><td>Rankings, Top N</td><td><span class="badge badge-blue">Muito</span></td></tr>
+                <tr><td>5</td><td><strong>Tabela / Matriz</strong></td><td>Detalhamento com drill-down</td><td><span class="badge badge-blue">Muito</span></td></tr>
+                <tr><td>6</td><td><strong>Rosca / Pizza</strong></td><td>Composição (máx 5 fatias)</td><td><span class="badge badge-blue">Muito</span></td></tr>
+                <tr><td>7</td><td><strong>Combinado (barra+linha)</strong></td><td>Meta vs. Realizado</td><td><span class="badge badge-yellow">Frequente</span></td></tr>
+                <tr><td>8</td><td><strong>Barras empilhadas</strong></td><td>Composição + comparação</td><td><span class="badge badge-yellow">Frequente</span></td></tr>
+                <tr><td>9</td><td><strong>Mapa</strong></td><td>Dados geográficos</td><td><span class="badge badge-purple">Ocasional</span></td></tr>
+                <tr><td>10</td><td><strong>Gauge / KPI</strong></td><td>Progresso em relação a meta</td><td><span class="badge badge-purple">Ocasional</span></td></tr>
+            </table>
+
+            <div class="roni-comment">
+                <p><strong>Regra de ouro no Power BI:</strong> menos é mais. Um dashboard bom tem 5-7 visuais no máximo. Um cartão de KPI no topo, um gráfico de barras, um de linha, uma tabela e um filtro. É isso. Dashboards poluídos são o erro #1 de iniciantes.</p>
+            </div>
+        </div>
+
+        <!-- POWER BI INTERFACE GUIDE -->
+        <div class="card">
+            <h3>🖥️ Anatomia do Power BI Desktop</h3>
+            <p>Conheça as 3 views que você usará:</p>
+
+            <div class="tab-container" id="pbiTabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" onclick="switchTab('pbiTabs', 0)">📊 Report View</button>
+                    <button class="tab-btn" onclick="switchTab('pbiTabs', 1)">📋 Data View</button>
+                    <button class="tab-btn" onclick="switchTab('pbiTabs', 2)">🔗 Model View</button>
+                </div>
+
+                <div class="tab-panel active">
+                    <div class="card-sm">
+                        <h4 style="color: var(--accent2);">Report View — Onde tudo acontece</h4>
+                        <p>É onde você monta os dashboards. Arrastar campos para os visuais, aplicar filtros, formatar cores e layout.</p>
+                        <ul class="check-list">
+                            <li><strong>Canvas:</strong> área central onde ficam os visuais</li>
+                            <li><strong>Painel de Visuais:</strong> à direita — escolha o tipo de gráfico</li>
+                            <li><strong>Painel de Campos:</strong> à direita — arraste colunas/medidas</li>
+                            <li><strong>Painel de Filtros:</strong> defina filtros visuais, de página ou de relatório</li>
+                            <li><strong>Páginas:</strong> abas na parte inferior — organize por tema</li>
+                        </ul>
+                        <div class="tip-box">
+                            <p><strong>Estrutura clássica de páginas:</strong> 1) Visão Geral (KPIs), 2) Detalhamento Financeiro, 3) Análise de Clientes, 4) Operacional.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-panel">
+                    <div class="card-sm">
+                        <h4 style="color: var(--green);">Data View — Inspecionar dados</h4>
+                        <p>Mostra os dados tabulares carregados. Use para verificar se o ETL funcionou, criar colunas calculadas e conferir tipos.</p>
+                        <ul class="check-list">
+                            <li>Veja cada tabela como uma planilha</li>
+                            <li>Crie colunas calculadas aqui (com DAX)</li>
+                            <li>Confira tipos de dados (texto, número, data)</li>
+                            <li>Verifique se o Power Query limpou corretamente</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tab-panel">
+                    <div class="card-sm">
+                        <h4 style="color: var(--purple);">Model View — Relacionamentos</h4>
+                        <p>Aqui você vê e configura os relacionamentos entre tabelas. É onde se monta o esquema estrela.</p>
+                        <ul class="check-list">
+                            <li>Arraste campos entre tabelas para criar relacionamentos</li>
+                            <li>Defina cardinalidade (1:N, N:N)</li>
+                            <li>Configure direção do filtro cruzado</li>
+                            <li>Oculte colunas que o usuário não precisa ver</li>
+                        </ul>
+                        <div class="warn-box">
+                            <p>Relacionamentos errados = medidas erradas. Sempre confira a cardinalidade. A maioria dos erros de DAX vem de modelagem ruim.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- 5. DAX ESSENTIALS -->
+    <!-- ================================================================ -->
+    <section id="dax">
+        <h2>🧮 DAX — As fórmulas que você PRECISA saber <span class="tag">80/20</span></h2>
+
+        <div class="roni-comment">
+            <p><strong>DAX (Data Analysis Expressions)</strong> é a linguagem de fórmulas do Power BI. Parece Excel, mas é mais poderosa. Você NÃO precisa saber tudo — 20 fórmulas resolvem 80% do trabalho. Aqui estão elas, em ordem de importância.</p>
+        </div>
+
+        <!-- BASIC MEASURES -->
+        <div class="card">
+            <h3>🟢 Nível 1 — Medidas Básicas (aprenda primeiro)</h3>
+
+            <div class="code-block">
+                <span class="cm">-- Faturamento total</span><br>
+                Faturamento = <span class="fn">SUM</span>( vendas[valor] )<br><br>
+
+                <span class="cm">-- Quantidade vendida</span><br>
+                Qtd Vendas = <span class="fn">COUNTROWS</span>( vendas )<br><br>
+
+                <span class="cm">-- Ticket médio</span><br>
+                Ticket Médio = <span class="fn">DIVIDE</span>( [Faturamento], [Qtd Vendas], <span class="num">0</span> )<br><br>
+
+                <span class="cm">-- Clientes únicos</span><br>
+                Clientes Únicos = <span class="fn">DISTINCTCOUNT</span>( vendas[cliente_id] )<br><br>
+
+                <span class="cm">-- Faturamento médio por dia</span><br>
+                Média Diária = <span class="fn">AVERAGEX</span>(<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">VALUES</span>( calendario[data] ),<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;[Faturamento]<br>
+                )
+            </div>
+
+            <div class="roni-comment">
+                <p><strong>DIVIDE vs divisão (/):</strong> sempre use DIVIDE() em vez de barra. Ele trata divisão por zero automaticamente. Isso é pergunta de entrevista e é erro comum de iniciante.</p>
+            </div>
+        </div>
+
+        <!-- TIME INTELLIGENCE -->
+        <div class="card">
+            <h3>🟡 Nível 2 — Time Intelligence (o que impressiona)</h3>
+            <p>Funções de inteligência temporal são o que separa um dashboard básico de um profissional. Requisito: ter uma <strong>tabela calendário</strong> no modelo.</p>
+
+            <div class="code-block">
+                <span class="cm">-- Tabela Calendário (OBRIGATÓRIA)</span><br>
+                Calendario = <span class="fn">CALENDARAUTO</span>()<br><br>
+
+                <span class="cm">-- Faturamento do mês anterior</span><br>
+                Fat Mês Anterior = <span class="fn">CALCULATE</span>(<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;[Faturamento],<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">PREVIOUSMONTH</span>( calendario[Date] )<br>
+                )<br><br>
+
+                <span class="cm">-- Variação % MoM (Month over Month)</span><br>
+                Var % MoM = <span class="fn">DIVIDE</span>(<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;[Faturamento] - [Fat Mês Anterior],<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;[Fat Mês Anterior],<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="num">0</span><br>
+                )<br><br>
+
+                <span class="cm">-- Acumulado do ano (YTD - Year to Date)</span><br>
+                Fat YTD = <span class="fn">TOTALYTD</span>( [Faturamento], calendario[Date] )<br><br>
+
+                <span class="cm">-- Mesmo período ano anterior (YoY)</span><br>
+                Fat Ano Anterior = <span class="fn">CALCULATE</span>(<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;[Faturamento],<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">SAMEPERIODLASTYEAR</span>( calendario[Date] )<br>
+                )<br><br>
+
+                <span class="cm">-- Variação % Ano sobre Ano</span><br>
+                Var % YoY = <span class="fn">DIVIDE</span>(<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;[Faturamento] - [Fat Ano Anterior],<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;[Fat Ano Anterior],<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="num">0</span><br>
+                )<br><br>
+
+                <span class="cm">-- Média móvel 3 meses</span><br>
+                Média Móvel 3M = <span class="fn">AVERAGEX</span>(<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">DATESINPERIOD</span>( calendario[Date], <span class="fn">MAX</span>(calendario[Date]), <span class="num">-3</span>, <span class="kw">MONTH</span> ),<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;[Faturamento]<br>
+                )
+            </div>
+
+            <div class="warn-box">
+                <p><strong>Sem tabela calendário = sem time intelligence.</strong> Sempre crie uma. Se o entrevistador perguntar "por que precisa de tabela calendário?", responda: "porque as funções de time intelligence do DAX exigem uma coluna de data contínua e marcada como tabela de datas."</p>
+            </div>
+        </div>
+
+        <!-- CALCULATE -->
+        <div class="card">
+            <h3>🔴 Nível 3 — CALCULATE (a função mais poderosa)</h3>
+            <p><code>CALCULATE</code> altera o contexto de filtro. É a função mais importante do DAX — aparece em 70% das medidas avançadas.</p>
+
+            <div class="code-block">
+                <span class="cm">-- Faturamento só de SP</span><br>
+                Fat SP = <span class="fn">CALCULATE</span>( [Faturamento], clientes[uf] = <span class="str">"SP"</span> )<br><br>
+
+                <span class="cm">-- Faturamento ignorando filtro de região (ALL)</span><br>
+                Fat Total Geral = <span class="fn">CALCULATE</span>( [Faturamento], <span class="fn">ALL</span>( clientes[uf] ) )<br><br>
+
+                <span class="cm">-- % do total</span><br>
+                % do Total = <span class="fn">DIVIDE</span>(<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;[Faturamento],<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">CALCULATE</span>( [Faturamento], <span class="fn">ALL</span>( vendas ) ),<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="num">0</span><br>
+                )<br><br>
+
+                <span class="cm">-- Faturamento com filtros múltiplos</span><br>
+                Fat Premium SP = <span class="fn">CALCULATE</span>(<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;[Faturamento],<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;clientes[uf] = <span class="str">"SP"</span>,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;clientes[segmento] = <span class="str">"Premium"</span><br>
+                )<br><br>
+
+                <span class="cm">-- Ranking de produto (RANKX)</span><br>
+                Rank Produto = <span class="fn">RANKX</span>(<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">ALL</span>( produtos[nome] ),<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;[Faturamento],<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">DESC</span>,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">DENSE</span><br>
+                )
+            </div>
+
+            <div class="roni-comment">
+                <p><strong>Se você entender CALCULATE + contexto de filtro, entendeu 50% do DAX.</strong> O conceito é: cada visual do Power BI aplica filtros implícitos. CALCULATE permite ignorar, adicionar ou modificar esses filtros. Ex: um gráfico filtrado por "SP" + CALCULATE com ALL() remove esse filtro → mostra o total geral.</p>
+            </div>
+        </div>
+
+        <!-- CHEAT SHEET -->
+        <div class="card">
+            <h3>📋 DAX Cheat Sheet — Funções que mais caem</h3>
+            <table class="info-table">
+                <tr><th>Função</th><th>O que faz</th><th>Exemplo</th></tr>
+                <tr><td><code>SUM</code></td><td>Soma coluna</td><td><code>SUM(v[valor])</code></td></tr>
+                <tr><td><code>COUNTROWS</code></td><td>Conta linhas</td><td><code>COUNTROWS(vendas)</code></td></tr>
+                <tr><td><code>DISTINCTCOUNT</code></td><td>Conta valores únicos</td><td><code>DISTINCTCOUNT(v[cliente_id])</code></td></tr>
+                <tr><td><code>AVERAGE</code></td><td>Média de coluna</td><td><code>AVERAGE(v[valor])</code></td></tr>
+                <tr><td><code>DIVIDE</code></td><td>Divisão segura</td><td><code>DIVIDE([A], [B], 0)</code></td></tr>
+                <tr><td><code>CALCULATE</code></td><td>Muda contexto de filtro</td><td><code>CALCULATE([Fat], UF="SP")</code></td></tr>
+                <tr><td><code>ALL</code></td><td>Remove filtros</td><td><code>ALL(tabela[coluna])</code></td></tr>
+                <tr><td><code>FILTER</code></td><td>Filtra tabela</td><td><code>FILTER(tab, [val]>100)</code></td></tr>
+                <tr><td><code>VALUES</code></td><td>Valores distintos</td><td><code>VALUES(tab[col])</code></td></tr>
+                <tr><td><code>RELATED</code></td><td>Busca em tabela relacionada (como VLOOKUP)</td><td><code>RELATED(prod[nome])</code></td></tr>
+                <tr><td><code>RANKX</code></td><td>Ranking</td><td><code>RANKX(ALL(p), [Fat])</code></td></tr>
+                <tr><td><code>TOTALYTD</code></td><td>Acumulado do ano</td><td><code>TOTALYTD([Fat], cal[Data])</code></td></tr>
+                <tr><td><code>PREVIOUSMONTH</code></td><td>Período anterior</td><td><code>PREVIOUSMONTH(cal[Data])</code></td></tr>
+                <tr><td><code>SAMEPERIODLASTYEAR</code></td><td>Mesmo período ano anterior</td><td><code>SAMEPERIODLASTYEAR(cal[Data])</code></td></tr>
+                <tr><td><code>IF</code></td><td>Condicional</td><td><code>IF([Var]>0, "↑", "↓")</code></td></tr>
+                <tr><td><code>SWITCH</code></td><td>Múltiplas condições</td><td><code>SWITCH([nota], 5, "A", 4, "B")</code></td></tr>
+                <tr><td><code>FORMAT</code></td><td>Formata valor como texto</td><td><code>FORMAT([val], "#,##0")</code></td></tr>
+                <tr><td><code>SELECTEDVALUE</code></td><td>Valor selecionado no filtro</td><td><code>SELECTEDVALUE(tab[col])</code></td></tr>
+                <tr><td><code>ISBLANK</code></td><td>Verifica se é vazio</td><td><code>IF(ISBLANK([X]), 0, [X])</code></td></tr>
+                <tr><td><code>SUMX</code></td><td>Soma iterada (row by row)</td><td><code>SUMX(tab, [qtd]*[preco])</code></td></tr>
+            </table>
+        </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- 6. POWER QUERY -->
+    <!-- ================================================================ -->
+    <section id="pq">
+        <h2>🔄 Power Query — ETL dentro do Power BI <span class="tag">Transformação</span></h2>
+
+        <div class="roni-comment">
+            <p>Power Query é onde você limpa e transforma os dados ANTES de montar o dashboard. É o "bastidor" — o entrevistador pergunta sobre isso e muitos candidatos ignoram.</p>
+        </div>
+
+        <div class="card">
+            <h3>Operações mais usadas (80/20)</h3>
+            <table class="info-table">
+                <tr><th>#</th><th>Operação</th><th>O que faz</th><th>Exemplos</th></tr>
+                <tr><td>1</td><td><strong>Remover Colunas</strong></td><td>Elimina colunas desnecessárias</td><td>Remove ID interno, campos técnicos</td></tr>
+                <tr><td>2</td><td><strong>Filtrar Linhas</strong></td><td>Remove linhas que não interessam</td><td>Remove status "cancelado", teste</td></tr>
+                <tr><td>3</td><td><strong>Alterar Tipo</strong></td><td>Corrige tipo de dados</td><td>Texto → Data, Texto → Número</td></tr>
+                <tr><td>4</td><td><strong>Substituir Valores</strong></td><td>Padroniza valores</td><td>"SP" e "São Paulo" → "SP"</td></tr>
+                <tr><td>5</td><td><strong>Remover Duplicatas</strong></td><td>Elimina linhas repetidas</td><td>Deduplicar clientes por CPF</td></tr>
+                <tr><td>6</td><td><strong>Mesclar Consultas (Merge)</strong></td><td>Faz JOIN entre tabelas</td><td>Adiciona nome do cliente na venda</td></tr>
+                <tr><td>7</td><td><strong>Acrescentar Consultas (Append)</strong></td><td>Empilha tabelas (UNION)</td><td>Junta jan.csv + fev.csv + mar.csv</td></tr>
+                <tr><td>8</td><td><strong>Coluna Personalizada</strong></td><td>Cria coluna com fórmula M</td><td>[Valor] * [Quantidade]</td></tr>
+                <tr><td>9</td><td><strong>Coluna Condicional</strong></td><td>IF/THEN/ELSE visual</td><td>Se valor > 1000 então "Alto"</td></tr>
+                <tr><td>10</td><td><strong>Agrupar Por</strong></td><td>GROUP BY visual</td><td>Total por cliente, por mês</td></tr>
+                <tr><td>11</td><td><strong>Dividir Coluna</strong></td><td>Separa texto</td><td>"São Paulo - SP" → cidade + UF</td></tr>
+                <tr><td>12</td><td><strong>Transpor / Pivotar</strong></td><td>Transforma linhas ↔ colunas</td><td>Meses como colunas → como linhas</td></tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h3>Linguagem M — Exemplos práticos</h3>
+            <p>Power Query usa a linguagem M nos bastidores. Você não precisa escrever do zero, mas entender ajuda muito:</p>
+
+            <div class="code-block">
+                <span class="cm">// Carregar CSV</span><br>
+                <span class="kw">let</span><br>
+                &nbsp;&nbsp;Fonte = <span class="fn">Csv.Document</span>(<span class="fn">File.Contents</span>(<span class="str">"C:\dados\vendas.csv"</span>)),<br>
+                &nbsp;&nbsp;TipoAlterado = <span class="fn">Table.TransformColumnTypes</span>(Fonte, {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;{<span class="str">"data"</span>, <span class="kw">type date</span>},<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;{<span class="str">"valor"</span>, <span class="kw">type number</span>}<br>
+                &nbsp;&nbsp;}),<br>
+                &nbsp;&nbsp;SemDuplicatas = <span class="fn">Table.Distinct</span>(TipoAlterado, {<span class="str">"id"</span>}),<br>
+                &nbsp;&nbsp;Filtrado = <span class="fn">Table.SelectRows</span>(SemDuplicatas, <span class="kw">each</span> [status] &lt;&gt; <span class="str">"cancelado"</span>)<br>
+                <span class="kw">in</span><br>
+                &nbsp;&nbsp;Filtrado
+            </div>
+
+            <div class="tip-box">
+                <p><strong>Na entrevista:</strong> se perguntarem "você sabe M?", diga: "Sim, uso o editor avançado quando a interface visual não atende — por exemplo, para lógicas condicionais complexas, funções customizadas ou para conectar a APIs REST."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- 7. SQL PARA BI -->
+    <!-- ================================================================ -->
+    <section id="sql">
+        <h2>🗃️ SQL para BI — O essencial <span class="tag">80/20</span></h2>
+
+        <div class="roni-comment">
+            <p>Você já tem o ambiente SQL completo na pasta <code>/SQL</code> com 118 queries interativas. Aqui vou resumir os padrões que mais caem em entrevistas de BI e que você usará no dia a dia.</p>
+        </div>
+
+        <div class="card">
+            <h3>Os 12 padrões SQL que resolvem 80% do trabalho de BI</h3>
+
+            <div class="code-block">
+                <span class="cm">-- 1. Faturamento por mês</span><br>
+                <span class="kw">SELECT</span> <span class="fn">STRFTIME</span>(<span class="str">'%Y-%m'</span>, data) <span class="kw">AS</span> mes,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">SUM</span>(valor) <span class="kw">AS</span> faturamento<br>
+                <span class="kw">FROM</span> vendas<br>
+                <span class="kw">GROUP BY</span> mes<br>
+                <span class="kw">ORDER BY</span> mes;
+            </div>
+
+            <div class="code-block">
+                <span class="cm">-- 2. Top 10 clientes</span><br>
+                <span class="kw">SELECT</span> c.nome, <span class="fn">SUM</span>(v.valor) <span class="kw">AS</span> total<br>
+                <span class="kw">FROM</span> vendas v<br>
+                <span class="kw">JOIN</span> clientes c <span class="kw">ON</span> v.cliente_id = c.id<br>
+                <span class="kw">GROUP BY</span> c.nome<br>
+                <span class="kw">ORDER BY</span> total <span class="kw">DESC</span><br>
+                <span class="kw">LIMIT</span> <span class="num">10</span>;
+            </div>
+
+            <div class="code-block">
+                <span class="cm">-- 3. Variação MoM (com LAG)</span><br>
+                <span class="kw">WITH</span> mensal <span class="kw">AS</span> (<br>
+                &nbsp;&nbsp;<span class="kw">SELECT</span> <span class="fn">STRFTIME</span>(<span class="str">'%Y-%m'</span>, data) <span class="kw">AS</span> mes,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">SUM</span>(valor) <span class="kw">AS</span> fat<br>
+                &nbsp;&nbsp;<span class="kw">FROM</span> vendas <span class="kw">GROUP BY</span> mes<br>
+                )<br>
+                <span class="kw">SELECT</span> mes, fat,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">LAG</span>(fat) <span class="kw">OVER</span> (<span class="kw">ORDER BY</span> mes) <span class="kw">AS</span> fat_anterior,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">ROUND</span>((fat - <span class="fn">LAG</span>(fat) <span class="kw">OVER</span> (<span class="kw">ORDER BY</span> mes)) * <span class="num">100.0</span> / <span class="fn">LAG</span>(fat) <span class="kw">OVER</span> (<span class="kw">ORDER BY</span> mes), <span class="num">1</span>) <span class="kw">AS</span> var_pct<br>
+                <span class="kw">FROM</span> mensal;
+            </div>
+
+            <div class="code-block">
+                <span class="cm">-- 4. RFM simplificado (Recência, Frequência, Monetário)</span><br>
+                <span class="kw">SELECT</span> cliente_id,<br>
+                &nbsp;&nbsp;<span class="fn">JULIANDAY</span>(<span class="str">'now'</span>) - <span class="fn">JULIANDAY</span>(<span class="fn">MAX</span>(data)) <span class="kw">AS</span> recencia_dias,<br>
+                &nbsp;&nbsp;<span class="fn">COUNT</span>(*) <span class="kw">AS</span> frequencia,<br>
+                &nbsp;&nbsp;<span class="fn">SUM</span>(valor) <span class="kw">AS</span> monetario<br>
+                <span class="kw">FROM</span> vendas<br>
+                <span class="kw">GROUP BY</span> cliente_id;
+            </div>
+
+            <div class="code-block">
+                <span class="cm">-- 5. % do total (Window Function)</span><br>
+                <span class="kw">SELECT</span> categoria,<br>
+                &nbsp;&nbsp;<span class="fn">SUM</span>(valor) <span class="kw">AS</span> total,<br>
+                &nbsp;&nbsp;<span class="fn">ROUND</span>(<span class="fn">SUM</span>(valor) * <span class="num">100.0</span> / <span class="fn">SUM</span>(<span class="fn">SUM</span>(valor)) <span class="kw">OVER</span>(), <span class="num">1</span>) <span class="kw">AS</span> pct<br>
+                <span class="kw">FROM</span> vendas<br>
+                <span class="kw">GROUP BY</span> categoria;
+            </div>
+
+            <div class="code-block">
+                <span class="cm">-- 6. DRE simplificado</span><br>
+                <span class="kw">SELECT</span><br>
+                &nbsp;&nbsp;(<span class="kw">SELECT</span> <span class="fn">SUM</span>(valor) <span class="kw">FROM</span> vendas) <span class="kw">AS</span> receita,<br>
+                &nbsp;&nbsp;(<span class="kw">SELECT</span> <span class="fn">SUM</span>(valor) <span class="kw">FROM</span> despesas) <span class="kw">AS</span> despesa,<br>
+                &nbsp;&nbsp;(<span class="kw">SELECT</span> <span class="fn">SUM</span>(valor) <span class="kw">FROM</span> vendas) - (<span class="kw">SELECT</span> <span class="fn">SUM</span>(valor) <span class="kw">FROM</span> despesas) <span class="kw">AS</span> lucro;
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>SQL que diferencia Jr de Pleno na entrevista</h3>
+            <table class="info-table">
+                <tr><th>Conceito</th><th>Jr sabe</th><th>Pleno sabe</th></tr>
+                <tr><td>SELECT/WHERE/JOIN</td><td>✅</td><td>✅</td></tr>
+                <tr><td>GROUP BY + agregações</td><td>✅</td><td>✅</td></tr>
+                <tr><td>CTEs (WITH)</td><td>❌</td><td>✅</td></tr>
+                <tr><td>Window Functions (LAG, RANK, OVER)</td><td>❌</td><td>✅</td></tr>
+                <tr><td>Subqueries correlacionadas</td><td>❌</td><td>✅</td></tr>
+                <tr><td>CASE WHEN</td><td>Básico</td><td>Complexo</td></tr>
+                <tr><td>Otimização (índices, EXPLAIN)</td><td>❌</td><td>Noção</td></tr>
+            </table>
+
+            <div class="tip-box">
+                <p>Se você dominar CTEs e Window Functions (que estão no /SQL que construímos), já se posiciona como candidato pleno. É o maior pulo de qualidade.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- 8. PROJETOS GITHUB -->
+    <!-- ================================================================ -->
+    <section id="projetos">
+        <h2>🚀 Projetos GitHub que viram diferencial <span class="tag">Portfólio</span></h2>
+
+        <div class="roni-comment">
+            <p><strong>Verdade inconveniente:</strong> 90% dos candidatos Jr não têm NENHUM projeto no GitHub. Ter 2-3 projetos bem feitos já te coloca no top 10%. Não precisa ser complexo — precisa ser bem apresentado e mostrar que você sabe resolver problemas reais.</p>
+        </div>
+
+        <div class="card-grid">
+            <div class="card-sm">
+                <h3>🏆 Projeto 1: Dashboard de Vendas</h3>
+                <span class="badge badge-green">~1 semana</span> <span class="badge badge-blue">Power BI</span>
+                <ul class="check-list" style="margin-top: 0.75rem;">
+                    <li>Gere dados fictícios com Python (Faker)</li>
+                    <li>Monte esquema estrela (fato + 4 dimensões)</li>
+                    <li>Crie 12-15 medidas DAX (fat, ticket, MoM, YTD)</li>
+                    <li>3 páginas: Overview, Financeiro, Clientes</li>
+                    <li>Publique no GitHub com README profissional</li>
+                    <li>Inclua prints + arquivo .pbix</li>
+                </ul>
+                <div class="tip-box">
+                    <p><strong>Este é O projeto.</strong> Todo recrutador de BI espera ver um dashboard de vendas. Capriche no visual, use cores consistentes, e escreva o README em português E inglês.</p>
+                </div>
+            </div>
+
+            <div class="card-sm">
+                <h3>💼 Projeto 2: Pipeline ETL com Python</h3>
+                <span class="badge badge-yellow">~3-5 dias</span> <span class="badge badge-green">Python</span>
+                <ul class="check-list" style="margin-top: 0.75rem;">
+                    <li>Leia dados de uma API pública (ex: IBGE, CVM, Alpha Vantage)</li>
+                    <li>Transforme com Pandas (limpeza, agregação)</li>
+                    <li>Salve em SQLite ou CSV processado</li>
+                    <li>Gere relatório automático (PDF ou HTML)</li>
+                    <li>Schedule com GitHub Actions (roda sozinho)</li>
+                </ul>
+                <div class="roni-comment">
+                    <p>Isso mostra que você sabe automatizar — e é o que empresas querem. "Ele não só faz dashboard, ele automatiza a coleta de dados." É ouro no currículo.</p>
+                </div>
+            </div>
+
+            <div class="card-sm">
+                <h3>📊 Projeto 3: Seu projeto roniricardo.com</h3>
+                <span class="badge badge-green">Já existe!</span> <span class="badge badge-purple">Produção</span>
+                <ul class="check-list" style="margin-top: 0.75rem;">
+                    <li>Dashboard real atendendo clientes reais</li>
+                    <li>Python processando CSVs → JSON</li>
+                    <li>Visualização com Chart.js</li>
+                    <li>Hospedado com domínio próprio</li>
+                    <li>Insights automáticos com lógica de negócio</li>
+                </ul>
+                <div class="roni-comment">
+                    <p><strong>Este é seu ás na manga.</strong> Nenhum outro candidato júnior tem um produto em produção com domínio próprio atendendo clientes. Isso vale mais que qualquer certificação.</p>
+                </div>
+            </div>
+
+            <div class="card-sm">
+                <h3>📈 Projeto 4: Análise exploratória (EDA)</h3>
+                <span class="badge badge-yellow">~2-3 dias</span> <span class="badge badge-green">Python</span>
+                <ul class="check-list" style="margin-top: 0.75rem;">
+                    <li>Pegue um dataset do Kaggle (ex: e-commerce)</li>
+                    <li>Notebook Jupyter com análise completa</li>
+                    <li>Pandas profiling, gráficos Matplotlib/Seaborn</li>
+                    <li>Insights de negócio escritos (não só código)</li>
+                    <li>Conclusão com recomendações acionáveis</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>📄 README perfeito para projeto BI</h3>
+            <div class="code-block">
+                # 📊 Dashboard de Vendas — Análise Comercial<br><br>
+                ## 🎯 Objetivo<br>
+                Dashboard interativo para análise de vendas,<br>
+                com foco em KPIs comerciais e tendências mensais.<br><br>
+                ## 🛠️ Ferramentas<br>
+                - **Power BI** (modelagem e visualização)<br>
+                - **Python** (geração de dados fictícios)<br>
+                - **SQL** (queries de validação)<br><br>
+                ## 📋 Modelo de Dados<br>
+                Esquema estrela: 1 fato (vendas) + 4 dimensões<br>
+                (cliente, produto, tempo, loja)<br><br>
+                ## 📊 Dashboards<br>
+                | Página | Descrição |<br>
+                |--------|-----------|<br>
+                | Overview | KPIs, trend mensal, top produtos |<br>
+                | Financeiro | DRE, margens, despesas |<br>
+                | Clientes | Segmentação, RFM, retenção |<br><br>
+                ## 🖼️ Screenshots<br>
+                ![Overview](screenshots/overview.png)<br><br>
+                ## 💡 Principais Medidas DAX<br>
+                ```dax<br>
+                Faturamento = SUM(vendas[valor])<br>
+                Var MoM = DIVIDE([Fat]-[Fat Anterior],[Fat Anterior])<br>
+                ```<br><br>
+                ## 🚀 Como usar<br>
+                1. Clone o repositório<br>
+                2. Abra `dashboard.pbix` no Power BI Desktop<br>
+                3. Atualize dados se necessário
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- 9. LINKEDIN -->
+    <!-- ================================================================ -->
+    <section id="linkedin">
+        <h2>💼 LinkedIn — Posicionamento estratégico <span class="tag">Marketing pessoal</span></h2>
+
+        <div class="card">
+            <h3>Headline (título do perfil)</h3>
+            <p>A headline é o que aparece em buscas e ao lado do seu nome. Não coloque "procurando oportunidades".</p>
+
+            <div class="vs-grid">
+                <div class="card-sm" style="border-color: var(--red);">
+                    <h4 style="color: var(--red);">❌ Ruim</h4>
+                    <p style="margin: 0.5rem 0 0;">"Estudante de Dados | Em busca de oportunidades | Apaixonado por dados"</p>
+                </div>
+                <div class="card-sm" style="border-color: var(--green);">
+                    <h4 style="color: var(--green);">✅ Bom</h4>
+                    <p style="margin: 0.5rem 0 0;">"Analista BI | Power BI • SQL • Python | Dashboards para PMEs | roniricardo.com"</p>
+                </div>
+            </div>
+
+            <div class="roni-comment">
+                <p>Coloque as ferramentas separadas por • (bullet) — recrutadores filtram por "Power BI" e seu perfil aparece. O domínio no final mostra autoridade.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Sobre (About) — Template pronto</h3>
+            <div class="code-block" style="white-space: pre-wrap; font-family: 'Inter', sans-serif; font-size: 0.88rem;">Transformo dados em decisões.
+
+Crio dashboards e relatórios de BI para negócios que precisam parar de "achar" e começar a "saber". Meu foco é entregar clareza: KPIs que importam, trends que indicam ação, e automação que economiza horas.
+
+🛠️ Stack:
+• Power BI (DAX, Power Query, modelagem estrela, RLS)
+• SQL (CTEs, Window Functions, otimização)
+• Python (Pandas, automação ETL, APIs)
+• Git/GitHub, Excel avançado
+
+📊 Projetos em produção:
+→ roniricardo.com — dashboards personalizados para PMEs
+→ GitHub: github.com/seuuser — portfólio completo
+
+💡 Aberto a oportunidades em BI, Analytics e Dados.
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Posts que geram visibilidade</h3>
+            <p>Poste sobre o que você está aprendendo. Formato que funciona:</p>
+            <ol class="num-list">
+                <li><strong>"Aprendi X fazendo Y"</strong> — mostra um print do dashboard + conta o que aprendeu ao montar</li>
+                <li><strong>"Antes vs Depois"</strong> — mostra dados bagunçados vs dashboard limpo</li>
+                <li><strong>"3 funções DAX que todo analista deveria saber"</strong> — posts educativos com exemplos</li>
+                <li><strong>"Automatizei X com Python"</strong> — mostra o antes (manual) vs depois (automatizado)</li>
+                <li><strong>Compartilhe projetos do GitHub</strong> — "Acabei de publicar minha análise de vendas"</li>
+            </ol>
+
+            <div class="tip-box">
+                <p><strong>Frequência ideal:</strong> 2-3 posts por semana. Não precisa ser artigo longo — 5-7 linhas + uma imagem já funciona. Consistência > qualidade perfeita.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- 10. ROADMAP -->
+    <!-- ================================================================ -->
+    <section id="roadmap">
+        <h2>🗺️ Roadmap — Plano de ação <span class="tag">Execução</span></h2>
+
+        <div class="roni-comment">
+            <p>Este é o plano tático para você ser contratável no menor tempo possível. Cada etapa tem entregáveis concretos.</p>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-item done">
+                <div class="time-label">Semana 1-2 ✅</div>
+                <h4>Fundamentos SQL</h4>
+                <p>Complete as 118 queries do /SQL. Foque em JOINs, GROUP BY, CTEs e Window Functions.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="time-label">Semana 2-3</div>
+                <h4>Power BI Desktop + DAX básico</h4>
+                <p>Instale o Power BI Desktop (gratuito). Importe os dados do salao.db. Monte seu primeiro dashboard de 3 páginas. Aprenda as 10 medidas DAX do Nível 1 e 2 desta página.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="time-label">Semana 3-4</div>
+                <h4>Projeto GitHub #1 — Dashboard de Vendas</h4>
+                <p>Gere dados com Python (Faker), modele em estrela, monte 15 medidas DAX, publique no GitHub com README completo e screenshots.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="time-label">Semana 4-5</div>
+                <h4>DAX intermediário + Power Query</h4>
+                <p>CALCULATE, ALL, Time Intelligence (MoM, YTD, YoY). Power Query: Merge, Append, tipos, coluna condicional.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="time-label">Semana 5-6</div>
+                <h4>Projeto GitHub #2 — Pipeline ETL</h4>
+                <p>API pública → Python → SQL → relatório. Publique com README e documentação.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="time-label">Semana 6-7</div>
+                <h4>LinkedIn + Currículo + Candidaturas</h4>
+                <p>Monte o LinkedIn com o template desta página. Comece a postar. Candidatar-se a 5-10 vagas por dia. Pratique respostas da seção RH.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="time-label">Semana 7-8</div>
+                <h4>Cases técnicos + Entrevistas</h4>
+                <p>Muitas vagas pedem um case: "monte um dashboard com estes dados". Treine resolvendo cases do Kaggle em 2h. Simule entrevistas com as perguntas desta página.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>📊 Habilidades — Nível necessário para ser contratado</h3>
+            <div class="skill-bar">
+                <div class="skill-label"><span>Power BI</span><span style="color:var(--accent2)">85%</span></div>
+                <div class="bar-bg"><div class="bar-fill" style="width: 85%; background: var(--accent);"></div></div>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-label"><span>SQL</span><span style="color:var(--accent2)">80%</span></div>
+                <div class="bar-bg"><div class="bar-fill" style="width: 80%; background: var(--accent);"></div></div>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-label"><span>DAX</span><span style="color:var(--accent2)">70%</span></div>
+                <div class="bar-bg"><div class="bar-fill" style="width: 70%; background: var(--purple);"></div></div>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-label"><span>Power Query</span><span style="color:var(--accent2)">65%</span></div>
+                <div class="bar-bg"><div class="bar-fill" style="width: 65%; background: var(--purple);"></div></div>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-label"><span>Python (Pandas)</span><span style="color:var(--accent2)">60%</span></div>
+                <div class="bar-bg"><div class="bar-fill" style="width: 60%; background: var(--green);"></div></div>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-label"><span>Excel</span><span style="color:var(--accent2)">75%</span></div>
+                <div class="bar-bg"><div class="bar-fill" style="width: 75%; background: var(--green);"></div></div>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-label"><span>Storytelling c/ Dados</span><span style="color:var(--accent2)">50%</span></div>
+                <div class="bar-bg"><div class="bar-fill" style="width: 50%; background: var(--yellow);"></div></div>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-label"><span>Git/GitHub</span><span style="color:var(--accent2)">55%</span></div>
+                <div class="bar-bg"><div class="bar-fill" style="width: 55%; background: var(--yellow);"></div></div>
+            </div>
+
+            <div class="roni-comment" style="margin-top: 1rem;">
+                <p>Esses % representam o nível mínimo que o mercado espera de um Jr/Pleno. Você NÃO precisa ser 100% em nada. Precisa ser consistente em tudo e excelente em Power BI + SQL.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>📚 Recursos gratuitos (os melhores)</h3>
+            <table class="info-table">
+                <tr><th>Recurso</th><th>O que aprende</th><th>Tipo</th></tr>
+                <tr><td><strong>Microsoft Learn (Power BI)</strong></td><td>Tudo sobre Power BI, oficial</td><td>Curso gratuito</td></tr>
+                <tr><td><strong>SQLZOO.net</strong></td><td>SQL interativo no navegador</td><td>Exercícios</td></tr>
+                <tr><td><strong>Mode Analytics SQL Tutorial</strong></td><td>SQL para análise</td><td>Tutorial</td></tr>
+                <tr><td><strong>DAX Guide (dax.guide)</strong></td><td>Referência de todas as funções DAX</td><td>Documentação</td></tr>
+                <tr><td><strong>SQLBI.com (Marco Russo)</strong></td><td>DAX avançado, modelagem</td><td>Artigos + vídeos</td></tr>
+                <tr><td><strong>Kaggle Datasets</strong></td><td>Datasets reais para praticar</td><td>Dados gratuitos</td></tr>
+                <tr><td><strong>Seu ambiente /SQL</strong></td><td>SQL prático com 118 queries</td><td>Seu material!</td></tr>
+            </table>
+        </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- EXTRA: GLOSSÁRIO -->
+    <!-- ================================================================ -->
+    <section id="glossario">
+        <h2>📖 Glossário BI — Termos que você precisa conhecer</h2>
+
+        <div class="card" style="columns: 2; column-gap: 2rem;">
+            <p><strong style="color:var(--accent2)">KPI</strong> — Key Performance Indicator. Métrica principal do negócio.</p>
+            <p><strong style="color:var(--accent2)">ETL</strong> — Extract, Transform, Load. Processo de limpeza de dados.</p>
+            <p><strong style="color:var(--accent2)">Data Warehouse</strong> — Banco de dados otimizado para análise (leitura).</p>
+            <p><strong style="color:var(--accent2)">Data Lake</strong> — Armazém de dados brutos (sem transformação).</p>
+            <p><strong style="color:var(--accent2)">Esquema Estrela</strong> — Modelagem com fato central + dimensões.</p>
+            <p><strong style="color:var(--accent2)">DAX</strong> — Data Analysis Expressions. Linguagem de fórmulas do Power BI.</p>
+            <p><strong style="color:var(--accent2)">Power Query (M)</strong> — Ferramenta de ETL dentro do Power BI.</p>
+            <p><strong style="color:var(--accent2)">RLS</strong> — Row-Level Security. Controle de acesso por linha.</p>
+            <p><strong style="color:var(--accent2)">Gateway</strong> — Ponte entre dados on-premises e Power BI Service.</p>
+            <p><strong style="color:var(--accent2)">Drill-down</strong> — Navegar de resumo para detalhe (ex: ano → mês → dia).</p>
+            <p><strong style="color:var(--accent2)">Slicers</strong> — Filtros visuais no dashboard (botões, dropdowns).</p>
+            <p><strong style="color:var(--accent2)">Tooltip</strong> — Info ao passar o mouse sobre um visual.</p>
+            <p><strong style="color:var(--accent2)">Bookmark</strong> — Estado salvo de filtros/visuais para navegação.</p>
+            <p><strong style="color:var(--accent2)">Dataflow</strong> — ETL centralizado no Power BI Service (nuvem).</p>
+            <p><strong style="color:var(--accent2)">Workspace</strong> — Área de trabalho compartilhada no Power BI Service.</p>
+            <p><strong style="color:var(--accent2)">Dataset</strong> — Conjunto de dados publicado no Power BI Service.</p>
+            <p><strong style="color:var(--accent2)">MoM</strong> — Month over Month. Comparação mês atual vs anterior.</p>
+            <p><strong style="color:var(--accent2)">YTD</strong> — Year to Date. Acumulado do ano.</p>
+            <p><strong style="color:var(--accent2)">YoY</strong> — Year over Year. Comparação com mesmo período do ano anterior.</p>
+            <p><strong style="color:var(--accent2)">Churn</strong> — Taxa de perda de clientes.</p>
+            <p><strong style="color:var(--accent2)">NPS</strong> — Net Promoter Score. Índice de satisfação (0-100).</p>
+            <p><strong style="color:var(--accent2)">CAC</strong> — Custo de Aquisição de Cliente.</p>
+            <p><strong style="color:var(--accent2)">LTV</strong> — Lifetime Value. Valor total que um cliente gera.</p>
+            <p><strong style="color:var(--accent2)">OLAP</strong> — Online Analytical Processing. Análise multidimensional.</p>
+            <p><strong style="color:var(--accent2)">OLTP</strong> — Online Transaction Processing. Bancos transacionais.</p>
+            <p><strong style="color:var(--accent2)">Staging</strong> — Área intermediária onde dados ficam antes de ir pro DW.</p>
+            <p><strong style="color:var(--accent2)">Self-service BI</strong> — Quando o próprio usuário cria relatórios.</p>
+            <p><strong style="color:var(--accent2)">Data-driven</strong> — Cultura de decisão baseada em dados.</p>
+        </div>
+    </section>
+
+</div>
+
+
+
+<button class="scroll-top" id="scrollTop" title="Voltar ao topo">↑</button>
+
+<script>
+// ============================================================
+// CHARTS — POWER BI SIMULATOR
+// ============================================================
+Chart.defaults.color = '#94a3b8';
+Chart.defaults.borderColor = 'rgba(51,65,85,0.4)';
+Chart.defaults.font.family = "'Inter', sans-serif";
+Chart.defaults.font.size = 12;
+
+const COLORS = {
+    blue: '#3b82f6',
+    blue2: '#60a5fa',
+    green: '#34d399',
+    yellow: '#fbbf24',
+    orange: '#fb923c',
+    red: '#f87171',
+    purple: '#a78bfa',
+    pink: '#f472b6',
+    cyan: '#22d3ee',
+    blueA: 'rgba(59,130,246,0.7)',
+    greenA: 'rgba(52,211,153,0.7)',
+    yellowA: 'rgba(251,191,36,0.7)',
+    purpleA: 'rgba(167,139,250,0.7)',
+    pinkA: 'rgba(244,114,182,0.7)',
+    orangeA: 'rgba(251,146,60,0.7)',
+};
+
+const meses = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
+
+// 1) BARRAS - Faturamento por Categoria
+new Chart(document.getElementById('chartBarras'), {
+    type: 'bar',
+    data: {
+        labels: ['Cabelo', 'Unha', 'Estética', 'Maquiagem', 'Depilação', 'Barba'],
+        datasets: [{
+            label: 'Faturamento (R$ mil)',
+            data: [89, 42, 67, 31, 28, 27],
+            backgroundColor: [COLORS.blueA, COLORS.greenA, COLORS.purpleA, COLORS.pinkA, COLORS.yellowA, COLORS.orangeA],
+            borderRadius: 6,
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: { y: { beginAtZero: true, ticks: { callback: v => 'R$ ' + v + 'k' } } }
+    }
+});
+
+// 2) LINHAS - Faturamento mensal
+new Chart(document.getElementById('chartLinhas'), {
+    type: 'line',
+    data: {
+        labels: meses,
+        datasets: [{
+            label: '2025',
+            data: [18, 21, 24, 28, 26, 32, 35, 33, 38, 41, 44, 48],
+            borderColor: COLORS.blue,
+            backgroundColor: 'rgba(59,130,246,0.1)',
+            fill: true,
+            tension: 0.4,
+            pointRadius: 4,
+        }, {
+            label: '2024',
+            data: [15, 17, 19, 22, 21, 25, 27, 26, 30, 33, 35, 38],
+            borderColor: COLORS.purple,
+            borderDash: [5, 5],
+            tension: 0.4,
+            pointRadius: 3,
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: { legend: { position: 'top' } },
+        scales: { y: { ticks: { callback: v => 'R$ ' + v + 'k' } } }
+    }
+});
+
+// 3) ROSCA - Mix de Receita
+new Chart(document.getElementById('chartRosca'), {
+    type: 'doughnut',
+    data: {
+        labels: ['Serviços', 'Produtos', 'Pacotes', 'Assinaturas'],
+        datasets: [{
+            data: [52, 24, 16, 8],
+            backgroundColor: [COLORS.blueA, COLORS.greenA, COLORS.purpleA, COLORS.yellowA],
+            borderWidth: 0,
+        }]
+    },
+    options: {
+        responsive: true,
+        cutout: '65%',
+        plugins: {
+            legend: { position: 'right' },
+            tooltip: { callbacks: { label: ctx => ctx.label + ': ' + ctx.parsed + '%' } }
+        }
+    }
+});
+
+// 4) COMBO - Meta vs Realizado
+new Chart(document.getElementById('chartCombo'), {
+    type: 'bar',
+    data: {
+        labels: meses.slice(0, 6),
+        datasets: [{
+            type: 'bar',
+            label: 'Realizado',
+            data: [42, 38, 45, 51, 48, 55],
+            backgroundColor: COLORS.blueA,
+            borderRadius: 6,
+        }, {
+            type: 'line',
+            label: 'Meta',
+            data: [40, 40, 45, 45, 50, 50],
+            borderColor: COLORS.yellow,
+            borderDash: [6, 3],
+            pointRadius: 5,
+            pointStyle: 'triangle',
+            tension: 0,
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: { legend: { position: 'top' } },
+        scales: { y: { beginAtZero: true, ticks: { callback: v => 'R$ ' + v + 'k' } } }
+    }
+});
+
+// 5) BARRAS HORIZONTAIS - Ranking
+new Chart(document.getElementById('chartHorizontal'), {
+    type: 'bar',
+    data: {
+        labels: ['São Paulo', 'Rio de Janeiro', 'Minas Gerais', 'Paraná', 'Bahia', 'RS', 'Santa Catarina', 'Goiás'],
+        datasets: [{
+            label: 'Faturamento (R$ mil)',
+            data: [120, 85, 62, 48, 44, 38, 35, 28],
+            backgroundColor: COLORS.blueA,
+            borderRadius: 4,
+        }]
+    },
+    options: {
+        indexAxis: 'y',
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: { x: { ticks: { callback: v => 'R$ ' + v + 'k' } } }
+    }
+});
+
+// 6) STACKED - Vendas por produto
+new Chart(document.getElementById('chartStacked'), {
+    type: 'bar',
+    data: {
+        labels: meses.slice(0, 6),
+        datasets: [
+            { label: 'Shampoo', data: [12, 14, 11, 15, 13, 17], backgroundColor: COLORS.blueA, borderRadius: 2 },
+            { label: 'Tintura', data: [8, 9, 11, 10, 12, 14], backgroundColor: COLORS.purpleA, borderRadius: 2 },
+            { label: 'Creme', data: [5, 6, 7, 8, 7, 9], backgroundColor: COLORS.greenA, borderRadius: 2 },
+        ]
+    },
+    options: {
+        responsive: true,
+        plugins: { legend: { position: 'top' } },
+        scales: {
+            x: { stacked: true },
+            y: { stacked: true, ticks: { callback: v => v + ' un' } }
+        }
+    }
+});
+
+// 7) SCATTER - Preço vs Volume
+new Chart(document.getElementById('chartScatter'), {
+    type: 'scatter',
+    data: {
+        datasets: [{
+            label: 'Produtos',
+            data: [
+                {x:25,y:180},{x:35,y:150},{x:45,y:120},{x:55,y:95},{x:65,y:80},
+                {x:75,y:60},{x:85,y:45},{x:30,y:160},{x:50,y:110},{x:70,y:70},
+                {x:40,y:140},{x:60,y:88},{x:80,y:52},{x:20,y:200},{x:90,y:35}
+            ],
+            backgroundColor: COLORS.blueA,
+            pointRadius: 7,
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: {
+            x: { title: { display: true, text: 'Preço (R$)' } },
+            y: { title: { display: true, text: 'Unidades vendidas' } }
+        }
+    }
+});
+
+// 8) AREA - Evolução acumulada
+new Chart(document.getElementById('chartArea'), {
+    type: 'line',
+    data: {
+        labels: meses,
+        datasets: [{
+            label: 'Receita Acumulada',
+            data: [18, 39, 63, 91, 117, 149, 184, 217, 255, 296, 340, 388],
+            fill: true,
+            backgroundColor: 'rgba(59,130,246,0.15)',
+            borderColor: COLORS.blue,
+            tension: 0.3,
+            pointRadius: 4,
+        }, {
+            label: 'Despesa Acumulada',
+            data: [12, 26, 41, 58, 74, 93, 114, 134, 157, 180, 205, 232],
+            fill: true,
+            backgroundColor: 'rgba(248,113,113,0.1)',
+            borderColor: COLORS.red,
+            tension: 0.3,
+            pointRadius: 4,
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: { legend: { position: 'top' } },
+        scales: { y: { ticks: { callback: v => 'R$ ' + v + 'k' } } }
+    }
+});
+
+// 9) RADAR - Perfil do Analista
+new Chart(document.getElementById('chartRadar'), {
+    type: 'radar',
+    data: {
+        labels: ['Power BI', 'SQL', 'DAX', 'Python', 'Excel', 'Storytelling', 'Modelagem'],
+        datasets: [{
+            label: 'Nível atual',
+            data: [7, 8, 5, 6, 7, 4, 5],
+            backgroundColor: 'rgba(59,130,246,0.2)',
+            borderColor: COLORS.blue,
+            pointBackgroundColor: COLORS.blue,
+        }, {
+            label: 'Meta para Jr',
+            data: [8, 8, 7, 5, 7, 6, 7],
+            backgroundColor: 'rgba(52,211,153,0.1)',
+            borderColor: COLORS.green,
+            borderDash: [5, 5],
+            pointBackgroundColor: COLORS.green,
+        }]
+    },
+    options: {
+        responsive: true,
+        scales: { r: { beginAtZero: true, max: 10, ticks: { stepSize: 2 } } },
+        plugins: { legend: { position: 'top' } }
+    }
+});
+
+// 10) POLAR - Despesas
+new Chart(document.getElementById('chartPolar'), {
+    type: 'polarArea',
+    data: {
+        labels: ['Aluguel', 'Salários', 'Produtos', 'Marketing', 'Manutenção'],
+        datasets: [{
+            data: [8, 35, 12, 5, 3],
+            backgroundColor: [
+                'rgba(59,130,246,0.6)', 'rgba(167,139,250,0.6)', 'rgba(52,211,153,0.6)',
+                'rgba(251,191,36,0.6)', 'rgba(248,113,113,0.6)'
+            ],
+            borderWidth: 0
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: { legend: { position: 'right' } },
+        scales: { r: { ticks: { callback: v => 'R$ ' + v + 'k' } } }
+    }
+});
+
+
+// ============================================================
+// UI INTERACTIONS
+// ============================================================
+
+// Accordion
+function toggleAccordion(header) {
+    const body = header.nextElementSibling;
+    const isOpen = body.classList.contains('open');
+
+    // Close all in same section
+    header.closest('section').querySelectorAll('.accordion-body.open').forEach(b => {
+        b.classList.remove('open');
+        b.previousElementSibling.classList.remove('open');
+    });
+
+    if (!isOpen) {
+        body.classList.add('open');
+        header.classList.add('open');
+    }
+}
+
+// Tabs
+function switchTab(containerId, index) {
+    const cont = document.getElementById(containerId);
+    cont.querySelectorAll('.tab-btn').forEach((b, i) => b.classList.toggle('active', i === index));
+    cont.querySelectorAll('.tab-panel').forEach((p, i) => p.classList.toggle('active', i === index));
+}
+
+// Scroll to top
+const scrollBtn = document.getElementById('scrollTop');
+window.addEventListener('scroll', () => scrollBtn.classList.toggle('visible', window.scrollY > 400));
+scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+// Active nav highlight
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.topnav-links a');
+
+window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(sec => {
+        if (window.scrollY >= sec.offsetTop - 100) current = sec.id;
+    });
+    navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
+});
+
+
+</script>
+
+</body>
+</html>

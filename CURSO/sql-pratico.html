@@ -1,0 +1,1726 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Prático — Exercícios Reais | Róni Ricardo</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
+    <style>
+        :root {
+            --bg: #0a0f1a;
+            --bg2: #111827;
+            --bg3: #1e293b;
+            --bg4: #0f172a;
+            --border: #334155;
+            --text: #e2e8f0;
+            --text2: #94a3b8;
+            --accent: #3b82f6;
+            --accent2: #60a5fa;
+            --green: #34d399;
+            --yellow: #fbbf24;
+            --orange: #fb923c;
+            --red: #f87171;
+            --purple: #a78bfa;
+            --pink: #f472b6;
+            --cyan: #22d3ee;
+            --radius: 12px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        /* ===== NAV ===== */
+        .topnav {
+            position: fixed; top: 0; left: 0; right: 0;
+            background: rgba(10, 15, 26, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            z-index: 999; padding: 0 2rem;
+        }
+        .topnav-inner {
+            max-width: 1200px; margin: 0 auto;
+            display: flex; align-items: center; justify-content: space-between; height: 56px;
+        }
+        .topnav .logo {
+            font-weight: 800; font-size: 1rem;
+            background: linear-gradient(135deg, var(--green), var(--cyan));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .topnav-links { display: flex; gap: 0.25rem; overflow-x: auto; scrollbar-width: none; }
+        .topnav-links::-webkit-scrollbar { display: none; }
+        .topnav-links a {
+            color: var(--text2); text-decoration: none; font-size: 0.78rem;
+            padding: 0.4rem 0.7rem; border-radius: 6px; white-space: nowrap; transition: all 0.2s;
+        }
+        .topnav-links a:hover, .topnav-links a.active { color: var(--green); background: rgba(52,211,153,0.1); }
+
+        /* ===== LAYOUT ===== */
+        .container { max-width: 1200px; margin: 0 auto; padding: 80px 2rem 4rem; }
+        section { margin-bottom: 4rem; scroll-margin-top: 70px; }
+        h1 { font-size: 2.2rem; font-weight: 800; }
+        h2 { font-size: 1.6rem; font-weight: 700; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; }
+        h2 .tag { font-size: 0.65rem; background: var(--green); color: var(--bg); padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+        h3 { font-size: 1.15rem; font-weight: 600; margin-bottom: 0.5rem; }
+        p { color: var(--text2); margin-bottom: 1rem; }
+
+        /* ===== HERO ===== */
+        .hero { text-align: center; padding: 3rem 0 2rem; }
+        .hero h1 {
+            background: linear-gradient(135deg, var(--green), var(--cyan));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            margin-bottom: 0.75rem; font-size: 2.5rem;
+        }
+        .hero p { font-size: 1.05rem; max-width: 700px; margin: 0 auto 1.5rem; }
+        .hero-stats { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; }
+        .hero-stat { text-align: center; }
+        .hero-stat .num { font-size: 2rem; font-weight: 800; color: var(--green); }
+        .hero-stat .label { font-size: 0.8rem; color: var(--text2); }
+
+        /* ===== CARD ===== */
+        .card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin-bottom: 1.5rem; }
+
+        /* ===== EXERCISE ===== */
+        .exercise {
+            background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius);
+            margin-bottom: 1.5rem; overflow: hidden;
+        }
+        .exercise-header {
+            padding: 1rem 1.5rem; display: flex; align-items: center; gap: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .exercise-num {
+            background: var(--green); color: var(--bg); width: 32px; height: 32px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-weight: 800; font-size: 0.85rem; flex-shrink: 0;
+        }
+        .exercise-header h3 { margin: 0; font-size: 1rem; }
+        .exercise-diff {
+            margin-left: auto; font-size: 0.7rem; font-weight: 600; padding: 0.15rem 0.6rem;
+            border-radius: 4px; text-transform: uppercase; letter-spacing: 0.03em;
+        }
+        .diff-easy { background: rgba(52,211,153,0.15); color: var(--green); }
+        .diff-medium { background: rgba(251,191,36,0.15); color: var(--yellow); }
+        .diff-hard { background: rgba(248,113,113,0.15); color: var(--red); }
+
+        .exercise-body { padding: 1.5rem; }
+        .exercise-desc { font-size: 0.9rem; color: var(--text2); margin-bottom: 1rem; }
+        .exercise-hint {
+            background: rgba(59,130,246,0.06); border-left: 3px solid var(--accent);
+            border-radius: 0 8px 8px 0; padding: 0.75rem 1rem; margin-bottom: 1rem;
+            font-size: 0.85rem; color: var(--text2); display: none;
+        }
+        .exercise-hint.visible { display: block; }
+
+        .btn-row { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem; }
+        .btn {
+            padding: 0.45rem 1rem; border-radius: 6px; border: 1px solid var(--border);
+            background: var(--bg3); color: var(--text2); font-size: 0.8rem; cursor: pointer;
+            font-family: 'Inter', sans-serif; font-weight: 500; transition: all 0.2s;
+        }
+        .btn:hover { color: var(--text); border-color: var(--text2); }
+        .btn-run { background: var(--green); color: var(--bg); border-color: var(--green); font-weight: 600; }
+        .btn-run:hover { background: #2abb87; }
+        .btn-answer { background: var(--bg3); }
+
+        /* SQL EDITOR */
+        .sql-editor {
+            width: 100%; min-height: 100px; background: var(--bg4); border: 1px solid var(--border);
+            border-radius: 8px; padding: 1rem; font-family: 'Fira Code', monospace;
+            font-size: 0.85rem; color: var(--text); resize: vertical; line-height: 1.7;
+            tab-size: 4; outline: none;
+        }
+        .sql-editor:focus { border-color: var(--green); }
+        .sql-editor::placeholder { color: #4a5568; }
+
+        /* RESULTS */
+        .result-area {
+            margin-top: 1rem; border-radius: 8px; overflow: hidden;
+            border: 1px solid var(--border); display: none;
+        }
+        .result-area.visible { display: block; }
+        .result-header {
+            background: var(--bg3); padding: 0.5rem 1rem; font-size: 0.78rem;
+            color: var(--text2); display: flex; justify-content: space-between; align-items: center;
+        }
+        .result-ok { color: var(--green); }
+        .result-err { color: var(--red); }
+
+        .result-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+        .result-table th {
+            background: var(--bg3); color: var(--accent2); text-align: left;
+            padding: 0.6rem 0.75rem; font-weight: 600; border-bottom: 2px solid var(--border);
+            position: sticky; top: 0;
+        }
+        .result-table td {
+            padding: 0.5rem 0.75rem; border-bottom: 1px solid rgba(51,65,85,0.5); color: var(--text2);
+        }
+        .result-table tr:hover td { background: rgba(52,211,153,0.04); }
+        .result-table .null { color: var(--red); font-style: italic; opacity: 0.6; }
+
+        .result-scroll { max-height: 350px; overflow: auto; }
+
+        /* ANSWER REVEAL */
+        .answer-block {
+            background: rgba(52,211,153,0.04); border: 1px solid rgba(52,211,153,0.2);
+            border-radius: 8px; padding: 1rem; margin-top: 1rem; display: none;
+        }
+        .answer-block.visible { display: block; }
+        .answer-block h4 { color: var(--green); font-size: 0.85rem; margin-bottom: 0.75rem; }
+        .answer-sql {
+            background: var(--bg4); border: 1px solid var(--border); border-radius: 6px;
+            padding: 0.75rem 1rem; font-family: 'Fira Code', monospace; font-size: 0.82rem;
+            line-height: 1.7; overflow-x: auto; white-space: pre-wrap;
+        }
+        .answer-explain { font-size: 0.85rem; color: var(--text2); margin-top: 0.75rem; }
+
+        /* SCORE */
+        .score-bar {
+            position: fixed; bottom: 0; left: 0; right: 0;
+            background: rgba(10,15,26,0.95); backdrop-filter: blur(12px);
+            border-top: 1px solid var(--border); padding: 0.6rem 2rem; z-index: 998;
+            display: flex; align-items: center; justify-content: center; gap: 2rem;
+        }
+        .score-bar .score-label { color: var(--text2); font-size: 0.82rem; }
+        .score-bar .score-val { color: var(--green); font-weight: 800; font-size: 1.1rem; }
+        .progress-track { width: 200px; height: 6px; background: var(--bg3); border-radius: 3px; }
+        .progress-fill { height: 100%; background: var(--green); border-radius: 3px; transition: width 0.5s ease; }
+
+        /* BADGES */
+        .badge { display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.72rem; font-weight: 600; }
+        .badge-green { background: rgba(52,211,153,0.15); color: var(--green); }
+        .badge-yellow { background: rgba(251,191,36,0.15); color: var(--yellow); }
+        .badge-red { background: rgba(248,113,113,0.15); color: var(--red); }
+        .badge-blue { background: rgba(59,130,246,0.15); color: var(--accent2); }
+        .badge-purple { background: rgba(167,139,250,0.15); color: var(--purple); }
+
+        /* COMMENT BOXES */
+        .roni-comment {
+            background: rgba(59,130,246,0.06); border-left: 3px solid var(--accent);
+            border-radius: 0 8px 8px 0; padding: 1rem 1.25rem; margin: 1rem 0;
+        }
+        .roni-comment::before {
+            content: '💡 Comentário do Roni'; display: block; font-size: 0.75rem;
+            font-weight: 700; color: var(--accent2); text-transform: uppercase;
+            letter-spacing: 0.04em; margin-bottom: 0.4rem;
+        }
+        .roni-comment p { color: var(--text); font-size: 0.9rem; }
+        .roni-comment p:last-child { margin-bottom: 0; }
+
+        .tip-box {
+            background: rgba(52,211,153,0.06); border-left: 3px solid var(--green);
+            border-radius: 0 8px 8px 0; padding: 1rem 1.25rem; margin: 1rem 0;
+        }
+        .tip-box::before {
+            content: '✅ Dica prática'; display: block; font-size: 0.75rem;
+            font-weight: 700; color: var(--green); text-transform: uppercase;
+            letter-spacing: 0.04em; margin-bottom: 0.4rem;
+        }
+        .tip-box p { color: var(--text); font-size: 0.9rem; }
+        .tip-box p:last-child { margin-bottom: 0; }
+
+        .warn-box {
+            background: rgba(251,191,36,0.06); border-left: 3px solid var(--yellow);
+            border-radius: 0 8px 8px 0; padding: 1rem 1.25rem; margin: 1rem 0;
+        }
+        .warn-box::before {
+            content: '⚠️ Atenção'; display: block; font-size: 0.75rem;
+            font-weight: 700; color: var(--yellow); text-transform: uppercase;
+            letter-spacing: 0.04em; margin-bottom: 0.4rem;
+        }
+        .warn-box p { color: var(--text); font-size: 0.9rem; }
+        .warn-box p:last-child { margin-bottom: 0; }
+
+        /* TABLE */
+        .info-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin: 1rem 0; }
+        .info-table th {
+            background: var(--bg3); color: var(--accent2); text-align: left;
+            padding: 0.75rem 1rem; font-weight: 600; border-bottom: 2px solid var(--border);
+        }
+        .info-table td { padding: 0.65rem 1rem; border-bottom: 1px solid rgba(51,65,85,0.5); color: var(--text2); }
+        .info-table tr:hover td { background: rgba(59,130,246,0.04); }
+
+        /* SCHEMA DIAGRAM */
+        .schema {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1rem; margin: 1.5rem 0;
+        }
+        .schema-table {
+            background: var(--bg3); border: 1px solid var(--border); border-radius: 8px;
+            overflow: hidden;
+        }
+        .schema-table-name {
+            background: var(--bg4); padding: 0.5rem 0.75rem; font-weight: 700;
+            font-size: 0.82rem; color: var(--yellow); border-bottom: 1px solid var(--border);
+        }
+        .schema-table-cols { padding: 0.5rem 0.75rem; }
+        .schema-table-cols div {
+            font-size: 0.75rem; color: var(--text2); padding: 0.15rem 0;
+            font-family: 'Fira Code', monospace;
+        }
+        .schema-table-cols .pk { color: var(--yellow); }
+        .schema-table-cols .fk { color: var(--cyan); }
+
+        /* CHECK ANIMATION */
+        .check-anim {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 24px; height: 24px; border-radius: 50%; background: var(--green);
+            color: var(--bg); font-weight: 800; font-size: 0.75rem;
+            animation: popIn 0.3s ease;
+        }
+        @keyframes popIn { 0% { transform: scale(0); } 50% { transform: scale(1.2); } 100% { transform: scale(1); } }
+
+        /* SCROLL TOP */
+        .scroll-top {
+            position: fixed; bottom: 4rem; right: 2rem;
+            background: var(--green); color: var(--bg);
+            width: 42px; height: 42px; border-radius: 50%; border: none;
+            cursor: pointer; font-size: 1.2rem; display: none;
+            align-items: center; justify-content: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.4); z-index: 200;
+        }
+        .scroll-top.visible { display: flex; }
+
+        /* MOBILE */
+        @media (max-width: 800px) {
+            .topnav-links { display: none; }
+            .container { padding: 70px 1rem 5rem; }
+            .schema { grid-template-columns: 1fr 1fr; }
+            h1 { font-size: 1.6rem; }
+            h2 { font-size: 1.3rem; }
+            .hero h1 { font-size: 1.8rem; }
+            .score-bar { gap: 1rem; padding: 0.5rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="topnav">
+    <div class="topnav-inner">
+        <div class="logo">🗃️ SQL Prático — Exercícios</div>
+        <div class="topnav-links">
+            <a href="#setup">Setup</a>
+            <a href="#fase1">Fase 1</a>
+            <a href="#fase2">Fase 2</a>
+            <a href="#fase3">Fase 3</a>
+            <a href="#fase4">Fase 4</a>
+            <a href="#fase5">Fase 5</a>
+            <a href="#desafios">Desafios</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <!-- HERO -->
+    <section class="hero" id="top">
+        <h1>SQL Prático — Exercícios Reais</h1>
+        <p>Pare de ler. Escreva SQL de verdade. 30 exercícios progressivos com banco real rodando no navegador — você escreve, executa e confere.</p>
+        <div class="hero-stats">
+            <div class="hero-stat"><div class="num">30</div><div class="label">Exercícios</div></div>
+            <div class="hero-stat"><div class="num">5</div><div class="label">Fases</div></div>
+            <div class="hero-stat"><div class="num">∞</div><div class="label">Tentativas</div></div>
+        </div>
+    </section>
+
+    <!-- ==================== SETUP ==================== -->
+    <section id="setup">
+        <h2>⚙️ Banco de Dados — Schema <span class="tag">Referência</span></h2>
+
+        <div class="card">
+            <h3>O cenário</h3>
+            <p>Você é o novo <strong style="color:var(--green)">analista de dados de um salão de beleza</strong>. A dona pediu relatórios e você precisa extrair as informações do banco. Abaixo está o schema — consulte ele sempre que precisar.</p>
+
+            <div class="schema">
+                <div class="schema-table">
+                    <div class="schema-table-name">👥 clientes</div>
+                    <div class="schema-table-cols">
+                        <div class="pk">id (PK)</div>
+                        <div>nome, email, telefone</div>
+                        <div>data_nascimento, cidade</div>
+                        <div>bairro, data_cadastro, ativo</div>
+                    </div>
+                </div>
+                <div class="schema-table">
+                    <div class="schema-table-name">💼 funcionarios</div>
+                    <div class="schema-table-cols">
+                        <div class="pk">id (PK)</div>
+                        <div>nome, cargo, salario</div>
+                        <div>comissao_pct</div>
+                        <div>data_contratacao, ativo</div>
+                    </div>
+                </div>
+                <div class="schema-table">
+                    <div class="schema-table-name">✂️ servicos</div>
+                    <div class="schema-table-cols">
+                        <div class="pk">id (PK)</div>
+                        <div>nome, categoria, preco</div>
+                        <div>duracao_minutos, ativo</div>
+                    </div>
+                </div>
+                <div class="schema-table">
+                    <div class="schema-table-name">📅 agendamentos</div>
+                    <div class="schema-table-cols">
+                        <div class="pk">id (PK)</div>
+                        <div class="fk">cliente_id, funcionario_id</div>
+                        <div class="fk">servico_id</div>
+                        <div>data_hora, valor_cobrado</div>
+                        <div>desconto, forma_pagamento</div>
+                        <div>status, observacao</div>
+                    </div>
+                </div>
+                <div class="schema-table">
+                    <div class="schema-table-name">📦 produtos</div>
+                    <div class="schema-table-cols">
+                        <div class="pk">id (PK)</div>
+                        <div>nome, marca, categoria</div>
+                        <div>preco_custo, preco_venda</div>
+                        <div>estoque</div>
+                    </div>
+                </div>
+                <div class="schema-table">
+                    <div class="schema-table-name">🛒 vendas_produtos</div>
+                    <div class="schema-table-cols">
+                        <div class="pk">id (PK)</div>
+                        <div class="fk">agendamento_id, produto_id</div>
+                        <div>quantidade, valor_unitario</div>
+                        <div>data_venda</div>
+                    </div>
+                </div>
+                <div class="schema-table">
+                    <div class="schema-table-name">💸 despesas</div>
+                    <div class="schema-table-cols">
+                        <div class="pk">id (PK)</div>
+                        <div>categoria, descricao</div>
+                        <div>valor, data, recorrente</div>
+                    </div>
+                </div>
+                <div class="schema-table">
+                    <div class="schema-table-name">⭐ avaliacoes</div>
+                    <div class="schema-table-cols">
+                        <div class="pk">id (PK)</div>
+                        <div class="fk">agendamento_id</div>
+                        <div>nota (1-5), comentario</div>
+                        <div>data</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="roni-comment">
+                <p><strong>Como funciona:</strong> este banco SQLite roda 100% no seu navegador (via WebAssembly). Nada é enviado para nenhum servidor. Você escreve a query, clica ▶ Executar, e vê o resultado na hora. Se errar, tenta de novo — sem medo.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>🎯 Regras do jogo</h3>
+            <p>1. <strong style="color:var(--green)">Tente primeiro.</strong> Só olhe a resposta depois de pelo menos 2 tentativas.</p>
+            <p>2. <strong style="color:var(--yellow)">Use a dica</strong> se travar — ela dá a direção sem entregar a resposta.</p>
+            <p>3. <strong style="color:var(--accent2)">Entenda a explicação</strong> depois de acertar. É ali que o aprendizado se consolida.</p>
+            <p>4. Os exercícios são <strong style="color:var(--text)">progressivos</strong> — cada fase exige o que você aprendeu na anterior.</p>
+        </div>
+    </section>
+
+    <!-- ==================== FASE 1: SELECT + WHERE ==================== -->
+    <section id="fase1">
+        <h2>🟢 Fase 1 — SELECT + WHERE <span class="tag">Fundamento</span></h2>
+
+        <div class="roni-comment">
+            <p>O básico que todo mundo precisa dominar dormindo. Selecionar dados e filtrar. Parece simples, mas é 40% do trabalho diário de um analista.</p>
+        </div>
+
+        <!-- EX 1 -->
+        <div class="exercise" id="ex1">
+            <div class="exercise-header">
+                <div class="exercise-num">1</div>
+                <h3>Liste todos os serviços com preço acima de R$ 100</h3>
+                <span class="exercise-diff diff-easy">Fácil</span>
+            </div>
+            <div class="exercise-body">
+                <p class="exercise-desc">A dona quer saber quais serviços são "premium" (acima de R$ 100). Mostre <strong>nome, categoria e preço</strong>, ordenados do mais caro ao mais barato.</p>
+                <div class="exercise-hint" id="hint1">Você vai precisar de: <code>SELECT</code>, <code>FROM</code>, <code>WHERE</code> e <code>ORDER BY ... DESC</code></div>
+                <div class="btn-row">
+                    <button class="btn" onclick="toggleHint(1)">💡 Dica</button>
+                    <button class="btn btn-run" onclick="runExercise(1)">▶ Executar</button>
+                    <button class="btn btn-answer" onclick="showAnswer(1)">👁 Resposta</button>
+                </div>
+                <textarea class="sql-editor" id="editor1" placeholder="-- Escreva seu SQL aqui...&#10;SELECT ..." spellcheck="false"></textarea>
+                <div class="result-area" id="result1"></div>
+                <div class="answer-block" id="answer1">
+                    <h4>✅ Resposta</h4>
+                    <div class="answer-sql">SELECT nome, categoria, preco
+FROM servicos
+WHERE preco > 100
+ORDER BY preco DESC;</div>
+                    <p class="answer-explain"><strong>Explicação:</strong> WHERE filtra as linhas onde preço é maior que 100. ORDER BY com DESC coloca o maior primeiro. Simples e direto — essa é a base de qualquer consulta.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- EX 2 -->
+        <div class="exercise" id="ex2">
+            <div class="exercise-header">
+                <div class="exercise-num">2</div>
+                <h3>Clientes cadastrados em 2024</h3>
+                <span class="exercise-diff diff-easy">Fácil</span>
+            </div>
+            <div class="exercise-body">
+                <p class="exercise-desc">Quantos clientes se cadastraram em 2024? Mostre <strong>nome, email e data_cadastro</strong> dos clientes cujo cadastro foi em 2024.</p>
+                <div class="exercise-hint" id="hint2">Use <code>WHERE data_cadastro BETWEEN '2024-01-01' AND '2024-12-31'</code> ou <code>STRFTIME('%Y', data_cadastro) = '2024'</code></div>
+                <div class="btn-row">
+                    <button class="btn" onclick="toggleHint(2)">💡 Dica</button>
+                    <button class="btn btn-run" onclick="runExercise(2)">▶ Executar</button>
+                    <button class="btn btn-answer" onclick="showAnswer(2)">👁 Resposta</button>
+                </div>
+                <textarea class="sql-editor" id="editor2" placeholder="-- Escreva seu SQL aqui..." spellcheck="false"></textarea>
+                <div class="result-area" id="result2"></div>
+                <div class="answer-block" id="answer2">
+                    <h4>✅ Resposta</h4>
+                    <div class="answer-sql">SELECT nome, email, data_cadastro
+FROM clientes
+WHERE data_cadastro BETWEEN '2024-01-01' AND '2024-12-31'
+ORDER BY data_cadastro;</div>
+                    <p class="answer-explain"><strong>Explicação:</strong> BETWEEN é inclusivo nos dois lados. Também funciona com STRFTIME ou LIKE '2024%'. Em entrevista, BETWEEN é mais limpo.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- EX 3 -->
+        <div class="exercise" id="ex3">
+            <div class="exercise-header">
+                <div class="exercise-num">3</div>
+                <h3>Funcionários ativos com salário acima de R$ 3.000</h3>
+                <span class="exercise-diff diff-easy">Fácil</span>
+            </div>
+            <div class="exercise-body">
+                <p class="exercise-desc">RH quer a lista de funcionários ativos que ganham acima de 3 mil. Mostre <strong>nome, cargo, salario</strong>.</p>
+                <div class="exercise-hint" id="hint3">Duas condições no WHERE: <code>ativo = 1 AND salario > 3000</code></div>
+                <div class="btn-row">
+                    <button class="btn" onclick="toggleHint(3)">💡 Dica</button>
+                    <button class="btn btn-run" onclick="runExercise(3)">▶ Executar</button>
+                    <button class="btn btn-answer" onclick="showAnswer(3)">👁 Resposta</button>
+                </div>
+                <textarea class="sql-editor" id="editor3" placeholder="-- Escreva seu SQL aqui..." spellcheck="false"></textarea>
+                <div class="result-area" id="result3"></div>
+                <div class="answer-block" id="answer3">
+                    <h4>✅ Resposta</h4>
+                    <div class="answer-sql">SELECT nome, cargo, salario
+FROM funcionarios
+WHERE ativo = 1
+  AND salario > 3000
+ORDER BY salario DESC;</div>
+                    <p class="answer-explain"><strong>Explicação:</strong> AND combina filtros. Ambas as condições precisam ser verdadeiras. É assim que o dia a dia funciona — raramente você filtra por uma coisa só.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- EX 4 -->
+        <div class="exercise" id="ex4">
+            <div class="exercise-header">
+                <div class="exercise-num">4</div>
+                <h3>Produtos com estoque abaixo de 10 unidades</h3>
+                <span class="exercise-diff diff-easy">Fácil</span>
+            </div>
+            <div class="exercise-body">
+                <p class="exercise-desc">Alerta de reposição! Liste os produtos com estoque baixo. Mostre <strong>nome, marca, estoque e preco_venda</strong>, do menor estoque ao maior.</p>
+                <div class="exercise-hint" id="hint4"><code>WHERE estoque < 10 ORDER BY estoque ASC</code></div>
+                <div class="btn-row">
+                    <button class="btn" onclick="toggleHint(4)">💡 Dica</button>
+                    <button class="btn btn-run" onclick="runExercise(4)">▶ Executar</button>
+                    <button class="btn btn-answer" onclick="showAnswer(4)">👁 Resposta</button>
+                </div>
+                <textarea class="sql-editor" id="editor4" placeholder="-- Escreva seu SQL aqui..." spellcheck="false"></textarea>
+                <div class="result-area" id="result4"></div>
+                <div class="answer-block" id="answer4">
+                    <h4>✅ Resposta</h4>
+                    <div class="answer-sql">SELECT nome, marca, estoque, preco_venda
+FROM produtos
+WHERE estoque < 10
+ORDER BY estoque ASC;</div>
+                    <p class="answer-explain"><strong>Explicação:</strong> ORDER BY ASC (ou sem ASC, que é o padrão) mostra do menor ao maior. Relatório clássico de estoque — gestores precisam disso toda semana.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- EX 5 -->
+        <div class="exercise" id="ex5">
+            <div class="exercise-header">
+                <div class="exercise-num">5</div>
+                <h3>Agendamentos cancelados ou faltados</h3>
+                <span class="exercise-diff diff-easy">Fácil</span>
+            </div>
+            <div class="exercise-body">
+                <p class="exercise-desc">A gerente quer ver os agendamentos que não foram realizados. Mostre <strong>id, data_hora, status, valor_cobrado</strong> onde o status é 'cancelado' ou 'falta'.</p>
+                <div class="exercise-hint" id="hint5">Use <code>WHERE status IN ('cancelado', 'falta')</code> ou <code>WHERE status = 'cancelado' OR status = 'falta'</code></div>
+                <div class="btn-row">
+                    <button class="btn" onclick="toggleHint(5)">💡 Dica</button>
+                    <button class="btn btn-run" onclick="runExercise(5)">▶ Executar</button>
+                    <button class="btn btn-answer" onclick="showAnswer(5)">👁 Resposta</button>
+                </div>
+                <textarea class="sql-editor" id="editor5" placeholder="-- Escreva seu SQL aqui..." spellcheck="false"></textarea>
+                <div class="result-area" id="result5"></div>
+                <div class="answer-block" id="answer5">
+                    <h4>✅ Resposta</h4>
+                    <div class="answer-sql">SELECT id, data_hora, status, valor_cobrado
+FROM agendamentos
+WHERE status IN ('cancelado', 'falta')
+ORDER BY data_hora DESC;</div>
+                    <p class="answer-explain"><strong>Explicação:</strong> IN é mais limpo que vários OR. Funciona como uma lista de valores aceitos. Em entrevista, preferem ver IN — mostra que você é organizado.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- EX 6 -->
+        <div class="exercise" id="ex6">
+            <div class="exercise-header">
+                <div class="exercise-num">6</div>
+                <h3>Busca por nome parcial (LIKE)</h3>
+                <span class="exercise-diff diff-easy">Fácil</span>
+            </div>
+            <div class="exercise-body">
+                <p class="exercise-desc">Uma cliente ligou mas só sabe que o nome começa com "Ma". Liste todos os clientes cujo nome começa com "Ma". Mostre <strong>nome, telefone, email</strong>.</p>
+                <div class="exercise-hint" id="hint6"><code>WHERE nome LIKE 'Ma%'</code> — o % substitui qualquer coisa depois</div>
+                <div class="btn-row">
+                    <button class="btn" onclick="toggleHint(6)">💡 Dica</button>
+                    <button class="btn btn-run" onclick="runExercise(6)">▶ Executar</button>
+                    <button class="btn btn-answer" onclick="showAnswer(6)">👁 Resposta</button>
+                </div>
+                <textarea class="sql-editor" id="editor6" placeholder="-- Escreva seu SQL aqui..." spellcheck="false"></textarea>
+                <div class="result-area" id="result6"></div>
+                <div class="answer-block" id="answer6">
+                    <h4>✅ Resposta</h4>
+                    <div class="answer-sql">SELECT nome, telefone, email
+FROM clientes
+WHERE nome LIKE 'Ma%'
+ORDER BY nome;</div>
+                    <p class="answer-explain"><strong>Explicação:</strong> LIKE com % é o curinga do SQL. 'Ma%' = começa com Ma. '%silva%' = contém silva. '%son' = termina com son. Muito usado em buscas e relatórios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FASE 2: AGREGAÇÕES ==================== -->
+    <section id="fase2">
+        <h2>🟡 Fase 2 — GROUP BY + Agregações <span class="tag">Análise</span></h2>
+
+        <div class="roni-comment">
+            <p>Aqui é onde você deixa de ser "alguém que consulta dados" e vira "alguém que analisa dados". GROUP BY + funções de agregação = 30% do seu trabalho como analista BI.</p>
+        </div>
+
+        <!-- EX 7 -->
+        <div class="exercise" id="ex7">
+            <div class="exercise-header">
+                <div class="exercise-num">7</div>
+                <h3>Faturamento total do salão</h3>
+                <span class="exercise-diff diff-easy">Fácil</span>
+            </div>
+            <div class="exercise-body">
+                <p class="exercise-desc">A dona perguntou: "quanto o salão já faturou no total?" Calcule o <strong>faturamento total</strong> (soma de valor_cobrado) dos agendamentos com status 'realizado'.</p>
+                <div class="exercise-hint" id="hint7"><code>SELECT SUM(valor_cobrado) FROM agendamentos WHERE status = 'realizado'</code></div>
+                <div class="btn-row">
+                    <button class="btn" onclick="toggleHint(7)">💡 Dica</button>
+                    <button class="btn btn-run" onclick="runExercise(7)">▶ Executar</button>
+                    <button class="btn btn-answer" onclick="showAnswer(7)">👁 Resposta</button>
+                </div>
+                <textarea class="sql-editor" id="editor7" placeholder="-- Escreva seu SQL aqui..." spellcheck="false"></textarea>
+                <div class="result-area" id="result7"></div>
+                <div class="answer-block" id="answer7">
+                    <h4>✅ Resposta</h4>
+                    <div class="answer-sql">SELECT
+    SUM(valor_cobrado) AS faturamento_total,
+    COUNT(*) AS total_atendimentos,
+    ROUND(AVG(valor_cobrado), 2) AS ticket_medio
+FROM agendamentos
+WHERE status = 'realizado';</div>
+                    <p class="answer-explain"><strong>Explicação:</strong> SUM soma, COUNT conta linhas, AVG calcula média. O alias (AS) dá nome legível à coluna. ROUND arredonda decimais. Aproveitei pra já calcular ticket médio — analista bom já traz mais do que pedem.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- EX 8 -->
+        <div class="exercise" id="ex8">
+            <div class="exercise-header">
+                <div class="exercise-num">8</div>
+                <h3>Faturamento por mês</h3>
+                <span class="exercise-diff diff-medium">Médio</span>
+            </div>
+            <div class="exercise-body">
+                <p class="exercise-desc">Relatório mensal. Mostre o <strong>faturamento agrupado por mês</strong> (formato YYYY-MM), número de atendimentos e ticket médio. Só agendamentos realizados.</p>
+                <div class="exercise-hint" id="hint8">Use <code>STRFTIME('%Y-%m', data_hora)</code> para extrair ano-mês. Agrupe por ele.</div>
+                <div class="btn-row">
+                    <button class="btn" onclick="toggleHint(8)">💡 Dica</button>
+                    <button class="btn btn-run" onclick="runExercise(8)">▶ Executar</button>
+                    <button class="btn btn-answer" onclick="showAnswer(8)">👁 Resposta</button>
+                </div>
+                <textarea class="sql-editor" id="editor8" placeholder="-- Escreva seu SQL aqui..." spellcheck="false"></textarea>
+                <div class="result-area" id="result8"></div>
+                <div class="answer-block" id="answer8">
+                    <h4>✅ Resposta</h4>
+                    <div class="answer-sql">SELECT
+    STRFTIME('%Y-%m', data_hora) AS mes,
+    SUM(valor_cobrado) AS faturamento,
+    COUNT(*) AS atendimentos,
+    ROUND(AVG(valor_cobrado), 2) AS ticket_medio
+FROM agendamentos
+WHERE status = 'realizado'
+GROUP BY mes
+ORDER BY mes;</div>
+                    <p class="answer-explain"><strong>Explicação:</strong> STRFTIME extrai partes de datas no SQLite. GROUP BY agrupa todas as linhas do mesmo mês e aplica as funções de agregação em cada grupo. Esse é O relatório que todo gestor pede.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- EX 9 -->
+        <div class="exercise" id="ex9">
+            <div class="exercise-header">
+                <div class="exercise-num">9</div>
+                <h3>Top 5 serviços mais vendidos</h3>
+                <span class="exercise-diff diff-medium">Médio</span>
+            </div>
+            <div class="exercise-body">
+                <p class="exercise-desc">Quais serviços são os campeões? Mostre os <strong>5 serviços com mais agendamentos realizados</strong>, com nome do serviço, quantidade e faturamento total.</p>
+                <div class="exercise-hint" id="hint9">Você precisa de JOIN entre agendamentos e servicos. Agrupe por servico, ordene por COUNT DESC, e use LIMIT 5.</div>
+                <div class="btn-row">
+                    <button class="btn" onclick="toggleHint(9)">💡 Dica</button>
+                    <button class="btn btn-run" onclick="runExercise(9)">▶ Executar</button>
+                    <button class="btn btn-answer" onclick="showAnswer(9)">👁 Resposta</button>
+                </div>
+                <textarea class="sql-editor" id="editor9" placeholder="-- Escreva seu SQL aqui..." spellcheck="false"></textarea>
+                <div class="result-area" id="result9"></div>
+                <div class="answer-block" id="answer9">
+                    <h4>✅ Resposta</h4>
+                    <div class="answer-sql">SELECT
+    s.nome AS servico,
+    COUNT(*) AS qtd_agendamentos,
+    SUM(a.valor_cobrado) AS faturamento
+FROM agendamentos a
+JOIN servicos s ON a.servico_id = s.id
+WHERE a.status = 'realizado'
+GROUP BY s.nome
+ORDER BY qtd_agendamentos DESC
+LIMIT 5;</div>
+                    <p class="answer-explain"><strong>Explicação:</strong> JOIN conecta duas tabelas pela chave estrangeira. Alias (a, s) deixa o código mais curto. GROUP BY s.nome agrupa por serviço. LIMIT 5 = Top 5. Relatório tipo Pareto — quais poucos serviços geram maior receita.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- EX 10 -->
+        <div class="exercise" id="ex10">
+            <div class="exercise-header">
+                <div class="exercise-num">10</div>
+                <h3>Faturamento por categoria de serviço</h3>
+                <span class="exercise-diff diff-medium">Médio</span>
+            </div>
+            <div class="exercise-body">
+                <p class="exercise-desc">Agrupe por <strong>categoria do serviço</strong> (ex: Cabelo, Unha, etc). Mostre categoria, total de atendimentos, faturamento e ticket médio.</p>
+                <div class="exercise-hint" id="hint10">JOIN com servicos, mas GROUP BY s.categoria em vez de s.nome.</div>
+                <div class="btn-row">
+                    <button class="btn" onclick="toggleHint(10)">💡 Dica</button>
+                    <button class="btn btn-run" onclick="runExercise(10)">▶ Executar</button>
+                    <button class="btn btn-answer" onclick="showAnswer(10)">👁 Resposta</button>
+                </div>
+                <textarea class="sql-editor" id="editor10" placeholder="-- Escreva seu SQL aqui..." spellcheck="false"></textarea>
+                <div class="result-area" id="result10"></div>
+                <div class="answer-block" id="answer10">
+                    <h4>✅ Resposta</h4>
+                    <div class="answer-sql">SELECT
+    s.categoria,
+    COUNT(*) AS atendimentos,
+    SUM(a.valor_cobrado) AS faturamento,
+    ROUND(AVG(a.valor_cobrado), 2) AS ticket_medio
+FROM agendamentos a
+JOIN servicos s ON a.servico_id = s.id
+WHERE a.status = 'realizado'
+GROUP BY s.categoria
+ORDER BY faturamento DESC;</div>
+                    <p class="answer-explain"><strong>Explicação:</strong> Mesmo padrão do anterior, mas agrupando por categoria. Esse é o tipo de análise que vira gráfico de barras no Power BI.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- EX 11 -->
+        <div class="exercise" id="ex11">
+            <div class="exercise-header">
+                <div class="exercise-num">11</div>
+                <h3>Média de avaliação por funcionário</h3>
+                <span class="exercise-diff diff-medium">Médio</span>
+            </div>
+            <div class="exercise-body">
+                <p class="exercise-desc">Qual funcionário é o melhor avaliado? Mostre <strong>nome do funcionário, média de nota, e quantidade de avaliações</strong>. Só quem tem pelo menos 3 avaliações.</p>
+                <div class="exercise-hint" id="hint11">Você precisa encadear 2 JOINs: avaliacoes → agendamentos → funcionarios. Use HAVING COUNT(*) >= 3 para filtrar depois do GROUP BY.</div>
+                <div class="btn-row">
+                    <button class="btn" onclick="toggleHint(11)">💡 Dica</button>
+                    <button class="btn btn-run" onclick="runExercise(11)">▶ Executar</button>
+                    <button class="btn btn-answer" onclick="showAnswer(11)">👁 Resposta</button>
+                </div>
+                <textarea class="sql-editor" id="editor11" placeholder="-- Escreva seu SQL aqui..." spellcheck="false"></textarea>
+                <div class="result-area" id="result11"></div>
+                <div class="answer-block" id="answer11">
+                    <h4>✅ Resposta</h4>
+                    <div class="answer-sql">SELECT
+    f.nome AS funcionario,
+    ROUND(AVG(av.nota), 2) AS media_nota,
+    COUNT(*) AS qtd_avaliacoes
+FROM avaliacoes av
+JOIN agendamentos a ON av.agendamento_id = a.id
+JOIN funcionarios f ON a.funcionario_id = f.id
+GROUP BY f.nome
+HAVING COUNT(*) >= 3
+ORDER BY media_nota DESC;</div>
+                    <p class="answer-explain"><strong>Explicação:</strong> HAVING filtra DEPOIS da agregação (WHERE filtra ANTES). Dois JOINs encadeados conectam avaliações → agendamentos → funcionários. Isso é SQL intermediário — se fizer isso na entrevista, impressiona.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- EX 12 -->
+        <div class="exercise" id="ex12">
+            <div class="exercise-header">
+                <div class="exercise-num">12</div>
+                <h3>Faturamento por forma de pagamento</h3>
+                <span class="exercise-diff diff-easy">Fácil</span>
+            </div>
+            <div class="exercise-body">
+                <p class="exercise-desc">Qual forma de pagamento gera mais receita? Mostre <strong>forma de pagamento, total e percentual do faturamento</strong>.</p>
+                <div class="exercise-hint" id="hint12">Para o percentual: divida o SUM de cada grupo pelo SUM total (subquery ou SUM() OVER()).</div>
+                <div class="btn-row">
+                    <button class="btn" onclick="toggleHint(12)">💡 Dica</button>
+                    <button class="btn btn-run" onclick="runExercise(12)">▶ Executar</button>
+                    <button class="btn btn-answer" onclick="showAnswer(12)">👁 Resposta</button>
+                </div>
+                <textarea class="sql-editor" id="editor12" placeholder="-- Escreva seu SQL aqui..." spellcheck="false"></textarea>
+                <div class="result-area" id="result12"></div>
+                <div class="answer-block" id="answer12">
+                    <h4>✅ Resposta</h4>
+                    <div class="answer-sql">SELECT
+    forma_pagamento,
+    SUM(valor_cobrado) AS total,
+    ROUND(SUM(valor_cobrado) * 100.0 /
+        (SELECT SUM(valor_cobrado) FROM agendamentos WHERE status = 'realizado'),
+    1) AS percentual
+FROM agendamentos
+WHERE status = 'realizado'
+GROUP BY forma_pagamento
+ORDER BY total DESC;</div>
+                    <p class="answer-explain"><strong>Explicação:</strong> A subquery no SELECT calcula o total geral. Dividir o parcial pelo total e multiplicar por 100 dá o percentual. Relatório clássico financeiro.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FASE 3: JOINs AVANÇADOS ==================== -->
+    <section id="fase3">
+        <h2>🟠 Fase 3 — JOINs + Subqueries <span class="tag">Intermediário</span></h2>
+
+        <div class="roni-comment">
+            <p>Agora ficou sério. JOINs são 25% do trabalho de analista de dados. Se você dominar isso, passa na frente de 80% dos candidatos Jr.</p>
+        </div>
+
+        <!-- EX 13 -->
+        <div class="exercise" id="ex13">
+            <div class="exercise-header">
+                <div class="exercise-num">13</div>
+                <h3>Clientes que nunca agendaram</h3>
+                <span class="exercise-diff diff-medium">Médio</span>
+            </div>
+            <div class="exercise-body">
+                <p class="exercise-desc">Quais clientes se cadastraram mas nunca fizeram um agendamento? Mostre <strong>nome, email e data_cadastro</strong>. Isso é fundamental para campanhas de reativação.</p>
+                <div class="exercise-hint" id="hint13">Use LEFT JOIN + WHERE IS NULL, ou NOT IN com subquery, ou NOT EXISTS.</div>
+                <div class="btn-row">
+                    <button class="btn" onclick="toggleHint(13)">💡 Dica</button>
+                    <button class="btn btn-run" onclick="runExercise(13)">▶ Executar</button>
+                    <button class="btn btn-answer" onclick="showAnswer(13)">👁 Resposta</button>
+                </div>
+                <textarea class="sql-editor" id="editor13" placeholder="-- Escreva seu SQL aqui..." spellcheck="false"></textarea>
+                <div class="result-area" id="result13"></div>
+                <div class="answer-block" id="answer13">
+                    <h4>✅ Resposta</h4>
+                    <div class="answer-sql">SELECT c.nome, c.email, c.data_cadastro
+FROM clientes c
+LEFT JOIN agendamentos a ON c.id = a.cliente_id
+WHERE a.id IS NULL
+ORDER BY c.data_cadastro;</div>
+                    <p class="answer-explain"><strong>Explicação:</strong> LEFT JOIN traz TODOS os clientes, mesmo sem agendamento. Onde não há correspondência, os campos de agendamentos ficam NULL. Filtrar WHERE a.id IS NULL pega exatamente quem nunca agendou. Padrão clássico — cai em toda entrevista.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- EX 14 -->
+        <div class="exercise" id="ex14">
+            <div class="exercise-header">
+                <div class="exercise-num">14</div>
+                <h3>Ranking de clientes por gasto total</h3>
+                <span class="exercise-diff diff-medium">Médio</span>
+            </div>
+            <div class="exercise-body">
+                <p class="exercise-desc">Monte o <strong>Top 10 clientes que mais gastaram</strong> (soma de valor_cobrado). Mostre nome, quantidade de visitas e gasto total.</p>
+                <div class="exercise-hint" id="hint14">JOIN clientes com agendamentos, GROUP BY cliente, SUM(valor_cobrado), ORDER BY DESC, LIMIT 10.</div>
+                <div class="btn-row">
+                    <button class="btn" onclick="toggleHint(14)">💡 Dica</button>
+                    <button class="btn btn-run" onclick="runExercise(14)">▶ Executar</button>
+                    <button class="btn btn-answer" onclick="showAnswer(14)">👁 Resposta</button>
+                </div>
+                <textarea class="sql-editor" id="editor14" placeholder="-- Escreva seu SQL aqui..." spellcheck="false"></textarea>
+                <div class="result-area" id="result14"></div>
+                <div class="answer-block" id="answer14">
+                    <h4>✅ Resposta</h4>
+                    <div class="answer-sql">SELECT
+    c.nome,
+    COUNT(*) AS visitas,
+    SUM(a.valor_cobrado) AS gasto_total,
+    ROUND(AVG(a.valor_cobrado), 2) AS ticket_medio
+FROM clientes c
+JOIN agendamentos a ON c.id = a.cliente_id
+WHERE a.status = 'realizado'
+GROUP BY c.nome
+ORDER BY gasto_total DESC
+LIMIT 10;</div>
+                    <p class="answer-explain"><strong>Explicação:</strong> Esse é o relatório de "melhores clientes" — toda empresa quer saber. É a base de programas de fidelidade. No Power BI você transforma isso em tabela matrix com drill-down.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- EX 15 -->
+        <div class="exercise" id="ex15">
+            <div class="exercise-header">
+                <div class="exercise-num">15</div>
+                <h3>Comissão de cada funcionário</h3>
+                <span class="exercise-diff diff-medium">Médio</span>
+            </div>
+            <div class="exercise-body">
+                <p class="exercise-desc">Calcule a <strong>comissão total de cada funcionário</strong>: nome, total faturado, percentual de comissão e valor da comissão (faturado × comissao_pct / 100).</p>
+                <div class="exercise-hint" id="hint15">JOIN funcionarios com agendamentos. A comissão é <code>SUM(valor_cobrado) * f.comissao_pct / 100</code></div>
+                <div class="btn-row">
+                    <button class="btn" onclick="toggleHint(15)">💡 Dica</button>
+                    <button class="btn btn-run" onclick="runExercise(15)">▶ Executar</button>
+                    <button class="btn btn-answer" onclick="showAnswer(15)">👁 Resposta</button>
+                </div>
+                <textarea class="sql-editor" id="editor15" placeholder="-- Escreva seu SQL aqui..." spellcheck="false"></textarea>
+                <div class="result-area" id="result15"></div>
+                <div class="answer-block" id="answer15">
+                    <h4>✅ Resposta</h4>
+                    <div class="answer-sql">SELECT
+    f.nome,
+    f.comissao_pct,
+    SUM(a.valor_cobrado) AS faturado,
+    ROUND(SUM(a.valor_cobrado) * f.comissao_pct / 100.0, 2) AS comissao
+FROM funcionarios f
+JOIN agendamentos a ON f.id = a.funcionario_id
+WHERE a.status = 'realizado'
+GROUP BY f.nome, f.comissao_pct
+ORDER BY comissao DESC;</div>
+                    <p class="answer-explain"><strong>Explicação:</strong> Cálculo de comissão é um dos relatórios mais pedidos em salão/varejo. Note o 100.0 (float) para evitar divisão inteira. GROUP BY inclui comissao_pct porque é um campo não-agregado.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- EX 16 -->
+        <div class="exercise" id="ex16">
+            <div class="exercise-header">
+                <div class="exercise-num">16</div>
+                <h3>Clientes acima da média de gasto</h3>
+                <span class="exercise-diff diff-hard">Difícil</span>
+            </div>
+            <div class="exercise-body">
+                <p class="exercise-desc">Liste clientes cujo <strong>gasto total é maior que a média geral</strong> de gasto por cliente. Mostre nome, gasto total, e quantas vezes visitou.</p>
+                <div class="exercise-hint" id="hint16">Subquery: calcule o gasto médio por cliente na subquery, e compare no HAVING. Ou use CTE.</div>
+                <div class="btn-row">
+                    <button class="btn" onclick="toggleHint(16)">💡 Dica</button>
+                    <button class="btn btn-run" onclick="runExercise(16)">▶ Executar</button>
+                    <button class="btn btn-answer" onclick="showAnswer(16)">👁 Resposta</button>
+                </div>
+                <textarea class="sql-editor" id="editor16" placeholder="-- Escreva seu SQL aqui..." spellcheck="false"></textarea>
+                <div class="result-area" id="result16"></div>
+                <div class="answer-block" id="answer16">
+                    <h4>✅ Resposta</h4>
+                    <div class="answer-sql">SELECT
+    c.nome,
+    SUM(a.valor_cobrado) AS gasto_total,
+    COUNT(*) AS visitas
+FROM clientes c
+JOIN agendamentos a ON c.id = a.cliente_id
+WHERE a.status = 'realizado'
+GROUP BY c.nome
+HAVING gasto_total > (
+    SELECT AVG(total) FROM (
+        SELECT SUM(valor_cobrado) AS total
+        FROM agendamentos
+        WHERE status = 'realizado'
+        GROUP BY cliente_id
+    )
+)
+ORDER BY gasto_total DESC;</div>
+                    <p class="answer-explain"><strong>Explicação:</strong> Subquery aninhada: primeiro calcula o total por cliente, depois calcula a média desses totais, e compara no HAVING. Esse padrão ("acima da média") é pergunta clássica de entrevista SQL.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- EX 17 -->
+        <div class="exercise" id="ex17">
+            <div class="exercise-header">
+                <div class="exercise-num">17</div>
+                <h3>Margem de lucro dos produtos</h3>
+                <span class="exercise-diff diff-medium">Médio</span>
+            </div>
+            <div class="exercise-body">
+                <p class="exercise-desc">Calcule o <strong>lucro bruto de cada produto vendido</strong>: nome do produto, quantidade vendida, receita total, custo total e lucro (receita - custo). Ordene pelo mais lucrativo.</p>
+                <div class="exercise-hint" id="hint17">JOIN vendas_produtos com produtos. Receita = SUM(quantidade * valor_unitario). Custo = SUM(quantidade * preco_custo).</div>
+                <div class="btn-row">
+                    <button class="btn" onclick="toggleHint(17)">💡 Dica</button>
+                    <button class="btn btn-run" onclick="runExercise(17)">▶ Executar</button>
+                    <button class="btn btn-answer" onclick="showAnswer(17)">👁 Resposta</button>
+                </div>
+                <textarea class="sql-editor" id="editor17" placeholder="-- Escreva seu SQL aqui..." spellcheck="false"></textarea>
+                <div class="result-area" id="result17"></div>
+                <div class="answer-block" id="answer17">
+                    <h4>✅ Resposta</h4>
+                    <div class="answer-sql">SELECT
+    p.nome,
+    SUM(vp.quantidade) AS qtd_vendida,
+    ROUND(SUM(vp.quantidade * vp.valor_unitario), 2) AS receita,
+    ROUND(SUM(vp.quantidade * p.preco_custo), 2) AS custo,
+    ROUND(SUM(vp.quantidade * vp.valor_unitario) - SUM(vp.quantidade * p.preco_custo), 2) AS lucro
+FROM vendas_produtos vp
+JOIN produtos p ON vp.produto_id = p.id
+GROUP BY p.nome
+ORDER BY lucro DESC;</div>
+                    <p class="answer-explain"><strong>Explicação:</strong> Margem de lucro é um dos relatórios mais comuns em varejo/e-commerce. A lógica é: receita - custo = lucro bruto. Esse tipo de query vira gráfico de barras no dashboard.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- EX 18 -->
+        <div class="exercise" id="ex18">
+            <div class="exercise-header">
+                <div class="exercise-num">18</div>
+                <h3>DRE Simplificado do salão</h3>
+                <span class="exercise-diff diff-hard">Difícil</span>
+            </div>
+            <div class="exercise-body">
+                <p class="exercise-desc">Monte um <strong>Demonstrativo de Resultado</strong>: Receita total de serviços, + Receita de produtos, - Total de despesas, - Total de salários = Resultado.</p>
+                <div class="exercise-hint" id="hint18">Use subqueries separadas para cada linha. SUM de agendamentos realizados, SUM de vendas_produtos, SUM de despesas, SUM de salários de funcionários.</div>
+                <div class="btn-row">
+                    <button class="btn" onclick="toggleHint(18)">💡 Dica</button>
+                    <button class="btn btn-run" onclick="runExercise(18)">▶ Executar</button>
+                    <button class="btn btn-answer" onclick="showAnswer(18)">👁 Resposta</button>
+                </div>
+                <textarea class="sql-editor" id="editor18" placeholder="-- Escreva seu SQL aqui..." spellcheck="false"></textarea>
+                <div class="result-area" id="result18"></div>
+                <div class="answer-block" id="answer18">
+                    <h4>✅ Resposta</h4>
+                    <div class="answer-sql">SELECT
+    (SELECT SUM(valor_cobrado) FROM agendamentos WHERE status = 'realizado') AS receita_servicos,
+    (SELECT SUM(quantidade * valor_unitario) FROM vendas_produtos) AS receita_produtos,
+    (SELECT SUM(valor) FROM despesas) AS despesas,
+    (SELECT SUM(salario) FROM funcionarios WHERE ativo = 1) AS folha_salarial,
+    (SELECT SUM(valor_cobrado) FROM agendamentos WHERE status = 'realizado')
+    + (SELECT SUM(quantidade * valor_unitario) FROM vendas_produtos)
+    - (SELECT SUM(valor) FROM despesas)
+    - (SELECT SUM(salario) FROM funcionarios WHERE ativo = 1) AS resultado;</div>
+                    <p class="answer-explain"><strong>Explicação:</strong> DRE (Demonstrativo de Resultado do Exercício) é o relatório financeiro mais importante de qualquer negócio. Aqui usamos subqueries para calcular cada componente. Num projeto Power BI, cada linha vira um KPI card.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FASE 4: CTEs + Window Functions ==================== -->
+    <section id="fase4">
+        <h2>🔴 Fase 4 — CTEs + Window Functions <span class="tag">Avançado</span></h2>
+
+        <div class="roni-comment">
+            <p>Se você dominar isso, já está acima de 90% dos candidatos Jr. CTEs + Window Functions são o que separam um analista que "sabe SQL" de um que realmente resolve problemas complexos. Esse é o 20% do esforço que gera 80% do resultado em entrevistas.</p>
+        </div>
+
+        <!-- EX 19 -->
+        <div class="exercise" id="ex19">
+            <div class="exercise-header">
+                <div class="exercise-num">19</div>
+                <h3>Variação MoM (Mês sobre Mês)</h3>
+                <span class="exercise-diff diff-hard">Difícil</span>
+            </div>
+            <div class="exercise-body">
+                <p class="exercise-desc">Calcule o <strong>faturamento mensal com variação percentual em relação ao mês anterior</strong>. Mostre: mês, faturamento, faturamento anterior, variação %.</p>
+                <div class="exercise-hint" id="hint19">Use CTE para calcular faturamento mensal. Depois LAG(faturamento) OVER (ORDER BY mes) para pegar o mês anterior.</div>
+                <div class="btn-row">
+                    <button class="btn" onclick="toggleHint(19)">💡 Dica</button>
+                    <button class="btn btn-run" onclick="runExercise(19)">▶ Executar</button>
+                    <button class="btn btn-answer" onclick="showAnswer(19)">👁 Resposta</button>
+                </div>
+                <textarea class="sql-editor" id="editor19" placeholder="-- Escreva seu SQL aqui..." spellcheck="false"></textarea>
+                <div class="result-area" id="result19"></div>
+                <div class="answer-block" id="answer19">
+                    <h4>✅ Resposta</h4>
+                    <div class="answer-sql">WITH mensal AS (
+    SELECT
+        STRFTIME('%Y-%m', data_hora) AS mes,
+        SUM(valor_cobrado) AS faturamento
+    FROM agendamentos
+    WHERE status = 'realizado'
+    GROUP BY mes
+)
+SELECT
+    mes,
+    faturamento,
+    LAG(faturamento) OVER (ORDER BY mes) AS fat_anterior,
+    ROUND(
+        (faturamento - LAG(faturamento) OVER (ORDER BY mes)) * 100.0
+        / LAG(faturamento) OVER (ORDER BY mes),
+    1) AS variacao_pct
+FROM mensal
+ORDER BY mes;</div>
+                    <p class="answer-explain"><strong>Explicação:</strong> CTE (WITH) cria uma "tabela temporária" legível. LAG() é uma Window Function que pega o valor da linha anterior. Esse padrão é IDÊNTICO ao que você faria no Power BI com PREVIOUSMONTH(). Se fizer isso na entrevista, contrataram.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- EX 20 -->
+        <div class="exercise" id="ex20">
+            <div class="exercise-header">
+                <div class="exercise-num">20</div>
+                <h3>Ranking de funcionários por mês</h3>
+                <span class="exercise-diff diff-hard">Difícil</span>
+            </div>
+            <div class="exercise-body">
+                <p class="exercise-desc">Para cada mês, faça um <strong>ranking dos funcionários por faturamento</strong>. Mostre: mês, nome, faturamento, posição no ranking.</p>
+                <div class="exercise-hint" id="hint20">RANK() OVER (PARTITION BY mes ORDER BY faturamento DESC). PARTITION BY cria "grupos" dentro da window function.</div>
+                <div class="btn-row">
+                    <button class="btn" onclick="toggleHint(20)">💡 Dica</button>
+                    <button class="btn btn-run" onclick="runExercise(20)">▶ Executar</button>
+                    <button class="btn btn-answer" onclick="showAnswer(20)">👁 Resposta</button>
+                </div>
+                <textarea class="sql-editor" id="editor20" placeholder="-- Escreva seu SQL aqui..." spellcheck="false"></textarea>
+                <div class="result-area" id="result20"></div>
+                <div class="answer-block" id="answer20">
+                    <h4>✅ Resposta</h4>
+                    <div class="answer-sql">WITH fat_func AS (
+    SELECT
+        STRFTIME('%Y-%m', a.data_hora) AS mes,
+        f.nome,
+        SUM(a.valor_cobrado) AS faturamento
+    FROM agendamentos a
+    JOIN funcionarios f ON a.funcionario_id = f.id
+    WHERE a.status = 'realizado'
+    GROUP BY mes, f.nome
+)
+SELECT
+    mes,
+    nome,
+    faturamento,
+    RANK() OVER (PARTITION BY mes ORDER BY faturamento DESC) AS posicao
+FROM fat_func
+ORDER BY mes, posicao;</div>
+                    <p class="answer-explain"><strong>Explicação:</strong> PARTITION BY mes cria um "ranking separado para cada mês". Sem ele, o ranking seria geral. RANK() dá a mesma posição para empates (ex: dois 1ºs, próximo é 3º). DENSE_RANK() não pula números.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- EX 21 -->
+        <div class="exercise" id="ex21">
+            <div class="exercise-header">
+                <div class="exercise-num">21</div>
+                <h3>Acumulado (Running Total)</h3>
+                <span class="exercise-diff diff-hard">Difícil</span>
+            </div>
+            <div class="exercise-body">
+                <p class="exercise-desc">Calcule o <strong>faturamento acumulado mês a mês</strong>. A dona quer ver o crescimento acumulado do negócio ao longo do tempo.</p>
+                <div class="exercise-hint" id="hint21">SUM() OVER (ORDER BY mes) — sem PARTITION BY, isso soma tudo desde o início até a linha atual.</div>
+                <div class="btn-row">
+                    <button class="btn" onclick="toggleHint(21)">💡 Dica</button>
+                    <button class="btn btn-run" onclick="runExercise(21)">▶ Executar</button>
+                    <button class="btn btn-answer" onclick="showAnswer(21)">👁 Resposta</button>
+                </div>
+                <textarea class="sql-editor" id="editor21" placeholder="-- Escreva seu SQL aqui..." spellcheck="false"></textarea>
+                <div class="result-area" id="result21"></div>
+                <div class="answer-block" id="answer21">
+                    <h4>✅ Resposta</h4>
+                    <div class="answer-sql">WITH mensal AS (
+    SELECT
+        STRFTIME('%Y-%m', data_hora) AS mes,
+        SUM(valor_cobrado) AS faturamento
+    FROM agendamentos
+    WHERE status = 'realizado'
+    GROUP BY mes
+)
+SELECT
+    mes,
+    faturamento,
+    SUM(faturamento) OVER (ORDER BY mes) AS acumulado
+FROM mensal
+ORDER BY mes;</div>
+                    <p class="answer-explain"><strong>Explicação:</strong> SUM() OVER (ORDER BY mes) sem PARTITION BY = running total. Cada linha soma tudo que veio antes + ela mesma. No Power BI, isso é TOTALYTD(). Gráfico de área com acumulado é um dos visuais mais bonitos.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- EX 22 -->
+        <div class="exercise" id="ex22">
+            <div class="exercise-header">
+                <div class="exercise-num">22</div>
+                <h3>Média Móvel 3 Meses</h3>
+                <span class="exercise-diff diff-hard">Difícil</span>
+            </div>
+            <div class="exercise-body">
+                <p class="exercise-desc">Calcule a <strong>média móvel de 3 meses</strong> do faturamento. Isso suaviza variações e mostra a tendência real.</p>
+                <div class="exercise-hint" id="hint22">AVG(faturamento) OVER (ORDER BY mes ROWS BETWEEN 2 PRECEDING AND CURRENT ROW)</div>
+                <div class="btn-row">
+                    <button class="btn" onclick="toggleHint(22)">💡 Dica</button>
+                    <button class="btn btn-run" onclick="runExercise(22)">▶ Executar</button>
+                    <button class="btn btn-answer" onclick="showAnswer(22)">👁 Resposta</button>
+                </div>
+                <textarea class="sql-editor" id="editor22" placeholder="-- Escreva seu SQL aqui..." spellcheck="false"></textarea>
+                <div class="result-area" id="result22"></div>
+                <div class="answer-block" id="answer22">
+                    <h4>✅ Resposta</h4>
+                    <div class="answer-sql">WITH mensal AS (
+    SELECT
+        STRFTIME('%Y-%m', data_hora) AS mes,
+        SUM(valor_cobrado) AS faturamento
+    FROM agendamentos
+    WHERE status = 'realizado'
+    GROUP BY mes
+)
+SELECT
+    mes,
+    faturamento,
+    ROUND(AVG(faturamento) OVER (
+        ORDER BY mes
+        ROWS BETWEEN 2 PRECEDING AND CURRENT ROW
+    ), 2) AS media_movel_3m
+FROM mensal
+ORDER BY mes;</div>
+                    <p class="answer-explain"><strong>Explicação:</strong> ROWS BETWEEN 2 PRECEDING AND CURRENT ROW cria uma "janela" de 3 linhas (2 anteriores + atual). AVG nessa janela = média móvel. Muito usado em finanças e BI para identificar tendências reais, ignorando picos pontuais.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- EX 23 -->
+        <div class="exercise" id="ex23">
+            <div class="exercise-header">
+                <div class="exercise-num">23</div>
+                <h3>% do total por categoria (Window)</h3>
+                <span class="exercise-diff diff-hard">Difícil</span>
+            </div>
+            <div class="exercise-body">
+                <p class="exercise-desc">Para cada categoria de serviço, mostre faturamento e o <strong>percentual que ele representa do total geral</strong> — usando Window Function (não subquery).</p>
+                <div class="exercise-hint" id="hint23">SUM(faturamento) OVER () — sem ORDER BY nem PARTITION = soma de tudo. Divida o parcial por isso.</div>
+                <div class="btn-row">
+                    <button class="btn" onclick="toggleHint(23)">💡 Dica</button>
+                    <button class="btn btn-run" onclick="runExercise(23)">▶ Executar</button>
+                    <button class="btn btn-answer" onclick="showAnswer(23)">👁 Resposta</button>
+                </div>
+                <textarea class="sql-editor" id="editor23" placeholder="-- Escreva seu SQL aqui..." spellcheck="false"></textarea>
+                <div class="result-area" id="result23"></div>
+                <div class="answer-block" id="answer23">
+                    <h4>✅ Resposta</h4>
+                    <div class="answer-sql">WITH cat AS (
+    SELECT
+        s.categoria,
+        SUM(a.valor_cobrado) AS faturamento
+    FROM agendamentos a
+    JOIN servicos s ON a.servico_id = s.id
+    WHERE a.status = 'realizado'
+    GROUP BY s.categoria
+)
+SELECT
+    categoria,
+    faturamento,
+    ROUND(faturamento * 100.0 / SUM(faturamento) OVER (), 1) AS pct_total
+FROM cat
+ORDER BY faturamento DESC;</div>
+                    <p class="answer-explain"><strong>Explicação:</strong> SUM() OVER () sem parâmetros = soma total de todas as linhas. Isso é o equivalente ao CALCULATE(ALL()) do DAX. Muito mais elegante que subquery. É o padrão que analistas sêniores usam.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- EX 24 -->
+        <div class="exercise" id="ex24">
+            <div class="exercise-header">
+                <div class="exercise-num">24</div>
+                <h3>Diferença entre vizinhos (LAG + LEAD)</h3>
+                <span class="exercise-diff diff-hard">Difícil</span>
+            </div>
+            <div class="exercise-body">
+                <p class="exercise-desc">Para o faturamento mensal, mostre: mês, faturamento, <strong>faturamento do mês anterior (LAG), do mês seguinte (LEAD)</strong>, e a diferença entre eles.</p>
+                <div class="exercise-hint" id="hint24">LAG() pega a linha anterior, LEAD() pega a próxima. Ambas aceitam ORDER BY.</div>
+                <div class="btn-row">
+                    <button class="btn" onclick="toggleHint(24)">💡 Dica</button>
+                    <button class="btn btn-run" onclick="runExercise(24)">▶ Executar</button>
+                    <button class="btn btn-answer" onclick="showAnswer(24)">👁 Resposta</button>
+                </div>
+                <textarea class="sql-editor" id="editor24" placeholder="-- Escreva seu SQL aqui..." spellcheck="false"></textarea>
+                <div class="result-area" id="result24"></div>
+                <div class="answer-block" id="answer24">
+                    <h4>✅ Resposta</h4>
+                    <div class="answer-sql">WITH mensal AS (
+    SELECT
+        STRFTIME('%Y-%m', data_hora) AS mes,
+        SUM(valor_cobrado) AS fat
+    FROM agendamentos
+    WHERE status = 'realizado'
+    GROUP BY mes
+)
+SELECT
+    mes,
+    fat,
+    LAG(fat) OVER (ORDER BY mes) AS anterior,
+    LEAD(fat) OVER (ORDER BY mes) AS proximo,
+    fat - LAG(fat) OVER (ORDER BY mes) AS diff_anterior
+FROM mensal
+ORDER BY mes;</div>
+                    <p class="answer-explain"><strong>Explicação:</strong> LAG(coluna, n) volta n linhas. LEAD(coluna, n) avança n linhas. Default é 1. Combinados, dão uma visão temporal completa — antes, agora e depois. Muito usado em análise de tendência.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FASE 5: ANÁLISE DE NEGÓCIO ==================== -->
+    <section id="fase5">
+        <h2>🏆 Fase 5 — Análise de Negócio <span class="tag">Portfolio</span></h2>
+
+        <div class="roni-comment">
+            <p>Esses são os exercícios que você coloca no GitHub e mostra na entrevista. Cada um resolve um problema real de negócio. Se fizer esses 4, você tem material para falar sobre SQL em qualquer entrevista de BI.</p>
+        </div>
+
+        <!-- EX 25 -->
+        <div class="exercise" id="ex25">
+            <div class="exercise-header">
+                <div class="exercise-num">25</div>
+                <h3>Análise RFM (Recência, Frequência, Monetário)</h3>
+                <span class="exercise-diff diff-hard">Difícil</span>
+            </div>
+            <div class="exercise-body">
+                <p class="exercise-desc">Segmente os clientes em <strong>RFM</strong>: para cada cliente, calcule quantos dias desde a última visita (R), quantas visitas (F) e quanto gastou no total (M). Classifique cada dimensão em 1-3 (usando NTILE ou CASE).</p>
+                <div class="exercise-hint" id="hint25">1) CTE base com JULIANDAY('now') - JULIANDAY(MAX(data_hora)), COUNT(*), SUM(valor_cobrado). 2) NTILE(3) OVER() para classificar em 3 grupos.</div>
+                <div class="btn-row">
+                    <button class="btn" onclick="toggleHint(25)">💡 Dica</button>
+                    <button class="btn btn-run" onclick="runExercise(25)">▶ Executar</button>
+                    <button class="btn btn-answer" onclick="showAnswer(25)">👁 Resposta</button>
+                </div>
+                <textarea class="sql-editor" id="editor25" placeholder="-- Escreva seu SQL aqui..." spellcheck="false"></textarea>
+                <div class="result-area" id="result25"></div>
+                <div class="answer-block" id="answer25">
+                    <h4>✅ Resposta</h4>
+                    <div class="answer-sql">WITH rfm_base AS (
+    SELECT
+        c.nome,
+        CAST(JULIANDAY('now') - JULIANDAY(MAX(a.data_hora)) AS INTEGER) AS recencia,
+        COUNT(*) AS frequencia,
+        SUM(a.valor_cobrado) AS monetario
+    FROM clientes c
+    JOIN agendamentos a ON c.id = a.cliente_id
+    WHERE a.status = 'realizado'
+    GROUP BY c.nome
+),
+rfm_score AS (
+    SELECT *,
+        NTILE(3) OVER (ORDER BY recencia DESC) AS r_score,
+        NTILE(3) OVER (ORDER BY frequencia ASC) AS f_score,
+        NTILE(3) OVER (ORDER BY monetario ASC) AS m_score
+    FROM rfm_base
+)
+SELECT
+    nome, recencia, frequencia, ROUND(monetario, 2) AS monetario,
+    r_score, f_score, m_score,
+    r_score || f_score || m_score AS rfm_segment
+FROM rfm_score
+ORDER BY monetario DESC;</div>
+                    <p class="answer-explain"><strong>Explicação:</strong> RFM é a segmentação de clientes mais usada no mercado. NTILE(3) divide automaticamente em 3 grupos iguais. Recência tem ORDER DESC porque menor = melhor (mais recente). Score 333 = melhor cliente. 111 = risco de churn.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- EX 26 -->
+        <div class="exercise" id="ex26">
+            <div class="exercise-header">
+                <div class="exercise-num">26</div>
+                <h3>Análise de horário de pico</h3>
+                <span class="exercise-diff diff-medium">Médio</span>
+            </div>
+            <div class="exercise-body">
+                <p class="exercise-desc">Em qual <strong>dia da semana e horário</strong> o salão tem mais movimento? Monte uma análise cruzada dia × hora com contagem de agendamentos.</p>
+                <div class="exercise-hint" id="hint26">Use STRFTIME('%w', data_hora) para dia da semana (0=domingo) e STRFTIME('%H', data_hora) para hora.</div>
+                <div class="btn-row">
+                    <button class="btn" onclick="toggleHint(26)">💡 Dica</button>
+                    <button class="btn btn-run" onclick="runExercise(26)">▶ Executar</button>
+                    <button class="btn btn-answer" onclick="showAnswer(26)">👁 Resposta</button>
+                </div>
+                <textarea class="sql-editor" id="editor26" placeholder="-- Escreva seu SQL aqui..." spellcheck="false"></textarea>
+                <div class="result-area" id="result26"></div>
+                <div class="answer-block" id="answer26">
+                    <h4>✅ Resposta</h4>
+                    <div class="answer-sql">SELECT
+    CASE CAST(STRFTIME('%w', data_hora) AS INTEGER)
+        WHEN 0 THEN 'Domingo'
+        WHEN 1 THEN 'Segunda'
+        WHEN 2 THEN 'Terça'
+        WHEN 3 THEN 'Quarta'
+        WHEN 4 THEN 'Quinta'
+        WHEN 5 THEN 'Sexta'
+        WHEN 6 THEN 'Sábado'
+    END AS dia_semana,
+    STRFTIME('%H:00', data_hora) AS hora,
+    COUNT(*) AS agendamentos,
+    SUM(valor_cobrado) AS faturamento
+FROM agendamentos
+WHERE status = 'realizado'
+GROUP BY dia_semana, hora
+ORDER BY agendamentos DESC
+LIMIT 15;</div>
+                    <p class="answer-explain"><strong>Explicação:</strong> CASE WHEN transforma números (0-6) em nomes legíveis. Agrupar por dia+hora mostra os picos de demanda. Isso é valioso para gestão: contratar mais nos picos, fazer promoções nos vales.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- EX 27 -->
+        <div class="exercise" id="ex27">
+            <div class="exercise-header">
+                <div class="exercise-num">27</div>
+                <h3>Cohort — Retenção de clientes por mês de cadastro</h3>
+                <span class="exercise-diff diff-hard">Difícil</span>
+            </div>
+            <div class="exercise-body">
+                <p class="exercise-desc">Para cada <strong>mês de cadastro</strong> (cohort), quantos clientes fizeram agendamento naquele mês, no mês seguinte, 2 meses depois, etc? Análise de retenção.</p>
+                <div class="exercise-hint" id="hint27">Calcule o mês do cadastro e o mês de cada agendamento. A diferença em meses = período. GROUP BY cohort, periodo e conte clientes distintos.</div>
+                <div class="btn-row">
+                    <button class="btn" onclick="toggleHint(27)">💡 Dica</button>
+                    <button class="btn btn-run" onclick="runExercise(27)">▶ Executar</button>
+                    <button class="btn btn-answer" onclick="showAnswer(27)">👁 Resposta</button>
+                </div>
+                <textarea class="sql-editor" id="editor27" placeholder="-- Escreva seu SQL aqui..." spellcheck="false"></textarea>
+                <div class="result-area" id="result27"></div>
+                <div class="answer-block" id="answer27">
+                    <h4>✅ Resposta</h4>
+                    <div class="answer-sql">WITH cohort AS (
+    SELECT
+        c.id AS cliente_id,
+        STRFTIME('%Y-%m', c.data_cadastro) AS mes_cadastro,
+        STRFTIME('%Y-%m', a.data_hora) AS mes_visita,
+        (CAST(STRFTIME('%Y', a.data_hora) AS INT) - CAST(STRFTIME('%Y', c.data_cadastro) AS INT)) * 12
+        + CAST(STRFTIME('%m', a.data_hora) AS INT) - CAST(STRFTIME('%m', c.data_cadastro) AS INT) AS periodo
+    FROM clientes c
+    JOIN agendamentos a ON c.id = a.cliente_id
+    WHERE a.status = 'realizado'
+)
+SELECT
+    mes_cadastro,
+    periodo,
+    COUNT(DISTINCT cliente_id) AS clientes_ativos
+FROM cohort
+WHERE periodo >= 0 AND periodo <= 6
+GROUP BY mes_cadastro, periodo
+ORDER BY mes_cadastro, periodo;</div>
+                    <p class="answer-explain"><strong>Explicação:</strong> Análise de cohort é uma das mais valorizadas no mercado. Mostra se o negócio retém clientes. Se o mês 0 tem 50 clientes e o mês 3 tem 10, a retenção é 20%. Coloque isso no portfolio e vai chamar atenção.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- EX 28 -->
+        <div class="exercise" id="ex28">
+            <div class="exercise-header">
+                <div class="exercise-num">28</div>
+                <h3>Análise ABC de serviços (Pareto)</h3>
+                <span class="exercise-diff diff-hard">Difícil</span>
+            </div>
+            <div class="exercise-body">
+                <p class="exercise-desc">Classifique os serviços em <strong>A (top 80% da receita), B (80-95%) e C (últimos 5%)</strong> usando percentual acumulado.</p>
+                <div class="exercise-hint" id="hint28">1) CTE com faturamento por serviço. 2) % do total com SUM() OVER(). 3) SUM acumulado com ORDER BY fat DESC. 4) CASE para classificar.</div>
+                <div class="btn-row">
+                    <button class="btn" onclick="toggleHint(28)">💡 Dica</button>
+                    <button class="btn btn-run" onclick="runExercise(28)">▶ Executar</button>
+                    <button class="btn btn-answer" onclick="showAnswer(28)">👁 Resposta</button>
+                </div>
+                <textarea class="sql-editor" id="editor28" placeholder="-- Escreva seu SQL aqui..." spellcheck="false"></textarea>
+                <div class="result-area" id="result28"></div>
+                <div class="answer-block" id="answer28">
+                    <h4>✅ Resposta</h4>
+                    <div class="answer-sql">WITH servico_fat AS (
+    SELECT
+        s.nome,
+        SUM(a.valor_cobrado) AS faturamento
+    FROM agendamentos a
+    JOIN servicos s ON a.servico_id = s.id
+    WHERE a.status = 'realizado'
+    GROUP BY s.nome
+),
+servico_pct AS (
+    SELECT *,
+        ROUND(faturamento * 100.0 / SUM(faturamento) OVER(), 1) AS pct,
+        ROUND(SUM(faturamento) OVER (ORDER BY faturamento DESC) * 100.0
+            / SUM(faturamento) OVER(), 1) AS pct_acumulado
+    FROM servico_fat
+)
+SELECT
+    nome, faturamento, pct, pct_acumulado,
+    CASE
+        WHEN pct_acumulado <= 80 THEN 'A'
+        WHEN pct_acumulado <= 95 THEN 'B'
+        ELSE 'C'
+    END AS classe_abc
+FROM servico_pct
+ORDER BY faturamento DESC;</div>
+                    <p class="answer-explain"><strong>Explicação:</strong> Curva ABC (Pareto) mostra que poucos serviços geram a maioria da receita. É uma das análises mais valorizadas em BI. O acumulado com ORDER BY DESC garante que os maiores ficam no topo. Muito usado em gestão de estoque e serviços.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== DESAFIOS FINAIS ==================== -->
+    <section id="desafios">
+        <h2>⚡ Desafios Finais <span class="tag">Boss Fight</span></h2>
+
+        <div class="roni-comment">
+            <p>Esses dois exercícios combinam tudo. Se conseguir fazê-los sozinho (sem olhar a resposta), você está pronto para qualquer case técnico de entrevista SQL.</p>
+        </div>
+
+        <!-- EX 29 -->
+        <div class="exercise" id="ex29">
+            <div class="exercise-header">
+                <div class="exercise-num">29</div>
+                <h3>Dashboard SQL Completo — Resumo Executivo</h3>
+                <span class="exercise-diff diff-hard">Boss</span>
+            </div>
+            <div class="exercise-body">
+                <p class="exercise-desc">Monte um <strong>resumo executivo completo em uma única query</strong>: faturamento total, ticket médio, total de clientes, média de avaliação, taxa de cancelamento (%), melhor mês e melhor funcionário.</p>
+                <div class="exercise-hint" id="hint29">Use múltiplas subqueries ou um CTE complexo. Cada métrica pode ser uma subquery no SELECT.</div>
+                <div class="btn-row">
+                    <button class="btn" onclick="toggleHint(29)">💡 Dica</button>
+                    <button class="btn btn-run" onclick="runExercise(29)">▶ Executar</button>
+                    <button class="btn btn-answer" onclick="showAnswer(29)">👁 Resposta</button>
+                </div>
+                <textarea class="sql-editor" id="editor29" placeholder="-- Escreva seu SQL aqui...&#10;-- Esse é o chefão. Respire fundo." spellcheck="false"></textarea>
+                <div class="result-area" id="result29"></div>
+                <div class="answer-block" id="answer29">
+                    <h4>✅ Resposta</h4>
+                    <div class="answer-sql">SELECT
+    (SELECT ROUND(SUM(valor_cobrado), 2) FROM agendamentos WHERE status = 'realizado') AS faturamento_total,
+    (SELECT ROUND(AVG(valor_cobrado), 2) FROM agendamentos WHERE status = 'realizado') AS ticket_medio,
+    (SELECT COUNT(DISTINCT cliente_id) FROM agendamentos WHERE status = 'realizado') AS clientes_atendidos,
+    (SELECT ROUND(AVG(nota), 2) FROM avaliacoes) AS media_avaliacao,
+    (SELECT ROUND(
+        COUNT(CASE WHEN status = 'cancelado' THEN 1 END) * 100.0 / COUNT(*), 1
+    ) FROM agendamentos) AS taxa_cancelamento_pct,
+    (SELECT STRFTIME('%Y-%m', data_hora) FROM agendamentos WHERE status = 'realizado'
+     GROUP BY STRFTIME('%Y-%m', data_hora) ORDER BY SUM(valor_cobrado) DESC LIMIT 1) AS melhor_mes,
+    (SELECT f.nome FROM funcionarios f JOIN agendamentos a ON f.id = a.funcionario_id
+     WHERE a.status = 'realizado' GROUP BY f.nome ORDER BY SUM(a.valor_cobrado) DESC LIMIT 1) AS melhor_funcionario;</div>
+                    <p class="answer-explain"><strong>Explicação:</strong> Cada subquery é independente. COUNT(CASE WHEN...) é uma forma elegante de contar condicionalmente. Esse resumo é exatamente o tipo de coisa que se coloca em KPI cards no Power BI. Uma query → 7 métricas.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- EX 30 -->
+        <div class="exercise" id="ex30">
+            <div class="exercise-header">
+                <div class="exercise-num">30</div>
+                <h3>Relatório Completo — Exportável para Dashboard</h3>
+                <span class="exercise-diff diff-hard">Boss</span>
+            </div>
+            <div class="exercise-body">
+                <p class="exercise-desc">Monte a <strong>base de dados para um dashboard financeiro mensal</strong>: mês, receita serviços, receita produtos, despesas, lucro, variação MoM do lucro, acumulado do ano. Tudo em uma query.</p>
+                <div class="exercise-hint" id="hint30">Múltiplas CTEs: (1) receita_servicos por mês, (2) receita_produtos por mês, (3) despesas por mês. JOIN por mês, LAG para MoM, SUM() OVER() para acumulado.</div>
+                <div class="btn-row">
+                    <button class="btn" onclick="toggleHint(30)">💡 Dica</button>
+                    <button class="btn btn-run" onclick="runExercise(30)">▶ Executar</button>
+                    <button class="btn btn-answer" onclick="showAnswer(30)">👁 Resposta</button>
+                </div>
+                <textarea class="sql-editor" id="editor30" placeholder="-- Escreva seu SQL aqui...&#10;-- O desafio final. Tudo junto." spellcheck="false"></textarea>
+                <div class="result-area" id="result30"></div>
+                <div class="answer-block" id="answer30">
+                    <h4>✅ Resposta</h4>
+                    <div class="answer-sql">WITH rec_serv AS (
+    SELECT STRFTIME('%Y-%m', data_hora) AS mes,
+           SUM(valor_cobrado) AS receita_servicos
+    FROM agendamentos WHERE status = 'realizado'
+    GROUP BY mes
+),
+rec_prod AS (
+    SELECT STRFTIME('%Y-%m', data_venda) AS mes,
+           SUM(quantidade * valor_unitario) AS receita_produtos
+    FROM vendas_produtos
+    GROUP BY mes
+),
+desp AS (
+    SELECT STRFTIME('%Y-%m', data) AS mes,
+           SUM(valor) AS despesas
+    FROM despesas
+    GROUP BY mes
+),
+consolidado AS (
+    SELECT
+        rs.mes,
+        COALESCE(rs.receita_servicos, 0) AS receita_servicos,
+        COALESCE(rp.receita_produtos, 0) AS receita_produtos,
+        COALESCE(d.despesas, 0) AS despesas,
+        COALESCE(rs.receita_servicos, 0) + COALESCE(rp.receita_produtos, 0) - COALESCE(d.despesas, 0) AS lucro
+    FROM rec_serv rs
+    LEFT JOIN rec_prod rp ON rs.mes = rp.mes
+    LEFT JOIN desp d ON rs.mes = d.mes
+)
+SELECT
+    mes,
+    ROUND(receita_servicos, 2) AS rec_servicos,
+    ROUND(receita_produtos, 2) AS rec_produtos,
+    ROUND(despesas, 2) AS despesas,
+    ROUND(lucro, 2) AS lucro,
+    ROUND((lucro - LAG(lucro) OVER (ORDER BY mes)) * 100.0
+        / LAG(lucro) OVER (ORDER BY mes), 1) AS var_mom_pct,
+    ROUND(SUM(lucro) OVER (ORDER BY mes), 2) AS lucro_acumulado
+FROM consolidado
+ORDER BY mes;</div>
+                    <p class="answer-explain"><strong>Explicação:</strong> Isso é exatamente o que um analista BI faz no dia a dia: consolida múltiplas fontes (serviços, produtos, despesas), calcula lucro, adiciona variação temporal e acumulado. Essa query é a base de um dashboard financeiro completo. Se você leva isso para a entrevista, acabou.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<!-- SCORE BAR -->
+<div class="score-bar">
+    <span class="score-label">Progresso:</span>
+    <span class="score-val" id="scoreVal">0 / 30</span>
+    <div class="progress-track"><div class="progress-fill" id="progressFill" style="width: 0%"></div></div>
+</div>
+
+<button class="scroll-top" id="scrollTop" title="Voltar ao topo">↑</button>
+
+<script>
+// ============================================================
+// SQL ENGINE
+// ============================================================
+let db = null;
+const TOTAL = 30;
+const completed = new Set();
+
+// Load database
+async function initDB() {
+    try {
+        const sqlPromise = initSqlJs({
+            locateFile: file => 'https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/' + file
+        });
+        const dataPromise = fetch('../SQL/salao.db').then(r => {
+            if (!r.ok) return fetch('salao.db').then(r2 => r2.arrayBuffer());
+            return r.arrayBuffer();
+        }).catch(() => fetch('salao.db').then(r => r.arrayBuffer()));
+
+        const [SQL, buf] = await Promise.all([sqlPromise, dataPromise]);
+        db = new SQL.Database(new Uint8Array(buf));
+        document.querySelector('.score-label').textContent = '✅ Banco carregado — Progresso:';
+    } catch (e) {
+        document.querySelector('.score-label').textContent = '⚠️ Erro ao carregar banco — ';
+        console.error(e);
+    }
+}
+
+function escapeHTML(s) {
+    const d = document.createElement('div');
+    d.textContent = s;
+    return d.innerHTML;
+}
+
+function runExercise(n) {
+    if (!db) { alert('Banco ainda carregando... aguarde.'); return; }
+    const editor = document.getElementById('editor' + n);
+    const area = document.getElementById('result' + n);
+    const sql = editor.value.trim();
+    if (!sql) { alert('Escreva uma query primeiro!'); return; }
+
+    area.classList.add('visible');
+    try {
+        const results = db.exec(sql);
+        if (!results.length) {
+            area.innerHTML = '<div class="result-header"><span class="result-ok">✅ Executado — 0 linhas retornadas</span></div>';
+        } else {
+            const r = results[0];
+            const maxRows = 50;
+            const shown = r.values.slice(0, maxRows);
+            let html = '<div class="result-header"><span class="result-ok">✅ ' + r.values.length + ' linha(s)</span>';
+            if (r.values.length > maxRows) html += '<span>Mostrando ' + maxRows + ' de ' + r.values.length + '</span>';
+            html += '</div><div class="result-scroll"><table class="result-table"><tr>';
+            r.columns.forEach(c => html += '<th>' + escapeHTML(String(c)) + '</th>');
+            html += '</tr>';
+            shown.forEach(row => {
+                html += '<tr>';
+                row.forEach(v => {
+                    if (v === null) html += '<td class="null">NULL</td>';
+                    else html += '<td>' + escapeHTML(String(v)) + '</td>';
+                });
+                html += '</tr>';
+            });
+            html += '</table></div>';
+            area.innerHTML = html;
+
+            // Mark completed
+            if (!completed.has(n)) {
+                completed.add(n);
+                updateScore();
+            }
+        }
+    } catch (e) {
+        area.innerHTML = '<div class="result-header"><span class="result-err">❌ Erro: ' + escapeHTML(e.message) + '</span></div>';
+    }
+}
+
+function toggleHint(n) {
+    document.getElementById('hint' + n).classList.toggle('visible');
+}
+
+function showAnswer(n) {
+    document.getElementById('answer' + n).classList.toggle('visible');
+}
+
+function updateScore() {
+    const val = completed.size;
+    document.getElementById('scoreVal').textContent = val + ' / ' + TOTAL;
+    document.getElementById('progressFill').style.width = (val / TOTAL * 100) + '%';
+}
+
+// Tab support in editors
+document.addEventListener('keydown', function(e) {
+    if (e.target.classList.contains('sql-editor')) {
+        if (e.key === 'Tab') {
+            e.preventDefault();
+            const s = e.target.selectionStart;
+            e.target.value = e.target.value.substring(0, s) + '    ' + e.target.value.substring(e.target.selectionEnd);
+            e.target.selectionStart = e.target.selectionEnd = s + 4;
+        }
+        if (e.ctrlKey && e.key === 'Enter') {
+            e.preventDefault();
+            const n = e.target.id.replace('editor', '');
+            runExercise(parseInt(n));
+        }
+    }
+});
+
+// Scroll to top
+const scrollBtn = document.getElementById('scrollTop');
+window.addEventListener('scroll', () => {
+    scrollBtn.classList.toggle('visible', window.scrollY > 400);
+});
+scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+// Active nav
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.topnav-links a');
+window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(sec => {
+        if (window.scrollY >= sec.offsetTop - 100) current = sec.id;
+    });
+    navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
+});
+
+// Init
+initDB();
+</script>
+
+</body>
+</html>

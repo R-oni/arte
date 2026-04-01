@@ -1,0 +1,1933 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BI Prático — 2 Dashboards para Portfólio | Róni Ricardo</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0f1a;
+            --bg2: #111827;
+            --bg3: #1e293b;
+            --bg4: #0f172a;
+            --border: #334155;
+            --text: #e2e8f0;
+            --text2: #94a3b8;
+            --accent: #3b82f6;
+            --accent2: #60a5fa;
+            --green: #34d399;
+            --yellow: #fbbf24;
+            --orange: #fb923c;
+            --red: #f87171;
+            --purple: #a78bfa;
+            --pink: #f472b6;
+            --cyan: #22d3ee;
+            --radius: 12px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        /* ===== NAV ===== */
+        .topnav {
+            position: fixed; top: 0; left: 0; right: 0;
+            background: rgba(10, 15, 26, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            z-index: 999; padding: 0 2rem;
+        }
+        .topnav-inner {
+            max-width: 1200px; margin: 0 auto;
+            display: flex; align-items: center; justify-content: space-between; height: 56px;
+        }
+        .topnav .logo {
+            font-weight: 800; font-size: 1rem;
+            background: linear-gradient(135deg, var(--accent2), var(--purple));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .topnav-links { display: flex; gap: 0.25rem; overflow-x: auto; scrollbar-width: none; }
+        .topnav-links::-webkit-scrollbar { display: none; }
+        .topnav-links a {
+            color: var(--text2); text-decoration: none; font-size: 0.78rem;
+            padding: 0.4rem 0.7rem; border-radius: 6px; white-space: nowrap; transition: all 0.2s;
+        }
+        .topnav-links a:hover, .topnav-links a.active { color: var(--accent2); background: rgba(59,130,246,0.1); }
+
+        /* ===== LAYOUT ===== */
+        .container { max-width: 1200px; margin: 0 auto; padding: 80px 2rem 4rem; }
+        section { margin-bottom: 4rem; scroll-margin-top: 70px; }
+        h1 { font-size: 2.2rem; font-weight: 800; }
+        h2 { font-size: 1.6rem; font-weight: 700; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+        h2 .tag { font-size: 0.65rem; background: var(--accent); color: white; padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+        h3 { font-size: 1.15rem; font-weight: 600; margin-bottom: 0.5rem; }
+        p { color: var(--text2); margin-bottom: 1rem; }
+
+        /* ===== HERO ===== */
+        .hero { text-align: center; padding: 3rem 0 2rem; }
+        .hero h1 {
+            background: linear-gradient(135deg, var(--accent2), var(--purple));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            margin-bottom: 0.75rem; font-size: 2.5rem;
+        }
+        .hero p { font-size: 1.05rem; max-width: 700px; margin: 0 auto 1.5rem; }
+        .hero-stats { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; }
+        .hero-stat { text-align: center; }
+        .hero-stat .num { font-size: 2rem; font-weight: 800; color: var(--accent2); }
+        .hero-stat .label { font-size: 0.8rem; color: var(--text2); }
+
+        /* ===== CARD ===== */
+        .card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin-bottom: 1.5rem; }
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.25rem; margin-bottom: 1.5rem; }
+        .card-sm { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; }
+
+        /* ===== STEP ===== */
+        .step {
+            background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius);
+            margin-bottom: 1.5rem; overflow: hidden;
+        }
+        .step-header {
+            padding: 1rem 1.5rem; display: flex; align-items: center; gap: 1rem;
+            border-bottom: 1px solid var(--border); cursor: pointer; transition: background 0.2s;
+        }
+        .step-header:hover { background: var(--bg3); }
+        .step-num {
+            background: var(--accent); color: white; width: 32px; height: 32px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-weight: 800; font-size: 0.85rem; flex-shrink: 0;
+        }
+        .step-num.done { background: var(--green); }
+        .step-header h3 { margin: 0; font-size: 1rem; flex: 1; }
+        .step-header .arrow { transition: transform 0.2s; font-size: 0.8rem; color: var(--text2); }
+        .step-header.open .arrow { transform: rotate(180deg); }
+        .step-body { display: none; padding: 1.5rem; }
+        .step-body.open { display: block; }
+        .step-body p { font-size: 0.9rem; }
+
+        /* ===== STEP CHECKLIST ===== */
+        .checklist { list-style: none; margin: 0.5rem 0; }
+        .checklist li {
+            padding: 0.5rem 0; font-size: 0.9rem; color: var(--text);
+            display: flex; align-items: flex-start; gap: 0.6rem; cursor: pointer;
+        }
+        .checklist li .check-box {
+            width: 20px; height: 20px; border: 2px solid var(--border); border-radius: 4px;
+            flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+            font-size: 0.7rem; transition: all 0.2s; margin-top: 2px;
+        }
+        .checklist li.checked .check-box {
+            background: var(--green); border-color: var(--green); color: var(--bg);
+        }
+        .checklist li.checked .check-box::after { content: '✓'; font-weight: 700; }
+        .checklist li.checked span { text-decoration: line-through; color: var(--text2); }
+
+        /* ===== CODE BLOCK ===== */
+        .code-block {
+            background: var(--bg4); border: 1px solid var(--border); border-radius: 8px;
+            padding: 1rem; font-family: 'Fira Code', monospace; font-size: 0.82rem;
+            line-height: 1.7; overflow-x: auto; margin: 0.75rem 0; color: var(--text);
+            white-space: pre-wrap;
+        }
+        code {
+            font-family: 'Fira Code', monospace; background: var(--bg3);
+            padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.82rem;
+        }
+        .kw { color: var(--purple); font-weight: 500; }
+        .fn { color: var(--cyan); }
+        .str { color: var(--green); }
+        .cm { color: #64748b; font-style: italic; }
+
+        /* ===== COMMENT BOXES ===== */
+        .roni-comment {
+            background: rgba(59,130,246,0.06); border-left: 3px solid var(--accent);
+            border-radius: 0 8px 8px 0; padding: 1rem 1.25rem; margin: 1rem 0;
+        }
+        .roni-comment::before {
+            content: '💡 Comentário do Roni'; display: block; font-size: 0.75rem;
+            font-weight: 700; color: var(--accent2); text-transform: uppercase;
+            letter-spacing: 0.04em; margin-bottom: 0.4rem;
+        }
+        .roni-comment p { color: var(--text); font-size: 0.9rem; }
+        .roni-comment p:last-child { margin-bottom: 0; }
+
+        .tip-box {
+            background: rgba(52,211,153,0.06); border-left: 3px solid var(--green);
+            border-radius: 0 8px 8px 0; padding: 1rem 1.25rem; margin: 1rem 0;
+        }
+        .tip-box::before {
+            content: '✅ Dica prática'; display: block; font-size: 0.75rem;
+            font-weight: 700; color: var(--green); text-transform: uppercase;
+            letter-spacing: 0.04em; margin-bottom: 0.4rem;
+        }
+        .tip-box p { color: var(--text); font-size: 0.9rem; }
+        .tip-box p:last-child { margin-bottom: 0; }
+
+        .warn-box {
+            background: rgba(251,191,36,0.06); border-left: 3px solid var(--yellow);
+            border-radius: 0 8px 8px 0; padding: 1rem 1.25rem; margin: 1rem 0;
+        }
+        .warn-box::before {
+            content: '⚠️ Atenção'; display: block; font-size: 0.75rem;
+            font-weight: 700; color: var(--yellow); text-transform: uppercase;
+            letter-spacing: 0.04em; margin-bottom: 0.4rem;
+        }
+        .warn-box p { color: var(--text); font-size: 0.9rem; }
+        .warn-box p:last-child { margin-bottom: 0; }
+
+        .do-box {
+            background: rgba(167,139,250,0.06); border-left: 3px solid var(--purple);
+            border-radius: 0 8px 8px 0; padding: 1rem 1.25rem; margin: 1rem 0;
+        }
+        .do-box::before {
+            content: '🎯 Faça agora'; display: block; font-size: 0.75rem;
+            font-weight: 700; color: var(--purple); text-transform: uppercase;
+            letter-spacing: 0.04em; margin-bottom: 0.4rem;
+        }
+        .do-box p { color: var(--text); font-size: 0.9rem; }
+        .do-box p:last-child { margin-bottom: 0; }
+
+        /* ===== TABLE ===== */
+        .info-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin: 1rem 0; }
+        .info-table th {
+            background: var(--bg3); color: var(--accent2); text-align: left;
+            padding: 0.75rem 1rem; font-weight: 600; border-bottom: 2px solid var(--border);
+        }
+        .info-table td { padding: 0.65rem 1rem; border-bottom: 1px solid rgba(51,65,85,0.5); color: var(--text2); }
+        .info-table tr:hover td { background: rgba(59,130,246,0.04); }
+
+        /* ===== BADGES ===== */
+        .badge { display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.72rem; font-weight: 600; }
+        .badge-blue { background: rgba(59,130,246,0.15); color: var(--accent2); }
+        .badge-green { background: rgba(52,211,153,0.15); color: var(--green); }
+        .badge-yellow { background: rgba(251,191,36,0.15); color: var(--yellow); }
+        .badge-red { background: rgba(248,113,113,0.15); color: var(--red); }
+        .badge-purple { background: rgba(167,139,250,0.15); color: var(--purple); }
+
+        /* ===== FLOW DIAGRAM ===== */
+        .flow {
+            display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;
+            margin: 1rem 0; justify-content: center;
+        }
+        .flow-step {
+            background: var(--bg3); border: 1px solid var(--border); border-radius: 8px;
+            padding: 0.75rem 1.25rem; text-align: center; min-width: 120px;
+        }
+        .flow-step .icon { font-size: 1.5rem; margin-bottom: 0.3rem; }
+        .flow-step .name { font-size: 0.82rem; font-weight: 600; }
+        .flow-step .detail { font-size: 0.7rem; color: var(--text2); }
+        .flow-arrow { color: var(--accent2); font-size: 1.2rem; }
+
+        /* ===== DASHBOARD PREVIEW ===== */
+        .dash-preview {
+            background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius);
+            padding: 1.5rem; margin: 1rem 0;
+        }
+        .dash-preview h4 {
+            color: var(--accent2); font-size: 0.85rem; margin-bottom: 0.75rem;
+            text-transform: uppercase; letter-spacing: 0.04em;
+        }
+        .dash-layout {
+            display: grid; gap: 0.75rem; min-height: 250px;
+        }
+        .dash-widget {
+            background: var(--bg2); border: 1px solid var(--border); border-radius: 8px;
+            padding: 0.75rem 1rem; display: flex; flex-direction: column;
+            align-items: center; justify-content: center; text-align: center;
+        }
+        .dash-widget .w-icon { font-size: 1.5rem; margin-bottom: 0.3rem; }
+        .dash-widget .w-name { font-size: 0.75rem; color: var(--text2); }
+        .dash-widget .w-value { font-size: 1.3rem; font-weight: 800; color: var(--accent2); }
+        .dash-widget .w-delta { font-size: 0.72rem; }
+        .dash-widget .w-delta.up { color: var(--green); }
+        .dash-widget .w-delta.down { color: var(--red); }
+
+        /* ===== DAX BOX ===== */
+        .dax-box {
+            background: var(--bg4); border: 1px solid var(--border); border-radius: 8px;
+            padding: 1rem 1.25rem; margin: 0.75rem 0; overflow-x: auto;
+        }
+        .dax-box h5 {
+            color: var(--yellow); font-size: 0.78rem; margin-bottom: 0.5rem;
+            text-transform: uppercase; letter-spacing: 0.03em;
+        }
+        .dax-code {
+            font-family: 'Fira Code', monospace; font-size: 0.82rem; line-height: 1.7;
+            white-space: pre-wrap; color: var(--text);
+        }
+
+        /* ===== SCORE BAR ===== */
+        .score-bar {
+            position: fixed; bottom: 0; left: 0; right: 0;
+            background: rgba(10,15,26,0.95); backdrop-filter: blur(12px);
+            border-top: 1px solid var(--border); padding: 0.6rem 2rem; z-index: 998;
+            display: flex; align-items: center; justify-content: center; gap: 2rem;
+        }
+        .score-bar .score-label { color: var(--text2); font-size: 0.82rem; }
+        .score-bar .score-val { color: var(--accent2); font-weight: 800; font-size: 1.1rem; }
+        .progress-track { width: 200px; height: 6px; background: var(--bg3); border-radius: 3px; }
+        .progress-fill { height: 100%; background: var(--accent); border-radius: 3px; transition: width 0.5s ease; }
+
+        /* ===== SCROLL TOP ===== */
+        .scroll-top {
+            position: fixed; bottom: 4rem; right: 2rem;
+            background: var(--accent); color: white;
+            width: 42px; height: 42px; border-radius: 50%; border: none;
+            cursor: pointer; font-size: 1.2rem; display: none;
+            align-items: center; justify-content: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.4); z-index: 200;
+        }
+        .scroll-top.visible { display: flex; }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 800px) {
+            .topnav-links { display: none; }
+            .container { padding: 70px 1rem 5rem; }
+            .card-grid { grid-template-columns: 1fr; }
+            .flow { gap: 0.3rem; }
+            .flow-step { min-width: 90px; padding: 0.5rem 0.75rem; }
+            h1 { font-size: 1.6rem; }
+            h2 { font-size: 1.3rem; }
+            .hero h1 { font-size: 1.8rem; }
+            .score-bar { gap: 1rem; padding: 0.5rem 1rem; }
+            .dash-layout { grid-template-columns: 1fr !important; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="topnav">
+    <div class="topnav-inner">
+        <div class="logo">📊 BI Prático — 2 Dashboards</div>
+        <div class="topnav-links">
+            <a href="#intro">Intro</a>
+            <a href="#setup">Setup</a>
+            <a href="#proj1">Projeto 1</a>
+            <a href="#proj1-pq">Power Query</a>
+            <a href="#proj1-model">Modelo</a>
+            <a href="#proj1-dax">DAX</a>
+            <a href="#proj1-viz">Visuais</a>
+            <a href="#proj2">Projeto 2</a>
+            <a href="#proj2-pq">RH Query</a>
+            <a href="#proj2-model">RH Modelo</a>
+            <a href="#proj2-dax">RH DAX</a>
+            <a href="#proj2-viz">RH Visuais</a>
+            <a href="#github">GitHub</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <!-- ================================================================ -->
+    <!-- HERO -->
+    <!-- ================================================================ -->
+    <section class="hero" id="top">
+        <h1>BI Prático — 2 Dashboards para Portfólio</h1>
+        <p>Pare de assistir tutorial. Abra o Power BI Desktop e monte. Guia passo-a-passo: dos dados brutos ao dashboard publicado no GitHub.</p>
+        <div class="hero-stats">
+            <div class="hero-stat"><div class="num">2</div><div class="label">Projetos completos</div></div>
+            <div class="hero-stat"><div class="num">30+</div><div class="label">Medidas DAX</div></div>
+            <div class="hero-stat"><div class="num">6</div><div class="label">Páginas de dashboard</div></div>
+        </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- INTRO -->
+    <!-- ================================================================ -->
+    <section id="intro">
+        <h2>🎯 O que você vai construir <span class="tag">Visão geral</span></h2>
+
+        <div class="card-grid">
+            <div class="card-sm" style="border-left: 3px solid var(--accent);">
+                <h3 style="color: var(--accent2);">📊 Projeto 1 — Dashboard Comercial de Vendas</h3>
+                <p>Análise de vendas de um e-commerce fictício com 10.000+ registros. Faturamento, ticket médio, Top N produtos, análise regional, trend mensal, metas.</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.5rem;">
+                    <span class="badge badge-blue">Power BI</span>
+                    <span class="badge badge-purple">DAX</span>
+                    <span class="badge badge-green">Power Query</span>
+                    <span class="badge badge-yellow">3 páginas</span>
+                </div>
+            </div>
+            <div class="card-sm" style="border-left: 3px solid var(--purple);">
+                <h3 style="color: var(--purple);">👥 Projeto 2 — Dashboard de RH & People Analytics</h3>
+                <p>Análise de pessoas: headcount, turnover, salários, desempenho, hiring funnel. Tema diferente = portfólio diverso.</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.5rem;">
+                    <span class="badge badge-blue">Power BI</span>
+                    <span class="badge badge-purple">DAX</span>
+                    <span class="badge badge-green">Power Query</span>
+                    <span class="badge badge-yellow">3 páginas</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="roni-comment">
+            <p><strong>Por que 2 projetos?</strong> Um só de vendas parece "exercício de curso". Com vendas + RH, você mostra que sabe aplicar BI em contextos diferentes. Recrutadores adoram diversidade de domínio no portfólio.</p>
+        </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- SETUP -->
+    <!-- ================================================================ -->
+    <section id="setup">
+        <h2>⚙️ Setup — O que você precisa <span class="tag">Preparação</span></h2>
+
+        <div class="card">
+            <h3>Ferramentas necessárias</h3>
+            <ul class="checklist" id="setupChecklist">
+                <li onclick="toggleCheck(this)"><div class="check-box"></div><span><strong>Power BI Desktop</strong> — Baixe grátis em powerbi.microsoft.com (só Windows)</span></li>
+                <li onclick="toggleCheck(this)"><div class="check-box"></div><span><strong>Python 3.x</strong> — Para gerar os dados fictícios (1 script roda tudo)</span></li>
+                <li onclick="toggleCheck(this)"><div class="check-box"></div><span><strong>GitHub</strong> — Para hospedar o projeto e README</span></li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>🗂️ Estrutura do projeto (crie estas pastas)</h3>
+            <div class="code-block">📁 dashboard-vendas/
+├── 📁 dados/
+│   ├── vendas.csv
+│   ├── clientes.csv
+│   ├── produtos.csv
+│   ├── vendedores.csv
+│   └── metas.csv
+├── 📁 screenshots/
+├── 📄 gerar_dados.py
+├── 📄 dashboard.pbix
+└── 📄 README.md
+
+📁 dashboard-rh/
+├── 📁 dados/
+│   ├── funcionarios.csv
+│   ├── departamentos.csv
+│   ├── avaliacoes.csv
+│   ├── contratacoes.csv
+│   └── saidas.csv
+├── 📁 screenshots/
+├── 📄 gerar_dados.py
+├── 📄 dashboard.pbix
+└── 📄 README.md</div>
+        </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- ================================================================ -->
+    <!-- PROJETO 1 — DASHBOARD COMERCIAL DE VENDAS                       -->
+    <!-- ================================================================ -->
+    <!-- ================================================================ -->
+
+    <section id="proj1">
+        <h2>📊 Projeto 1 — Dashboard Comercial de Vendas <span class="tag">Início</span></h2>
+
+        <div class="card">
+            <h3>O cenário</h3>
+            <p>Você é o <strong style="color: var(--accent2);">analista de BI de uma loja online</strong> que vende eletrônicos, acessórios e informática. A diretoria precisa de um dashboard para acompanhar performance de vendas, metas e clientes. Você vai construir o dashboard completo do zero.</p>
+
+            <div class="flow">
+                <div class="flow-step"><div class="icon">🐍</div><div class="name">Python</div><div class="detail">Gera 5 CSVs</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="icon">🔄</div><div class="name">Power Query</div><div class="detail">Limpa + Transforma</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="icon">🔗</div><div class="name">Modelo</div><div class="detail">Esquema Estrela</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="icon">🧮</div><div class="name">DAX</div><div class="detail">15 medidas</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="icon">📊</div><div class="name">Dashboard</div><div class="detail">3 páginas</div></div>
+            </div>
+        </div>
+
+        <!-- STEP 1: GERAR DADOS -->
+        <div class="step">
+            <div class="step-header" onclick="toggleStep(this)">
+                <div class="step-num" id="s1num">1</div>
+                <h3>Gerar os dados com Python</h3>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="step-body">
+                <p>Copie e execute o script abaixo. Ele gera 5 CSVs realistas com ~10.000 vendas, 500 clientes, 50 produtos, 12 vendedores e metas mensais.</p>
+
+                <div class="do-box">
+                    <p><strong>1.</strong> Crie a pasta <code>dashboard-vendas/dados/</code></p>
+                    <p><strong>2.</strong> Salve o código abaixo como <code>gerar_dados.py</code> dentro de <code>dashboard-vendas/</code></p>
+                    <p><strong>3.</strong> Execute: <code>pip install faker pandas</code> depois <code>python gerar_dados.py</code></p>
+                </div>
+
+                <div class="code-block"><span class="cm"># gerar_dados.py — Gerador de dados para Dashboard de Vendas</span>
+<span class="kw">import</span> pandas <span class="kw">as</span> pd
+<span class="kw">import</span> numpy <span class="kw">as</span> np
+<span class="kw">from</span> faker <span class="kw">import</span> Faker
+<span class="kw">from</span> datetime <span class="kw">import</span> datetime, timedelta
+<span class="kw">import</span> os, random
+
+fake = Faker(<span class="str">'pt_BR'</span>)
+random.seed(<span class="str">42</span>); np.random.seed(<span class="str">42</span>)
+os.makedirs(<span class="str">'dados'</span>, exist_ok=True)
+
+<span class="cm"># === PRODUTOS (50) ===</span>
+categorias = {
+    <span class="str">'Smartphones'</span>: [(<span class="str">'iPhone 15'</span>,4999), (<span class="str">'Galaxy S24'</span>,3999), (<span class="str">'Motorola Edge'</span>,2499),
+                    (<span class="str">'Xiaomi 14'</span>,2299), (<span class="str">'Pixel 8'</span>,3499)],
+    <span class="str">'Notebooks'</span>: [(<span class="str">'MacBook Air M3'</span>,8999), (<span class="str">'Dell Inspiron'</span>,3999), (<span class="str">'Lenovo IdeaPad'</span>,3299),
+                  (<span class="str">'Acer Aspire'</span>,2799), (<span class="str">'ASUS VivoBook'</span>,3599)],
+    <span class="str">'Acessórios'</span>: [(<span class="str">'AirPods Pro'</span>,1899), (<span class="str">'Mouse Logitech MX'</span>,499), (<span class="str">'Teclado Mecânico'</span>,349),
+                   (<span class="str">'Webcam HD'</span>,249), (<span class="str">'Hub USB-C'</span>,189), (<span class="str">'Mousepad Gamer'</span>,79),
+                   (<span class="str">'Suporte Notebook'</span>,149), (<span class="str">'Cabo HDMI 2.1'</span>,59)],
+    <span class="str">'Monitores'</span>: [(<span class="str">'Monitor 27\" 4K'</span>,2499), (<span class="str">'Monitor 24\" FHD'</span>,999),
+                  (<span class="str">'Ultrawide 34\"'</span>,3499), (<span class="str">'Monitor Gamer 165Hz'</span>,1999)],
+    <span class="str">'Tablets'</span>: [(<span class="str">'iPad Air'</span>,5499), (<span class="str">'Galaxy Tab S9'</span>,3999), (<span class="str">'iPad 10'</span>,3499)],
+    <span class="str">'Armazenamento'</span>: [(<span class="str">'SSD 1TB NVMe'</span>,449), (<span class="str">'HD Externo 2TB'</span>,399),
+                       (<span class="str">'Pen Drive 128GB'</span>,69), (<span class="str">'Cartão SD 256GB'</span>,149)],
+    <span class="str">'Áudio'</span>: [(<span class="str">'JBL Flip 6'</span>,699), (<span class="str">'Sony WH-1000XM5'</span>,2299), (<span class="str">'Headset Gamer'</span>,299),
+             (<span class="str">'Microfone USB'</span>,399), (<span class="str">'Soundbar'</span>,899)],
+    <span class="str">'Periféricos'</span>: [(<span class="str">'Impressora Laser'</span>,1299), (<span class="str">'Roteador WiFi 6'</span>,499),
+                    (<span class="str">'No-break 1400VA'</span>,799), (<span class="str">'Estabilizador'</span>,249)],
+}
+prods = []
+pid = 1
+<span class="kw">for</span> cat, items <span class="kw">in</span> categorias.items():
+    <span class="kw">for</span> nome, preco <span class="kw">in</span> items:
+        custo = round(preco * random.uniform(0.4, 0.65), 2)
+        prods.append({<span class="str">'produto_id'</span>: pid, <span class="str">'nome'</span>: nome, <span class="str">'categoria'</span>: cat,
+                      <span class="str">'preco'</span>: preco, <span class="str">'custo'</span>: custo})
+        pid += 1
+df_prod = pd.DataFrame(prods)
+df_prod.to_csv(<span class="str">'dados/produtos.csv'</span>, index=False)
+
+<span class="cm"># === CLIENTES (500) ===</span>
+regioes = {<span class="str">'SP'</span>: 35, <span class="str">'RJ'</span>: 15, <span class="str">'MG'</span>: 12, <span class="str">'PR'</span>: 8, <span class="str">'RS'</span>: 7,
+           <span class="str">'BA'</span>: 6, <span class="str">'SC'</span>: 5, <span class="str">'GO'</span>: 4, <span class="str">'PE'</span>: 4, <span class="str">'CE'</span>: 4}
+segmentos = [<span class="str">'Pessoa Física'</span>, <span class="str">'Pessoa Jurídica'</span>, <span class="str">'Revendedor'</span>]
+clientes = []
+<span class="kw">for</span> i <span class="kw">in</span> range(1, 501):
+    uf = random.choices(list(regioes.keys()), weights=list(regioes.values()))[0]
+    clientes.append({
+        <span class="str">'cliente_id'</span>: i, <span class="str">'nome'</span>: fake.name(), <span class="str">'email'</span>: fake.email(),
+        <span class="str">'uf'</span>: uf, <span class="str">'cidade'</span>: fake.city(),
+        <span class="str">'segmento'</span>: random.choices(segmentos, weights=[70,20,10])[0],
+        <span class="str">'data_cadastro'</span>: fake.date_between(<span class="str">'-3y'</span>, <span class="str">'-30d'</span>).isoformat()
+    })
+df_cli = pd.DataFrame(clientes)
+df_cli.to_csv(<span class="str">'dados/clientes.csv'</span>, index=False)
+
+<span class="cm"># === VENDEDORES (12) ===</span>
+vendedores = []
+<span class="kw">for</span> i <span class="kw">in</span> range(1, 13):
+    vendedores.append({
+        <span class="str">'vendedor_id'</span>: i, <span class="str">'nome'</span>: fake.first_name() + <span class="str">' '</span> + fake.last_name(),
+        <span class="str">'regiao'</span>: random.choice([<span class="str">'Sudeste'</span>,<span class="str">'Sul'</span>,<span class="str">'Nordeste'</span>,<span class="str">'Centro-Oeste'</span>]),
+        <span class="str">'data_admissao'</span>: fake.date_between(<span class="str">'-5y'</span>, <span class="str">'-6m'</span>).isoformat()
+    })
+df_vend = pd.DataFrame(vendedores)
+df_vend.to_csv(<span class="str">'dados/vendedores.csv'</span>, index=False)
+
+<span class="cm"># === VENDAS (10.000) ===</span>
+vendas = []
+data_inicio = datetime(2024, 1, 1)
+<span class="kw">for</span> i <span class="kw">in</span> range(1, 10001):
+    dt = data_inicio + timedelta(days=random.randint(0, 545))
+    prod = random.choice(prods)
+    qtd = np.random.choice([1,1,1,1,2,2,3], p=[0.5,0.15,0.1,0.05,0.1,0.05,0.05])
+    desconto = random.choices([0, 0, 0, 5, 10, 15, 20], weights=[40,15,10,15,10,5,5])[0]
+    valor = round(prod[<span class="str">'preco'</span>] * qtd * (1 - desconto/100), 2)
+    vendas.append({
+        <span class="str">'venda_id'</span>: i,
+        <span class="str">'data'</span>: dt.strftime(<span class="str">'%Y-%m-%d'</span>),
+        <span class="str">'cliente_id'</span>: random.randint(1, 500),
+        <span class="str">'produto_id'</span>: prod[<span class="str">'produto_id'</span>],
+        <span class="str">'vendedor_id'</span>: random.randint(1, 12),
+        <span class="str">'quantidade'</span>: int(qtd),
+        <span class="str">'valor_unitario'</span>: prod[<span class="str">'preco'</span>],
+        <span class="str">'desconto_pct'</span>: desconto,
+        <span class="str">'valor_total'</span>: valor,
+        <span class="str">'forma_pagamento'</span>: random.choices(
+            [<span class="str">'Cartão Crédito'</span>,<span class="str">'Cartão Débito'</span>,<span class="str">'PIX'</span>,<span class="str">'Boleto'</span>],
+            weights=[40,15,35,10])[0],
+        <span class="str">'status'</span>: random.choices(
+            [<span class="str">'Entregue'</span>,<span class="str">'Entregue'</span>,<span class="str">'Enviado'</span>,<span class="str">'Cancelado'</span>,<span class="str">'Devolvido'</span>],
+            weights=[55,20,10,10,5])[0],
+    })
+df_vendas = pd.DataFrame(vendas)
+df_vendas.to_csv(<span class="str">'dados/vendas.csv'</span>, index=False)
+
+<span class="cm"># === METAS MENSAIS ===</span>
+metas = []
+<span class="kw">for</span> ano <span class="kw">in</span> [2024, 2025]:
+    <span class="kw">for</span> mes <span class="kw">in</span> range(1, 13):
+        <span class="kw">for</span> v <span class="kw">in</span> vendedores:
+            metas.append({
+                <span class="str">'vendedor_id'</span>: v[<span class="str">'vendedor_id'</span>],
+                <span class="str">'ano'</span>: ano, <span class="str">'mes'</span>: mes,
+                <span class="str">'meta'</span>: round(random.uniform(40000, 120000), 2)
+            })
+df_metas = pd.DataFrame(metas)
+df_metas.to_csv(<span class="str">'dados/metas.csv'</span>, index=False)
+
+print(<span class="str">f'✅ Gerado: {len(df_prod)} produtos, {len(df_cli)} clientes, '</span>
+      <span class="str">f'{len(df_vend)} vendedores, {len(df_vendas)} vendas, {len(df_metas)} metas'</span>)</div>
+
+                <div class="tip-box">
+                    <p>Depois de rodar, confira que os 5 arquivos CSV foram criados dentro de <code>dados/</code>. Abra cada um no Excel ou VS Code para ver se os dados fazem sentido.</p>
+                </div>
+
+                <ul class="checklist" id="step1check">
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Instalei faker e pandas</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Rodei o gerar_dados.py</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Tenho 5 CSVs na pasta dados/</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- PROJ 1 — POWER QUERY -->
+    <!-- ================================================================ -->
+    <section id="proj1-pq">
+        <h2>🔄 Projeto 1 — Power Query (ETL) <span class="tag">Transformação</span></h2>
+
+        <!-- STEP 2: IMPORTAR -->
+        <div class="step">
+            <div class="step-header" onclick="toggleStep(this)">
+                <div class="step-num">2</div>
+                <h3>Importar os CSVs no Power BI</h3>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="step-body">
+                <div class="do-box">
+                    <p><strong>1.</strong> Abra o Power BI Desktop → <strong>Obter Dados</strong> → <strong>Texto/CSV</strong></p>
+                    <p><strong>2.</strong> Importe os 5 arquivos um por um: vendas.csv, clientes.csv, produtos.csv, vendedores.csv, metas.csv</p>
+                    <p><strong>3.</strong> Para cada um, clique em <strong>Transformar Dados</strong> (não "Carregar" direto)</p>
+                </div>
+
+                <div class="roni-comment">
+                    <p>Sempre entre pelo Power Query antes de carregar. Mesmo que os dados pareçam ok, confira tipos, nomes e nulos. Isso é disciplina profissional — recrutadores testam isso em cases.</p>
+                </div>
+
+                <ul class="checklist">
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Importei vendas.csv</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Importei clientes.csv</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Importei produtos.csv</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Importei vendedores.csv</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Importei metas.csv</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- STEP 3: TRANSFORMAÇÕES -->
+        <div class="step">
+            <div class="step-header" onclick="toggleStep(this)">
+                <div class="step-num">3</div>
+                <h3>Transformações no Power Query</h3>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="step-body">
+                <h3>📋 Tabela: vendas</h3>
+                <div class="do-box">
+                    <p><strong>1.</strong> Coluna <code>data</code> → clique com botão direito → <strong>Alterar Tipo → Data</strong></p>
+                    <p><strong>2.</strong> Coluna <code>valor_total</code> → Alterar Tipo → <strong>Número Decimal Fixo</strong> (moeda)</p>
+                    <p><strong>3.</strong> Coluna <code>valor_unitario</code> → Alterar Tipo → <strong>Número Decimal Fixo</strong></p>
+                    <p><strong>4.</strong> Filtre <code>status</code>: remova linhas com status <strong>"Cancelado"</strong> e <strong>"Devolvido"</strong> (queremos só vendas efetivas)</p>
+                    <p><strong>5.</strong> Renomeie a query para <strong>fVendas</strong> (f de fato)</p>
+                </div>
+
+                <div class="warn-box">
+                    <p><strong>Convenção de nomes:</strong> Tabelas fato começam com <code>f</code> (fVendas) e tabelas dimensão com <code>d</code> (dClientes). Isso é padrão de mercado e mostra maturidade no modelo.</p>
+                </div>
+
+                <h3>📋 Tabela: clientes</h3>
+                <div class="do-box">
+                    <p><strong>1.</strong> Coluna <code>data_cadastro</code> → Alterar Tipo → <strong>Data</strong></p>
+                    <p><strong>2.</strong> Coluna <code>email</code> → Remover esta coluna (dados sensíveis, não vai pro dashboard)</p>
+                    <p><strong>3.</strong> Renomeie para <strong>dClientes</strong></p>
+                </div>
+
+                <h3>📋 Tabela: produtos</h3>
+                <div class="do-box">
+                    <p><strong>1.</strong> Coluna <code>preco</code> e <code>custo</code> → Alterar Tipo → <strong>Número Decimal Fixo</strong></p>
+                    <p><strong>2.</strong> Adicione <strong>Coluna Personalizada</strong>: nome = <code>margem_pct</code>, fórmula:</p>
+                </div>
+                <div class="code-block">= Number.Round(([preco] - [custo]) / [preco] * 100, 1)</div>
+                <div class="do-box">
+                    <p><strong>3.</strong> Renomeie para <strong>dProdutos</strong></p>
+                </div>
+
+                <h3>📋 Tabela: vendedores</h3>
+                <div class="do-box">
+                    <p><strong>1.</strong> Coluna <code>data_admissao</code> → Alterar Tipo → <strong>Data</strong></p>
+                    <p><strong>2.</strong> Renomeie para <strong>dVendedores</strong></p>
+                </div>
+
+                <h3>📋 Tabela: metas</h3>
+                <div class="do-box">
+                    <p><strong>1.</strong> Crie <strong>Coluna Personalizada</strong> chamada <code>data_meta</code>:</p>
+                </div>
+                <div class="code-block">= #date([ano], [mes], 1)</div>
+                <div class="do-box">
+                    <p><strong>2.</strong> Altere o tipo de <code>data_meta</code> para <strong>Data</strong></p>
+                    <p><strong>3.</strong> Remova colunas <code>ano</code> e <code>mes</code> (ficaram redundantes)</p>
+                    <p><strong>4.</strong> Renomeie para <strong>fMetas</strong></p>
+                </div>
+
+                <h3>🗓️ Criar Tabela Calendário</h3>
+                <div class="do-box">
+                    <p><strong>1.</strong> No Power Query: <strong>Nova Fonte → Consulta Nula</strong></p>
+                    <p><strong>2.</strong> Na barra de fórmulas, cole:</p>
+                </div>
+                <div class="code-block">= List.Dates(#date(2024,1,1), 730, #duration(1,0,0,0))</div>
+                <div class="do-box">
+                    <p><strong>3.</strong> Clique em <strong>Para Tabela</strong> → OK</p>
+                    <p><strong>4.</strong> Renomeie a coluna para <code>Data</code> e altere para tipo <strong>Data</strong></p>
+                    <p><strong>5.</strong> Adicione estas colunas via <strong>Adicionar Coluna → Coluna de Exemplo</strong> ou <strong>Coluna Personalizada</strong>:</p>
+                </div>
+                <div class="code-block"><span class="cm">// Coluna: Ano</span>
+= Date.Year([Data])
+
+<span class="cm">// Coluna: Mês Num</span>
+= Date.Month([Data])
+
+<span class="cm">// Coluna: Mês Nome</span>
+= Date.MonthName([Data], "pt-BR")
+
+<span class="cm">// Coluna: Mês Abrev</span>
+= Text.Start(Date.MonthName([Data], "pt-BR"), 3)
+
+<span class="cm">// Coluna: Trimestre</span>
+= "Q" &amp; Text.From(Date.QuarterOfYear([Data]))
+
+<span class="cm">// Coluna: Dia da Semana</span>
+= Date.DayOfWeekName([Data], "pt-BR")
+
+<span class="cm">// Coluna: Ano-Mês</span>
+= Date.ToText([Data], "yyyy-MM")</div>
+                <div class="do-box">
+                    <p><strong>6.</strong> Renomeie a query para <strong>dCalendario</strong></p>
+                    <p><strong>7.</strong> Clique em <strong>Fechar e Aplicar</strong></p>
+                </div>
+
+                <div class="tip-box">
+                    <p><strong>Por que criar calendário manualmente?</strong> Porque CALENDARAUTO() às vezes falha e não gera colunas como mês-nome, trimestre, dia-da-semana. Fazendo no Power Query você tem controle total e impressiona na entrevista.</p>
+                </div>
+
+                <ul class="checklist">
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Transformei fVendas (tipos, filtro status, nome)</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Transformei dClientes (tipo data, removeu email, nome)</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Transformei dProdutos (tipos, margem_pct, nome)</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Transformei dVendedores (tipo data, nome)</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Transformei fMetas (data_meta, removeu ano/mes, nome)</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Criei dCalendario com 7 colunas</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Fechei e Apliquei</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- PROJ 1 — MODELO DE DADOS -->
+    <!-- ================================================================ -->
+    <section id="proj1-model">
+        <h2>🔗 Projeto 1 — Modelo de Dados <span class="tag">Esquema Estrela</span></h2>
+
+        <div class="step">
+            <div class="step-header" onclick="toggleStep(this)">
+                <div class="step-num">4</div>
+                <h3>Configurar relacionamentos</h3>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="step-body">
+                <div class="do-box">
+                    <p><strong>1.</strong> Vá para <strong>Model View</strong> (ícone de diagrama na lateral esquerda)</p>
+                    <p><strong>2.</strong> Crie estes relacionamentos arrastando os campos:</p>
+                </div>
+
+                <table class="info-table">
+                    <tr><th>De (Fato)</th><th>Para (Dimensão)</th><th>Cardinalidade</th><th>Direção</th></tr>
+                    <tr><td>fVendas[cliente_id]</td><td>dClientes[cliente_id]</td><td>N:1</td><td>Single</td></tr>
+                    <tr><td>fVendas[produto_id]</td><td>dProdutos[produto_id]</td><td>N:1</td><td>Single</td></tr>
+                    <tr><td>fVendas[vendedor_id]</td><td>dVendedores[vendedor_id]</td><td>N:1</td><td>Single</td></tr>
+                    <tr><td>fVendas[data]</td><td>dCalendario[Data]</td><td>N:1</td><td>Single</td></tr>
+                    <tr><td>fMetas[vendedor_id]</td><td>dVendedores[vendedor_id]</td><td>N:1</td><td>Single</td></tr>
+                    <tr><td>fMetas[data_meta]</td><td>dCalendario[Data]</td><td>N:1</td><td>Single</td></tr>
+                </table>
+
+                <div class="dash-preview">
+                    <h4>Seu esquema estrela deve ficar assim:</h4>
+                    <div style="text-align: center; padding: 1rem;">
+                        <div style="display: inline-block; background: var(--accent); color: white; padding: 0.75rem 2rem; border-radius: 8px; font-weight: 700; font-size: 1rem; margin-bottom: 1rem;">
+                            📦 fVendas<br><span style="font-size: 0.72rem; opacity: 0.8;">10.000 linhas — tabela fato central</span>
+                        </div>
+                        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                            <div style="background: var(--bg4); border: 1px solid var(--purple); padding: 0.5rem 1rem; border-radius: 6px;">
+                                <span style="color: var(--purple); font-weight: 600;">dCalendario</span><br>
+                                <span style="font-size: 0.72rem; color: var(--text2);">Data, Ano, Mês, Trimestre</span>
+                            </div>
+                            <div style="background: var(--bg4); border: 1px solid var(--green); padding: 0.5rem 1rem; border-radius: 6px;">
+                                <span style="color: var(--green); font-weight: 600;">dClientes</span><br>
+                                <span style="font-size: 0.72rem; color: var(--text2);">nome, uf, segmento</span>
+                            </div>
+                            <div style="background: var(--bg4); border: 1px solid var(--yellow); padding: 0.5rem 1rem; border-radius: 6px;">
+                                <span style="color: var(--yellow); font-weight: 600;">dProdutos</span><br>
+                                <span style="font-size: 0.72rem; color: var(--text2);">nome, categoria, preço</span>
+                            </div>
+                            <div style="background: var(--bg4); border: 1px solid var(--pink); padding: 0.5rem 1rem; border-radius: 6px;">
+                                <span style="color: var(--pink); font-weight: 600;">dVendedores</span><br>
+                                <span style="font-size: 0.72rem; color: var(--text2);">nome, região</span>
+                            </div>
+                        </div>
+                        <div style="margin-top: 1rem;">
+                            <div style="display: inline-block; background: var(--orange); color: var(--bg); padding: 0.5rem 1.5rem; border-radius: 8px; font-weight: 700; font-size: 0.9rem;">
+                                📋 fMetas<br><span style="font-size: 0.72rem;">vendedor_id → dVendedores | data_meta → dCalendario</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="do-box">
+                    <p><strong>3.</strong> Marque dCalendario como <strong>Tabela de Data</strong>: clique na tabela → Ferramentas de Tabela → "Marcar como tabela de data" → selecione a coluna <code>Data</code></p>
+                </div>
+
+                <div class="warn-box">
+                    <p>Se não marcar como tabela de data, as funções de Time Intelligence (PREVIOUSMONTH, TOTALYTD) não vão funcionar. É o erro mais comum de quem está começando.</p>
+                </div>
+
+                <ul class="checklist">
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Criei 6 relacionamentos</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Todos estão N:1, Single direction</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Marquei dCalendario como tabela de data</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- PROJ 1 — MEDIDAS DAX -->
+    <!-- ================================================================ -->
+    <section id="proj1-dax">
+        <h2>🧮 Projeto 1 — Medidas DAX <span class="tag">15 Medidas</span></h2>
+
+        <div class="step">
+            <div class="step-header" onclick="toggleStep(this)">
+                <div class="step-num">5</div>
+                <h3>Criar as medidas DAX</h3>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="step-body">
+                <div class="do-box">
+                    <p>Para cada medida: vá em <strong>Report View</strong> → selecione a tabela <code>fVendas</code> → <strong>Nova Medida</strong> → cole a fórmula → Enter.</p>
+                    <p>Crie uma pasta "Medidas" para organizá-las: clique na medida → Propriedades → Pasta de exibição → <code>_Medidas</code></p>
+                </div>
+
+                <h3 style="color: var(--green); margin-top: 1.5rem;">🟢 Básicas</h3>
+
+                <div class="dax-box">
+                    <h5>Medida 1 — Faturamento</h5>
+                    <div class="dax-code">Faturamento = <span class="fn">SUM</span>( fVendas[valor_total] )</div>
+                </div>
+
+                <div class="dax-box">
+                    <h5>Medida 2 — Quantidade Vendida</h5>
+                    <div class="dax-code">Qtd Vendida = <span class="fn">SUM</span>( fVendas[quantidade] )</div>
+                </div>
+
+                <div class="dax-box">
+                    <h5>Medida 3 — Nº de Vendas</h5>
+                    <div class="dax-code">Nº Vendas = <span class="fn">COUNTROWS</span>( fVendas )</div>
+                </div>
+
+                <div class="dax-box">
+                    <h5>Medida 4 — Ticket Médio</h5>
+                    <div class="dax-code">Ticket Médio = <span class="fn">DIVIDE</span>( [Faturamento], [Nº Vendas], 0 )</div>
+                </div>
+
+                <div class="dax-box">
+                    <h5>Medida 5 — Clientes Únicos</h5>
+                    <div class="dax-code">Clientes Únicos = <span class="fn">DISTINCTCOUNT</span>( fVendas[cliente_id] )</div>
+                </div>
+
+                <h3 style="color: var(--yellow); margin-top: 1.5rem;">🟡 Time Intelligence</h3>
+
+                <div class="dax-box">
+                    <h5>Medida 6 — Faturamento Mês Anterior</h5>
+                    <div class="dax-code">Fat Mês Anterior = <span class="fn">CALCULATE</span>(
+    [Faturamento],
+    <span class="fn">PREVIOUSMONTH</span>( dCalendario[Data] )
+)</div>
+                </div>
+
+                <div class="dax-box">
+                    <h5>Medida 7 — Variação MoM %</h5>
+                    <div class="dax-code">Var MoM % = <span class="fn">DIVIDE</span>(
+    [Faturamento] - [Fat Mês Anterior],
+    [Fat Mês Anterior],
+    0
+)</div>
+                </div>
+
+                <div class="dax-box">
+                    <h5>Medida 8 — Faturamento YTD (Acumulado do Ano)</h5>
+                    <div class="dax-code">Fat YTD = <span class="fn">TOTALYTD</span>(
+    [Faturamento],
+    dCalendario[Data]
+)</div>
+                </div>
+
+                <div class="dax-box">
+                    <h5>Medida 9 — Faturamento Ano Anterior</h5>
+                    <div class="dax-code">Fat Ano Anterior = <span class="fn">CALCULATE</span>(
+    [Faturamento],
+    <span class="fn">SAMEPERIODLASTYEAR</span>( dCalendario[Data] )
+)</div>
+                </div>
+
+                <div class="dax-box">
+                    <h5>Medida 10 — Variação YoY %</h5>
+                    <div class="dax-code">Var YoY % = <span class="fn">DIVIDE</span>(
+    [Faturamento] - [Fat Ano Anterior],
+    [Fat Ano Anterior],
+    0
+)</div>
+                </div>
+
+                <h3 style="color: var(--red); margin-top: 1.5rem;">🔴 Avançadas</h3>
+
+                <div class="dax-box">
+                    <h5>Medida 11 — Meta Total</h5>
+                    <div class="dax-code">Meta = <span class="fn">SUM</span>( fMetas[meta] )</div>
+                </div>
+
+                <div class="dax-box">
+                    <h5>Medida 12 — % da Meta Atingido</h5>
+                    <div class="dax-code">% Meta = <span class="fn">DIVIDE</span>( [Faturamento], [Meta], 0 )</div>
+                </div>
+
+                <div class="dax-box">
+                    <h5>Medida 13 — % do Total Geral (para gráfico de composição)</h5>
+                    <div class="dax-code">% do Total = <span class="fn">DIVIDE</span>(
+    [Faturamento],
+    <span class="fn">CALCULATE</span>( [Faturamento], <span class="fn">ALL</span>( fVendas ) ),
+    0
+)</div>
+                </div>
+
+                <div class="dax-box">
+                    <h5>Medida 14 — Ranking de Produto</h5>
+                    <div class="dax-code">Rank Produto = <span class="fn">RANKX</span>(
+    <span class="fn">ALL</span>( dProdutos[nome] ),
+    [Faturamento],,
+    <span class="kw">DESC</span>,
+    <span class="kw">DENSE</span>
+)</div>
+                </div>
+
+                <div class="dax-box">
+                    <h5>Medida 15 — Desconto Médio %</h5>
+                    <div class="dax-code">Desconto Médio % = <span class="fn">AVERAGE</span>( fVendas[desconto_pct] )</div>
+                </div>
+
+                <div class="roni-comment">
+                    <p><strong>15 medidas. É tudo.</strong> Note que com essas 15 você cobre: KPIs básicos (1-5), comparação temporal (6-10) e análise avançada (11-15). Formate cada medida: clic direito → Formato → moeda para valores, percentual para %, número inteiro para contagens.</p>
+                </div>
+
+                <ul class="checklist">
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Criei medidas 1-5 (básicas)</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Criei medidas 6-10 (time intelligence)</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Criei medidas 11-15 (avançadas)</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Formatei todas as medidas corretamente</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- PROJ 1 — VISUAIS (DASHBOARD) -->
+    <!-- ================================================================ -->
+    <section id="proj1-viz">
+        <h2>📊 Projeto 1 — Montar o Dashboard <span class="tag">3 Páginas</span></h2>
+
+        <div class="roni-comment">
+            <p><strong>Regras de ouro:</strong> (1) Fundo branco ou cinza bem claro — dark mode é só pra Dev, não pra gestor. (2) Máximo 7 visuais por página. (3) KPIs (cartões) sempre no topo. (4) Menos é mais. Dashboard poluído = não contratado.</p>
+        </div>
+
+        <!-- PAGE 1 -->
+        <div class="step">
+            <div class="step-header" onclick="toggleStep(this)">
+                <div class="step-num">6</div>
+                <h3>Página 1 — Visão Geral</h3>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="step-body">
+                <div class="do-box">
+                    <p><strong>1.</strong> Renomeie a aba para <strong>"Visão Geral"</strong></p>
+                    <p><strong>2.</strong> Configure o fundo: Formato da página → Tela de fundo → cor <code>#F5F5F5</code></p>
+                    <p><strong>3.</strong> Tamanho da tela: 16:9 (1280 × 720) — padrão mais usado</p>
+                </div>
+
+                <div class="dash-preview">
+                    <h4>Layout da Página 1 — Visão Geral</h4>
+                    <div class="dash-layout" style="grid-template-columns: repeat(5, 1fr); grid-template-rows: auto auto auto;">
+                        <div class="dash-widget"><div class="w-name">Faturamento</div><div class="w-value">R$ 8.2M</div><div class="w-delta up">▲ 12%</div></div>
+                        <div class="dash-widget"><div class="w-name">Nº Vendas</div><div class="w-value">7.460</div><div class="w-delta up">▲ 8%</div></div>
+                        <div class="dash-widget"><div class="w-name">Ticket Médio</div><div class="w-value">R$ 1.1k</div><div class="w-delta down">▼ 3%</div></div>
+                        <div class="dash-widget"><div class="w-name">Clientes</div><div class="w-value">487</div><div class="w-delta up">▲ 5%</div></div>
+                        <div class="dash-widget"><div class="w-name">% Meta</div><div class="w-value">94%</div><div class="w-delta down">▼ 6pp</div></div>
+                        <div class="dash-widget" style="grid-column: span 3;"><div class="w-icon">📈</div><div class="w-name">Gráfico de Linhas — Faturamento por Mês (com trend)</div></div>
+                        <div class="dash-widget" style="grid-column: span 2;"><div class="w-icon">📊</div><div class="w-name">Barras Horizontais — Top 10 Produtos</div></div>
+                        <div class="dash-widget" style="grid-column: span 2;"><div class="w-icon">🍩</div><div class="w-name">Rosca — Faturamento por Categoria</div></div>
+                        <div class="dash-widget" style="grid-column: span 2;"><div class="w-icon">📊</div><div class="w-name">Barras — Fat. por Região (UF)</div></div>
+                        <div class="dash-widget"><div class="w-icon">🔽</div><div class="w-name">Slicer — Ano/Mês</div></div>
+                    </div>
+                </div>
+
+                <h4 style="margin-top: 1.5rem; color: var(--accent2);">Instruções detalhadas:</h4>
+
+                <div class="do-box">
+                    <p><strong>KPI Cards (topo):</strong></p>
+                    <p>— Insira 5 visuais "Cartão". Arraste as medidas: Faturamento, Nº Vendas, Ticket Médio, Clientes Únicos, % Meta.</p>
+                    <p>— Para cada cartão: Formato → Rótulo de dados → fonte 24pt, negrito. Título do cartão: fonte 10pt, cor cinza.</p>
+                    <p>— Alinhe todos na mesma altura (Formato → Alinhar → Distribuir horizontalmente).</p>
+                </div>
+
+                <div class="do-box">
+                    <p><strong>Gráfico de Linhas (centro-esquerda):</strong></p>
+                    <p>— Visual: Gráfico de Linhas. Eixo X: dCalendario[Ano-Mês]. Valores: [Faturamento].</p>
+                    <p>— Adicione linha de tendência: Formato → Análise → Linha de tendência → Ativar.</p>
+                    <p>— Adicione a medida [Fat Mês Anterior] como segunda linha (tracejada).</p>
+                </div>
+
+                <div class="do-box">
+                    <p><strong>Top 10 Produtos (centro-direita):</strong></p>
+                    <p>— Visual: Barras Horizontais. Eixo Y: dProdutos[nome]. Valores: [Faturamento].</p>
+                    <p>— Filtro visual: [Rank Produto] ≤ 10 (arraste a medida para "Filtros neste visual").</p>
+                    <p>— Formato: Barras → cor <code>#3b82f6</code>. Rótulos de dados → Ativar.</p>
+                </div>
+
+                <div class="do-box">
+                    <p><strong>Rosca — Categorias (inferior-esquerda):</strong></p>
+                    <p>— Visual: Gráfico de Rosca. Legenda: dProdutos[categoria]. Valores: [Faturamento].</p>
+                    <p>— Formato: Rótulos → mostra valor + percentual.</p>
+                </div>
+
+                <div class="do-box">
+                    <p><strong>Barras por UF (inferior-centro):</strong></p>
+                    <p>— Visual: Barras Verticais. Eixo X: dClientes[uf]. Valores: [Faturamento].</p>
+                    <p>— Ordene decrescente por [Faturamento].</p>
+                </div>
+
+                <div class="do-box">
+                    <p><strong>Slicer (inferior-direita):</strong></p>
+                    <p>— Visual: Segmentação. Campo: dCalendario[Ano-Mês].</p>
+                    <p>— Formato: estilo "Lista suspensa".</p>
+                </div>
+
+                <div class="tip-box">
+                    <p><strong>Dica de design:</strong> Use a mesma cor azul (#3b82f6) como cor principal em todos os gráficos. Use cinza para elementos secundários. Isso dá coesão visual — dashboard parece profissional.</p>
+                </div>
+
+                <ul class="checklist">
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>5 cartões KPI no topo, alinhados</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Gráfico de linhas com trend</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Top 10 produtos (barras horizontais)</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Rosca de categorias</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Barras por UF</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Slicer de período</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- PAGE 2 -->
+        <div class="step">
+            <div class="step-header" onclick="toggleStep(this)">
+                <div class="step-num">7</div>
+                <h3>Página 2 — Performance de Vendedores</h3>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="step-body">
+                <div class="do-box">
+                    <p><strong>1.</strong> Crie nova página → renomeie para <strong>"Vendedores"</strong></p>
+                    <p><strong>2.</strong> Mesmo fundo e tamanho da Página 1</p>
+                </div>
+
+                <div class="dash-preview">
+                    <h4>Layout da Página 2 — Vendedores</h4>
+                    <div class="dash-layout" style="grid-template-columns: 1fr 1fr; grid-template-rows: auto auto auto;">
+                        <div class="dash-widget" style="grid-column: span 2;"><div class="w-icon">📊</div><div class="w-name">Barras Agrupadas — Meta vs Realizado por Vendedor</div></div>
+                        <div class="dash-widget"><div class="w-icon">📋</div><div class="w-name">Tabela — Ranking de Vendedores (nome, fat, meta, %)</div></div>
+                        <div class="dash-widget"><div class="w-icon">🍩</div><div class="w-name">Rosca — Fat. por Região do Vendedor</div></div>
+                        <div class="dash-widget" style="grid-column: span 2;"><div class="w-icon">📈</div><div class="w-name">Linhas — Evolução mensal por Vendedor (Legend = nome)</div></div>
+                    </div>
+                </div>
+
+                <div class="do-box">
+                    <p><strong>Barras Meta vs Realizado (topo):</strong></p>
+                    <p>— Visual: Barras Agrupadas. Eixo X: dVendedores[nome].</p>
+                    <p>— Valores: [Faturamento] (barra azul) e [Meta] (barra cinza claro).</p>
+                    <p>— Formato: cores contrastantes, rótulos de dados ativos.</p>
+                </div>
+
+                <div class="do-box">
+                    <p><strong>Tabela Ranking (centro-esquerda):</strong></p>
+                    <p>— Visual: Tabela. Colunas: dVendedores[nome], [Faturamento], [Meta], [% Meta], [Nº Vendas].</p>
+                    <p>— Formato condicional na coluna % Meta: ícones (verde ≥ 100%, amarelo ≥ 80%, vermelho &lt; 80%).</p>
+                </div>
+
+                <div class="do-box">
+                    <p><strong>Rosca por Região (centro-direita):</strong></p>
+                    <p>— Visual: Rosca. Legenda: dVendedores[regiao]. Valores: [Faturamento].</p>
+                </div>
+
+                <div class="do-box">
+                    <p><strong>Evolução mensal por vendedor (rodapé):</strong></p>
+                    <p>— Visual: Linhas. Eixo X: dCalendario[Ano-Mês]. Valores: [Faturamento]. Legenda: dVendedores[nome].</p>
+                    <p>— Se ficou muita linha, use um slicer de vendedor para filtrar 3-4 por vez.</p>
+                </div>
+
+                <ul class="checklist">
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Barras Meta vs Realizado</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Tabela com formato condicional</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Rosca por região</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Evolução mensal por vendedor</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- PAGE 3 -->
+        <div class="step">
+            <div class="step-header" onclick="toggleStep(this)">
+                <div class="step-num">8</div>
+                <h3>Página 3 — Análise de Clientes</h3>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="step-body">
+                <div class="do-box">
+                    <p><strong>1.</strong> Nova página → <strong>"Clientes"</strong></p>
+                </div>
+
+                <div class="dash-preview">
+                    <h4>Layout da Página 3 — Clientes</h4>
+                    <div class="dash-layout" style="grid-template-columns: repeat(3, 1fr); grid-template-rows: auto auto auto;">
+                        <div class="dash-widget"><div class="w-name">Clientes Únicos</div><div class="w-value">487</div></div>
+                        <div class="dash-widget"><div class="w-name">Ticket Médio</div><div class="w-value">R$ 1.1k</div></div>
+                        <div class="dash-widget"><div class="w-name">Desconto Médio</div><div class="w-value">6.3%</div></div>
+                        <div class="dash-widget" style="grid-column: span 2;"><div class="w-icon">📊</div><div class="w-name">Barras — Fat. por Segmento de Cliente</div></div>
+                        <div class="dash-widget"><div class="w-icon">🍩</div><div class="w-name">Rosca — Forma de Pagamento</div></div>
+                        <div class="dash-widget" style="grid-column: span 3;"><div class="w-icon">📋</div><div class="w-name">Tabela — Top 20 Clientes (nome, UF, fat, nº compras, ticket médio)</div></div>
+                    </div>
+                </div>
+
+                <div class="do-box">
+                    <p><strong>KPIs (topo):</strong> 3 cartões — Clientes Únicos, Ticket Médio, Desconto Médio %</p>
+                    <p><strong>Barras por segmento:</strong> Eixo X: dClientes[segmento]. Valores: [Faturamento].</p>
+                    <p><strong>Rosca pagamento:</strong> Legenda: fVendas[forma_pagamento]. Valores: [Nº Vendas].</p>
+                    <p><strong>Tabela Top 20:</strong> Filtre com filtro visual: [Rank Cliente] ≤ 20.</p>
+                </div>
+
+                <p>Para o Rank por Cliente, crie uma medida extra:</p>
+                <div class="dax-box">
+                    <h5>Medida Bônus — Ranking de Cliente</h5>
+                    <div class="dax-code">Rank Cliente = <span class="fn">RANKX</span>(
+    <span class="fn">ALL</span>( dClientes[nome] ),
+    [Faturamento],,
+    <span class="kw">DESC</span>,
+    <span class="kw">DENSE</span>
+)</div>
+                </div>
+
+                <ul class="checklist">
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>3 cartões KPI</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Barras por segmento</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Rosca forma de pagamento</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Tabela Top 20 clientes</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Criei medida Rank Cliente</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card" style="border-color: var(--green); margin-top: 1rem;">
+            <h3 style="color: var(--green);">✅ Projeto 1 — Finalização</h3>
+            <ul class="checklist">
+                <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Revisei fontes e cores (tudo consistente)</span></li>
+                <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Adicionei título em cada página (caixa de texto no topo)</span></li>
+                <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Testei slicers — filtros funcionam em todos os visuais</span></li>
+                <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Salvei como dashboard-vendas.pbix</span></li>
+                <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Tirei screenshots das 3 páginas para o GitHub</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- ================================================================ -->
+    <!-- PROJETO 2 — DASHBOARD DE RH & PEOPLE ANALYTICS                  -->
+    <!-- ================================================================ -->
+    <!-- ================================================================ -->
+
+    <section id="proj2">
+        <h2>👥 Projeto 2 — Dashboard de RH & People Analytics <span class="tag">Início</span></h2>
+
+        <div class="card">
+            <h3>O cenário</h3>
+            <p>Agora você é o <strong style="color: var(--purple);">analista de BI do departamento de RH</strong> de uma empresa de tecnologia com 300 funcionários. O diretor de pessoas quer dashboards para acompanhar headcount, turnover, salários e desempenho.</p>
+
+            <div class="flow">
+                <div class="flow-step"><div class="icon">🐍</div><div class="name">Python</div><div class="detail">Gera 5 CSVs</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="icon">🔄</div><div class="name">Power Query</div><div class="detail">Limpa + Transforma</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="icon">🔗</div><div class="name">Modelo</div><div class="detail">Estrela</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="icon">🧮</div><div class="name">DAX</div><div class="detail">15+ medidas</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="icon">👥</div><div class="name">Dashboard</div><div class="detail">3 páginas</div></div>
+            </div>
+        </div>
+
+        <div class="roni-comment">
+            <p><strong>People Analytics</strong> é uma das áreas mais quentes de BI. Poucas empresas têm analistas dedicados a RH, o que significa menos concorrência. Ter um dashboard de RH no portfólio te diferencia de 95% dos candidatos que só fazem vendas.</p>
+        </div>
+
+        <!-- STEP 9: GERAR DADOS RH -->
+        <div class="step">
+            <div class="step-header" onclick="toggleStep(this)">
+                <div class="step-num">9</div>
+                <h3>Gerar os dados de RH com Python</h3>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="step-body">
+                <div class="do-box">
+                    <p><strong>1.</strong> Crie a pasta <code>dashboard-rh/dados/</code></p>
+                    <p><strong>2.</strong> Salve o código abaixo como <code>gerar_dados.py</code> dentro de <code>dashboard-rh/</code></p>
+                    <p><strong>3.</strong> Execute: <code>python gerar_dados.py</code></p>
+                </div>
+
+                <div class="code-block"><span class="cm"># gerar_dados.py — Gerador de dados para Dashboard de RH</span>
+<span class="kw">import</span> pandas <span class="kw">as</span> pd
+<span class="kw">import</span> numpy <span class="kw">as</span> np
+<span class="kw">from</span> faker <span class="kw">import</span> Faker
+<span class="kw">from</span> datetime <span class="kw">import</span> datetime, timedelta
+<span class="kw">import</span> os, random
+
+fake = Faker(<span class="str">'pt_BR'</span>)
+random.seed(<span class="str">99</span>); np.random.seed(<span class="str">99</span>)
+os.makedirs(<span class="str">'dados'</span>, exist_ok=True)
+
+<span class="cm"># === DEPARTAMENTOS ===</span>
+deptos = [
+    {<span class="str">'depto_id'</span>: 1, <span class="str">'nome'</span>: <span class="str">'Engenharia'</span>, <span class="str">'centro_custo'</span>: <span class="str">'CC-100'</span>},
+    {<span class="str">'depto_id'</span>: 2, <span class="str">'nome'</span>: <span class="str">'Produto'</span>, <span class="str">'centro_custo'</span>: <span class="str">'CC-200'</span>},
+    {<span class="str">'depto_id'</span>: 3, <span class="str">'nome'</span>: <span class="str">'Comercial'</span>, <span class="str">'centro_custo'</span>: <span class="str">'CC-300'</span>},
+    {<span class="str">'depto_id'</span>: 4, <span class="str">'nome'</span>: <span class="str">'Marketing'</span>, <span class="str">'centro_custo'</span>: <span class="str">'CC-400'</span>},
+    {<span class="str">'depto_id'</span>: 5, <span class="str">'nome'</span>: <span class="str">'Financeiro'</span>, <span class="str">'centro_custo'</span>: <span class="str">'CC-500'</span>},
+    {<span class="str">'depto_id'</span>: 6, <span class="str">'nome'</span>: <span class="str">'RH'</span>, <span class="str">'centro_custo'</span>: <span class="str">'CC-600'</span>},
+    {<span class="str">'depto_id'</span>: 7, <span class="str">'nome'</span>: <span class="str">'Operações'</span>, <span class="str">'centro_custo'</span>: <span class="str">'CC-700'</span>},
+    {<span class="str">'depto_id'</span>: 8, <span class="str">'nome'</span>: <span class="str">'Suporte'</span>, <span class="str">'centro_custo'</span>: <span class="str">'CC-800'</span>},
+]
+pd.DataFrame(deptos).to_csv(<span class="str">'dados/departamentos.csv'</span>, index=False)
+
+<span class="cm"># === FUNCIONÁRIOS (300) ===</span>
+cargos_por_depto = {
+    <span class="str">'Engenharia'</span>: [(<span class="str">'Dev Júnior'</span>,4500,7000), (<span class="str">'Dev Pleno'</span>,8000,14000), (<span class="str">'Dev Sênior'</span>,14000,22000),
+                   (<span class="str">'Tech Lead'</span>,18000,28000), (<span class="str">'QA'</span>,4000,9000)],
+    <span class="str">'Produto'</span>: [(<span class="str">'PM Júnior'</span>,5000,8000), (<span class="str">'PM Pleno'</span>,9000,15000), (<span class="str">'Designer UX'</span>,5000,12000)],
+    <span class="str">'Comercial'</span>: [(<span class="str">'SDR'</span>,2500,4500), (<span class="str">'AE'</span>,5000,12000), (<span class="str">'Closer'</span>,7000,15000), (<span class="str">'CS'</span>,3500,7000)],
+    <span class="str">'Marketing'</span>: [(<span class="str">'Analista MKT'</span>,3500,7000), (<span class="str">'Growth'</span>,6000,12000), (<span class="str">'Social Media'</span>,2500,5000)],
+    <span class="str">'Financeiro'</span>: [(<span class="str">'Analista FIN'</span>,4000,8000), (<span class="str">'Controller'</span>,10000,18000), (<span class="str">'Contábil'</span>,3500,6500)],
+    <span class="str">'RH'</span>: [(<span class="str">'BP'</span>,5000,10000), (<span class="str">'Recrutador'</span>,3500,7000), (<span class="str">'Analista RH'</span>,3000,6000)],
+    <span class="str">'Operações'</span>: [(<span class="str">'Analista Ops'</span>,3500,7000), (<span class="str">'SysAdmin'</span>,5000,10000), (<span class="str">'DBA'</span>,7000,14000)],
+    <span class="str">'Suporte'</span>: [(<span class="str">'Suporte N1'</span>,2000,3500), (<span class="str">'Suporte N2'</span>,3000,5500), (<span class="str">'Suporte N3'</span>,5000,9000)],
+}
+niveis = [<span class="str">'Júnior'</span>, <span class="str">'Pleno'</span>, <span class="str">'Sênior'</span>]
+generos = [<span class="str">'M'</span>, <span class="str">'F'</span>, <span class="str">'Outro'</span>]
+funcs = []
+depto_weights = [80, 35, 45, 25, 20, 15, 30, 50]
+<span class="kw">for</span> i <span class="kw">in</span> range(1, 301):
+    d = random.choices(deptos, weights=depto_weights)[0]
+    cargos = cargos_por_depto[d[<span class="str">'nome'</span>]]
+    cargo, sal_min, sal_max = random.choice(cargos)
+    salario = round(random.uniform(sal_min, sal_max), 2)
+    dt_adm = fake.date_between(<span class="str">'-6y'</span>, <span class="str">'-30d'</span>)
+    ativo = random.choices([1, 0], weights=[82, 18])[0]
+    dt_saida = None
+    motivo_saida = None
+    <span class="kw">if</span> not ativo:
+        dt_saida = fake.date_between(dt_adm + timedelta(days=90), <span class="str">'today'</span>).isoformat()
+        motivo_saida = random.choice([<span class="str">'Pedido de demissão'</span>, <span class="str">'Desligamento'</span>,
+                                       <span class="str">'Fim de contrato'</span>, <span class="str">'Mudança de cidade'</span>])
+    funcs.append({
+        <span class="str">'func_id'</span>: i, <span class="str">'nome'</span>: fake.name(),
+        <span class="str">'genero'</span>: random.choices(generos, weights=[48,48,4])[0],
+        <span class="str">'data_nascimento'</span>: fake.date_of_birth(minimum_age=22, maximum_age=55).isoformat(),
+        <span class="str">'depto_id'</span>: d[<span class="str">'depto_id'</span>],
+        <span class="str">'cargo'</span>: cargo,
+        <span class="str">'nivel'</span>: random.choices(niveis, weights=[40,35,25])[0],
+        <span class="str">'salario'</span>: salario,
+        <span class="str">'data_admissao'</span>: dt_adm.isoformat(),
+        <span class="str">'ativo'</span>: ativo,
+        <span class="str">'data_saida'</span>: dt_saida,
+        <span class="str">'motivo_saida'</span>: motivo_saida,
+    })
+df_func = pd.DataFrame(funcs)
+df_func.to_csv(<span class="str">'dados/funcionarios.csv'</span>, index=False)
+
+<span class="cm"># === AVALIAÇÕES DE DESEMPENHO (semestrais) ===</span>
+avaliacoes = []
+aid = 1
+<span class="kw">for</span> f <span class="kw">in</span> funcs:
+    n_aval = random.randint(1, 4)
+    <span class="kw">for</span> _ <span class="kw">in</span> range(n_aval):
+        semestre = random.choice([<span class="str">'2023-S1'</span>,<span class="str">'2023-S2'</span>,<span class="str">'2024-S1'</span>,<span class="str">'2024-S2'</span>,<span class="str">'2025-S1'</span>])
+        avaliacoes.append({
+            <span class="str">'aval_id'</span>: aid, <span class="str">'func_id'</span>: f[<span class="str">'func_id'</span>],
+            <span class="str">'periodo'</span>: semestre,
+            <span class="str">'nota_tecnica'</span>: round(random.uniform(2.0, 5.0), 1),
+            <span class="str">'nota_comportamental'</span>: round(random.uniform(2.5, 5.0), 1),
+            <span class="str">'nota_entrega'</span>: round(random.uniform(2.0, 5.0), 1),
+        })
+        aid += 1
+df_aval = pd.DataFrame(avaliacoes)
+df_aval.to_csv(<span class="str">'dados/avaliacoes.csv'</span>, index=False)
+
+<span class="cm"># === CONTRATAÇÕES POR MÊS ===</span>
+contratacoes = []
+cid = 1
+<span class="kw">for</span> ano <span class="kw">in</span> [2022, 2023, 2024, 2025]:
+    <span class="kw">for</span> mes <span class="kw">in</span> range(1, 13):
+        if ano == 2025 and mes > 6: break
+        qtd = random.randint(1, 8)
+        contratacoes.append({
+            <span class="str">'id'</span>: cid, <span class="str">'ano'</span>: ano, <span class="str">'mes'</span>: mes,
+            <span class="str">'contratacoes'</span>: qtd,
+            <span class="str">'vagas_abertas'</span>: qtd + random.randint(0, 5),
+            <span class="str">'tempo_medio_dias'</span>: random.randint(15, 60),
+        })
+        cid += 1
+df_contr = pd.DataFrame(contratacoes)
+df_contr.to_csv(<span class="str">'dados/contratacoes.csv'</span>, index=False)
+
+<span class="cm"># === SAÍDAS / TURNOVER POR MÊS ===</span>
+saidas = []
+sid = 1
+<span class="kw">for</span> ano <span class="kw">in</span> [2022, 2023, 2024, 2025]:
+    <span class="kw">for</span> mes <span class="kw">in</span> range(1, 13):
+        if ano == 2025 and mes > 6: break
+        vol = random.choices([<span class="str">'Voluntária'</span>, <span class="str">'Involuntária'</span>], weights=[60, 40])[0]
+        saidas.append({
+            <span class="str">'id'</span>: sid, <span class="str">'ano'</span>: ano, <span class="str">'mes'</span>: mes,
+            <span class="str">'saidas'</span>: random.randint(0, 5),
+            <span class="str">'tipo'</span>: vol,
+        })
+        sid += 1
+df_saidas = pd.DataFrame(saidas)
+df_saidas.to_csv(<span class="str">'dados/saidas.csv'</span>, index=False)
+
+print(<span class="str">f'✅ Gerado: 8 departamentos, {len(df_func)} funcionários, '</span>
+      <span class="str">f'{len(df_aval)} avaliações, {len(df_contr)} registros contratações, '</span>
+      <span class="str">f'{len(df_saidas)} registros saídas'</span>)</div>
+
+                <ul class="checklist">
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Rodei gerar_dados.py para o projeto RH</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Tenho 5 CSVs na pasta dashboard-rh/dados/</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- PROJ 2 — POWER QUERY -->
+    <!-- ================================================================ -->
+    <section id="proj2-pq">
+        <h2>🔄 Projeto 2 — Power Query (ETL) <span class="tag">Transformação</span></h2>
+
+        <div class="step">
+            <div class="step-header" onclick="toggleStep(this)">
+                <div class="step-num">10</div>
+                <h3>Importar e transformar dados de RH</h3>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="step-body">
+                <div class="do-box">
+                    <p>Novo arquivo Power BI → <strong>Obter Dados → Texto/CSV</strong> para os 5 CSVs → <strong>Transformar Dados</strong></p>
+                </div>
+
+                <h3>📋 Tabela: funcionarios → <strong>dFuncionarios</strong></h3>
+                <div class="do-box">
+                    <p><strong>1.</strong> Colunas <code>data_nascimento</code>, <code>data_admissao</code>, <code>data_saida</code> → Alterar Tipo → <strong>Data</strong></p>
+                    <p><strong>2.</strong> Coluna <code>salario</code> → Alterar Tipo → <strong>Número Decimal Fixo</strong></p>
+                    <p><strong>3.</strong> Adicione <strong>Coluna Personalizada</strong> <code>faixa_salarial</code>:</p>
+                </div>
+                <div class="code-block">= if [salario] < 4000 then "Até R$4k"
+else if [salario] < 8000 then "R$4k-8k"
+else if [salario] < 14000 then "R$8k-14k"
+else "Acima de R$14k"</div>
+                <div class="do-box">
+                    <p><strong>4.</strong> Adicione <strong>Coluna Personalizada</strong> <code>tempo_empresa_meses</code>:</p>
+                </div>
+                <div class="code-block">= Duration.TotalDays(DateTime.LocalNow() - [data_admissao]) / 30</div>
+                <div class="do-box">
+                    <p><strong>5.</strong> Altere <code>tempo_empresa_meses</code> para <strong>Número Inteiro</strong></p>
+                </div>
+
+                <h3>📋 Tabela: departamentos → <strong>dDepartamentos</strong></h3>
+                <div class="do-box">
+                    <p>Tipos já estão ok. Só renomeie.</p>
+                </div>
+
+                <h3>📋 Tabela: avaliacoes → <strong>fAvaliacoes</strong></h3>
+                <div class="do-box">
+                    <p><strong>1.</strong> Notas → Alterar Tipo → <strong>Número Decimal</strong></p>
+                    <p><strong>2.</strong> Adicione <strong>Coluna Personalizada</strong> <code>nota_geral</code>:</p>
+                </div>
+                <div class="code-block">= Number.Round(([nota_tecnica] + [nota_comportamental] + [nota_entrega]) / 3, 1)</div>
+
+                <h3>📋 Tabela: contratacoes → <strong>fContratacoes</strong></h3>
+                <div class="do-box">
+                    <p><strong>1.</strong> Crie <strong>Coluna Personalizada</strong> <code>data</code>:</p>
+                </div>
+                <div class="code-block">= #date([ano], [mes], 1)</div>
+                <div class="do-box">
+                    <p><strong>2.</strong> Altere para tipo Data. Remova <code>ano</code> e <code>mes</code>.</p>
+                </div>
+
+                <h3>📋 Tabela: saidas → <strong>fSaidas</strong></h3>
+                <div class="do-box">
+                    <p>Mesmo processo: crie coluna <code>data</code> = <code>#date([ano], [mes], 1)</code>, remova ano/mes.</p>
+                </div>
+
+                <h3>🗓️ Tabela Calendário — <strong>dCalendario</strong></h3>
+                <div class="do-box">
+                    <p>Crie igual ao Projeto 1 (mesmo processo). Intervalo: 01/01/2022 a 31/12/2025 (1461 dias).</p>
+                </div>
+                <div class="code-block">= List.Dates(#date(2022,1,1), 1461, #duration(1,0,0,0))</div>
+
+                <div class="do-box">
+                    <p>Fechar e Aplicar.</p>
+                </div>
+
+                <ul class="checklist">
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>dFuncionarios (tipos, faixa salarial, tempo empresa)</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>dDepartamentos (renomeado)</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>fAvaliacoes (notas, nota_geral)</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>fContratacoes (data criada)</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>fSaidas (data criada)</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>dCalendario criado (2022-2025)</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- PROJ 2 — MODELO -->
+    <!-- ================================================================ -->
+    <section id="proj2-model">
+        <h2>🔗 Projeto 2 — Modelo de Dados <span class="tag">Relacionamentos</span></h2>
+
+        <div class="step">
+            <div class="step-header" onclick="toggleStep(this)">
+                <div class="step-num">11</div>
+                <h3>Configurar relacionamentos de RH</h3>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="step-body">
+                <table class="info-table">
+                    <tr><th>De</th><th>Para</th><th>Cardinalidade</th></tr>
+                    <tr><td>dFuncionarios[depto_id]</td><td>dDepartamentos[depto_id]</td><td>N:1</td></tr>
+                    <tr><td>fAvaliacoes[func_id]</td><td>dFuncionarios[func_id]</td><td>N:1</td></tr>
+                    <tr><td>fContratacoes[data]</td><td>dCalendario[Data]</td><td>N:1</td></tr>
+                    <tr><td>fSaidas[data]</td><td>dCalendario[Data]</td><td>N:1</td></tr>
+                </table>
+
+                <div class="warn-box">
+                    <p><strong>Relação fContratacoes e fSaidas com dCalendario:</strong> ambas se conectam pela coluna <code>data</code>. Se o Power BI ativar apenas uma automaticamente, ative a outra manualmente (pode aparecer como inativa — ative em "editar relacionamento").</p>
+                </div>
+
+                <div class="do-box">
+                    <p>Marque dCalendario como tabela de data (mesmo processo do Projeto 1).</p>
+                </div>
+
+                <ul class="checklist">
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>4 relacionamentos criados</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>dCalendario marcado como tabela de data</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- PROJ 2 — DAX -->
+    <!-- ================================================================ -->
+    <section id="proj2-dax">
+        <h2>🧮 Projeto 2 — Medidas DAX de RH <span class="tag">17 Medidas</span></h2>
+
+        <div class="step">
+            <div class="step-header" onclick="toggleStep(this)">
+                <div class="step-num">12</div>
+                <h3>Criar medidas de People Analytics</h3>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="step-body">
+
+                <h3 style="color: var(--green); margin-top: 1rem;">🟢 Headcount & Estrutura</h3>
+
+                <div class="dax-box">
+                    <h5>Medida 1 — Headcount Ativo</h5>
+                    <div class="dax-code">Headcount = <span class="fn">COUNTROWS</span>(
+    <span class="fn">FILTER</span>( dFuncionarios, dFuncionarios[ativo] = 1 )
+)</div>
+                </div>
+
+                <div class="dax-box">
+                    <h5>Medida 2 — Total de Funcionários (todos)</h5>
+                    <div class="dax-code">Total Funcionários = <span class="fn">COUNTROWS</span>( dFuncionarios )</div>
+                </div>
+
+                <div class="dax-box">
+                    <h5>Medida 3 — Salário Médio</h5>
+                    <div class="dax-code">Salário Médio = <span class="fn">AVERAGE</span>( dFuncionarios[salario] )</div>
+                </div>
+
+                <div class="dax-box">
+                    <h5>Medida 4 — Folha de Pagamento (mensal)</h5>
+                    <div class="dax-code">Folha Mensal = <span class="fn">SUMX</span>(
+    <span class="fn">FILTER</span>( dFuncionarios, dFuncionarios[ativo] = 1 ),
+    dFuncionarios[salario]
+)</div>
+                </div>
+
+                <div class="dax-box">
+                    <h5>Medida 5 — Tempo Médio na Empresa (meses)</h5>
+                    <div class="dax-code">Tempo Médio Empresa = <span class="fn">AVERAGE</span>( dFuncionarios[tempo_empresa_meses] )</div>
+                </div>
+
+                <h3 style="color: var(--yellow); margin-top: 1.5rem;">🟡 Turnover</h3>
+
+                <div class="dax-box">
+                    <h5>Medida 6 — Total Saídas</h5>
+                    <div class="dax-code">Total Saídas = <span class="fn">SUM</span>( fSaidas[saidas] )</div>
+                </div>
+
+                <div class="dax-box">
+                    <h5>Medida 7 — Total Contratações</h5>
+                    <div class="dax-code">Total Contratações = <span class="fn">SUM</span>( fContratacoes[contratacoes] )</div>
+                </div>
+
+                <div class="dax-box">
+                    <h5>Medida 8 — Taxa de Turnover %</h5>
+                    <div class="dax-code">Turnover % = <span class="fn">DIVIDE</span>(
+    [Total Saídas],
+    [Headcount],
+    0
+)</div>
+                </div>
+
+                <div class="dax-box">
+                    <h5>Medida 9 — Saldo Líquido (contratações - saídas)</h5>
+                    <div class="dax-code">Saldo Líquido = [Total Contratações] - [Total Saídas]</div>
+                </div>
+
+                <div class="dax-box">
+                    <h5>Medida 10 — Vagas Abertas</h5>
+                    <div class="dax-code">Vagas Abertas = <span class="fn">SUM</span>( fContratacoes[vagas_abertas] )</div>
+                </div>
+
+                <div class="dax-box">
+                    <h5>Medida 11 — Taxa de Conversão de Vagas</h5>
+                    <div class="dax-code">Conversão Vagas % = <span class="fn">DIVIDE</span>( [Total Contratações], [Vagas Abertas], 0 )</div>
+                </div>
+
+                <div class="dax-box">
+                    <h5>Medida 12 — Tempo Médio para Contratar (dias)</h5>
+                    <div class="dax-code">Tempo Médio Contratação = <span class="fn">AVERAGE</span>( fContratacoes[tempo_medio_dias] )</div>
+                </div>
+
+                <h3 style="color: var(--red); margin-top: 1.5rem;">🔴 Desempenho & Diversidade</h3>
+
+                <div class="dax-box">
+                    <h5>Medida 13 — Nota Média Geral</h5>
+                    <div class="dax-code">Nota Média = <span class="fn">AVERAGE</span>( fAvaliacoes[nota_geral] )</div>
+                </div>
+
+                <div class="dax-box">
+                    <h5>Medida 14 — % Alto Desempenho (nota ≥ 4.0)</h5>
+                    <div class="dax-code">% Alto Desempenho = <span class="fn">DIVIDE</span>(
+    <span class="fn">COUNTROWS</span>( <span class="fn">FILTER</span>( fAvaliacoes, fAvaliacoes[nota_geral] >= 4 ) ),
+    <span class="fn">COUNTROWS</span>( fAvaliacoes ),
+    0
+)</div>
+                </div>
+
+                <div class="dax-box">
+                    <h5>Medida 15 — % Feminino</h5>
+                    <div class="dax-code">% Feminino = <span class="fn">DIVIDE</span>(
+    <span class="fn">COUNTROWS</span>( <span class="fn">FILTER</span>( dFuncionarios, dFuncionarios[genero] = "F" ) ),
+    [Total Funcionários],
+    0
+)</div>
+                </div>
+
+                <div class="dax-box">
+                    <h5>Medida 16 — Gap Salarial de Gênero</h5>
+                    <div class="dax-code">Salário Médio M = <span class="fn">CALCULATE</span>(
+    <span class="fn">AVERAGE</span>( dFuncionarios[salario] ),
+    dFuncionarios[genero] = "M"
+)
+
+Salário Médio F = <span class="fn">CALCULATE</span>(
+    <span class="fn">AVERAGE</span>( dFuncionarios[salario] ),
+    dFuncionarios[genero] = "F"
+)
+
+Gap Salarial % = <span class="fn">DIVIDE</span>(
+    [Salário Médio M] - [Salário Médio F],
+    [Salário Médio M],
+    0
+)</div>
+                </div>
+
+                <div class="dax-box">
+                    <h5>Medida 17 — Índice de Retenção %</h5>
+                    <div class="dax-code">Retenção % = 1 - [Turnover %]</div>
+                </div>
+
+                <div class="roni-comment">
+                    <p><strong>17 medidas de People Analytics!</strong> Gap salarial, turnover e retenção são métricas que CEOs cobram do RH ativamente. Ter essas medidas no portfólio mostra que você entende negócio, não só ferramenta.</p>
+                </div>
+
+                <ul class="checklist">
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Medidas 1-5 (headcount e estrutura)</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Medidas 6-12 (turnover e recrutamento)</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Medidas 13-17 (desempenho e diversidade)</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Formatei todas (moeda, %, inteiro)</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- PROJ 2 — VISUAIS -->
+    <!-- ================================================================ -->
+    <section id="proj2-viz">
+        <h2>👥 Projeto 2 — Montar o Dashboard de RH <span class="tag">3 Páginas</span></h2>
+
+        <!-- PAGE 1 -->
+        <div class="step">
+            <div class="step-header" onclick="toggleStep(this)">
+                <div class="step-num">13</div>
+                <h3>Página 1 — Headcount & Estrutura</h3>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="step-body">
+                <div class="do-box">
+                    <p>Renomeie a aba para <strong>"Headcount"</strong>. Fundo: <code>#F5F5F5</code>. Tamanho: 1280×720.</p>
+                </div>
+
+                <div class="dash-preview">
+                    <h4>Layout — Headcount</h4>
+                    <div class="dash-layout" style="grid-template-columns: repeat(4, 1fr); grid-template-rows: auto auto auto;">
+                        <div class="dash-widget"><div class="w-name">Headcount</div><div class="w-value" style="color: var(--purple);">246</div></div>
+                        <div class="dash-widget"><div class="w-name">Folha Mensal</div><div class="w-value" style="color: var(--purple);">R$ 2.1M</div></div>
+                        <div class="dash-widget"><div class="w-name">Salário Médio</div><div class="w-value" style="color: var(--purple);">R$ 8.6k</div></div>
+                        <div class="dash-widget"><div class="w-name">Tempo Médio</div><div class="w-value" style="color: var(--purple);">24 meses</div></div>
+                        <div class="dash-widget" style="grid-column: span 2;"><div class="w-icon">📊</div><div class="w-name">Barras — Headcount por Departamento</div></div>
+                        <div class="dash-widget" style="grid-column: span 2;"><div class="w-icon">📊</div><div class="w-name">Barras Empilhadas — Funcionários por Nível × Depto</div></div>
+                        <div class="dash-widget" style="grid-column: span 2;"><div class="w-icon">🍩</div><div class="w-name">Rosca — Distribuição por Gênero</div></div>
+                        <div class="dash-widget" style="grid-column: span 2;"><div class="w-icon">📊</div><div class="w-name">Barras — Funcionários por Faixa Salarial</div></div>
+                    </div>
+                </div>
+
+                <div class="do-box">
+                    <p><strong>4 KPI Cards (topo):</strong> Headcount, Folha Mensal, Salário Médio, Tempo Médio Empresa</p>
+                    <p><strong>Barras por Depto:</strong> Eixo: dDepartamentos[nome]. Valores: [Headcount]. Cor: roxo (#a78bfa).</p>
+                    <p><strong>Barras Empilhadas Nível × Depto:</strong> Eixo X: dDepartamentos[nome]. Valores: contagem. Legenda: dFuncionarios[nivel]. Filtre ativo=1.</p>
+                    <p><strong>Rosca Gênero:</strong> Legenda: dFuncionarios[genero]. Valores: contagem. Mostra % no rótulo.</p>
+                    <p><strong>Barras Faixa Salarial:</strong> Eixo: dFuncionarios[faixa_salarial]. Valores: contagem. Filtre ativo=1.</p>
+                </div>
+
+                <ul class="checklist">
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>4 cartões KPI criados</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Barras por departamento</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Barras empilhadas nível × depto</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Rosca gênero</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Barras faixa salarial</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- PAGE 2 -->
+        <div class="step">
+            <div class="step-header" onclick="toggleStep(this)">
+                <div class="step-num">14</div>
+                <h3>Página 2 — Turnover & Recrutamento</h3>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="step-body">
+                <div class="dash-preview">
+                    <h4>Layout — Turnover</h4>
+                    <div class="dash-layout" style="grid-template-columns: repeat(4, 1fr); grid-template-rows: auto auto auto;">
+                        <div class="dash-widget"><div class="w-name">Turnover %</div><div class="w-value" style="color: var(--red);">18%</div></div>
+                        <div class="dash-widget"><div class="w-name">Retenção %</div><div class="w-value" style="color: var(--green);">82%</div></div>
+                        <div class="dash-widget"><div class="w-name">Contratações</div><div class="w-value" style="color: var(--accent2);">142</div></div>
+                        <div class="dash-widget"><div class="w-name">Tempo Contratação</div><div class="w-value" style="color: var(--orange);">32 dias</div></div>
+                        <div class="dash-widget" style="grid-column: span 4;"><div class="w-icon">📈</div><div class="w-name">Linhas — Contratações vs Saídas por Mês (2 linhas, mesmo gráfico)</div></div>
+                        <div class="dash-widget" style="grid-column: span 2;"><div class="w-icon">📊</div><div class="w-name">Barras — Saídas por Motivo</div></div>
+                        <div class="dash-widget" style="grid-column: span 2;"><div class="w-icon">📊</div><div class="w-name">Barras — Saldo Líquido por Mês (positivo=verde, negativo=vermelho)</div></div>
+                    </div>
+                </div>
+
+                <div class="do-box">
+                    <p><strong>4 KPI Cards:</strong> Turnover %, Retenção %, Total Contratações, Tempo Médio Contratação</p>
+                    <p><strong>Linhas Contratações vs Saídas:</strong> Eixo X: dCalendario[Ano-Mês]. Valores: [Total Contratações] (verde) + [Total Saídas] (vermelho). Precisa de USERELATIONSHIP se relação está inativa.</p>
+                    <p><strong>Barras por Motivo:</strong> Usaremos fSaidas[tipo]. Valores: [Total Saídas].</p>
+                    <p><strong>Barras Saldo Líquido:</strong> Use formato condicional: positivo=verde, negativo=vermelho.</p>
+                </div>
+
+                <div class="tip-box">
+                    <p><strong>Formato condicional em barras:</strong> Formato → Cores dos dados → Regras → Se valor ≥ 0 → verde (#34d399). Se valor &lt; 0 → vermelho (#f87171). Isso é Power BI avançado e impressiona muito.</p>
+                </div>
+
+                <ul class="checklist">
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>4 KPIs de turnover</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Gráfico de linhas contratações vs saídas</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Barras por motivo de saída</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Barras saldo líquido com cor condicional</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- PAGE 3 -->
+        <div class="step">
+            <div class="step-header" onclick="toggleStep(this)">
+                <div class="step-num">15</div>
+                <h3>Página 3 — Desempenho & Diversidade</h3>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="step-body">
+                <div class="dash-preview">
+                    <h4>Layout — Desempenho</h4>
+                    <div class="dash-layout" style="grid-template-columns: repeat(3, 1fr); grid-template-rows: auto auto auto;">
+                        <div class="dash-widget"><div class="w-name">Nota Média</div><div class="w-value" style="color: var(--yellow);">3.8</div></div>
+                        <div class="dash-widget"><div class="w-name">% Alto Desempenho</div><div class="w-value" style="color: var(--green);">42%</div></div>
+                        <div class="dash-widget"><div class="w-name">Gap Salarial</div><div class="w-value" style="color: var(--red);">8.2%</div></div>
+                        <div class="dash-widget" style="grid-column: span 2;"><div class="w-icon">📊</div><div class="w-name">Barras — Nota Média por Departamento</div></div>
+                        <div class="dash-widget"><div class="w-icon">📊</div><div class="w-name">Barras — Salário Médio por Gênero</div></div>
+                        <div class="dash-widget" style="grid-column: span 2;"><div class="w-icon">📋</div><div class="w-name">Tabela — Top/Bottom funcionários por nota (nome, depto, nota, nível)</div></div>
+                        <div class="dash-widget"><div class="w-icon">🍩</div><div class="w-name">Rosca — % Feminino vs Masculino (por depto, clicável)</div></div>
+                    </div>
+                </div>
+
+                <div class="do-box">
+                    <p><strong>3 KPIs:</strong> Nota Média, % Alto Desempenho, Gap Salarial %</p>
+                    <p><strong>Barras Nota por Depto:</strong> Eixo: dDepartamentos[nome]. Valores: [Nota Média]. Formato condicional: verde ≥ 4, amarelo ≥ 3, vermelho &lt; 3.</p>
+                    <p><strong>Barras Salário por Gênero:</strong> Eixo: dFuncionarios[genero]. Valores: [Salário Médio]. Mostra o gap visualmente.</p>
+                    <p><strong>Tabela de funcionários:</strong> dFuncionarios[nome], dDepartamentos[nome], [Nota Média], dFuncionarios[nivel]. Ordene por nota desc. Formato condicional na nota.</p>
+                    <p><strong>Rosca Gênero (por depto):</strong> Igual à página 1, mas aqui é drill-through — o gestor clica num departamento no gráfico de barras e a rosca se filtra.</p>
+                </div>
+
+                <div class="roni-comment">
+                    <p><strong>Gap salarial de gênero</strong> é um dos indicadores mais acompanhados em People Analytics. Mostrá-lo no seu dashboard demonstra maturidade analítica e sensibilidade ESG — temas que diretores de RH amam discutir.</p>
+                </div>
+
+                <ul class="checklist">
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>3 KPIs de desempenho</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Nota média por departamento</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Salário médio por gênero</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Tabela de funcionários</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Rosca gênero interativa</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card" style="border-color: var(--purple); margin-top: 1rem;">
+            <h3 style="color: var(--purple);">✅ Projeto 2 — Finalização</h3>
+            <ul class="checklist">
+                <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Revisei design (fontes, cores, alinhamento)</span></li>
+                <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Adicionei títulos em cada página</span></li>
+                <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Testei interação entre visuais</span></li>
+                <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Salvei como dashboard-rh.pbix</span></li>
+                <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Tirei screenshots das 3 páginas</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- PUBLICAR NO GITHUB -->
+    <!-- ================================================================ -->
+    <section id="github">
+        <h2>🚀 Publicar no GitHub <span class="tag">Portfólio</span></h2>
+
+        <div class="step">
+            <div class="step-header" onclick="toggleStep(this)">
+                <div class="step-num">16</div>
+                <h3>README e publicação</h3>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="step-body">
+
+                <h3>📄 Template de README (Projeto 1 — Vendas)</h3>
+                <div class="code-block" style="white-space: pre-wrap;">
+# 📊 Dashboard Comercial — Análise de Vendas
+
+## 🎯 Objetivo
+Dashboard interativo em Power BI para análise de vendas de e-commerce,
+com foco em KPIs comerciais, performance de vendedores e análise de clientes.
+
+## 🛠️ Stack
+- **Power BI Desktop** (modelagem, DAX, visualização)
+- **Python** (geração de dados com Faker)
+- **Power Query** (ETL e transformação)
+
+## 📋 Modelo de Dados
+Esquema estrela: 2 fatos (fVendas, fMetas) + 4 dimensões (dClientes,
+dProdutos, dVendedores, dCalendario). 6 relacionamentos configurados.
+
+## 📊 Dashboards (3 páginas)
+
+| Página | Descrição |
+|--------|-----------|
+| Visão Geral | KPIs financeiros, trend mensal, Top 10 produtos, mix de categorias |
+| Vendedores | Meta vs Realizado, ranking, evolução por vendedor |
+| Clientes | Segmentação, Top 20, formas de pagamento |
+
+## 🖼️ Screenshots
+![Visão Geral](screenshots/visao-geral.png)
+![Vendedores](screenshots/vendedores.png)
+![Clientes](screenshots/clientes.png)
+
+## 💡 Principais Medidas DAX
+```dax
+Faturamento = SUM(fVendas[valor_total])
+Var MoM % = DIVIDE([Faturamento]-[Fat Mês Anterior],[Fat Mês Anterior],0)
+% Meta = DIVIDE([Faturamento], [Meta], 0)
+Rank Produto = RANKX(ALL(dProdutos[nome]), [Faturamento],, DESC, DENSE)
+```
+
+## 📂 Estrutura
+```
+├── dados/         → CSVs gerados por Python
+├── screenshots/   → Prints do dashboard
+├── gerar_dados.py → Script de geração de dados
+├── dashboard.pbix → Arquivo Power BI
+└── README.md
+```
+
+## 🚀 Como usar
+1. Clone o repositório
+2. Execute `python gerar_dados.py` para gerar os dados
+3. Abra `dashboard.pbix` no Power BI Desktop
+4. Atualize as fontes de dados se necessário</div>
+
+                <div class="do-box">
+                    <p><strong>Para publicar:</strong></p>
+                    <p>1. Crie repositório no GitHub: <code>dashboard-vendas</code></p>
+                    <p>2. <code>git init</code> → <code>git add -A</code> → <code>git commit -m "Dashboard Comercial completo"</code></p>
+                    <p>3. <code>git push</code></p>
+                    <p>4. Repita para <code>dashboard-rh</code></p>
+                </div>
+
+                <div class="warn-box">
+                    <p><strong>NÃO esqueça o .gitignore:</strong> adicione <code>*.pbix.bak</code> e qualquer arquivo temporário do Power BI.</p>
+                </div>
+
+                <div class="tip-box">
+                    <p><strong>Dica final:</strong> Fixe (pin) estes 2 repositórios no seu perfil do GitHub. Recrutadores olham os repos fixados primeiro. É a sua vitrine.</p>
+                </div>
+
+                <ul class="checklist">
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>README do dashboard-vendas criado</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>README do dashboard-rh criado</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Pushei dashboard-vendas para o GitHub</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Pushei dashboard-rh para o GitHub</span></li>
+                    <li onclick="toggleCheck(this)"><div class="check-box"></div><span>Fixei os 2 repos no perfil</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<!-- SCORE BAR -->
+<div class="score-bar">
+    <span class="score-label">Progresso:</span>
+    <span class="score-val" id="scoreVal">0 / 16</span>
+    <div class="progress-track"><div class="progress-fill" id="progressFill" style="width: 0%"></div></div>
+</div>
+
+<button class="scroll-top" id="scrollTop" title="Voltar ao topo">↑</button>
+
+<script>
+// ============================================================
+// INTERACTIVITY
+// ============================================================
+const TOTAL_STEPS = 16;
+const completedSteps = new Set();
+
+// Toggle step accordion
+function toggleStep(header) {
+    header.classList.toggle('open');
+    const body = header.nextElementSibling;
+    body.classList.toggle('open');
+}
+
+// Toggle checklist item
+function toggleCheck(li) {
+    li.classList.toggle('checked');
+    updateProgress();
+}
+
+// Update progress bar
+function updateProgress() {
+    const allChecks = document.querySelectorAll('.checklist li');
+    const checked = document.querySelectorAll('.checklist li.checked');
+    const total = allChecks.length;
+    const done = checked.length;
+    const pct = Math.round((done / total) * 100);
+
+    document.getElementById('scoreVal').textContent = done + ' / ' + total;
+    document.getElementById('progressFill').style.width = pct + '%';
+
+    // Save to localStorage
+    const state = [];
+    allChecks.forEach((li, i) => { if (li.classList.contains('checked')) state.push(i); });
+    localStorage.setItem('bi-pratico-checks', JSON.stringify(state));
+}
+
+// Restore from localStorage
+function restoreChecks() {
+    const saved = localStorage.getItem('bi-pratico-checks');
+    if (!saved) return;
+    const state = JSON.parse(saved);
+    const allChecks = document.querySelectorAll('.checklist li');
+    state.forEach(i => { if (allChecks[i]) allChecks[i].classList.add('checked'); });
+    updateProgress();
+}
+
+// Scroll to top
+window.addEventListener('scroll', () => {
+    const btn = document.getElementById('scrollTop');
+    btn.classList.toggle('visible', window.scrollY > 400);
+});
+document.getElementById('scrollTop').addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Active nav link
+window.addEventListener('scroll', () => {
+    const links = document.querySelectorAll('.topnav-links a');
+    const sections = document.querySelectorAll('section[id]');
+    let current = '';
+    sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 100) current = s.id;
+    });
+    links.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+});
+
+// Init
+restoreChecks();
+</script>
+</body>
+</html>
