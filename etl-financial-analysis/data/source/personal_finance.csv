@@ -1,0 +1,2401 @@
+date,category,type,amount,description,payment_method
+2022-08-09,Assinaturas,despesa,236.74,Assinaturas — transação automática,Cartão de Crédito
+2022-05-08,Lazer,despesa,520.49,Lazer — transação automática,Cartão de Crédito
+2022-02-15,Freelance,receita,4816.26,Freelance — transação automática,Transferência
+2024-10-03,Assinaturas,despesa,373.73,Assinaturas — transação automática,Boleto
+2023-06-18,Educação,despesa,5.0,Educação — transação automática,Pix
+2023-03-20,Educação,despesa,241.06,Educação — transação automática,Transferência
+2024-06-10,Transporte,despesa,763.39,Transporte — transação automática,Cartão de Crédito
+2023-07-11,Vestuário,despesa,659.61,Vestuário — transação automática,Pix
+2022-10-22,Bônus,receita,6340.76,Bônus — transação automática,Transferência
+2024-05-09,Vestuário,despesa,311.92,Vestuário — transação automática,Cartão de Crédito
+2023-09-30,Freelance,receita,5223.54,Freelance — transação automática,Cartão de Crédito
+2022-05-21,Alimentação,despesa,547.99,Alimentação — transação automática,Pix
+2022-06-23,Vestuário,despesa,337.36,Vestuário — transação automática,Cartão de Crédito
+2022-07-10,Educação,despesa,5.0,Educação — transação automática,Cartão de Crédito
+2023-02-19,Bônus,receita,3625.49,Bônus — transação automática,Cartão de Crédito
+2022-01-24,Salário,receita,7086.79,Salário — transação automática,Pix
+2024-03-01,Moradia,despesa,461.88,Moradia — transação automática,Boleto
+2023-09-18,Transporte,despesa,298.64,Transporte — transação automática,Débito
+2022-06-09,Impostos,despesa,166.72,Impostos — transação automática,Boleto
+2024-07-16,Lazer,despesa,5.0,Lazer — transação automática,Débito
+2022-07-04,Rendimentos,receita,4730.79,Rendimentos — transação automática,Débito
+2022-09-30,Manutenção,despesa,195.28,Manutenção — transação automática,Boleto
+2022-02-07,Impostos,despesa,393.06,Impostos — transação automática,Pix
+2023-04-20,Salário,receita,1785.28,Salário — transação automática,Débito
+2024-08-20,Moradia,despesa,101.08,Moradia — transação automática,Boleto
+2022-12-21,Vestuário,despesa,30709.89,Vestuário — transação automática [ANOMALIA INJETADA],Débito
+2022-06-09,Bônus,receita,4524.44,Bônus — transação automática,Pix
+2022-12-07,Salário,receita,5947.25,Salário — transação automática,Boleto
+2024-01-02,Rendimentos,receita,6090.11,Rendimentos — transação automática,Débito
+2023-07-17,Lazer,despesa,91.7,Lazer — transação automática,Débito
+2024-09-28,Impostos,despesa,402.13,Impostos — transação automática,Transferência
+2022-08-05,Transporte,despesa,209.45,Transporte — transação automática,Transferência
+2022-05-31,Transporte,despesa,414.41,Transporte — transação automática,Débito
+2022-12-28,Assinaturas,despesa,237.94,Assinaturas — transação automática,Boleto
+2022-03-19,Educação,despesa,479.64,Educação — transação automática,Boleto
+2024-07-15,Lazer,despesa,615.23,Lazer — transação automática,Transferência
+2024-01-23,Lazer,despesa,536.51,Lazer — transação automática,Pix
+2024-09-16,Alimentação,despesa,597.95,Alimentação — transação automática,Pix
+2024-03-21,Freelance,receita,2687.72,Freelance — transação automática,Pix
+2022-11-25,Freelance,receita,1336.69,Freelance — transação automática,Transferência
+2023-06-07,Salário,receita,4159.79,Salário — transação automática,Boleto
+2024-05-09,Lazer,despesa,547.97,Lazer — transação automática,Pix
+2024-04-06,Impostos,despesa,5.0,Impostos — transação automática,Transferência
+2022-02-04,Alimentação,despesa,5.0,Alimentação — transação automática,Débito
+2023-06-28,Rendimentos,receita,7211.89,Rendimentos — transação automática,Débito
+2024-07-02,Educação,despesa,419.99,Educação — transação automática,Débito
+2022-11-22,Saúde,despesa,397.48,Saúde — transação automática,Pix
+2022-09-05,Saúde,despesa,430.24,Saúde — transação automática,Transferência
+2023-09-01,Alimentação,despesa,5.0,Alimentação — transação automática,Transferência
+2022-10-21,Transporte,despesa,47.39,Transporte — transação automática,Transferência
+2023-11-14,Manutenção,despesa,218.15,Manutenção — transação automática,Transferência
+2024-02-20,Assinaturas,despesa,62.66,Assinaturas — transação automática,Cartão de Crédito
+2024-09-28,Bônus,receita,5213.2,Bônus — transação automática,Transferência
+2024-01-29,Saúde,despesa,236.57,Saúde — transação automática,Boleto
+2024-03-31,Saúde,despesa,5.0,Saúde — transação automática,Transferência
+2024-09-30,Assinaturas,despesa,94.27,Assinaturas — transação automática,Débito
+2024-06-27,Alimentação,despesa,156.04,Alimentação — transação automática,Débito
+2023-03-11,Alimentação,despesa,61.09,Alimentação — transação automática,Transferência
+2022-02-25,Lazer,despesa,522.24,Lazer — transação automática,Boleto
+2023-02-01,Moradia,despesa,374.68,Moradia — transação automática,Transferência
+2024-02-28,Saúde,despesa,309.37,Saúde — transação automática,Cartão de Crédito
+2024-04-24,Educação,despesa,95.81,Educação — transação automática,Pix
+2024-03-11,Saúde,despesa,436.04,Saúde — transação automática,Boleto
+2023-02-11,Alimentação,despesa,464.77,Alimentação — transação automática,Pix
+2024-03-12,Impostos,despesa,482.59,Impostos — transação automática,Débito
+2023-10-04,Alimentação,despesa,65.67,Alimentação — transação automática,Boleto
+2023-01-21,Vestuário,despesa,41.06,Vestuário — transação automática,Pix
+2022-05-08,Vestuário,despesa,260.93,Vestuário — transação automática,Transferência
+2022-06-20,Impostos,despesa,5.0,Impostos — transação automática,Débito
+2024-12-11,Alimentação,despesa,104.09,Alimentação — transação automática,Transferência
+2023-05-27,Moradia,despesa,567.67,Moradia — transação automática,Débito
+2023-01-20,Alimentação,despesa,356.4,Alimentação — transação automática,Transferência
+2022-10-05,Bônus,receita,4715.83,Bônus — transação automática,Pix
+2024-04-30,Bônus,receita,6618.96,Bônus — transação automática,Boleto
+2022-09-24,Manutenção,despesa,412.29,Manutenção — transação automática,Transferência
+2023-07-12,Assinaturas,despesa,81.03,Assinaturas — transação automática,Débito
+2022-05-05,Educação,despesa,639.45,Educação — transação automática,Débito
+2023-07-20,Assinaturas,despesa,214.59,Assinaturas — transação automática,Débito
+2023-11-11,Manutenção,despesa,5.0,Manutenção — transação automática,Transferência
+2024-11-17,Bônus,receita,3549.14,Bônus — transação automática,Boleto
+2023-10-03,Lazer,despesa,406.29,Lazer — transação automática,Cartão de Crédito
+2024-11-15,Impostos,despesa,389.05,Impostos — transação automática,Débito
+2023-07-08,Salário,receita,3758.63,Salário — transação automática,Débito
+2024-12-29,Assinaturas,despesa,190.77,Assinaturas — transação automática,Pix
+2023-09-11,Rendimentos,receita,7127.05,Rendimentos — transação automática,Pix
+2024-01-19,Assinaturas,despesa,358.06,Assinaturas — transação automática,Transferência
+2022-11-22,Assinaturas,despesa,530.17,Assinaturas — transação automática,Pix
+2022-06-28,Bônus,receita,5600.24,Bônus — transação automática,Transferência
+2024-08-12,Saúde,despesa,473.58,Saúde — transação automática,Transferência
+2024-04-01,Moradia,despesa,5.0,Moradia — transação automática,Débito
+2022-12-16,Transporte,despesa,247.88,Transporte — transação automática,Pix
+2024-07-03,Freelance,receita,1009.1,Freelance — transação automática,Cartão de Crédito
+2022-10-21,Assinaturas,despesa,239.98,Assinaturas — transação automática,Pix
+2024-02-20,Transporte,despesa,956.12,Transporte — transação automática,Cartão de Crédito
+2022-09-11,Transporte,despesa,155.12,Transporte — transação automática,Cartão de Crédito
+2022-08-08,Assinaturas,despesa,471.86,Assinaturas — transação automática,Pix
+2023-06-16,Assinaturas,despesa,5.0,Assinaturas — transação automática,Boleto
+2024-05-04,Transporte,despesa,448.6,Transporte — transação automática,Pix
+2024-01-14,Lazer,despesa,5.0,Lazer — transação automática,Débito
+2022-04-24,Freelance,receita,1010.79,Freelance — transação automática,Pix
+2022-11-26,Educação,despesa,414.08,Educação — transação automática,Cartão de Crédito
+2022-09-11,Saúde,despesa,377.06,Saúde — transação automática,Débito
+2022-12-14,Lazer,despesa,350.4,Lazer — transação automática,Cartão de Crédito
+2024-01-15,Lazer,despesa,498.17,Lazer — transação automática,Boleto
+2022-06-28,Salário,receita,3974.89,Salário — transação automática,Cartão de Crédito
+2024-02-05,Bônus,receita,3095.29,Bônus — transação automática,Pix
+2022-09-05,Manutenção,despesa,138.86,Manutenção — transação automática,Cartão de Crédito
+2023-04-22,Transporte,despesa,427.22,Transporte — transação automática,Débito
+2022-07-30,Educação,despesa,727.5,Educação — transação automática,Boleto
+2022-09-26,Transporte,despesa,5.0,Transporte — transação automática,Débito
+2022-02-09,Freelance,receita,7874.54,Freelance — transação automática,Cartão de Crédito
+2023-10-17,Moradia,despesa,242.51,Moradia — transação automática,Transferência
+2024-08-07,Manutenção,despesa,373.13,Manutenção — transação automática,Boleto
+2022-06-29,Alimentação,despesa,461.23,Alimentação — transação automática,Débito
+2022-12-09,Impostos,despesa,443.69,Impostos — transação automática,Transferência
+2022-12-25,Assinaturas,despesa,277.25,Assinaturas — transação automática,Débito
+2023-05-06,Moradia,despesa,243.78,Moradia — transação automática,Débito
+2024-08-07,Assinaturas,despesa,292.6,Assinaturas — transação automática,Débito
+2023-06-11,Salário,receita,6989.51,Salário — transação automática,Transferência
+2022-04-30,Vestuário,despesa,433.51,Vestuário — transação automática,Transferência
+2024-05-09,Assinaturas,despesa,272.82,Assinaturas — transação automática,Boleto
+2023-04-05,Bônus,receita,4560.39,Bônus — transação automática,Transferência
+2022-02-21,Manutenção,despesa,213.31,Manutenção — transação automática,Cartão de Crédito
+2024-09-16,Vestuário,despesa,706.1,Vestuário — transação automática,Boleto
+2022-10-20,Manutenção,despesa,666.49,Manutenção — transação automática,Pix
+2023-10-04,Manutenção,despesa,253.88,Manutenção — transação automática,Débito
+2023-03-12,Impostos,despesa,314.7,Impostos — transação automática,Transferência
+2022-10-10,Educação,despesa,281.84,Educação — transação automática,Boleto
+2023-10-23,Lazer,despesa,206.06,Lazer — transação automática,Pix
+2023-04-17,Lazer,despesa,129.85,Lazer — transação automática,Cartão de Crédito
+2024-09-02,Educação,despesa,36.94,Educação — transação automática,Boleto
+2022-01-17,Impostos,despesa,5.0,Impostos — transação automática,Boleto
+2024-07-05,Manutenção,despesa,740.22,Manutenção — transação automática,Cartão de Crédito
+2022-11-28,Saúde,despesa,12.62,Saúde — transação automática,Débito
+2023-11-29,Bônus,receita,4911.72,Bônus — transação automática,Débito
+2023-01-12,Moradia,despesa,517.02,Moradia — transação automática,Débito
+2023-05-28,Rendimentos,receita,5314.86,Rendimentos — transação automática,Transferência
+2023-03-30,Vestuário,despesa,136.58,Vestuário — transação automática,Débito
+2024-01-09,Lazer,despesa,335.2,Lazer — transação automática,Transferência
+2024-02-04,Alimentação,despesa,690.42,Alimentação — transação automática,Transferência
+2023-07-24,Impostos,despesa,239.81,Impostos — transação automática,Cartão de Crédito
+2022-05-20,Lazer,despesa,886.88,Lazer — transação automática,Débito
+2023-09-13,Transporte,despesa,373.49,Transporte — transação automática,Transferência
+2022-09-05,Vestuário,despesa,454.77,Vestuário — transação automática,Débito
+2022-02-25,Transporte,despesa,421.1,Transporte — transação automática,Cartão de Crédito
+2024-02-09,Salário,receita,6068.37,Salário — transação automática,Cartão de Crédito
+2022-01-22,Vestuário,despesa,494.12,Vestuário — transação automática,Transferência
+2023-09-30,Vestuário,despesa,133.12,Vestuário — transação automática,Pix
+2023-09-09,Impostos,despesa,381.11,Impostos — transação automática,Transferência
+2024-04-24,Freelance,receita,3597.26,Freelance — transação automática,Pix
+2024-11-11,Moradia,despesa,347.71,Moradia — transação automática,Transferência
+2022-06-26,Moradia,despesa,515.42,Moradia — transação automática,Transferência
+2024-03-20,Saúde,despesa,5.0,Saúde — transação automática,Transferência
+2024-10-26,Moradia,despesa,533.37,Moradia — transação automática,Cartão de Crédito
+2024-04-10,Alimentação,despesa,576.05,Alimentação — transação automática,Boleto
+2023-04-05,Impostos,despesa,120.95,Impostos — transação automática,Débito
+2023-07-01,Moradia,despesa,644.72,Moradia — transação automática,Débito
+2023-07-10,Lazer,despesa,19.56,Lazer — transação automática,Transferência
+2023-05-01,Lazer,despesa,5.0,Lazer — transação automática,Débito
+2022-05-25,Lazer,despesa,71.08,Lazer — transação automática,Transferência
+2023-12-28,Bônus,receita,3743.44,Bônus — transação automática,Transferência
+2024-09-02,Impostos,despesa,415.89,Impostos — transação automática,Débito
+2022-06-22,Educação,despesa,690.95,Educação — transação automática,Pix
+2022-09-15,Bônus,receita,200.0,Bônus — transação automática,Transferência
+2022-12-23,Impostos,despesa,150.42,Impostos — transação automática,Débito
+2024-02-23,Freelance,receita,7039.85,Freelance — transação automática,Débito
+2022-10-19,Assinaturas,despesa,855.37,Assinaturas — transação automática,Débito
+2022-03-30,Impostos,despesa,402.55,Impostos — transação automática,Débito
+2023-12-14,Bônus,receita,1643.55,Bônus — transação automática,Cartão de Crédito
+2022-04-05,Alimentação,despesa,284.79,Alimentação — transação automática,Cartão de Crédito
+2022-08-19,Vestuário,despesa,123.87,Vestuário — transação automática,Débito
+2023-05-10,Transporte,despesa,551.04,Transporte — transação automática,Débito
+2022-01-04,Manutenção,despesa,5.0,Manutenção — transação automática,Boleto
+2023-04-24,Manutenção,despesa,589.74,Manutenção — transação automática,Transferência
+2022-07-15,Alimentação,despesa,418.21,Alimentação — transação automática,Transferência
+2022-10-03,Vestuário,despesa,54.6,Vestuário — transação automática,Débito
+2022-05-28,Alimentação,despesa,349.22,Alimentação — transação automática,Boleto
+2024-10-04,Moradia,despesa,323.64,Moradia — transação automática,Cartão de Crédito
+2024-11-04,Impostos,despesa,547.8,Impostos — transação automática,Débito
+2024-08-28,Freelance,receita,6768.04,Freelance — transação automática,Cartão de Crédito
+2024-10-22,Assinaturas,despesa,24792.43,Assinaturas — transação automática [ANOMALIA INJETADA],Pix
+2022-03-22,Bônus,receita,4416.55,Bônus — transação automática,Boleto
+2023-01-17,Rendimentos,receita,5090.69,Rendimentos — transação automática,Cartão de Crédito
+2022-11-30,Educação,despesa,319.98,Educação — transação automática,Pix
+2023-11-12,Rendimentos,receita,7141.68,Rendimentos — transação automática,Pix
+2023-12-13,Saúde,despesa,440.99,Saúde — transação automática,Débito
+2023-05-06,Assinaturas,despesa,438.96,Assinaturas — transação automática,Débito
+2023-02-16,Freelance,receita,5507.75,Freelance — transação automática,Cartão de Crédito
+2024-04-24,Rendimentos,receita,800.03,Rendimentos — transação automática,Boleto
+2022-02-22,Freelance,receita,5492.79,Freelance — transação automática,Débito
+2022-03-09,Impostos,despesa,276.38,Impostos — transação automática,Transferência
+2023-10-16,Lazer,despesa,392.01,Lazer — transação automática,Transferência
+2022-02-17,Rendimentos,receita,4095.3,Rendimentos — transação automática,Cartão de Crédito
+2023-09-11,Freelance,receita,4843.2,Freelance — transação automática,Débito
+2023-06-19,Assinaturas,despesa,457.97,Assinaturas — transação automática,Transferência
+2024-12-03,Saúde,despesa,334.54,Saúde — transação automática,Débito
+2023-11-17,Salário,receita,2837.21,Salário — transação automática,Débito
+2022-06-01,Lazer,despesa,698.1,Lazer — transação automática,Pix
+2023-08-29,Assinaturas,despesa,447.07,Assinaturas — transação automática,Pix
+2024-01-08,Salário,receita,4962.47,Salário — transação automática,Cartão de Crédito
+2022-04-04,Lazer,despesa,287.38,Lazer — transação automática,Pix
+2022-11-12,Assinaturas,despesa,437.62,Assinaturas — transação automática,Boleto
+2022-05-27,Rendimentos,receita,5668.89,Rendimentos — transação automática,Cartão de Crédito
+2023-04-29,Saúde,despesa,641.0,Saúde — transação automática,Cartão de Crédito
+2024-09-14,Bônus,receita,3738.79,Bônus — transação automática,Cartão de Crédito
+2023-05-27,Rendimentos,receita,5673.7,Rendimentos — transação automática,Pix
+2024-10-15,Salário,receita,200.0,Salário — transação automática,Pix
+2022-12-17,Bônus,receita,4301.11,Bônus — transação automática,Débito
+2023-03-29,Freelance,receita,2535.45,Freelance — transação automática,Transferência
+2024-05-30,Bônus,receita,2976.23,Bônus — transação automática,Cartão de Crédito
+2023-02-25,Alimentação,despesa,286.31,Alimentação — transação automática,Pix
+2023-04-07,Moradia,despesa,634.23,Moradia — transação automática,Boleto
+2022-08-12,Alimentação,despesa,485.06,Alimentação — transação automática,Transferência
+2023-11-15,Bônus,receita,7968.68,Bônus — transação automática,Transferência
+2022-11-19,Alimentação,despesa,55.42,Alimentação — transação automática,Pix
+2023-05-27,Bônus,receita,5118.36,Bônus — transação automática,Transferência
+2022-10-30,Assinaturas,despesa,724.9,Assinaturas — transação automática,Cartão de Crédito
+2024-02-01,Lazer,despesa,507.44,Lazer — transação automática,Pix
+2024-10-28,Salário,receita,4036.22,Salário — transação automática,Cartão de Crédito
+2022-12-05,Bônus,receita,4429.14,Bônus — transação automática,Débito
+2023-10-05,Manutenção,despesa,277.52,Manutenção — transação automática,Cartão de Crédito
+2023-01-22,Transporte,despesa,580.43,Transporte — transação automática,Pix
+2023-12-12,Educação,despesa,618.96,Educação — transação automática,Cartão de Crédito
+2023-09-06,Assinaturas,despesa,456.01,Assinaturas — transação automática,Pix
+2022-09-11,Bônus,receita,3994.0,Bônus — transação automática,Boleto
+2023-02-23,Saúde,despesa,649.21,Saúde — transação automática,Boleto
+2023-02-17,Lazer,despesa,385.6,Lazer — transação automática,Cartão de Crédito
+2024-08-28,Freelance,receita,4774.02,Freelance — transação automática,Pix
+2024-12-02,Assinaturas,despesa,593.56,Assinaturas — transação automática,Cartão de Crédito
+2023-06-16,Lazer,despesa,406.22,Lazer — transação automática,Pix
+2024-01-14,Transporte,despesa,170.79,Transporte — transação automática,Boleto
+2023-08-02,Saúde,despesa,254.73,Saúde — transação automática,Pix
+2023-01-09,Salário,receita,2767.69,Salário — transação automática,Boleto
+2022-02-27,Moradia,despesa,416.18,Moradia — transação automática,Débito
+2023-08-03,Vestuário,despesa,362.1,Vestuário — transação automática,Pix
+2023-06-26,Vestuário,despesa,68.15,Vestuário — transação automática,Débito
+2022-08-22,Salário,receita,4195.0,Salário — transação automática,Débito
+2024-05-05,Moradia,despesa,412.24,Moradia — transação automática,Boleto
+2024-05-18,Freelance,receita,2063.32,Freelance — transação automática,Boleto
+2024-03-14,Rendimentos,receita,5914.97,Rendimentos — transação automática,Pix
+2023-08-28,Transporte,despesa,475.9,Transporte — transação automática,Cartão de Crédito
+2024-12-23,Saúde,despesa,292.68,Saúde — transação automática,Débito
+2024-06-11,Vestuário,despesa,224.65,Vestuário — transação automática,Transferência
+2023-06-13,Impostos,despesa,260.73,Impostos — transação automática,Boleto
+2024-01-19,Lazer,despesa,549.14,Lazer — transação automática,Débito
+2023-08-19,Impostos,despesa,643.23,Impostos — transação automática,Transferência
+2023-10-08,Lazer,despesa,278.47,Lazer — transação automática,Débito
+2024-12-01,Educação,despesa,23.83,Educação — transação automática,Cartão de Crédito
+2023-04-28,Manutenção,despesa,180.82,Manutenção — transação automática,Transferência
+2023-03-29,Assinaturas,despesa,329.73,Assinaturas — transação automática,Boleto
+2024-12-12,Moradia,despesa,563.76,Moradia — transação automática,Boleto
+2023-07-22,Moradia,despesa,309.92,Moradia — transação automática,Cartão de Crédito
+2022-11-12,Rendimentos,receita,4055.84,Rendimentos — transação automática,Transferência
+2023-02-15,Moradia,despesa,375.03,Moradia — transação automática,Débito
+2023-07-25,Educação,despesa,685.48,Educação — transação automática,Boleto
+2024-12-01,Educação,despesa,603.88,Educação — transação automática,Cartão de Crédito
+2023-01-29,Salário,receita,1868.45,Salário — transação automática,Transferência
+2024-11-20,Lazer,despesa,329.6,Lazer — transação automática,Cartão de Crédito
+2023-04-03,Moradia,despesa,5.0,Moradia — transação automática,Boleto
+2023-01-16,Salário,receita,8327.79,Salário — transação automática,Cartão de Crédito
+2022-07-30,Impostos,despesa,248.15,Impostos — transação automática,Boleto
+2022-10-29,Bônus,receita,6918.1,Bônus — transação automática,Cartão de Crédito
+2024-09-03,Impostos,despesa,699.54,Impostos — transação automática,Pix
+2023-09-13,Transporte,despesa,25.23,Transporte — transação automática,Débito
+2024-01-02,Saúde,despesa,150.92,Saúde — transação automática,Débito
+2022-12-16,Bônus,receita,5803.58,Bônus — transação automática,Boleto
+2022-03-23,Rendimentos,receita,1954.5,Rendimentos — transação automática,Transferência
+2023-10-23,Transporte,despesa,300.53,Transporte — transação automática,Boleto
+2023-07-14,Vestuário,despesa,115.95,Vestuário — transação automática,Boleto
+2024-08-23,Moradia,despesa,293.16,Moradia — transação automática,Cartão de Crédito
+2022-03-26,Alimentação,despesa,881.4,Alimentação — transação automática,Transferência
+2022-08-12,Educação,despesa,456.28,Educação — transação automática,Transferência
+2022-12-10,Lazer,despesa,46.54,Lazer — transação automática,Boleto
+2023-01-17,Saúde,despesa,197.94,Saúde — transação automática,Boleto
+2024-03-06,Moradia,despesa,500.02,Moradia — transação automática,Débito
+2024-04-06,Salário,receita,4037.41,Salário — transação automática,Cartão de Crédito
+2023-12-10,Bônus,receita,4580.14,Bônus — transação automática,Transferência
+2024-01-30,Salário,receita,4758.74,Salário — transação automática,Boleto
+2023-04-10,Moradia,despesa,778.88,Moradia — transação automática,Débito
+2024-09-22,Impostos,despesa,498.16,Impostos — transação automática,Débito
+2022-03-10,Alimentação,despesa,443.15,Alimentação — transação automática,Cartão de Crédito
+2022-02-03,Assinaturas,despesa,681.01,Assinaturas — transação automática,Transferência
+2024-06-01,Transporte,despesa,565.01,Transporte — transação automática,Pix
+2023-11-07,Assinaturas,despesa,125.87,Assinaturas — transação automática,Boleto
+2023-05-24,Transporte,despesa,298.02,Transporte — transação automática,Boleto
+2023-03-17,Alimentação,despesa,249.92,Alimentação — transação automática,Pix
+2024-05-18,Saúde,despesa,353.6,Saúde — transação automática,Débito
+2023-11-04,Transporte,despesa,711.94,Transporte — transação automática,Débito
+2023-05-03,Bônus,receita,4447.82,Bônus — transação automática,Boleto
+2022-06-23,Bônus,receita,6878.4,Bônus — transação automática,Boleto
+2023-08-22,Freelance,receita,3437.91,Freelance — transação automática,Boleto
+2024-07-23,Bônus,receita,5311.47,Bônus — transação automática,Cartão de Crédito
+2022-02-14,Lazer,despesa,99.82,Lazer — transação automática,Débito
+2024-11-01,Assinaturas,despesa,246.63,Assinaturas — transação automática,Boleto
+2022-12-08,Transporte,despesa,822.8,Transporte — transação automática,Transferência
+2022-02-12,Educação,despesa,237.32,Educação — transação automática,Transferência
+2023-03-02,Vestuário,despesa,338.1,Vestuário — transação automática,Cartão de Crédito
+2022-01-28,Moradia,despesa,511.02,Moradia — transação automática,Débito
+2022-03-06,Freelance,receita,4951.25,Freelance — transação automática,Boleto
+2022-10-12,Bônus,receita,6756.34,Bônus — transação automática,Débito
+2022-09-19,Alimentação,despesa,135.19,Alimentação — transação automática,Pix
+2023-07-11,Impostos,despesa,443.18,Impostos — transação automática,Pix
+2023-04-15,Lazer,despesa,184.64,Lazer — transação automática,Débito
+2023-12-06,Assinaturas,despesa,678.08,Assinaturas — transação automática,Transferência
+2024-05-08,Manutenção,despesa,316.12,Manutenção — transação automática,Transferência
+2022-09-09,Rendimentos,receita,3852.32,Rendimentos — transação automática,Débito
+2024-11-10,Alimentação,despesa,283.76,Alimentação — transação automática,Débito
+2022-03-28,Vestuário,despesa,651.25,Vestuário — transação automática,Transferência
+2024-06-24,Moradia,despesa,632.72,Moradia — transação automática,Pix
+2024-08-27,Saúde,despesa,227.67,Saúde — transação automática,Débito
+2023-12-02,Impostos,despesa,5.0,Impostos — transação automática,Débito
+2022-12-11,Transporte,despesa,40.11,Transporte — transação automática,Cartão de Crédito
+2023-01-06,Manutenção,despesa,528.3,Manutenção — transação automática,Cartão de Crédito
+2022-12-11,Impostos,despesa,977.84,Impostos — transação automática,Boleto
+2024-06-27,Transporte,despesa,621.68,Transporte — transação automática,Débito
+2024-06-20,Manutenção,despesa,144.98,Manutenção — transação automática,Cartão de Crédito
+2022-02-02,Alimentação,despesa,265.0,Alimentação — transação automática,Pix
+2024-03-23,Lazer,despesa,448.79,Lazer — transação automática,Pix
+2022-05-30,Salário,receita,8441.91,Salário — transação automática,Boleto
+2022-07-03,Bônus,receita,5374.06,Bônus — transação automática,Cartão de Crédito
+2023-06-22,Manutenção,despesa,139.14,Manutenção — transação automática,Cartão de Crédito
+2022-01-19,Educação,despesa,5.0,Educação — transação automática,Transferência
+2023-09-16,Salário,receita,3809.57,Salário — transação automática,Cartão de Crédito
+2023-07-13,Impostos,despesa,185.2,Impostos — transação automática,Cartão de Crédito
+2023-12-28,Bônus,receita,345.75,Bônus — transação automática,Pix
+2024-01-21,Manutenção,despesa,491.32,Manutenção — transação automática,Boleto
+2023-08-09,Lazer,despesa,203.9,Lazer — transação automática,Boleto
+2024-12-25,Alimentação,despesa,747.92,Alimentação — transação automática,Transferência
+2022-03-03,Freelance,receita,5133.9,Freelance — transação automática,Transferência
+2022-03-27,Salário,receita,2951.3,Salário — transação automática,Débito
+2022-02-13,Rendimentos,receita,4537.73,Rendimentos — transação automática,Transferência
+2022-11-09,Moradia,despesa,351.43,Moradia — transação automática,Débito
+2023-01-29,Rendimentos,receita,2252.28,Rendimentos — transação automática,Boleto
+2022-03-28,Rendimentos,receita,7014.17,Rendimentos — transação automática,Cartão de Crédito
+2024-10-20,Freelance,receita,3174.47,Freelance — transação automática,Débito
+2023-08-11,Rendimentos,receita,2602.06,Rendimentos — transação automática,Cartão de Crédito
+2023-02-27,Saúde,despesa,274.05,Saúde — transação automática,Boleto
+2022-12-08,Moradia,despesa,258.22,Moradia — transação automática,Débito
+2023-07-25,Impostos,despesa,507.25,Impostos — transação automática,Cartão de Crédito
+2023-07-24,Assinaturas,despesa,413.7,Assinaturas — transação automática,Débito
+2022-11-26,Salário,receita,5284.94,Salário — transação automática,Cartão de Crédito
+2023-03-22,Rendimentos,receita,2926.32,Rendimentos — transação automática,Cartão de Crédito
+2023-11-21,Manutenção,despesa,515.24,Manutenção — transação automática,Cartão de Crédito
+2023-12-20,Vestuário,despesa,5.0,Vestuário — transação automática,Boleto
+2022-07-20,Saúde,despesa,712.43,Saúde — transação automática,Boleto
+2022-03-07,Moradia,despesa,313.05,Moradia — transação automática,Boleto
+2024-01-17,Assinaturas,despesa,26.15,Assinaturas — transação automática,Cartão de Crédito
+2024-11-21,Assinaturas,despesa,272.36,Assinaturas — transação automática,Cartão de Crédito
+2022-06-14,Educação,despesa,716.72,Educação — transação automática,Cartão de Crédito
+2022-10-27,Saúde,despesa,333.2,Saúde — transação automática,Cartão de Crédito
+2023-11-14,Alimentação,despesa,561.33,Alimentação — transação automática,Cartão de Crédito
+2023-09-16,Manutenção,despesa,475.8,Manutenção — transação automática,Pix
+2024-04-16,Salário,receita,5946.96,Salário — transação automática,Boleto
+2024-08-08,Freelance,receita,6975.62,Freelance — transação automática,Débito
+2023-01-14,Freelance,receita,3477.43,Freelance — transação automática,Boleto
+2022-05-19,Transporte,despesa,335.48,Transporte — transação automática,Boleto
+2024-12-07,Manutenção,despesa,654.12,Manutenção — transação automática,Cartão de Crédito
+2024-05-19,Impostos,despesa,480.93,Impostos — transação automática,Pix
+2022-10-04,Moradia,despesa,186.63,Moradia — transação automática,Transferência
+2022-10-31,Transporte,despesa,72.81,Transporte — transação automática,Cartão de Crédito
+2022-09-05,Salário,receita,3810.0,Salário — transação automática,Boleto
+2023-03-26,Moradia,despesa,241.05,Moradia — transação automática,Pix
+2023-05-29,Salário,receita,3951.04,Salário — transação automática,Transferência
+2024-03-10,Transporte,despesa,391.13,Transporte — transação automática,Cartão de Crédito
+2022-08-05,Saúde,despesa,5.0,Saúde — transação automática,Débito
+2024-11-13,Manutenção,despesa,562.14,Manutenção — transação automática,Cartão de Crédito
+2022-07-04,Transporte,despesa,330.9,Transporte — transação automática,Débito
+2024-07-01,Transporte,despesa,674.36,Transporte — transação automática,Débito
+2023-06-28,Bônus,receita,2710.93,Bônus — transação automática,Boleto
+2023-05-12,Saúde,despesa,202.73,Saúde — transação automática,Débito
+2024-09-09,Lazer,despesa,438.67,Lazer — transação automática,Cartão de Crédito
+2022-05-21,Moradia,despesa,313.24,Moradia — transação automática,Débito
+2023-02-21,Rendimentos,receita,2641.29,Rendimentos — transação automática,Débito
+2023-06-26,Rendimentos,receita,3469.38,Rendimentos — transação automática,Boleto
+2023-09-29,Impostos,despesa,200.62,Impostos — transação automática,Pix
+2024-02-13,Freelance,receita,9093.75,Freelance — transação automática,Transferência
+2022-05-08,Moradia,despesa,694.39,Moradia — transação automática,Cartão de Crédito
+2022-03-30,Salário,receita,6993.08,Salário — transação automática,Transferência
+2022-03-30,Rendimentos,receita,5933.36,Rendimentos — transação automática,Transferência
+2024-07-20,Freelance,receita,5037.06,Freelance — transação automática,Transferência
+2024-03-22,Educação,despesa,666.29,Educação — transação automática,Débito
+2023-05-31,Transporte,despesa,285.38,Transporte — transação automática,Cartão de Crédito
+2024-07-10,Moradia,despesa,451.15,Moradia — transação automática,Débito
+2023-11-18,Moradia,despesa,566.22,Moradia — transação automática,Pix
+2024-06-29,Salário,receita,21742.31,Salário — transação automática [ANOMALIA INJETADA],Débito
+2023-03-01,Transporte,despesa,23.93,Transporte — transação automática,Transferência
+2024-11-29,Freelance,receita,3356.32,Freelance — transação automática,Transferência
+2024-07-14,Bônus,receita,6932.03,Bônus — transação automática,Cartão de Crédito
+2024-12-01,Manutenção,despesa,668.89,Manutenção — transação automática,Transferência
+2023-10-28,Assinaturas,despesa,211.1,Assinaturas — transação automática,Transferência
+2023-03-08,Lazer,despesa,482.89,Lazer — transação automática,Débito
+2024-01-04,Rendimentos,receita,200.0,Rendimentos — transação automática,Transferência
+2023-10-20,Rendimentos,receita,4236.96,Rendimentos — transação automática,Boleto
+2022-04-04,Alimentação,despesa,455.89,Alimentação — transação automática,Boleto
+2023-07-31,Vestuário,despesa,342.86,Vestuário — transação automática,Pix
+2024-05-23,Vestuário,despesa,456.47,Vestuário — transação automática,Boleto
+2024-01-17,Moradia,despesa,597.96,Moradia — transação automática,Transferência
+2023-08-03,Saúde,despesa,5.0,Saúde — transação automática,Débito
+2023-02-12,Freelance,receita,3398.6,Freelance — transação automática,Transferência
+2023-06-22,Bônus,receita,8609.22,Bônus — transação automática,Boleto
+2022-02-20,Saúde,despesa,593.02,Saúde — transação automática,Boleto
+2022-07-04,Impostos,despesa,304.55,Impostos — transação automática,Transferência
+2024-09-27,Vestuário,despesa,707.25,Vestuário — transação automática,Transferência
+2023-07-18,Manutenção,despesa,290.16,Manutenção — transação automática,Transferência
+2023-06-07,Vestuário,despesa,655.99,Vestuário — transação automática,Cartão de Crédito
+2024-11-05,Impostos,despesa,523.12,Impostos — transação automática,Pix
+2024-12-06,Bônus,receita,6139.01,Bônus — transação automática,Cartão de Crédito
+2024-05-16,Bônus,receita,3149.8,Bônus — transação automática,Débito
+2024-04-03,Manutenção,despesa,345.09,Manutenção — transação automática,Transferência
+2022-12-06,Educação,despesa,331.2,Educação — transação automática,Débito
+2024-10-13,Vestuário,despesa,454.71,Vestuário — transação automática,Boleto
+2023-07-07,Moradia,despesa,5.0,Moradia — transação automática,Transferência
+2023-06-04,Impostos,despesa,414.32,Impostos — transação automática,Boleto
+2022-06-25,Bônus,receita,1474.93,Bônus — transação automática,Boleto
+2023-10-13,Manutenção,despesa,95.42,Manutenção — transação automática,Boleto
+2022-01-30,Lazer,despesa,153.18,Lazer — transação automática,Pix
+2024-12-06,Transporte,despesa,482.11,Transporte — transação automática,Boleto
+2022-07-23,Rendimentos,receita,4003.18,Rendimentos — transação automática,Cartão de Crédito
+2023-10-28,Manutenção,despesa,292.02,Manutenção — transação automática,Transferência
+2022-01-16,Saúde,despesa,143.21,Saúde — transação automática,Boleto
+2024-05-16,Rendimentos,receita,3624.16,Rendimentos — transação automática,Cartão de Crédito
+2022-01-22,Freelance,receita,2327.76,Freelance — transação automática,Transferência
+2024-07-14,Assinaturas,despesa,212.34,Assinaturas — transação automática,Cartão de Crédito
+2024-02-18,Freelance,receita,4768.84,Freelance — transação automática,Pix
+2022-03-01,Salário,receita,963.64,Salário — transação automática,Cartão de Crédito
+2022-01-01,Moradia,despesa,193.48,Moradia — transação automática,Pix
+2022-02-20,Lazer,despesa,219.68,Lazer — transação automática,Débito
+2023-11-11,Assinaturas,despesa,210.8,Assinaturas — transação automática,Pix
+2023-01-22,Saúde,despesa,107.5,Saúde — transação automática,Transferência
+2023-12-07,Impostos,despesa,933.44,Impostos — transação automática,Pix
+2023-06-02,Vestuário,despesa,613.86,Vestuário — transação automática,Pix
+2022-12-30,Vestuário,despesa,151.76,Vestuário — transação automática,Cartão de Crédito
+2022-04-23,Transporte,despesa,293.32,Transporte — transação automática,Débito
+2023-11-04,Impostos,despesa,190.96,Impostos — transação automática,Boleto
+2022-04-26,Bônus,receita,4752.86,Bônus — transação automática,Transferência
+2022-07-26,Freelance,receita,5982.21,Freelance — transação automática,Pix
+2022-10-21,Transporte,despesa,214.01,Transporte — transação automática,Cartão de Crédito
+2024-06-17,Freelance,receita,5779.4,Freelance — transação automática,Débito
+2022-07-30,Impostos,despesa,471.59,Impostos — transação automática,Cartão de Crédito
+2022-11-07,Assinaturas,despesa,290.84,Assinaturas — transação automática,Boleto
+2022-07-13,Rendimentos,receita,5285.76,Rendimentos — transação automática,Transferência
+2024-10-13,Bônus,receita,6545.82,Bônus — transação automática,Cartão de Crédito
+2023-09-29,Alimentação,despesa,469.67,Alimentação — transação automática,Cartão de Crédito
+2022-12-06,Freelance,receita,4149.84,Freelance — transação automática,Transferência
+2022-04-29,Bônus,receita,6294.51,Bônus — transação automática,Pix
+2024-09-26,Rendimentos,receita,1615.66,Rendimentos — transação automática,Cartão de Crédito
+2024-02-24,Bônus,receita,7363.3,Bônus — transação automática,Boleto
+2023-02-23,Lazer,despesa,677.81,Lazer — transação automática,Pix
+2024-03-02,Moradia,despesa,56.78,Moradia — transação automática,Transferência
+2024-06-25,Transporte,despesa,246.77,Transporte — transação automática,Pix
+2023-04-16,Bônus,receita,3177.87,Bônus — transação automática,Cartão de Crédito
+2024-09-19,Moradia,despesa,363.49,Moradia — transação automática,Débito
+2022-12-03,Saúde,despesa,250.69,Saúde — transação automática,Boleto
+2023-09-10,Manutenção,despesa,502.44,Manutenção — transação automática,Transferência
+2024-11-15,Alimentação,despesa,618.73,Alimentação — transação automática,Transferência
+2022-10-08,Bônus,receita,3986.92,Bônus — transação automática,Débito
+2024-04-17,Manutenção,despesa,771.9,Manutenção — transação automática,Pix
+2023-05-25,Educação,despesa,62.51,Educação — transação automática,Pix
+2022-10-15,Bônus,receita,1862.41,Bônus — transação automática,Pix
+2024-02-07,Freelance,receita,3492.38,Freelance — transação automática,Boleto
+2023-08-27,Rendimentos,receita,5174.47,Rendimentos — transação automática,Cartão de Crédito
+2024-08-05,Educação,despesa,230.39,Educação — transação automática,Transferência
+2022-02-15,Assinaturas,despesa,733.68,Assinaturas — transação automática,Transferência
+2024-06-06,Assinaturas,despesa,186.3,Assinaturas — transação automática,Débito
+2023-08-08,Manutenção,despesa,482.92,Manutenção — transação automática,Pix
+2023-06-16,Transporte,despesa,447.9,Transporte — transação automática,Boleto
+2023-01-15,Manutenção,despesa,618.97,Manutenção — transação automática,Cartão de Crédito
+2022-02-14,Saúde,despesa,571.42,Saúde — transação automática,Cartão de Crédito
+2024-07-21,Moradia,despesa,340.86,Moradia — transação automática,Cartão de Crédito
+2023-09-24,Transporte,despesa,629.28,Transporte — transação automática,Cartão de Crédito
+2024-11-05,Freelance,receita,2062.17,Freelance — transação automática,Débito
+2023-03-15,Salário,receita,2029.99,Salário — transação automática,Cartão de Crédito
+2022-12-07,Vestuário,despesa,239.46,Vestuário — transação automática,Cartão de Crédito
+2022-04-09,Assinaturas,despesa,40.26,Assinaturas — transação automática,Boleto
+2022-02-03,Lazer,despesa,276.79,Lazer — transação automática,Cartão de Crédito
+2024-12-30,Saúde,despesa,717.57,Saúde — transação automática,Transferência
+2022-12-26,Rendimentos,receita,3638.94,Rendimentos — transação automática,Transferência
+2024-11-05,Alimentação,despesa,306.87,Alimentação — transação automática,Transferência
+2022-08-18,Freelance,receita,3579.49,Freelance — transação automática,Débito
+2024-04-13,Impostos,despesa,537.5,Impostos — transação automática,Pix
+2022-05-22,Lazer,despesa,610.14,Lazer — transação automática,Boleto
+2022-11-04,Manutenção,despesa,261.96,Manutenção — transação automática,Cartão de Crédito
+2022-01-26,Salário,receita,6942.98,Salário — transação automática,Boleto
+2023-02-11,Assinaturas,despesa,42.46,Assinaturas — transação automática,Cartão de Crédito
+2022-10-16,Transporte,despesa,667.43,Transporte — transação automática,Cartão de Crédito
+2022-01-22,Transporte,despesa,463.04,Transporte — transação automática,Pix
+2022-12-22,Lazer,despesa,400.95,Lazer — transação automática,Boleto
+2023-01-05,Transporte,despesa,357.09,Transporte — transação automática,Pix
+2024-03-26,Lazer,despesa,362.5,Lazer — transação automática,Boleto
+2024-04-19,Rendimentos,receita,3153.03,Rendimentos — transação automática,Pix
+2024-11-04,Manutenção,despesa,5.0,Manutenção — transação automática,Transferência
+2023-12-02,Educação,despesa,426.07,Educação — transação automática,Cartão de Crédito
+2022-01-24,Educação,despesa,716.9,Educação — transação automática,Débito
+2023-10-16,Lazer,despesa,480.77,Lazer — transação automática,Débito
+2023-12-01,Bônus,receita,3567.52,Bônus — transação automática,Boleto
+2023-07-17,Transporte,despesa,25.72,Transporte — transação automática,Transferência
+2023-03-24,Transporte,despesa,546.39,Transporte — transação automática,Boleto
+2022-05-20,Vestuário,despesa,148.38,Vestuário — transação automática,Cartão de Crédito
+2023-06-12,Vestuário,despesa,351.6,Vestuário — transação automática,Boleto
+2022-01-28,Alimentação,despesa,639.15,Alimentação — transação automática,Débito
+2022-08-15,Vestuário,despesa,366.19,Vestuário — transação automática,Cartão de Crédito
+2024-01-09,Educação,despesa,310.43,Educação — transação automática,Débito
+2022-07-02,Lazer,despesa,116.18,Lazer — transação automática,Débito
+2022-05-24,Assinaturas,despesa,200.03,Assinaturas — transação automática,Transferência
+2023-03-12,Vestuário,despesa,1115.55,Vestuário — transação automática,Pix
+2024-12-14,Bônus,receita,4155.2,Bônus — transação automática,Débito
+2022-09-23,Vestuário,despesa,149.48,Vestuário — transação automática,Pix
+2024-10-08,Moradia,despesa,516.61,Moradia — transação automática,Cartão de Crédito
+2023-03-13,Rendimentos,receita,2381.63,Rendimentos — transação automática,Boleto
+2023-10-25,Bônus,receita,4676.63,Bônus — transação automática,Transferência
+2023-06-14,Transporte,despesa,229.58,Transporte — transação automática,Débito
+2022-03-17,Vestuário,despesa,189.66,Vestuário — transação automática,Transferência
+2024-04-30,Alimentação,despesa,93.68,Alimentação — transação automática,Transferência
+2023-06-19,Rendimentos,receita,4169.92,Rendimentos — transação automática,Boleto
+2022-09-04,Assinaturas,despesa,300.04,Assinaturas — transação automática,Transferência
+2023-11-05,Salário,receita,6612.95,Salário — transação automática,Boleto
+2022-08-19,Alimentação,despesa,552.53,Alimentação — transação automática,Débito
+2022-10-31,Alimentação,despesa,216.0,Alimentação — transação automática,Débito
+2023-09-11,Saúde,despesa,93.18,Saúde — transação automática,Pix
+2024-06-06,Vestuário,despesa,397.95,Vestuário — transação automática,Pix
+2023-06-03,Alimentação,despesa,807.86,Alimentação — transação automática,Boleto
+2022-08-04,Manutenção,despesa,503.3,Manutenção — transação automática,Boleto
+2024-07-27,Alimentação,despesa,614.88,Alimentação — transação automática,Boleto
+2023-05-25,Manutenção,despesa,152.95,Manutenção — transação automática,Transferência
+2024-07-17,Alimentação,despesa,200.28,Alimentação — transação automática,Cartão de Crédito
+2024-12-12,Vestuário,despesa,486.18,Vestuário — transação automática,Cartão de Crédito
+2024-07-31,Manutenção,despesa,452.7,Manutenção — transação automática,Boleto
+2022-06-26,Alimentação,despesa,208.93,Alimentação — transação automática,Débito
+2023-04-26,Transporte,despesa,775.88,Transporte — transação automática,Cartão de Crédito
+2024-01-19,Saúde,despesa,147.43,Saúde — transação automática,Pix
+2022-03-29,Alimentação,despesa,510.92,Alimentação — transação automática,Boleto
+2022-02-10,Salário,receita,3908.25,Salário — transação automática,Pix
+2024-11-12,Freelance,receita,3704.97,Freelance — transação automática,Boleto
+2023-05-28,Bônus,receita,1545.85,Bônus — transação automática,Débito
+2024-01-23,Bônus,receita,5133.81,Bônus — transação automática,Pix
+2022-05-12,Lazer,despesa,446.54,Lazer — transação automática,Transferência
+2024-08-30,Saúde,despesa,249.73,Saúde — transação automática,Pix
+2023-05-11,Manutenção,despesa,691.56,Manutenção — transação automática,Boleto
+2024-09-19,Bônus,receita,2041.48,Bônus — transação automática,Transferência
+2022-02-06,Manutenção,despesa,899.15,Manutenção — transação automática,Débito
+2023-09-17,Rendimentos,receita,8147.27,Rendimentos — transação automática,Débito
+2022-04-19,Alimentação,despesa,807.32,Alimentação — transação automática,Boleto
+2022-03-15,Saúde,despesa,499.33,Saúde — transação automática,Débito
+2023-10-11,Moradia,despesa,625.77,Moradia — transação automática,Débito
+2022-12-25,Vestuário,despesa,976.54,Vestuário — transação automática,Pix
+2024-10-29,Bônus,receita,4767.43,Bônus — transação automática,Boleto
+2023-08-22,Impostos,despesa,5.0,Impostos — transação automática,Boleto
+2022-08-26,Moradia,despesa,372.6,Moradia — transação automática,Débito
+2024-09-09,Transporte,despesa,678.29,Transporte — transação automática,Transferência
+2023-04-19,Impostos,despesa,313.05,Impostos — transação automática,Pix
+2022-09-28,Assinaturas,despesa,334.12,Assinaturas — transação automática,Boleto
+2023-09-08,Bônus,receita,5037.92,Bônus — transação automática,Débito
+2022-12-12,Bônus,receita,3673.51,Bônus — transação automática,Débito
+2022-07-29,Moradia,despesa,262.59,Moradia — transação automática,Cartão de Crédito
+2023-01-19,Vestuário,despesa,164.63,Vestuário — transação automática,Transferência
+2024-10-02,Rendimentos,receita,2098.32,Rendimentos — transação automática,Cartão de Crédito
+2022-04-29,Salário,receita,3403.08,Salário — transação automática,Transferência
+2022-01-07,Educação,despesa,522.22,Educação — transação automática,Transferência
+2023-12-14,Assinaturas,despesa,390.15,Assinaturas — transação automática,Boleto
+2022-02-04,Alimentação,despesa,750.49,Alimentação — transação automática,Boleto
+2024-02-07,Impostos,despesa,294.83,Impostos — transação automática,Boleto
+2024-12-14,Bônus,receita,4320.42,Bônus — transação automática,Boleto
+2022-03-01,Saúde,despesa,406.04,Saúde — transação automática,Pix
+2022-02-26,Manutenção,despesa,108.27,Manutenção — transação automática,Pix
+2022-06-09,Lazer,despesa,550.43,Lazer — transação automática,Transferência
+2024-05-15,Freelance,receita,4917.06,Freelance — transação automática,Boleto
+2022-01-04,Saúde,despesa,489.01,Saúde — transação automática,Transferência
+2022-06-11,Impostos,despesa,839.64,Impostos — transação automática,Débito
+2024-07-20,Lazer,despesa,5.0,Lazer — transação automática,Pix
+2023-06-09,Freelance,receita,1733.89,Freelance — transação automática,Transferência
+2023-01-05,Lazer,despesa,347.44,Lazer — transação automática,Boleto
+2022-08-12,Lazer,despesa,140.54,Lazer — transação automática,Cartão de Crédito
+2022-02-07,Lazer,despesa,566.3,Lazer — transação automática,Débito
+2024-12-27,Vestuário,despesa,24.92,Vestuário — transação automática,Pix
+2022-04-02,Saúde,despesa,246.21,Saúde — transação automática,Transferência
+2023-09-02,Vestuário,despesa,286.51,Vestuário — transação automática,Boleto
+2023-11-05,Rendimentos,receita,5595.78,Rendimentos — transação automática,Cartão de Crédito
+2022-04-26,Freelance,receita,6536.35,Freelance — transação automática,Débito
+2022-12-09,Lazer,despesa,526.37,Lazer — transação automática,Débito
+2022-04-03,Alimentação,despesa,265.51,Alimentação — transação automática,Pix
+2024-09-20,Moradia,despesa,374.46,Moradia — transação automática,Pix
+2023-10-13,Moradia,despesa,268.04,Moradia — transação automática,Pix
+2023-03-26,Alimentação,despesa,915.13,Alimentação — transação automática,Cartão de Crédito
+2022-09-17,Lazer,despesa,478.6,Lazer — transação automática,Pix
+2022-05-18,Transporte,despesa,576.88,Transporte — transação automática,Pix
+2022-12-26,Assinaturas,despesa,36.76,Assinaturas — transação automática,Boleto
+2023-04-20,Impostos,despesa,135.42,Impostos — transação automática,Pix
+2024-11-05,Impostos,despesa,315.24,Impostos — transação automática,Transferência
+2023-04-22,Salário,receita,4439.6,Salário — transação automática,Débito
+2022-11-03,Salário,receita,6562.28,Salário — transação automática,Pix
+2023-02-14,Rendimentos,receita,5492.61,Rendimentos — transação automática,Débito
+2024-07-28,Impostos,despesa,551.73,Impostos — transação automática,Débito
+2023-03-31,Educação,despesa,246.48,Educação — transação automática,Cartão de Crédito
+2023-04-12,Manutenção,despesa,47.58,Manutenção — transação automática,Transferência
+2023-02-07,Transporte,despesa,275.42,Transporte — transação automática,Transferência
+2023-01-26,Salário,receita,4113.34,Salário — transação automática,Pix
+2023-02-05,Impostos,despesa,362.34,Impostos — transação automática,Pix
+2022-02-17,Moradia,despesa,277.16,Moradia — transação automática,Cartão de Crédito
+2023-03-27,Rendimentos,receita,3484.25,Rendimentos — transação automática,Pix
+2024-01-12,Salário,receita,8355.33,Salário — transação automática,Cartão de Crédito
+2024-02-29,Manutenção,despesa,5.0,Manutenção — transação automática,Cartão de Crédito
+2024-01-03,Saúde,despesa,463.31,Saúde — transação automática,Cartão de Crédito
+2023-04-29,Lazer,despesa,217.59,Lazer — transação automática,Pix
+2023-12-06,Freelance,receita,3734.05,Freelance — transação automática,Pix
+2022-04-04,Alimentação,despesa,255.16,Alimentação — transação automática,Cartão de Crédito
+2024-09-29,Moradia,despesa,231.22,Moradia — transação automática,Pix
+2023-01-29,Alimentação,despesa,122.18,Alimentação — transação automática,Pix
+2023-12-08,Salário,receita,4895.21,Salário — transação automática,Débito
+2023-08-11,Vestuário,despesa,304.57,Vestuário — transação automática,Boleto
+2024-08-24,Bônus,receita,4344.83,Bônus — transação automática,Cartão de Crédito
+2024-08-15,Manutenção,despesa,5.0,Manutenção — transação automática,Transferência
+2024-02-02,Impostos,despesa,205.97,Impostos — transação automática,Transferência
+2022-08-05,Lazer,despesa,370.72,Lazer — transação automática,Boleto
+2024-07-13,Moradia,despesa,38.04,Moradia — transação automática,Débito
+2022-04-23,Assinaturas,despesa,262.43,Assinaturas — transação automática,Pix
+2024-06-12,Transporte,despesa,330.29,Transporte — transação automática,Boleto
+2023-11-10,Manutenção,despesa,686.66,Manutenção — transação automática,Boleto
+2022-12-02,Transporte,despesa,5.0,Transporte — transação automática,Transferência
+2022-10-18,Impostos,despesa,41.37,Impostos — transação automática,Débito
+2022-12-15,Transporte,despesa,266.17,Transporte — transação automática,Pix
+2024-05-12,Moradia,despesa,455.09,Moradia — transação automática,Transferência
+2022-08-11,Manutenção,despesa,382.62,Manutenção — transação automática,Boleto
+2024-09-23,Freelance,receita,4180.95,Freelance — transação automática,Pix
+2024-08-17,Rendimentos,receita,4197.6,Rendimentos — transação automática,Boleto
+2024-07-16,Manutenção,despesa,415.73,Manutenção — transação automática,Cartão de Crédito
+2022-03-14,Assinaturas,despesa,774.1,Assinaturas — transação automática,Cartão de Crédito
+2022-03-29,Impostos,despesa,544.61,Impostos — transação automática,Débito
+2022-07-04,Moradia,despesa,157.26,Moradia — transação automática,Débito
+2022-08-18,Alimentação,despesa,446.06,Alimentação — transação automática,Boleto
+2022-03-11,Transporte,despesa,403.61,Transporte — transação automática,Boleto
+2024-09-20,Alimentação,despesa,686.2,Alimentação — transação automática,Boleto
+2023-09-28,Freelance,receita,7359.93,Freelance — transação automática,Cartão de Crédito
+2022-02-19,Transporte,despesa,197.59,Transporte — transação automática,Cartão de Crédito
+2022-12-31,Rendimentos,receita,6399.23,Rendimentos — transação automática,Débito
+2024-05-06,Transporte,despesa,827.48,Transporte — transação automática,Boleto
+2024-02-18,Saúde,despesa,163.46,Saúde — transação automática,Cartão de Crédito
+2022-02-23,Assinaturas,despesa,80.94,Assinaturas — transação automática,Transferência
+2024-10-29,Bônus,receita,5594.57,Bônus — transação automática,Débito
+2022-10-05,Assinaturas,despesa,315.67,Assinaturas — transação automática,Pix
+2022-07-28,Impostos,despesa,810.95,Impostos — transação automática,Boleto
+2024-10-11,Freelance,receita,2430.35,Freelance — transação automática,Débito
+2022-01-14,Lazer,despesa,483.04,Lazer — transação automática,Débito
+2023-08-02,Salário,receita,4612.61,Salário — transação automática,Transferência
+2022-01-04,Assinaturas,despesa,659.46,Assinaturas — transação automática,Cartão de Crédito
+2023-10-05,Transporte,despesa,353.23,Transporte — transação automática,Cartão de Crédito
+2022-12-09,Manutenção,despesa,672.21,Manutenção — transação automática,Pix
+2023-04-01,Bônus,receita,4840.37,Bônus — transação automática,Débito
+2022-11-27,Impostos,despesa,359.56,Impostos — transação automática,Boleto
+2024-03-23,Alimentação,despesa,569.78,Alimentação — transação automática,Cartão de Crédito
+2022-12-30,Bônus,receita,4967.16,Bônus — transação automática,Pix
+2023-04-06,Rendimentos,receita,5651.32,Rendimentos — transação automática,Pix
+2022-07-05,Rendimentos,receita,5550.39,Rendimentos — transação automática,Transferência
+2022-06-16,Vestuário,despesa,841.48,Vestuário — transação automática,Pix
+2022-02-25,Vestuário,despesa,510.6,Vestuário — transação automática,Débito
+2023-12-27,Manutenção,despesa,535.96,Manutenção — transação automática,Pix
+2024-04-13,Transporte,despesa,543.57,Transporte — transação automática,Boleto
+2023-09-06,Saúde,despesa,677.35,Saúde — transação automática,Cartão de Crédito
+2023-04-04,Lazer,despesa,317.39,Lazer — transação automática,Transferência
+2023-08-28,Lazer,despesa,816.08,Lazer — transação automática,Pix
+2022-04-21,Assinaturas,despesa,599.21,Assinaturas — transação automática,Boleto
+2022-03-21,Educação,despesa,370.09,Educação — transação automática,Transferência
+2024-03-22,Saúde,despesa,39.22,Saúde — transação automática,Boleto
+2023-10-15,Rendimentos,receita,3885.47,Rendimentos — transação automática,Transferência
+2024-06-22,Assinaturas,despesa,135.87,Assinaturas — transação automática,Pix
+2024-02-13,Alimentação,despesa,298.38,Alimentação — transação automática,Débito
+2022-11-26,Alimentação,despesa,22.5,Alimentação — transação automática,Pix
+2022-01-17,Alimentação,despesa,699.9,Alimentação — transação automática,Débito
+2024-09-05,Bônus,receita,4359.79,Bônus — transação automática,Pix
+2022-03-06,Transporte,despesa,165.86,Transporte — transação automática,Boleto
+2022-01-26,Bônus,receita,1842.69,Bônus — transação automática,Cartão de Crédito
+2023-03-16,Salário,receita,5094.2,Salário — transação automática,Transferência
+2023-09-09,Freelance,receita,1698.27,Freelance — transação automática,Boleto
+2024-12-04,Moradia,despesa,417.37,Moradia — transação automática,Cartão de Crédito
+2022-06-09,Bônus,receita,2027.34,Bônus — transação automática,Pix
+2024-10-22,Freelance,receita,5088.54,Freelance — transação automática,Boleto
+2023-06-26,Salário,receita,4150.01,Salário — transação automática,Transferência
+2023-06-28,Freelance,receita,6242.2,Freelance — transação automática,Débito
+2022-11-15,Impostos,despesa,571.1,Impostos — transação automática,Boleto
+2024-01-20,Bônus,receita,3213.25,Bônus — transação automática,Pix
+2024-05-15,Moradia,despesa,95.95,Moradia — transação automática,Débito
+2023-01-21,Freelance,receita,3429.36,Freelance — transação automática,Pix
+2022-07-19,Lazer,despesa,277.49,Lazer — transação automática,Cartão de Crédito
+2024-03-31,Impostos,despesa,454.5,Impostos — transação automática,Débito
+2023-01-13,Vestuário,despesa,199.05,Vestuário — transação automática,Pix
+2023-05-17,Freelance,receita,3282.66,Freelance — transação automática,Transferência
+2022-07-05,Saúde,despesa,218.66,Saúde — transação automática,Débito
+2023-02-23,Saúde,despesa,396.23,Saúde — transação automática,Débito
+2022-12-07,Alimentação,despesa,18.2,Alimentação — transação automática,Boleto
+2022-09-26,Manutenção,despesa,49.69,Manutenção — transação automática,Pix
+2022-11-10,Salário,receita,4726.87,Salário — transação automática,Transferência
+2023-12-01,Transporte,despesa,647.21,Transporte — transação automática,Transferência
+2024-05-17,Lazer,despesa,180.37,Lazer — transação automática,Débito
+2023-09-15,Impostos,despesa,417.58,Impostos — transação automática,Débito
+2022-05-11,Manutenção,despesa,656.74,Manutenção — transação automática,Transferência
+2022-10-31,Vestuário,despesa,271.63,Vestuário — transação automática,Cartão de Crédito
+2022-07-24,Saúde,despesa,48.05,Saúde — transação automática,Transferência
+2024-08-29,Manutenção,despesa,850.31,Manutenção — transação automática,Transferência
+2023-03-06,Manutenção,despesa,164.64,Manutenção — transação automática,Transferência
+2024-11-15,Moradia,despesa,469.21,Moradia — transação automática,Cartão de Crédito
+2023-08-02,Manutenção,despesa,84.44,Manutenção — transação automática,Boleto
+2023-09-09,Alimentação,despesa,5.0,Alimentação — transação automática,Débito
+2023-12-12,Alimentação,despesa,660.82,Alimentação — transação automática,Boleto
+2022-08-31,Salário,receita,200.0,Salário — transação automática,Cartão de Crédito
+2024-09-22,Lazer,despesa,563.3,Lazer — transação automática,Transferência
+2022-10-10,Vestuário,despesa,89.61,Vestuário — transação automática,Boleto
+2024-07-08,Manutenção,despesa,5.0,Manutenção — transação automática,Débito
+2023-07-22,Freelance,receita,4031.64,Freelance — transação automática,Débito
+2023-07-16,Educação,despesa,442.23,Educação — transação automática,Transferência
+2022-10-14,Impostos,despesa,515.25,Impostos — transação automática,Cartão de Crédito
+2022-06-03,Saúde,despesa,699.89,Saúde — transação automática,Transferência
+2024-05-01,Alimentação,despesa,437.73,Alimentação — transação automática,Pix
+2024-12-09,Moradia,despesa,262.23,Moradia — transação automática,Débito
+2024-02-13,Impostos,despesa,723.71,Impostos — transação automática,Cartão de Crédito
+2024-05-15,Assinaturas,despesa,309.79,Assinaturas — transação automática,Transferência
+2022-10-29,Moradia,despesa,145.37,Moradia — transação automática,Transferência
+2023-05-28,Freelance,receita,3571.51,Freelance — transação automática,Débito
+2024-08-01,Rendimentos,receita,5895.84,Rendimentos — transação automática,Boleto
+2022-04-01,Alimentação,despesa,5.0,Alimentação — transação automática,Cartão de Crédito
+2022-07-08,Impostos,despesa,187.9,Impostos — transação automática,Boleto
+2024-06-16,Vestuário,despesa,479.25,Vestuário — transação automática,Débito
+2022-11-29,Moradia,despesa,180.92,Moradia — transação automática,Pix
+2023-10-03,Alimentação,despesa,539.59,Alimentação — transação automática,Transferência
+2022-12-23,Assinaturas,despesa,359.53,Assinaturas — transação automática,Pix
+2022-08-13,Manutenção,despesa,160.31,Manutenção — transação automática,Pix
+2023-10-26,Rendimentos,receita,7302.68,Rendimentos — transação automática,Transferência
+2024-12-19,Freelance,receita,3580.54,Freelance — transação automática,Boleto
+2022-05-26,Saúde,despesa,123.18,Saúde — transação automática,Transferência
+2022-08-04,Assinaturas,despesa,365.89,Assinaturas — transação automática,Débito
+2023-07-06,Manutenção,despesa,251.57,Manutenção — transação automática,Cartão de Crédito
+2023-06-03,Educação,despesa,514.0,Educação — transação automática,Transferência
+2022-07-02,Bônus,receita,4398.31,Bônus — transação automática,Débito
+2024-07-07,Transporte,despesa,221.11,Transporte — transação automática,Pix
+2024-02-20,Lazer,despesa,655.54,Lazer — transação automática,Pix
+2022-05-21,Bônus,receita,4721.84,Bônus — transação automática,Transferência
+2024-01-28,Vestuário,despesa,154.9,Vestuário — transação automática,Transferência
+2024-11-04,Bônus,receita,5532.81,Bônus — transação automática,Débito
+2023-10-21,Salário,receita,6423.63,Salário — transação automática,Cartão de Crédito
+2023-01-31,Salário,receita,6764.54,Salário — transação automática,Cartão de Crédito
+2023-09-17,Bônus,receita,2823.94,Bônus — transação automática,Boleto
+2023-09-16,Impostos,despesa,208.07,Impostos — transação automática,Cartão de Crédito
+2024-01-09,Transporte,despesa,620.09,Transporte — transação automática,Pix
+2022-02-05,Vestuário,despesa,893.3,Vestuário — transação automática,Pix
+2022-09-29,Salário,receita,1745.49,Salário — transação automática,Transferência
+2024-02-07,Saúde,despesa,215.81,Saúde — transação automática,Cartão de Crédito
+2024-03-08,Transporte,despesa,421.33,Transporte — transação automática,Pix
+2023-12-14,Impostos,despesa,375.63,Impostos — transação automática,Transferência
+2024-10-23,Salário,receita,3206.67,Salário — transação automática,Boleto
+2024-07-02,Educação,despesa,358.51,Educação — transação automática,Débito
+2023-02-25,Freelance,receita,5433.12,Freelance — transação automática,Transferência
+2022-04-19,Alimentação,despesa,717.7,Alimentação — transação automática,Pix
+2024-10-10,Saúde,despesa,5.0,Saúde — transação automática,Boleto
+2024-09-04,Saúde,despesa,210.32,Saúde — transação automática,Pix
+2022-05-06,Freelance,receita,2758.99,Freelance — transação automática,Transferência
+2022-03-16,Manutenção,despesa,5.0,Manutenção — transação automática,Débito
+2022-12-08,Educação,despesa,287.05,Educação — transação automática,Pix
+2024-01-06,Manutenção,despesa,260.28,Manutenção — transação automática,Boleto
+2024-10-24,Saúde,despesa,220.46,Saúde — transação automática,Pix
+2023-04-27,Lazer,despesa,437.56,Lazer — transação automática,Transferência
+2024-02-25,Manutenção,despesa,309.69,Manutenção — transação automática,Débito
+2024-06-10,Freelance,receita,5200.96,Freelance — transação automática,Pix
+2024-11-23,Manutenção,despesa,202.88,Manutenção — transação automática,Transferência
+2022-03-22,Saúde,despesa,427.41,Saúde — transação automática,Transferência
+2024-05-24,Lazer,despesa,13.87,Lazer — transação automática,Débito
+2024-09-22,Saúde,despesa,348.2,Saúde — transação automática,Cartão de Crédito
+2022-01-02,Bônus,receita,3893.68,Bônus — transação automática,Débito
+2022-09-10,Alimentação,despesa,533.95,Alimentação — transação automática,Cartão de Crédito
+2023-05-12,Bônus,receita,4042.45,Bônus — transação automática,Pix
+2022-04-29,Impostos,despesa,47.46,Impostos — transação automática,Débito
+2023-08-07,Saúde,despesa,613.23,Saúde — transação automática,Débito
+2024-07-20,Impostos,despesa,850.62,Impostos — transação automática,Boleto
+2024-12-15,Rendimentos,receita,5866.83,Rendimentos — transação automática,Boleto
+2024-09-15,Educação,despesa,906.81,Educação — transação automática,Cartão de Crédito
+2024-12-29,Bônus,receita,5473.5,Bônus — transação automática,Transferência
+2022-01-22,Lazer,despesa,598.43,Lazer — transação automática,Cartão de Crédito
+2022-04-24,Manutenção,despesa,422.96,Manutenção — transação automática,Pix
+2022-11-11,Freelance,receita,2028.08,Freelance — transação automática,Transferência
+2023-07-07,Moradia,despesa,431.95,Moradia — transação automática,Boleto
+2023-10-04,Bônus,receita,4482.78,Bônus — transação automática,Transferência
+2024-11-09,Lazer,despesa,235.64,Lazer — transação automática,Pix
+2022-02-01,Rendimentos,receita,5675.72,Rendimentos — transação automática,Transferência
+2023-06-17,Rendimentos,receita,7532.83,Rendimentos — transação automática,Pix
+2022-04-01,Saúde,despesa,5.0,Saúde — transação automática,Pix
+2024-04-06,Freelance,receita,6474.53,Freelance — transação automática,Débito
+2022-08-24,Lazer,despesa,100.61,Lazer — transação automática,Boleto
+2022-10-27,Educação,despesa,197.45,Educação — transação automática,Pix
+2023-08-31,Bônus,receita,6995.18,Bônus — transação automática,Pix
+2022-08-22,Impostos,despesa,456.21,Impostos — transação automática,Pix
+2022-12-05,Manutenção,despesa,197.24,Manutenção — transação automática,Transferência
+2024-02-22,Impostos,despesa,392.62,Impostos — transação automática,Pix
+2024-05-22,Lazer,despesa,467.66,Lazer — transação automática,Boleto
+2022-04-04,Freelance,receita,3929.97,Freelance — transação automática,Débito
+2024-07-08,Assinaturas,despesa,385.23,Assinaturas — transação automática,Transferência
+2023-04-18,Transporte,despesa,776.72,Transporte — transação automática,Cartão de Crédito
+2024-05-21,Vestuário,despesa,33.72,Vestuário — transação automática,Boleto
+2022-09-18,Manutenção,despesa,667.38,Manutenção — transação automática,Débito
+2022-06-16,Assinaturas,despesa,703.41,Assinaturas — transação automática,Pix
+2024-11-26,Alimentação,despesa,614.8,Alimentação — transação automática,Pix
+2022-04-08,Transporte,despesa,40.87,Transporte — transação automática,Pix
+2024-10-30,Lazer,despesa,799.55,Lazer — transação automática,Débito
+2024-12-12,Manutenção,despesa,269.98,Manutenção — transação automática,Transferência
+2022-06-26,Bônus,receita,7367.52,Bônus — transação automática,Transferência
+2024-01-09,Lazer,despesa,164.91,Lazer — transação automática,Pix
+2024-05-01,Educação,despesa,273.97,Educação — transação automática,Cartão de Crédito
+2022-05-10,Impostos,despesa,126.47,Impostos — transação automática,Cartão de Crédito
+2023-06-25,Vestuário,despesa,95.5,Vestuário — transação automática,Cartão de Crédito
+2024-06-04,Saúde,despesa,734.85,Saúde — transação automática,Cartão de Crédito
+2022-11-16,Transporte,despesa,5.0,Transporte — transação automática,Pix
+2022-09-14,Manutenção,despesa,61.07,Manutenção — transação automática,Cartão de Crédito
+2024-05-20,Bônus,receita,6696.56,Bônus — transação automática,Pix
+2023-08-18,Educação,despesa,5.0,Educação — transação automática,Débito
+2022-02-12,Rendimentos,receita,5308.82,Rendimentos — transação automática,Pix
+2023-08-13,Educação,despesa,338.75,Educação — transação automática,Transferência
+2024-12-21,Vestuário,despesa,316.8,Vestuário — transação automática,Boleto
+2024-04-08,Assinaturas,despesa,100.53,Assinaturas — transação automática,Débito
+2024-04-12,Transporte,despesa,283.8,Transporte — transação automática,Cartão de Crédito
+2024-02-03,Moradia,despesa,540.85,Moradia — transação automática,Boleto
+2024-10-26,Rendimentos,receita,5486.1,Rendimentos — transação automática,Transferência
+2023-05-19,Salário,receita,5128.22,Salário — transação automática,Pix
+2023-10-07,Saúde,despesa,119.15,Saúde — transação automática,Débito
+2023-04-17,Assinaturas,despesa,409.47,Assinaturas — transação automática,Cartão de Crédito
+2022-02-13,Moradia,despesa,506.88,Moradia — transação automática,Cartão de Crédito
+2022-10-14,Educação,despesa,5.0,Educação — transação automática,Boleto
+2022-09-21,Moradia,despesa,170.06,Moradia — transação automática,Débito
+2023-12-10,Moradia,despesa,310.13,Moradia — transação automática,Boleto
+2024-01-18,Freelance,receita,5466.28,Freelance — transação automática,Pix
+2024-06-14,Freelance,receita,6022.34,Freelance — transação automática,Pix
+2023-09-15,Vestuário,despesa,631.48,Vestuário — transação automática,Cartão de Crédito
+2023-10-01,Saúde,despesa,495.83,Saúde — transação automática,Pix
+2022-11-27,Salário,receita,5518.1,Salário — transação automática,Débito
+2023-09-07,Educação,despesa,130.99,Educação — transação automática,Boleto
+2023-03-05,Saúde,despesa,615.45,Saúde — transação automática,Cartão de Crédito
+2023-06-04,Lazer,despesa,416.8,Lazer — transação automática,Pix
+2022-07-24,Alimentação,despesa,530.12,Alimentação — transação automática,Pix
+2023-10-18,Lazer,despesa,161.94,Lazer — transação automática,Débito
+2023-02-25,Saúde,despesa,22.52,Saúde — transação automática,Boleto
+2024-09-29,Vestuário,despesa,556.07,Vestuário — transação automática,Transferência
+2024-04-14,Assinaturas,despesa,385.63,Assinaturas — transação automática,Boleto
+2023-11-18,Transporte,despesa,277.74,Transporte — transação automática,Débito
+2024-04-13,Salário,receita,3881.15,Salário — transação automática,Boleto
+2024-09-17,Manutenção,despesa,307.3,Manutenção — transação automática,Débito
+2024-04-07,Educação,despesa,985.0,Educação — transação automática,Cartão de Crédito
+2023-12-11,Educação,despesa,347.1,Educação — transação automática,Transferência
+2022-02-08,Moradia,despesa,522.6,Moradia — transação automática,Pix
+2023-10-06,Rendimentos,receita,5250.22,Rendimentos — transação automática,Boleto
+2022-05-05,Lazer,despesa,287.01,Lazer — transação automática,Pix
+2022-11-06,Bônus,receita,2754.69,Bônus — transação automática,Transferência
+2024-11-13,Assinaturas,despesa,236.54,Assinaturas — transação automática,Transferência
+2024-03-25,Transporte,despesa,189.36,Transporte — transação automática,Boleto
+2024-06-16,Salário,receita,4207.95,Salário — transação automática,Cartão de Crédito
+2022-04-28,Salário,receita,4207.81,Salário — transação automática,Boleto
+2023-09-05,Assinaturas,despesa,248.83,Assinaturas — transação automática,Débito
+2024-05-31,Manutenção,despesa,328.93,Manutenção — transação automática,Transferência
+2023-08-19,Saúde,despesa,123.91,Saúde — transação automática,Boleto
+2022-10-19,Saúde,despesa,586.25,Saúde — transação automática,Boleto
+2024-01-02,Alimentação,despesa,499.34,Alimentação — transação automática,Pix
+2024-05-02,Freelance,receita,4843.29,Freelance — transação automática,Boleto
+2024-11-11,Impostos,despesa,5.0,Impostos — transação automática,Débito
+2022-09-08,Transporte,despesa,528.45,Transporte — transação automática,Transferência
+2024-02-20,Bônus,receita,7528.7,Bônus — transação automática,Pix
+2022-06-11,Saúde,despesa,215.72,Saúde — transação automática,Cartão de Crédito
+2022-04-25,Lazer,despesa,421.09,Lazer — transação automática,Pix
+2022-02-10,Alimentação,despesa,259.58,Alimentação — transação automática,Boleto
+2023-12-24,Saúde,despesa,130.48,Saúde — transação automática,Cartão de Crédito
+2022-06-01,Manutenção,despesa,630.51,Manutenção — transação automática,Cartão de Crédito
+2024-12-02,Bônus,receita,4087.29,Bônus — transação automática,Débito
+2023-10-18,Manutenção,despesa,583.72,Manutenção — transação automática,Boleto
+2024-03-21,Alimentação,despesa,219.58,Alimentação — transação automática,Transferência
+2024-10-16,Impostos,despesa,268.0,Impostos — transação automática,Transferência
+2022-02-06,Alimentação,despesa,230.04,Alimentação — transação automática,Boleto
+2022-09-08,Lazer,despesa,191.72,Lazer — transação automática,Boleto
+2022-06-09,Assinaturas,despesa,673.19,Assinaturas — transação automática,Cartão de Crédito
+2023-07-16,Vestuário,despesa,96.21,Vestuário — transação automática,Débito
+2023-02-09,Transporte,despesa,703.43,Transporte — transação automática,Pix
+2022-09-06,Lazer,despesa,344.92,Lazer — transação automática,Débito
+2022-05-26,Alimentação,despesa,930.79,Alimentação — transação automática,Cartão de Crédito
+2022-12-31,Vestuário,despesa,345.09,Vestuário — transação automática,Cartão de Crédito
+2024-09-18,Salário,receita,5607.06,Salário — transação automática,Cartão de Crédito
+2023-06-19,Salário,receita,4121.56,Salário — transação automática,Cartão de Crédito
+2023-06-13,Assinaturas,despesa,461.66,Assinaturas — transação automática,Cartão de Crédito
+2022-12-27,Assinaturas,despesa,450.86,Assinaturas — transação automática,Pix
+2022-02-11,Alimentação,despesa,446.87,Alimentação — transação automática,Cartão de Crédito
+2023-09-12,Rendimentos,receita,5456.91,Rendimentos — transação automática,Boleto
+2024-03-21,Rendimentos,receita,3131.37,Rendimentos — transação automática,Boleto
+2022-09-05,Assinaturas,despesa,450.06,Assinaturas — transação automática,Cartão de Crédito
+2023-04-29,Transporte,despesa,197.16,Transporte — transação automática,Cartão de Crédito
+2023-03-11,Bônus,receita,4165.71,Bônus — transação automática,Transferência
+2024-09-05,Moradia,despesa,491.45,Moradia — transação automática,Débito
+2022-06-24,Freelance,receita,3637.86,Freelance — transação automática,Débito
+2024-06-16,Bônus,receita,4950.95,Bônus — transação automática,Cartão de Crédito
+2024-01-28,Alimentação,despesa,588.04,Alimentação — transação automática,Débito
+2023-07-24,Transporte,despesa,520.16,Transporte — transação automática,Transferência
+2023-11-05,Rendimentos,receita,3375.07,Rendimentos — transação automática,Pix
+2024-09-29,Assinaturas,despesa,170.3,Assinaturas — transação automática,Cartão de Crédito
+2023-10-15,Assinaturas,despesa,556.28,Assinaturas — transação automática,Débito
+2024-10-17,Vestuário,despesa,190.44,Vestuário — transação automática,Boleto
+2023-01-24,Vestuário,despesa,364.28,Vestuário — transação automática,Débito
+2023-03-04,Manutenção,despesa,478.1,Manutenção — transação automática,Boleto
+2024-06-01,Bônus,receita,3496.15,Bônus — transação automática,Pix
+2022-05-09,Bônus,receita,6044.27,Bônus — transação automática,Transferência
+2022-12-21,Lazer,despesa,395.86,Lazer — transação automática,Cartão de Crédito
+2023-10-01,Freelance,receita,4300.96,Freelance — transação automática,Boleto
+2023-06-16,Educação,despesa,545.8,Educação — transação automática,Débito
+2022-09-02,Freelance,receita,7258.51,Freelance — transação automática,Pix
+2024-03-13,Alimentação,despesa,443.64,Alimentação — transação automática,Cartão de Crédito
+2024-04-18,Freelance,receita,4805.79,Freelance — transação automática,Cartão de Crédito
+2024-12-20,Assinaturas,despesa,195.34,Assinaturas — transação automática,Transferência
+2023-03-13,Bônus,receita,4811.61,Bônus — transação automática,Transferência
+2022-10-19,Freelance,receita,5140.53,Freelance — transação automática,Transferência
+2024-03-10,Moradia,despesa,873.2,Moradia — transação automática,Cartão de Crédito
+2023-11-01,Alimentação,despesa,542.75,Alimentação — transação automática,Pix
+2022-08-01,Vestuário,despesa,43.99,Vestuário — transação automática,Pix
+2024-08-22,Rendimentos,receita,3611.94,Rendimentos — transação automática,Cartão de Crédito
+2023-02-12,Impostos,despesa,696.83,Impostos — transação automática,Cartão de Crédito
+2024-05-18,Assinaturas,despesa,562.67,Assinaturas — transação automática,Pix
+2024-08-09,Vestuário,despesa,41.01,Vestuário — transação automática,Pix
+2024-07-23,Rendimentos,receita,7133.6,Rendimentos — transação automática,Boleto
+2022-09-10,Impostos,despesa,155.61,Impostos — transação automática,Débito
+2024-12-02,Manutenção,despesa,260.63,Manutenção — transação automática,Cartão de Crédito
+2022-01-17,Salário,receita,4233.04,Salário — transação automática,Boleto
+2024-03-04,Alimentação,despesa,449.27,Alimentação — transação automática,Débito
+2024-11-02,Bônus,receita,579.38,Bônus — transação automática,Transferência
+2022-03-15,Rendimentos,receita,2802.68,Rendimentos — transação automática,Pix
+2024-08-27,Salário,receita,1627.96,Salário — transação automática,Cartão de Crédito
+2024-08-15,Impostos,despesa,402.23,Impostos — transação automática,Cartão de Crédito
+2024-03-20,Saúde,despesa,5.0,Saúde — transação automática,Pix
+2023-04-21,Salário,receita,2973.73,Salário — transação automática,Débito
+2024-04-26,Vestuário,despesa,696.28,Vestuário — transação automática,Pix
+2022-12-02,Lazer,despesa,5.0,Lazer — transação automática,Débito
+2023-11-20,Lazer,despesa,475.38,Lazer — transação automática,Débito
+2023-05-11,Assinaturas,despesa,476.74,Assinaturas — transação automática,Pix
+2024-06-12,Assinaturas,despesa,121.12,Assinaturas — transação automática,Cartão de Crédito
+2024-06-15,Rendimentos,receita,3908.31,Rendimentos — transação automática,Boleto
+2022-02-23,Saúde,despesa,752.48,Saúde — transação automática,Pix
+2022-06-17,Alimentação,despesa,133.71,Alimentação — transação automática,Pix
+2022-05-03,Transporte,despesa,515.1,Transporte — transação automática,Cartão de Crédito
+2022-12-27,Alimentação,despesa,800.38,Alimentação — transação automática,Boleto
+2022-06-01,Alimentação,despesa,410.38,Alimentação — transação automática,Cartão de Crédito
+2024-09-28,Impostos,despesa,167.35,Impostos — transação automática,Boleto
+2022-07-11,Salário,receita,1852.76,Salário — transação automática,Transferência
+2023-08-05,Vestuário,despesa,289.81,Vestuário — transação automática,Débito
+2023-03-18,Salário,receita,6219.91,Salário — transação automática,Débito
+2022-04-05,Manutenção,despesa,465.59,Manutenção — transação automática,Cartão de Crédito
+2022-06-29,Lazer,despesa,508.77,Lazer — transação automática,Débito
+2024-07-17,Salário,receita,5518.66,Salário — transação automática,Boleto
+2023-03-05,Bônus,receita,4980.62,Bônus — transação automática,Pix
+2024-02-20,Vestuário,despesa,382.05,Vestuário — transação automática,Cartão de Crédito
+2023-03-30,Moradia,despesa,589.75,Moradia — transação automática,Pix
+2024-11-29,Manutenção,despesa,457.41,Manutenção — transação automática,Transferência
+2024-08-27,Freelance,receita,6122.7,Freelance — transação automática,Pix
+2022-08-20,Saúde,despesa,589.54,Saúde — transação automática,Pix
+2023-03-29,Educação,despesa,859.34,Educação — transação automática,Pix
+2023-10-10,Salário,receita,366.64,Salário — transação automática,Boleto
+2022-01-21,Manutenção,despesa,16.53,Manutenção — transação automática,Pix
+2024-12-30,Bônus,receita,5321.11,Bônus — transação automática,Boleto
+2023-07-25,Assinaturas,despesa,731.3,Assinaturas — transação automática,Transferência
+2022-06-29,Transporte,despesa,59.61,Transporte — transação automática,Pix
+2022-02-19,Moradia,despesa,694.95,Moradia — transação automática,Boleto
+2024-08-14,Alimentação,despesa,567.23,Alimentação — transação automática,Boleto
+2023-06-20,Saúde,despesa,147.86,Saúde — transação automática,Boleto
+2024-04-30,Manutenção,despesa,176.18,Manutenção — transação automática,Boleto
+2022-04-15,Impostos,despesa,-2344.31,Impostos — transação automática [ANOMALIA INJETADA],Cartão de Crédito
+2022-02-22,Educação,despesa,311.13,Educação — transação automática,Transferência
+2023-10-14,Saúde,despesa,238.06,Saúde — transação automática,Pix
+2023-09-29,Educação,despesa,20172.98,Educação — transação automática [ANOMALIA INJETADA],Débito
+2023-09-28,Alimentação,despesa,223.48,Alimentação — transação automática,Pix
+2024-07-12,Moradia,despesa,602.83,Moradia — transação automática,Débito
+2024-03-25,Educação,despesa,222.06,Educação — transação automática,Boleto
+2024-11-30,Moradia,despesa,18.36,Moradia — transação automática,Débito
+2023-10-01,Manutenção,despesa,5.0,Manutenção — transação automática,Cartão de Crédito
+2022-01-24,Lazer,despesa,5.0,Lazer — transação automática,Cartão de Crédito
+2023-01-02,Alimentação,despesa,89.52,Alimentação — transação automática,Débito
+2022-07-11,Salário,receita,3961.58,Salário — transação automática,Pix
+2022-08-23,Impostos,despesa,418.58,Impostos — transação automática,Débito
+2022-02-03,Manutenção,despesa,357.05,Manutenção — transação automática,Boleto
+2022-07-28,Manutenção,despesa,649.36,Manutenção — transação automática,Transferência
+2024-11-17,Impostos,despesa,441.69,Impostos — transação automática,Transferência
+2024-07-26,Assinaturas,despesa,134.98,Assinaturas — transação automática,Boleto
+2023-03-23,Alimentação,despesa,102.51,Alimentação — transação automática,Boleto
+2023-09-19,Assinaturas,despesa,887.9,Assinaturas — transação automática,Débito
+2023-10-07,Bônus,receita,5731.48,Bônus — transação automática,Boleto
+2024-02-10,Manutenção,despesa,735.03,Manutenção — transação automática,Débito
+2022-09-23,Assinaturas,despesa,282.29,Assinaturas — transação automática,Boleto
+2022-03-22,Educação,despesa,528.14,Educação — transação automática,Pix
+2023-07-20,Alimentação,despesa,188.88,Alimentação — transação automática,Transferência
+2022-03-06,Bônus,receita,5652.24,Bônus — transação automática,Cartão de Crédito
+2023-01-08,Moradia,despesa,5.0,Moradia — transação automática,Pix
+2024-11-15,Bônus,receita,6039.54,Bônus — transação automática,Transferência
+2022-04-21,Salário,receita,200.0,Salário — transação automática,Boleto
+2023-10-12,Moradia,despesa,644.61,Moradia — transação automática,Débito
+2024-05-06,Manutenção,despesa,230.64,Manutenção — transação automática,Transferência
+2024-09-27,Salário,receita,6554.52,Salário — transação automática,Cartão de Crédito
+2024-02-26,Assinaturas,despesa,462.81,Assinaturas — transação automática,Cartão de Crédito
+2022-12-04,Moradia,despesa,958.18,Moradia — transação automática,Boleto
+2022-10-23,Moradia,despesa,738.73,Moradia — transação automática,Débito
+2024-08-16,Alimentação,despesa,5.0,Alimentação — transação automática,Débito
+2023-11-08,Alimentação,despesa,5.0,Alimentação — transação automática,Cartão de Crédito
+2023-08-21,Educação,despesa,102.56,Educação — transação automática,Boleto
+2022-08-23,Salário,receita,4950.46,Salário — transação automática,Débito
+2022-03-27,Assinaturas,despesa,303.41,Assinaturas — transação automática,Transferência
+2023-09-04,Transporte,despesa,293.86,Transporte — transação automática,Pix
+2022-11-11,Rendimentos,receita,5182.29,Rendimentos — transação automática,Cartão de Crédito
+2024-06-27,Rendimentos,receita,4087.15,Rendimentos — transação automática,Pix
+2022-07-08,Lazer,despesa,194.38,Lazer — transação automática,Pix
+2024-10-08,Assinaturas,despesa,536.81,Assinaturas — transação automática,Débito
+2022-08-24,Moradia,despesa,5.0,Moradia — transação automática,Débito
+2022-03-24,Moradia,despesa,5.0,Moradia — transação automática,Débito
+2024-02-27,Moradia,despesa,314.39,Moradia — transação automática,Pix
+2024-06-24,Educação,despesa,154.51,Educação — transação automática,Pix
+2022-12-23,Bônus,receita,5901.22,Bônus — transação automática,Transferência
+2024-12-03,Bônus,receita,2223.71,Bônus — transação automática,Cartão de Crédito
+2022-06-28,Vestuário,despesa,122.78,Vestuário — transação automática,Cartão de Crédito
+2022-09-13,Salário,receita,4804.09,Salário — transação automática,Pix
+2024-04-24,Assinaturas,despesa,451.76,Assinaturas — transação automática,Cartão de Crédito
+2023-06-29,Bônus,receita,1430.27,Bônus — transação automática,Cartão de Crédito
+2023-08-15,Bônus,receita,5230.52,Bônus — transação automática,Transferência
+2022-08-22,Manutenção,despesa,433.04,Manutenção — transação automática,Boleto
+2023-03-19,Saúde,despesa,283.07,Saúde — transação automática,Transferência
+2022-09-02,Alimentação,despesa,449.78,Alimentação — transação automática,Cartão de Crédito
+2023-05-08,Assinaturas,despesa,212.01,Assinaturas — transação automática,Boleto
+2024-05-18,Salário,receita,3544.45,Salário — transação automática,Pix
+2022-04-02,Transporte,despesa,108.82,Transporte — transação automática,Boleto
+2023-10-16,Vestuário,despesa,370.56,Vestuário — transação automática,Transferência
+2024-08-24,Moradia,despesa,878.47,Moradia — transação automática,Débito
+2024-04-13,Impostos,despesa,222.19,Impostos — transação automática,Débito
+2024-01-09,Saúde,despesa,523.04,Saúde — transação automática,Cartão de Crédito
+2023-04-11,Educação,despesa,657.78,Educação — transação automática,Débito
+2022-02-23,Saúde,despesa,798.41,Saúde — transação automática,Débito
+2022-10-09,Assinaturas,despesa,270.46,Assinaturas — transação automática,Pix
+2023-07-25,Manutenção,despesa,5.0,Manutenção — transação automática,Boleto
+2023-06-23,Alimentação,despesa,350.76,Alimentação — transação automática,Boleto
+2022-05-19,Impostos,despesa,5.0,Impostos — transação automática,Pix
+2022-12-17,Manutenção,despesa,524.3,Manutenção — transação automática,Boleto
+2024-11-04,Moradia,despesa,625.7,Moradia — transação automática,Cartão de Crédito
+2022-09-24,Assinaturas,despesa,151.75,Assinaturas — transação automática,Pix
+2024-05-23,Impostos,despesa,542.99,Impostos — transação automática,Pix
+2022-02-01,Educação,despesa,512.87,Educação — transação automática,Transferência
+2023-08-11,Bônus,receita,4802.21,Bônus — transação automática,Cartão de Crédito
+2022-07-20,Bônus,receita,5362.73,Bônus — transação automática,Cartão de Crédito
+2022-01-17,Bônus,receita,5260.2,Bônus — transação automática,Débito
+2024-09-03,Educação,despesa,459.23,Educação — transação automática,Débito
+2023-10-19,Educação,despesa,67.99,Educação — transação automática,Transferência
+2024-12-19,Manutenção,despesa,109.92,Manutenção — transação automática,Débito
+2024-03-22,Transporte,despesa,533.49,Transporte — transação automática,Transferência
+2022-07-26,Moradia,despesa,814.48,Moradia — transação automática,Pix
+2023-10-13,Moradia,despesa,5.0,Moradia — transação automática,Pix
+2024-09-17,Vestuário,despesa,43.13,Vestuário — transação automática,Pix
+2024-06-21,Manutenção,despesa,637.46,Manutenção — transação automática,Débito
+2022-05-10,Manutenção,despesa,815.76,Manutenção — transação automática,Débito
+2024-01-26,Transporte,despesa,5.0,Transporte — transação automática,Pix
+2023-11-26,Vestuário,despesa,447.89,Vestuário — transação automática,Débito
+2022-07-10,Moradia,despesa,136.13,Moradia — transação automática,Transferência
+2022-02-10,Manutenção,despesa,134.57,Manutenção — transação automática,Boleto
+2024-03-06,Bônus,receita,4212.35,Bônus — transação automática,Débito
+2022-10-05,Moradia,despesa,326.93,Moradia — transação automática,Pix
+2024-08-22,Assinaturas,despesa,175.32,Assinaturas — transação automática,Boleto
+2022-10-24,Bônus,receita,4875.56,Bônus — transação automática,Cartão de Crédito
+2022-04-12,Salário,receita,5603.52,Salário — transação automática,Cartão de Crédito
+2022-11-15,Educação,despesa,387.53,Educação — transação automática,Débito
+2023-04-30,Impostos,despesa,409.26,Impostos — transação automática,Boleto
+2022-11-12,Bônus,receita,4258.65,Bônus — transação automática,Débito
+2023-05-23,Rendimentos,receita,4822.49,Rendimentos — transação automática,Transferência
+2023-01-10,Lazer,despesa,249.85,Lazer — transação automática,Cartão de Crédito
+2023-09-18,Saúde,despesa,412.18,Saúde — transação automática,Boleto
+2023-08-28,Lazer,despesa,359.0,Lazer — transação automática,Transferência
+2023-06-01,Lazer,despesa,263.06,Lazer — transação automática,Cartão de Crédito
+2024-06-03,Bônus,receita,4599.61,Bônus — transação automática,Pix
+2024-06-07,Salário,receita,3120.98,Salário — transação automática,Transferência
+2024-03-18,Rendimentos,receita,441.04,Rendimentos — transação automática,Transferência
+2022-04-28,Manutenção,despesa,146.04,Manutenção — transação automática,Pix
+2024-09-11,Educação,despesa,152.83,Educação — transação automática,Pix
+2024-07-19,Impostos,despesa,795.5,Impostos — transação automática,Transferência
+2024-09-13,Assinaturas,despesa,557.35,Assinaturas — transação automática,Cartão de Crédito
+2024-03-04,Vestuário,despesa,283.37,Vestuário — transação automática,Débito
+2024-04-26,Alimentação,despesa,5.0,Alimentação — transação automática,Débito
+2022-09-07,Transporte,despesa,467.45,Transporte — transação automática,Pix
+2023-10-01,Impostos,despesa,755.59,Impostos — transação automática,Débito
+2023-04-19,Educação,despesa,236.05,Educação — transação automática,Débito
+2022-08-21,Impostos,despesa,340.9,Impostos — transação automática,Transferência
+2024-11-03,Manutenção,despesa,219.67,Manutenção — transação automática,Cartão de Crédito
+2022-03-21,Transporte,despesa,91.97,Transporte — transação automática,Boleto
+2022-07-28,Alimentação,despesa,280.85,Alimentação — transação automática,Transferência
+2022-01-06,Manutenção,despesa,286.74,Manutenção — transação automática,Débito
+2023-05-17,Rendimentos,receita,3260.23,Rendimentos — transação automática,Boleto
+2024-02-04,Manutenção,despesa,145.26,Manutenção — transação automática,Pix
+2024-01-25,Impostos,despesa,5.0,Impostos — transação automática,Pix
+2022-06-27,Vestuário,despesa,8.53,Vestuário — transação automática,Pix
+2022-05-30,Manutenção,despesa,246.14,Manutenção — transação automática,Boleto
+2024-11-18,Freelance,receita,4950.44,Freelance — transação automática,Pix
+2023-10-26,Transporte,despesa,525.3,Transporte — transação automática,Transferência
+2024-12-02,Assinaturas,despesa,394.69,Assinaturas — transação automática,Transferência
+2023-08-24,Bônus,receita,6384.3,Bônus — transação automática,Boleto
+2023-06-17,Impostos,despesa,254.62,Impostos — transação automática,Transferência
+2023-10-08,Manutenção,despesa,223.4,Manutenção — transação automática,Débito
+2024-06-12,Bônus,receita,200.0,Bônus — transação automática,Pix
+2024-04-24,Educação,despesa,233.04,Educação — transação automática,Transferência
+2024-07-19,Educação,despesa,349.23,Educação — transação automática,Transferência
+2023-07-10,Rendimentos,receita,6109.89,Rendimentos — transação automática,Transferência
+2022-09-06,Freelance,receita,3651.6,Freelance — transação automática,Cartão de Crédito
+2022-02-14,Moradia,despesa,631.78,Moradia — transação automática,Pix
+2023-01-25,Alimentação,despesa,108.6,Alimentação — transação automática,Boleto
+2024-12-22,Manutenção,despesa,327.72,Manutenção — transação automática,Débito
+2024-09-25,Educação,despesa,271.8,Educação — transação automática,Cartão de Crédito
+2024-05-14,Alimentação,despesa,421.51,Alimentação — transação automática,Cartão de Crédito
+2023-08-06,Impostos,despesa,348.76,Impostos — transação automática,Cartão de Crédito
+2022-10-11,Saúde,despesa,489.69,Saúde — transação automática,Transferência
+2023-09-12,Freelance,receita,6568.11,Freelance — transação automática,Pix
+2022-01-01,Moradia,despesa,151.45,Moradia — transação automática,Transferência
+2024-10-04,Salário,receita,1870.67,Salário — transação automática,Cartão de Crédito
+2023-05-27,Transporte,despesa,472.77,Transporte — transação automática,Boleto
+2022-08-08,Transporte,despesa,215.37,Transporte — transação automática,Débito
+2022-09-04,Impostos,despesa,613.8,Impostos — transação automática,Cartão de Crédito
+2022-02-19,Vestuário,despesa,585.74,Vestuário — transação automática,Cartão de Crédito
+2024-07-04,Rendimentos,receita,4935.14,Rendimentos — transação automática,Débito
+2023-10-06,Impostos,despesa,474.13,Impostos — transação automática,Débito
+2024-04-04,Moradia,despesa,328.33,Moradia — transação automática,Cartão de Crédito
+2022-09-15,Manutenção,despesa,493.71,Manutenção — transação automática,Cartão de Crédito
+2022-04-19,Freelance,receita,2626.11,Freelance — transação automática,Boleto
+2022-11-06,Vestuário,despesa,214.07,Vestuário — transação automática,Pix
+2023-02-05,Moradia,despesa,62.3,Moradia — transação automática,Débito
+2023-11-26,Assinaturas,despesa,253.46,Assinaturas — transação automática,Boleto
+2023-08-04,Manutenção,despesa,89.6,Manutenção — transação automática,Cartão de Crédito
+2022-07-28,Impostos,despesa,435.68,Impostos — transação automática,Boleto
+2023-08-27,Salário,receita,5185.65,Salário — transação automática,Pix
+2023-07-15,Freelance,receita,3561.88,Freelance — transação automática,Pix
+2023-07-05,Assinaturas,despesa,341.06,Assinaturas — transação automática,Cartão de Crédito
+2024-04-20,Impostos,despesa,402.13,Impostos — transação automática,Pix
+2024-12-19,Rendimentos,receita,5265.58,Rendimentos — transação automática,Cartão de Crédito
+2023-06-30,Alimentação,despesa,331.31,Alimentação — transação automática,Cartão de Crédito
+2024-10-07,Impostos,despesa,5.0,Impostos — transação automática,Pix
+2023-10-22,Rendimentos,receita,4403.47,Rendimentos — transação automática,Débito
+2022-01-27,Assinaturas,despesa,845.31,Assinaturas — transação automática,Débito
+2024-06-09,Impostos,despesa,200.85,Impostos — transação automática,Débito
+2023-08-24,Lazer,despesa,368.58,Lazer — transação automática,Débito
+2024-10-05,Impostos,despesa,818.47,Impostos — transação automática,Débito
+2023-08-31,Vestuário,despesa,283.81,Vestuário — transação automática,Boleto
+2024-07-15,Salário,receita,3454.57,Salário — transação automática,Débito
+2022-09-13,Lazer,despesa,529.72,Lazer — transação automática,Boleto
+2023-12-08,Vestuário,despesa,425.36,Vestuário — transação automática,Boleto
+2023-01-08,Transporte,despesa,5.0,Transporte — transação automática,Cartão de Crédito
+2024-04-07,Moradia,despesa,284.51,Moradia — transação automática,Débito
+2023-12-05,Transporte,despesa,254.21,Transporte — transação automática,Débito
+2023-10-03,Transporte,despesa,5.0,Transporte — transação automática,Pix
+2022-11-22,Educação,despesa,779.26,Educação — transação automática,Transferência
+2023-11-18,Bônus,receita,6069.45,Bônus — transação automática,Débito
+2024-06-16,Vestuário,despesa,319.4,Vestuário — transação automática,Débito
+2024-04-16,Educação,despesa,142.52,Educação — transação automática,Transferência
+2024-11-12,Alimentação,despesa,259.73,Alimentação — transação automática,Transferência
+2024-03-31,Moradia,despesa,5.0,Moradia — transação automática,Cartão de Crédito
+2022-01-26,Rendimentos,receita,1286.05,Rendimentos — transação automática,Débito
+2024-06-02,Saúde,despesa,416.01,Saúde — transação automática,Pix
+2023-04-24,Manutenção,despesa,41.62,Manutenção — transação automática,Boleto
+2022-09-10,Vestuário,despesa,28.35,Vestuário — transação automática,Transferência
+2024-06-09,Alimentação,despesa,409.08,Alimentação — transação automática,Pix
+2023-12-06,Alimentação,despesa,310.64,Alimentação — transação automática,Boleto
+2024-10-04,Vestuário,despesa,583.82,Vestuário — transação automática,Débito
+2023-05-07,Assinaturas,despesa,764.2,Assinaturas — transação automática,Cartão de Crédito
+2024-08-29,Saúde,despesa,225.84,Saúde — transação automática,Transferência
+2022-09-04,Vestuário,despesa,17.53,Vestuário — transação automática,Débito
+2022-06-11,Assinaturas,despesa,169.52,Assinaturas — transação automática,Cartão de Crédito
+2022-07-24,Vestuário,despesa,5.0,Vestuário — transação automática,Pix
+2022-01-03,Impostos,despesa,268.91,Impostos — transação automática,Transferência
+2023-08-03,Impostos,despesa,461.83,Impostos — transação automática,Débito
+2022-10-12,Educação,despesa,259.7,Educação — transação automática,Boleto
+2022-02-13,Transporte,despesa,795.62,Transporte — transação automática,Transferência
+2024-05-04,Freelance,receita,6257.37,Freelance — transação automática,Cartão de Crédito
+2023-09-27,Lazer,despesa,160.99,Lazer — transação automática,Boleto
+2022-08-29,Moradia,despesa,566.14,Moradia — transação automática,Débito
+2022-05-16,Manutenção,despesa,391.22,Manutenção — transação automática,Transferência
+2024-09-06,Saúde,despesa,5.0,Saúde — transação automática,Boleto
+2024-05-29,Lazer,despesa,810.63,Lazer — transação automática,Débito
+2022-05-28,Vestuário,despesa,664.32,Vestuário — transação automática,Cartão de Crédito
+2023-03-08,Manutenção,despesa,87.92,Manutenção — transação automática,Cartão de Crédito
+2023-11-21,Transporte,despesa,440.6,Transporte — transação automática,Cartão de Crédito
+2023-11-03,Educação,despesa,287.97,Educação — transação automática,Boleto
+2024-04-16,Bônus,receita,5402.73,Bônus — transação automática,Cartão de Crédito
+2023-03-09,Educação,despesa,312.5,Educação — transação automática,Pix
+2022-04-16,Rendimentos,receita,4134.77,Rendimentos — transação automática,Boleto
+2022-01-10,Saúde,despesa,265.82,Saúde — transação automática,Débito
+2024-02-29,Saúde,despesa,353.18,Saúde — transação automática,Débito
+2023-02-12,Lazer,despesa,365.09,Lazer — transação automática,Cartão de Crédito
+2023-08-05,Manutenção,despesa,114.45,Manutenção — transação automática,Cartão de Crédito
+2024-01-26,Impostos,despesa,650.92,Impostos — transação automática,Pix
+2022-12-29,Moradia,despesa,106.42,Moradia — transação automática,Cartão de Crédito
+2023-02-05,Moradia,despesa,189.85,Moradia — transação automática,Boleto
+2023-10-10,Transporte,despesa,697.73,Transporte — transação automática,Transferência
+2024-12-02,Assinaturas,despesa,226.73,Assinaturas — transação automática,Pix
+2024-06-10,Educação,despesa,7.97,Educação — transação automática,Débito
+2024-01-24,Rendimentos,receita,272.27,Rendimentos — transação automática,Boleto
+2022-08-23,Saúde,despesa,222.53,Saúde — transação automática,Boleto
+2023-12-28,Assinaturas,despesa,600.71,Assinaturas — transação automática,Boleto
+2022-05-25,Transporte,despesa,174.14,Transporte — transação automática,Cartão de Crédito
+2024-05-18,Freelance,receita,3727.35,Freelance — transação automática,Cartão de Crédito
+2022-01-11,Manutenção,despesa,5.0,Manutenção — transação automática,Débito
+2024-07-01,Manutenção,despesa,657.03,Manutenção — transação automática,Transferência
+2022-08-25,Salário,receita,5412.75,Salário — transação automática,Pix
+2022-11-05,Moradia,despesa,131.94,Moradia — transação automática,Boleto
+2024-05-27,Assinaturas,despesa,670.88,Assinaturas — transação automática,Débito
+2023-09-14,Educação,despesa,267.83,Educação — transação automática,Cartão de Crédito
+2023-05-22,Assinaturas,despesa,776.55,Assinaturas — transação automática,Cartão de Crédito
+2023-09-27,Lazer,despesa,634.51,Lazer — transação automática,Cartão de Crédito
+2022-10-05,Assinaturas,despesa,5.0,Assinaturas — transação automática,Boleto
+2022-12-27,Salário,receita,3609.82,Salário — transação automática,Cartão de Crédito
+2022-05-05,Impostos,despesa,288.92,Impostos — transação automática,Boleto
+2023-02-16,Assinaturas,despesa,430.1,Assinaturas — transação automática,Débito
+2024-05-28,Assinaturas,despesa,658.72,Assinaturas — transação automática,Débito
+2022-04-12,Alimentação,despesa,361.05,Alimentação — transação automática,Cartão de Crédito
+2024-11-25,Saúde,despesa,380.6,Saúde — transação automática,Pix
+2024-07-18,Impostos,despesa,5.0,Impostos — transação automática,Cartão de Crédito
+2024-02-06,Assinaturas,despesa,193.35,Assinaturas — transação automática,Cartão de Crédito
+2023-01-06,Alimentação,despesa,292.17,Alimentação — transação automática,Cartão de Crédito
+2024-05-31,Moradia,despesa,138.85,Moradia — transação automática,Pix
+2022-01-17,Transporte,despesa,611.17,Transporte — transação automática,Cartão de Crédito
+2023-01-04,Saúde,despesa,170.93,Saúde — transação automática,Pix
+2023-02-20,Vestuário,despesa,345.14,Vestuário — transação automática,Cartão de Crédito
+2024-01-11,Transporte,despesa,42.01,Transporte — transação automática,Cartão de Crédito
+2022-11-18,Salário,receita,3498.78,Salário — transação automática,Cartão de Crédito
+2024-01-26,Salário,receita,1371.15,Salário — transação automática,Boleto
+2022-08-26,Salário,receita,5218.9,Salário — transação automática,Transferência
+2023-10-04,Assinaturas,despesa,420.01,Assinaturas — transação automática,Débito
+2022-11-14,Transporte,despesa,352.36,Transporte — transação automática,Transferência
+2024-04-19,Manutenção,despesa,198.54,Manutenção — transação automática,Transferência
+2022-03-23,Lazer,despesa,283.31,Lazer — transação automática,Transferência
+2022-06-23,Assinaturas,despesa,54.46,Assinaturas — transação automática,Cartão de Crédito
+2023-04-05,Moradia,despesa,515.43,Moradia — transação automática,Boleto
+2024-03-29,Saúde,despesa,310.43,Saúde — transação automática,Boleto
+2024-03-23,Rendimentos,receita,7518.73,Rendimentos — transação automática,Débito
+2022-05-12,Educação,despesa,688.5,Educação — transação automática,Débito
+2022-12-16,Manutenção,despesa,707.45,Manutenção — transação automática,Pix
+2024-05-12,Freelance,receita,3355.49,Freelance — transação automática,Cartão de Crédito
+2023-06-16,Transporte,despesa,679.57,Transporte — transação automática,Cartão de Crédito
+2024-07-22,Lazer,despesa,232.9,Lazer — transação automática,Débito
+2022-05-11,Impostos,despesa,473.4,Impostos — transação automática,Cartão de Crédito
+2023-07-27,Transporte,despesa,534.66,Transporte — transação automática,Cartão de Crédito
+2022-05-05,Lazer,despesa,334.08,Lazer — transação automática,Boleto
+2022-09-09,Bônus,receita,7801.87,Bônus — transação automática,Boleto
+2022-05-14,Freelance,receita,4826.89,Freelance — transação automática,Boleto
+2024-12-29,Manutenção,despesa,249.65,Manutenção — transação automática,Boleto
+2023-04-20,Saúde,despesa,351.34,Saúde — transação automática,Pix
+2024-06-30,Freelance,receita,2827.19,Freelance — transação automática,Transferência
+2022-05-07,Transporte,despesa,89.21,Transporte — transação automática,Pix
+2022-09-14,Transporte,despesa,5.0,Transporte — transação automática,Débito
+2022-01-28,Moradia,despesa,424.56,Moradia — transação automática,Pix
+2024-07-23,Assinaturas,despesa,316.19,Assinaturas — transação automática,Cartão de Crédito
+2023-06-16,Assinaturas,despesa,5.0,Assinaturas — transação automática,Pix
+2024-04-20,Manutenção,despesa,481.95,Manutenção — transação automática,Boleto
+2023-01-22,Freelance,receita,5327.52,Freelance — transação automática,Cartão de Crédito
+2024-08-27,Rendimentos,receita,5978.24,Rendimentos — transação automática,Boleto
+2023-12-19,Lazer,despesa,586.95,Lazer — transação automática,Pix
+2024-10-01,Impostos,despesa,67.63,Impostos — transação automática,Transferência
+2022-09-16,Freelance,receita,7114.12,Freelance — transação automática,Débito
+2022-01-11,Alimentação,despesa,456.13,Alimentação — transação automática,Débito
+2024-05-03,Salário,receita,2816.13,Salário — transação automática,Transferência
+2022-01-12,Lazer,despesa,573.03,Lazer — transação automática,Pix
+2022-11-23,Alimentação,despesa,326.22,Alimentação — transação automática,Transferência
+2023-12-30,Impostos,despesa,383.4,Impostos — transação automática,Cartão de Crédito
+2022-07-16,Bônus,receita,5469.69,Bônus — transação automática,Boleto
+2023-09-26,Rendimentos,receita,6606.66,Rendimentos — transação automática,Boleto
+2024-04-05,Assinaturas,despesa,654.71,Assinaturas — transação automática,Débito
+2022-10-14,Manutenção,despesa,320.85,Manutenção — transação automática,Boleto
+2023-09-15,Moradia,despesa,111.11,Moradia — transação automática,Boleto
+2024-04-25,Impostos,despesa,449.71,Impostos — transação automática,Transferência
+2022-07-22,Bônus,receita,3297.62,Bônus — transação automática,Transferência
+2022-01-01,Salário,receita,6555.87,Salário — transação automática,Débito
+2022-03-25,Bônus,receita,5598.34,Bônus — transação automática,Transferência
+2023-05-31,Manutenção,despesa,372.99,Manutenção — transação automática,Cartão de Crédito
+2022-08-01,Manutenção,despesa,176.89,Manutenção — transação automática,Boleto
+2023-02-23,Bônus,receita,5902.1,Bônus — transação automática,Débito
+2023-11-29,Lazer,despesa,499.81,Lazer — transação automática,Boleto
+2022-10-04,Saúde,despesa,345.06,Saúde — transação automática,Boleto
+2024-12-17,Educação,despesa,483.21,Educação — transação automática,Pix
+2022-09-10,Salário,receita,6752.57,Salário — transação automática,Pix
+2022-03-26,Saúde,despesa,651.1,Saúde — transação automática,Cartão de Crédito
+2023-01-08,Lazer,despesa,417.51,Lazer — transação automática,Transferência
+2022-06-27,Assinaturas,despesa,355.98,Assinaturas — transação automática,Débito
+2023-07-06,Bônus,receita,3424.47,Bônus — transação automática,Cartão de Crédito
+2024-02-23,Salário,receita,997.4,Salário — transação automática,Débito
+2023-06-27,Manutenção,despesa,647.48,Manutenção — transação automática,Boleto
+2022-12-21,Manutenção,despesa,5.0,Manutenção — transação automática,Pix
+2024-04-02,Rendimentos,receita,4291.04,Rendimentos — transação automática,Boleto
+2022-05-18,Saúde,despesa,426.1,Saúde — transação automática,Transferência
+2022-03-09,Rendimentos,receita,2946.58,Rendimentos — transação automática,Cartão de Crédito
+2022-05-26,Freelance,receita,2192.75,Freelance — transação automática,Pix
+2023-02-19,Alimentação,despesa,5.0,Alimentação — transação automática,Transferência
+2023-01-18,Freelance,receita,4234.36,Freelance — transação automática,Débito
+2022-04-16,Vestuário,despesa,419.29,Vestuário — transação automática,Boleto
+2024-04-05,Impostos,despesa,448.58,Impostos — transação automática,Cartão de Crédito
+2023-12-01,Moradia,despesa,224.6,Moradia — transação automática,Boleto
+2024-05-23,Freelance,receita,5809.9,Freelance — transação automática,Pix
+2022-08-23,Freelance,receita,2135.6,Freelance — transação automática,Transferência
+2023-06-09,Impostos,despesa,73.31,Impostos — transação automática,Transferência
+2022-09-29,Assinaturas,despesa,703.23,Assinaturas — transação automática,Débito
+2022-03-08,Assinaturas,despesa,452.75,Assinaturas — transação automática,Transferência
+2023-08-25,Freelance,receita,1399.63,Freelance — transação automática,Débito
+2023-09-15,Manutenção,despesa,415.03,Manutenção — transação automática,Débito
+2024-03-27,Alimentação,despesa,348.39,Alimentação — transação automática,Débito
+2024-12-06,Salário,receita,1426.8,Salário — transação automática,Boleto
+2023-05-11,Transporte,despesa,616.81,Transporte — transação automática,Pix
+2024-07-17,Lazer,despesa,472.19,Lazer — transação automática,Débito
+2023-08-21,Transporte,despesa,221.65,Transporte — transação automática,Cartão de Crédito
+2023-07-23,Vestuário,despesa,428.62,Vestuário — transação automática,Transferência
+2024-06-21,Rendimentos,receita,4340.39,Rendimentos — transação automática,Transferência
+2022-02-09,Lazer,despesa,5.0,Lazer — transação automática,Débito
+2023-07-27,Saúde,despesa,5.0,Saúde — transação automática,Transferência
+2024-10-02,Alimentação,despesa,380.2,Alimentação — transação automática,Pix
+2022-10-27,Vestuário,despesa,402.08,Vestuário — transação automática,Débito
+2024-01-24,Assinaturas,despesa,182.32,Assinaturas — transação automática,Boleto
+2024-02-01,Rendimentos,receita,2102.29,Rendimentos — transação automática,Cartão de Crédito
+2024-12-12,Impostos,despesa,5.0,Impostos — transação automática,Pix
+2024-11-13,Lazer,despesa,32.72,Lazer — transação automática,Boleto
+2022-01-29,Educação,despesa,232.64,Educação — transação automática,Boleto
+2022-03-07,Assinaturas,despesa,330.86,Assinaturas — transação automática,Transferência
+2024-08-27,Manutenção,despesa,355.79,Manutenção — transação automática,Boleto
+2024-04-29,Vestuário,despesa,550.3,Vestuário — transação automática,Transferência
+2023-03-05,Moradia,despesa,197.74,Moradia — transação automática,Cartão de Crédito
+2023-04-04,Manutenção,despesa,133.52,Manutenção — transação automática,Pix
+2024-07-17,Educação,despesa,396.57,Educação — transação automática,Débito
+2024-06-15,Transporte,despesa,780.61,Transporte — transação automática,Transferência
+2024-10-09,Assinaturas,despesa,559.69,Assinaturas — transação automática,Débito
+2022-07-17,Salário,receita,6094.08,Salário — transação automática,Pix
+2022-12-24,Lazer,despesa,5.0,Lazer — transação automática,Cartão de Crédito
+2023-05-12,Manutenção,despesa,502.29,Manutenção — transação automática,Boleto
+2023-02-12,Vestuário,despesa,92.98,Vestuário — transação automática,Pix
+2022-01-16,Saúde,despesa,590.99,Saúde — transação automática,Transferência
+2023-01-29,Freelance,receita,5347.74,Freelance — transação automática,Pix
+2024-07-16,Manutenção,despesa,130.45,Manutenção — transação automática,Cartão de Crédito
+2022-05-24,Lazer,despesa,528.02,Lazer — transação automática,Transferência
+2022-10-24,Freelance,receita,5236.78,Freelance — transação automática,Débito
+2024-07-22,Vestuário,despesa,5.0,Vestuário — transação automática,Cartão de Crédito
+2024-07-27,Lazer,despesa,101.8,Lazer — transação automática,Pix
+2023-05-28,Freelance,receita,7824.95,Freelance — transação automática,Transferência
+2024-12-17,Transporte,despesa,276.08,Transporte — transação automática,Transferência
+2023-06-12,Assinaturas,despesa,713.63,Assinaturas — transação automática,Transferência
+2023-01-21,Lazer,despesa,321.26,Lazer — transação automática,Transferência
+2022-10-14,Transporte,despesa,70.4,Transporte — transação automática,Transferência
+2024-12-15,Impostos,despesa,592.76,Impostos — transação automática,Pix
+2023-11-28,Alimentação,despesa,390.17,Alimentação — transação automática,Cartão de Crédito
+2022-02-03,Freelance,receita,5218.84,Freelance — transação automática,Boleto
+2022-03-29,Saúde,despesa,480.24,Saúde — transação automática,Boleto
+2023-09-04,Rendimentos,receita,4873.04,Rendimentos — transação automática,Boleto
+2022-06-18,Impostos,despesa,199.69,Impostos — transação automática,Débito
+2022-05-27,Educação,despesa,564.08,Educação — transação automática,Cartão de Crédito
+2022-11-17,Transporte,despesa,236.0,Transporte — transação automática,Boleto
+2022-03-14,Transporte,despesa,671.0,Transporte — transação automática,Transferência
+2024-03-11,Impostos,despesa,251.15,Impostos — transação automática,Débito
+2024-04-30,Freelance,receita,3952.32,Freelance — transação automática,Pix
+2022-09-04,Saúde,despesa,342.9,Saúde — transação automática,Pix
+2022-03-08,Educação,despesa,239.63,Educação — transação automática,Transferência
+2024-05-14,Impostos,despesa,836.9,Impostos — transação automática,Boleto
+2024-08-22,Educação,despesa,613.37,Educação — transação automática,Cartão de Crédito
+2024-09-13,Alimentação,despesa,447.96,Alimentação — transação automática,Pix
+2022-11-02,Educação,despesa,512.43,Educação — transação automática,Transferência
+2024-09-03,Saúde,despesa,239.34,Saúde — transação automática,Cartão de Crédito
+2022-01-23,Bônus,receita,-2283.64,Bônus — transação automática [ANOMALIA INJETADA],Cartão de Crédito
+2024-12-01,Saúde,despesa,287.17,Saúde — transação automática,Transferência
+2023-09-09,Manutenção,despesa,103.58,Manutenção — transação automática,Transferência
+2023-05-27,Salário,receita,2684.18,Salário — transação automática,Cartão de Crédito
+2022-05-02,Educação,despesa,554.06,Educação — transação automática,Pix
+2024-06-21,Educação,despesa,256.83,Educação — transação automática,Boleto
+2023-04-21,Alimentação,despesa,674.82,Alimentação — transação automática,Cartão de Crédito
+2022-02-20,Bônus,receita,2143.27,Bônus — transação automática,Boleto
+2024-03-07,Salário,receita,4747.84,Salário — transação automática,Débito
+2022-12-31,Manutenção,despesa,278.38,Manutenção — transação automática,Cartão de Crédito
+2024-12-23,Impostos,despesa,659.64,Impostos — transação automática,Débito
+2022-09-28,Impostos,despesa,818.53,Impostos — transação automática,Pix
+2023-12-06,Rendimentos,receita,2446.21,Rendimentos — transação automática,Transferência
+2024-02-26,Salário,receita,6523.38,Salário — transação automática,Pix
+2022-12-28,Impostos,despesa,114.01,Impostos — transação automática,Pix
+2023-12-13,Vestuário,despesa,543.8,Vestuário — transação automática,Pix
+2022-02-06,Saúde,despesa,426.04,Saúde — transação automática,Débito
+2022-09-21,Moradia,despesa,268.68,Moradia — transação automática,Cartão de Crédito
+2022-10-09,Alimentação,despesa,82.31,Alimentação — transação automática,Cartão de Crédito
+2022-12-29,Vestuário,despesa,477.69,Vestuário — transação automática,Boleto
+2022-08-24,Bônus,receita,5034.79,Bônus — transação automática,Cartão de Crédito
+2023-06-20,Manutenção,despesa,655.2,Manutenção — transação automática,Débito
+2024-10-19,Bônus,receita,4211.46,Bônus — transação automática,Transferência
+2024-08-26,Moradia,despesa,851.61,Moradia — transação automática,Boleto
+2022-07-13,Manutenção,despesa,440.11,Manutenção — transação automática,Transferência
+2022-07-17,Manutenção,despesa,406.9,Manutenção — transação automática,Cartão de Crédito
+2022-09-26,Assinaturas,despesa,308.36,Assinaturas — transação automática,Pix
+2022-03-14,Manutenção,despesa,558.75,Manutenção — transação automática,Boleto
+2024-12-29,Impostos,despesa,561.42,Impostos — transação automática,Cartão de Crédito
+2022-04-03,Rendimentos,receita,3405.47,Rendimentos — transação automática,Boleto
+2024-01-30,Transporte,despesa,379.16,Transporte — transação automática,Transferência
+2023-11-03,Rendimentos,receita,6567.8,Rendimentos — transação automática,Cartão de Crédito
+2023-10-24,Moradia,despesa,420.08,Moradia — transação automática,Cartão de Crédito
+2023-02-10,Impostos,despesa,848.3,Impostos — transação automática,Boleto
+2022-01-18,Freelance,receita,3897.34,Freelance — transação automática,Débito
+2022-04-10,Assinaturas,despesa,502.05,Assinaturas — transação automática,Transferência
+2022-12-26,Freelance,receita,5536.97,Freelance — transação automática,Pix
+2024-05-22,Bônus,receita,4184.58,Bônus — transação automática,Débito
+2022-07-23,Transporte,despesa,291.79,Transporte — transação automática,Cartão de Crédito
+2023-02-13,Lazer,despesa,624.93,Lazer — transação automática,Transferência
+2023-08-09,Vestuário,despesa,363.14,Vestuário — transação automática,Boleto
+2023-05-17,Bônus,receita,3987.33,Bônus — transação automática,Transferência
+2023-04-16,Assinaturas,despesa,646.29,Assinaturas — transação automática,Débito
+2023-05-15,Moradia,despesa,495.31,Moradia — transação automática,Boleto
+2022-02-08,Transporte,despesa,562.01,Transporte — transação automática,Transferência
+2023-03-24,Manutenção,despesa,155.97,Manutenção — transação automática,Boleto
+2023-12-16,Impostos,despesa,576.3,Impostos — transação automática,Pix
+2024-10-18,Saúde,despesa,951.84,Saúde — transação automática,Cartão de Crédito
+2022-12-26,Freelance,receita,1092.45,Freelance — transação automática,Débito
+2022-03-24,Bônus,receita,4661.38,Bônus — transação automática,Cartão de Crédito
+2022-09-16,Vestuário,despesa,381.4,Vestuário — transação automática,Débito
+2024-07-26,Freelance,receita,2078.54,Freelance — transação automática,Pix
+2023-04-07,Salário,receita,5723.94,Salário — transação automática,Pix
+2024-02-04,Educação,despesa,139.39,Educação — transação automática,Boleto
+2023-03-06,Impostos,despesa,20634.28,Impostos — transação automática [ANOMALIA INJETADA],Pix
+2022-07-06,Alimentação,despesa,372.94,Alimentação — transação automática,Transferência
+2024-08-19,Lazer,despesa,373.6,Lazer — transação automática,Cartão de Crédito
+2023-05-22,Salário,receita,3538.95,Salário — transação automática,Boleto
+2024-09-27,Salário,receita,2789.07,Salário — transação automática,Cartão de Crédito
+2023-05-29,Transporte,despesa,319.71,Transporte — transação automática,Pix
+2022-01-29,Impostos,despesa,359.06,Impostos — transação automática,Cartão de Crédito
+2024-02-15,Alimentação,despesa,5.0,Alimentação — transação automática,Cartão de Crédito
+2022-03-15,Vestuário,despesa,629.97,Vestuário — transação automática,Boleto
+2023-07-01,Assinaturas,despesa,357.0,Assinaturas — transação automática,Pix
+2024-12-19,Freelance,receita,5879.27,Freelance — transação automática,Débito
+2023-12-04,Assinaturas,despesa,101.13,Assinaturas — transação automática,Boleto
+2024-02-15,Transporte,despesa,462.26,Transporte — transação automática,Cartão de Crédito
+2024-06-15,Saúde,despesa,292.68,Saúde — transação automática,Cartão de Crédito
+2023-06-18,Vestuário,despesa,517.45,Vestuário — transação automática,Transferência
+2024-03-05,Vestuário,despesa,402.48,Vestuário — transação automática,Débito
+2022-06-01,Lazer,despesa,131.22,Lazer — transação automática,Transferência
+2024-03-03,Manutenção,despesa,302.02,Manutenção — transação automática,Boleto
+2023-05-27,Bônus,receita,5101.18,Bônus — transação automática,Pix
+2024-02-12,Bônus,receita,5541.38,Bônus — transação automática,Transferência
+2023-07-17,Freelance,receita,6019.11,Freelance — transação automática,Transferência
+2023-07-04,Manutenção,despesa,249.64,Manutenção — transação automática,Cartão de Crédito
+2024-03-12,Manutenção,despesa,639.78,Manutenção — transação automática,Pix
+2024-05-09,Rendimentos,receita,3427.85,Rendimentos — transação automática,Pix
+2024-10-12,Salário,receita,2719.71,Salário — transação automática,Boleto
+2023-06-01,Educação,despesa,481.37,Educação — transação automática,Boleto
+2024-10-05,Saúde,despesa,5.0,Saúde — transação automática,Débito
+2022-07-29,Salário,receita,5734.31,Salário — transação automática,Débito
+2023-02-11,Rendimentos,receita,6245.82,Rendimentos — transação automática,Débito
+2022-11-06,Rendimentos,receita,2299.5,Rendimentos — transação automática,Cartão de Crédito
+2022-07-10,Educação,despesa,175.55,Educação — transação automática,Débito
+2024-01-12,Transporte,despesa,181.05,Transporte — transação automática,Transferência
+2024-07-20,Rendimentos,receita,6668.56,Rendimentos — transação automática,Cartão de Crédito
+2023-07-02,Impostos,despesa,725.47,Impostos — transação automática,Pix
+2023-12-22,Freelance,receita,5663.67,Freelance — transação automática,Pix
+2024-11-23,Educação,despesa,351.21,Educação — transação automática,Débito
+2023-01-18,Bônus,receita,4223.48,Bônus — transação automática,Transferência
+2024-11-01,Rendimentos,receita,4467.92,Rendimentos — transação automática,Débito
+2023-05-21,Manutenção,despesa,551.46,Manutenção — transação automática,Transferência
+2023-01-05,Assinaturas,despesa,185.86,Assinaturas — transação automática,Boleto
+2022-12-06,Moradia,despesa,201.8,Moradia — transação automática,Transferência
+2024-06-07,Alimentação,despesa,704.09,Alimentação — transação automática,Transferência
+2024-06-13,Manutenção,despesa,385.66,Manutenção — transação automática,Boleto
+2022-08-16,Saúde,despesa,287.16,Saúde — transação automática,Débito
+2022-03-26,Manutenção,despesa,222.63,Manutenção — transação automática,Boleto
+2022-06-29,Manutenção,despesa,544.45,Manutenção — transação automática,Boleto
+2024-11-14,Manutenção,despesa,209.49,Manutenção — transação automática,Transferência
+2022-09-03,Assinaturas,despesa,545.87,Assinaturas — transação automática,Boleto
+2022-06-15,Alimentação,despesa,345.75,Alimentação — transação automática,Boleto
+2022-02-11,Vestuário,despesa,588.09,Vestuário — transação automática,Débito
+2024-02-23,Lazer,despesa,350.68,Lazer — transação automática,Cartão de Crédito
+2024-08-08,Transporte,despesa,718.15,Transporte — transação automática,Pix
+2022-04-14,Saúde,despesa,188.18,Saúde — transação automática,Débito
+2023-03-17,Lazer,despesa,584.93,Lazer — transação automática,Débito
+2024-08-04,Educação,despesa,308.05,Educação — transação automática,Pix
+2023-04-03,Alimentação,despesa,440.58,Alimentação — transação automática,Boleto
+2023-06-02,Manutenção,despesa,68.82,Manutenção — transação automática,Débito
+2023-02-01,Saúde,despesa,282.75,Saúde — transação automática,Boleto
+2023-12-26,Freelance,receita,4194.19,Freelance — transação automática,Cartão de Crédito
+2023-04-12,Salário,receita,4292.41,Salário — transação automática,Débito
+2024-06-11,Impostos,despesa,426.74,Impostos — transação automática,Boleto
+2022-08-21,Vestuário,despesa,483.0,Vestuário — transação automática,Boleto
+2022-01-05,Alimentação,despesa,837.87,Alimentação — transação automática,Pix
+2023-04-24,Assinaturas,despesa,742.6,Assinaturas — transação automática,Boleto
+2023-12-02,Manutenção,despesa,328.95,Manutenção — transação automática,Débito
+2022-07-01,Alimentação,despesa,5.0,Alimentação — transação automática,Débito
+2024-01-17,Alimentação,despesa,488.21,Alimentação — transação automática,Cartão de Crédito
+2024-10-09,Saúde,despesa,763.34,Saúde — transação automática,Pix
+2023-01-01,Transporte,despesa,494.59,Transporte — transação automática,Transferência
+2023-12-05,Rendimentos,receita,2899.1,Rendimentos — transação automática,Transferência
+2024-12-06,Vestuário,despesa,252.33,Vestuário — transação automática,Boleto
+2023-05-22,Alimentação,despesa,129.99,Alimentação — transação automática,Pix
+2022-08-01,Bônus,receita,1778.16,Bônus — transação automática,Pix
+2022-03-05,Vestuário,despesa,40.21,Vestuário — transação automática,Pix
+2024-11-12,Moradia,despesa,408.94,Moradia — transação automática,Pix
+2022-08-21,Manutenção,despesa,618.62,Manutenção — transação automática,Cartão de Crédito
+2023-12-30,Rendimentos,receita,9521.0,Rendimentos — transação automática,Cartão de Crédito
+2023-08-01,Assinaturas,despesa,83.97,Assinaturas — transação automática,Cartão de Crédito
+2024-07-13,Educação,despesa,447.78,Educação — transação automática,Transferência
+2022-10-28,Vestuário,despesa,26.75,Vestuário — transação automática,Transferência
+2022-01-11,Vestuário,despesa,223.72,Vestuário — transação automática,Cartão de Crédito
+2022-12-16,Impostos,despesa,773.68,Impostos — transação automática,Cartão de Crédito
+2024-04-26,Freelance,receita,4953.69,Freelance — transação automática,Pix
+2022-07-28,Educação,despesa,134.15,Educação — transação automática,Pix
+2023-12-04,Alimentação,despesa,5.0,Alimentação — transação automática,Cartão de Crédito
+2023-07-13,Moradia,despesa,513.97,Moradia — transação automática,Débito
+2024-08-13,Bônus,receita,4510.62,Bônus — transação automática,Débito
+2023-07-11,Vestuário,despesa,515.78,Vestuário — transação automática,Boleto
+2023-06-21,Lazer,despesa,544.04,Lazer — transação automática,Transferência
+2023-06-08,Rendimentos,receita,5347.43,Rendimentos — transação automática,Débito
+2023-10-09,Manutenção,despesa,192.56,Manutenção — transação automática,Transferência
+2022-09-06,Impostos,despesa,451.93,Impostos — transação automática,Transferência
+2022-07-28,Moradia,despesa,520.62,Moradia — transação automática,Pix
+2023-04-04,Freelance,receita,2296.5,Freelance — transação automática,Débito
+2023-09-10,Rendimentos,receita,2290.57,Rendimentos — transação automática,Cartão de Crédito
+2024-01-30,Lazer,despesa,519.79,Lazer — transação automática,Cartão de Crédito
+2022-11-24,Manutenção,despesa,320.73,Manutenção — transação automática,Cartão de Crédito
+2024-10-25,Impostos,despesa,391.98,Impostos — transação automática,Cartão de Crédito
+2023-05-23,Manutenção,despesa,374.05,Manutenção — transação automática,Cartão de Crédito
+2024-11-13,Freelance,receita,7108.24,Freelance — transação automática,Débito
+2023-09-22,Freelance,receita,4818.95,Freelance — transação automática,Transferência
+2024-05-28,Bônus,receita,6922.37,Bônus — transação automática,Cartão de Crédito
+2024-02-04,Impostos,despesa,493.99,Impostos — transação automática,Boleto
+2022-09-22,Rendimentos,receita,8144.01,Rendimentos — transação automática,Cartão de Crédito
+2022-07-24,Freelance,receita,4646.71,Freelance — transação automática,Transferência
+2023-10-25,Freelance,receita,1062.25,Freelance — transação automática,Pix
+2024-03-01,Lazer,despesa,384.89,Lazer — transação automática,Pix
+2024-07-26,Freelance,receita,4876.42,Freelance — transação automática,Cartão de Crédito
+2022-05-30,Bônus,receita,5522.11,Bônus — transação automática,Pix
+2023-08-28,Impostos,despesa,243.8,Impostos — transação automática,Boleto
+2022-06-11,Manutenção,despesa,42.6,Manutenção — transação automática,Débito
+2024-01-02,Salário,receita,3577.38,Salário — transação automática,Transferência
+2024-01-09,Manutenção,despesa,103.27,Manutenção — transação automática,Transferência
+2024-02-05,Bônus,receita,7099.09,Bônus — transação automática,Boleto
+2024-03-03,Transporte,despesa,335.65,Transporte — transação automática,Boleto
+2022-05-05,Alimentação,despesa,31256.7,Alimentação — transação automática [ANOMALIA INJETADA],Pix
+2024-10-28,Lazer,despesa,91.08,Lazer — transação automática,Boleto
+2022-02-25,Manutenção,despesa,296.13,Manutenção — transação automática,Boleto
+2022-09-12,Educação,despesa,575.77,Educação — transação automática,Cartão de Crédito
+2024-05-25,Transporte,despesa,828.75,Transporte — transação automática,Débito
+2024-08-29,Salário,receita,5175.96,Salário — transação automática,Débito
+2022-08-26,Freelance,receita,3991.98,Freelance — transação automática,Boleto
+2022-01-24,Salário,receita,6812.62,Salário — transação automática,Boleto
+2022-02-22,Impostos,despesa,453.49,Impostos — transação automática,Débito
+2022-04-13,Transporte,despesa,161.06,Transporte — transação automática,Cartão de Crédito
+2024-06-26,Lazer,despesa,365.48,Lazer — transação automática,Transferência
+2023-10-09,Alimentação,despesa,448.58,Alimentação — transação automática,Débito
+2023-12-28,Assinaturas,despesa,734.38,Assinaturas — transação automática,Boleto
+2023-01-28,Rendimentos,receita,1784.47,Rendimentos — transação automática,Cartão de Crédito
+2024-04-08,Moradia,despesa,555.12,Moradia — transação automática,Transferência
+2024-04-21,Manutenção,despesa,348.99,Manutenção — transação automática,Pix
+2024-07-26,Educação,despesa,426.96,Educação — transação automática,Transferência
+2022-05-31,Lazer,despesa,278.37,Lazer — transação automática,Débito
+2023-09-21,Educação,despesa,631.35,Educação — transação automática,Transferência
+2022-07-26,Rendimentos,receita,4744.04,Rendimentos — transação automática,Pix
+2022-07-26,Manutenção,despesa,265.92,Manutenção — transação automática,Boleto
+2023-06-25,Assinaturas,despesa,520.04,Assinaturas — transação automática,Boleto
+2024-10-11,Transporte,despesa,314.48,Transporte — transação automática,Transferência
+2024-03-13,Saúde,despesa,298.14,Saúde — transação automática,Débito
+2024-11-30,Lazer,despesa,242.71,Lazer — transação automática,Boleto
+2024-11-21,Transporte,despesa,33.51,Transporte — transação automática,Pix
+2022-01-11,Lazer,despesa,5.0,Lazer — transação automática,Pix
+2023-06-18,Salário,receita,6597.67,Salário — transação automática,Débito
+2022-04-11,Salário,receita,4218.85,Salário — transação automática,Pix
+2023-12-23,Manutenção,despesa,246.17,Manutenção — transação automática,Pix
+2022-11-15,Manutenção,despesa,406.1,Manutenção — transação automática,Débito
+2023-04-23,Salário,receita,1901.49,Salário — transação automática,Débito
+2023-05-26,Transporte,despesa,5.0,Transporte — transação automática,Transferência
+2024-07-01,Bônus,receita,3241.72,Bônus — transação automática,Débito
+2022-06-21,Impostos,despesa,539.02,Impostos — transação automática,Débito
+2023-10-20,Bônus,receita,2359.29,Bônus — transação automática,Boleto
+2024-12-09,Moradia,despesa,5.0,Moradia — transação automática,Boleto
+2023-05-29,Assinaturas,despesa,830.61,Assinaturas — transação automática,Cartão de Crédito
+2023-02-22,Moradia,despesa,567.1,Moradia — transação automática,Débito
+2022-09-07,Vestuário,despesa,48.4,Vestuário — transação automática,Pix
+2024-06-28,Rendimentos,receita,7313.77,Rendimentos — transação automática,Boleto
+2024-06-17,Assinaturas,despesa,823.4,Assinaturas — transação automática,Pix
+2022-08-16,Educação,despesa,313.42,Educação — transação automática,Boleto
+2022-07-31,Impostos,despesa,301.67,Impostos — transação automática,Débito
+2022-12-19,Educação,despesa,398.64,Educação — transação automática,Transferência
+2022-04-09,Educação,despesa,584.47,Educação — transação automática,Débito
+2022-06-17,Impostos,despesa,933.23,Impostos — transação automática,Cartão de Crédito
+2022-07-20,Salário,receita,8533.7,Salário — transação automática,Cartão de Crédito
+2024-02-16,Vestuário,despesa,619.19,Vestuário — transação automática,Débito
+2024-10-24,Moradia,despesa,329.58,Moradia — transação automática,Boleto
+2023-08-19,Bônus,receita,4050.44,Bônus — transação automática,Boleto
+2023-10-10,Saúde,despesa,245.07,Saúde — transação automática,Débito
+2023-10-22,Assinaturas,despesa,222.77,Assinaturas — transação automática,Boleto
+2022-11-13,Saúde,despesa,800.79,Saúde — transação automática,Cartão de Crédito
+2024-02-12,Transporte,despesa,368.22,Transporte — transação automática,Boleto
+2023-03-08,Saúde,despesa,324.81,Saúde — transação automática,Cartão de Crédito
+2023-12-23,Alimentação,despesa,479.46,Alimentação — transação automática,Débito
+2024-10-28,Impostos,despesa,174.65,Impostos — transação automática,Boleto
+2023-01-03,Impostos,despesa,122.67,Impostos — transação automática,Boleto
+2023-11-25,Assinaturas,despesa,547.54,Assinaturas — transação automática,Pix
+2022-04-04,Impostos,despesa,377.43,Impostos — transação automática,Débito
+2022-06-05,Moradia,despesa,460.46,Moradia — transação automática,Boleto
+2024-02-12,Rendimentos,receita,3609.24,Rendimentos — transação automática,Transferência
+2023-12-22,Educação,despesa,286.96,Educação — transação automática,Cartão de Crédito
+2023-10-05,Transporte,despesa,310.09,Transporte — transação automática,Débito
+2022-06-02,Saúde,despesa,460.41,Saúde — transação automática,Pix
+2024-11-18,Educação,despesa,255.96,Educação — transação automática,Transferência
+2022-04-22,Freelance,receita,2475.08,Freelance — transação automática,Boleto
+2022-12-11,Educação,despesa,513.7,Educação — transação automática,Débito
+2022-10-26,Saúde,despesa,323.18,Saúde — transação automática,Cartão de Crédito
+2022-07-19,Moradia,despesa,415.27,Moradia — transação automática,Débito
+2023-06-09,Freelance,receita,2658.95,Freelance — transação automática,Transferência
+2024-06-29,Rendimentos,receita,6467.01,Rendimentos — transação automática,Boleto
+2024-01-11,Vestuário,despesa,369.75,Vestuário — transação automática,Boleto
+2022-10-18,Alimentação,despesa,607.73,Alimentação — transação automática,Boleto
+2023-10-01,Vestuário,despesa,485.72,Vestuário — transação automática,Cartão de Crédito
+2024-01-30,Freelance,receita,6160.58,Freelance — transação automática,Transferência
+2023-11-05,Bônus,receita,3927.15,Bônus — transação automática,Pix
+2022-02-08,Educação,despesa,515.17,Educação — transação automática,Transferência
+2022-06-23,Transporte,despesa,433.79,Transporte — transação automática,Cartão de Crédito
+2023-10-10,Freelance,receita,5371.58,Freelance — transação automática,Boleto
+2023-04-26,Lazer,despesa,449.21,Lazer — transação automática,Transferência
+2024-02-06,Vestuário,despesa,520.31,Vestuário — transação automática,Transferência
+2023-05-15,Lazer,despesa,502.06,Lazer — transação automática,Boleto
+2022-08-30,Transporte,despesa,611.14,Transporte — transação automática,Boleto
+2023-09-10,Impostos,despesa,408.15,Impostos — transação automática,Boleto
+2023-07-10,Alimentação,despesa,638.97,Alimentação — transação automática,Boleto
+2024-09-03,Rendimentos,receita,3961.82,Rendimentos — transação automática,Boleto
+2024-05-08,Alimentação,despesa,355.47,Alimentação — transação automática,Transferência
+2023-12-21,Assinaturas,despesa,143.61,Assinaturas — transação automática,Débito
+2024-10-23,Assinaturas,despesa,270.19,Assinaturas — transação automática,Boleto
+2024-11-07,Moradia,despesa,315.78,Moradia — transação automática,Boleto
+2024-12-01,Impostos,despesa,637.65,Impostos — transação automática,Pix
+2024-02-09,Transporte,despesa,67.01,Transporte — transação automática,Boleto
+2024-10-20,Rendimentos,receita,4834.76,Rendimentos — transação automática,Transferência
+2023-01-15,Transporte,despesa,448.52,Transporte — transação automática,Boleto
+2024-08-21,Educação,despesa,570.4,Educação — transação automática,Transferência
+2024-12-02,Freelance,receita,6573.66,Freelance — transação automática,Cartão de Crédito
+2022-05-30,Lazer,despesa,5.0,Lazer — transação automática,Cartão de Crédito
+2024-06-28,Vestuário,despesa,599.92,Vestuário — transação automática,Débito
+2023-05-25,Moradia,despesa,317.98,Moradia — transação automática,Transferência
+2024-12-27,Lazer,despesa,124.19,Lazer — transação automática,Débito
+2023-03-17,Saúde,despesa,538.45,Saúde — transação automática,Boleto
+2022-08-24,Salário,receita,3316.19,Salário — transação automática,Transferência
+2023-12-21,Moradia,despesa,316.03,Moradia — transação automática,Cartão de Crédito
+2024-10-12,Educação,despesa,434.73,Educação — transação automática,Transferência
+2023-02-27,Freelance,receita,3281.75,Freelance — transação automática,Boleto
+2023-02-11,Freelance,receita,429.1,Freelance — transação automática,Pix
+2022-10-14,Educação,despesa,246.43,Educação — transação automática,Cartão de Crédito
+2023-01-30,Bônus,receita,9093.41,Bônus — transação automática,Pix
+2024-05-09,Moradia,despesa,517.58,Moradia — transação automática,Débito
+2022-09-17,Vestuário,despesa,375.16,Vestuário — transação automática,Cartão de Crédito
+2023-04-25,Lazer,despesa,633.57,Lazer — transação automática,Transferência
+2024-06-10,Bônus,receita,3425.03,Bônus — transação automática,Débito
+2024-10-30,Impostos,despesa,211.21,Impostos — transação automática,Boleto
+2024-06-24,Educação,despesa,567.98,Educação — transação automática,Pix
+2022-02-13,Saúde,despesa,472.91,Saúde — transação automática,Transferência
+2024-05-13,Assinaturas,despesa,259.27,Assinaturas — transação automática,Cartão de Crédito
+2023-07-02,Impostos,despesa,266.72,Impostos — transação automática,Boleto
+2023-03-21,Lazer,despesa,170.46,Lazer — transação automática,Cartão de Crédito
+2022-10-31,Alimentação,despesa,547.13,Alimentação — transação automática,Pix
+2022-09-03,Assinaturas,despesa,96.43,Assinaturas — transação automática,Cartão de Crédito
+2022-06-29,Rendimentos,receita,4249.51,Rendimentos — transação automática,Pix
+2023-03-05,Vestuário,despesa,55.64,Vestuário — transação automática,Transferência
+2022-08-17,Rendimentos,receita,4531.67,Rendimentos — transação automática,Pix
+2023-09-10,Educação,despesa,129.09,Educação — transação automática,Débito
+2023-09-12,Rendimentos,receita,4524.54,Rendimentos — transação automática,Cartão de Crédito
+2022-06-28,Alimentação,despesa,689.86,Alimentação — transação automática,Débito
+2022-09-15,Freelance,receita,4562.39,Freelance — transação automática,Boleto
+2022-09-18,Bônus,receita,2786.17,Bônus — transação automática,Transferência
+2024-01-08,Moradia,despesa,104.85,Moradia — transação automática,Transferência
+2022-09-09,Freelance,receita,4565.55,Freelance — transação automática,Cartão de Crédito
+2023-10-30,Impostos,despesa,5.0,Impostos — transação automática,Transferência
+2023-01-22,Manutenção,despesa,68.46,Manutenção — transação automática,Cartão de Crédito
+2022-01-11,Rendimentos,receita,5555.1,Rendimentos — transação automática,Pix
+2023-01-14,Rendimentos,receita,2547.7,Rendimentos — transação automática,Transferência
+2023-06-27,Moradia,despesa,374.44,Moradia — transação automática,Transferência
+2024-12-05,Transporte,despesa,493.56,Transporte — transação automática,Cartão de Crédito
+2022-08-03,Manutenção,despesa,399.01,Manutenção — transação automática,Transferência
+2022-07-24,Impostos,despesa,602.37,Impostos — transação automática,Transferência
+2024-04-09,Moradia,despesa,118.42,Moradia — transação automática,Boleto
+2022-10-17,Salário,receita,2883.01,Salário — transação automática,Transferência
+2022-01-19,Manutenção,despesa,907.5,Manutenção — transação automática,Débito
+2022-08-14,Bônus,receita,4098.12,Bônus — transação automática,Cartão de Crédito
+2023-05-08,Vestuário,despesa,567.93,Vestuário — transação automática,Boleto
+2022-04-08,Salário,receita,7316.52,Salário — transação automática,Cartão de Crédito
+2024-09-21,Rendimentos,receita,2928.76,Rendimentos — transação automática,Cartão de Crédito
+2023-11-20,Vestuário,despesa,421.91,Vestuário — transação automática,Boleto
+2024-01-12,Moradia,despesa,481.94,Moradia — transação automática,Cartão de Crédito
+2022-04-26,Moradia,despesa,710.19,Moradia — transação automática,Boleto
+2024-10-25,Assinaturas,despesa,5.0,Assinaturas — transação automática,Cartão de Crédito
+2022-04-22,Impostos,despesa,43.52,Impostos — transação automática,Débito
+2022-11-02,Alimentação,despesa,284.62,Alimentação — transação automática,Boleto
+2024-05-17,Alimentação,despesa,779.22,Alimentação — transação automática,Débito
+2023-07-10,Lazer,despesa,13.43,Lazer — transação automática,Pix
+2022-12-06,Rendimentos,receita,4777.26,Rendimentos — transação automática,Débito
+2024-10-28,Impostos,despesa,45.64,Impostos — transação automática,Débito
+2022-11-05,Impostos,despesa,401.16,Impostos — transação automática,Boleto
+2022-01-06,Moradia,despesa,32783.32,Moradia — transação automática [ANOMALIA INJETADA],Cartão de Crédito
+2023-09-18,Alimentação,despesa,668.53,Alimentação — transação automática,Transferência
+2024-04-29,Lazer,despesa,84.67,Lazer — transação automática,Cartão de Crédito
+2024-03-17,Lazer,despesa,236.09,Lazer — transação automática,Transferência
+2022-10-24,Lazer,despesa,729.69,Lazer — transação automática,Pix
+2023-03-09,Vestuário,despesa,554.34,Vestuário — transação automática,Débito
+2024-03-12,Rendimentos,receita,4910.54,Rendimentos — transação automática,Pix
+2024-07-16,Transporte,despesa,28494.38,Transporte — transação automática [ANOMALIA INJETADA],Boleto
+2024-07-07,Moradia,despesa,225.59,Moradia — transação automática,Pix
+2023-11-19,Lazer,despesa,412.1,Lazer — transação automática,Débito
+2024-10-22,Impostos,despesa,481.6,Impostos — transação automática,Transferência
+2023-10-18,Transporte,despesa,5.0,Transporte — transação automática,Débito
+2023-04-22,Assinaturas,despesa,5.0,Assinaturas — transação automática,Débito
+2023-01-25,Transporte,despesa,867.08,Transporte — transação automática,Boleto
+2022-03-14,Manutenção,despesa,442.37,Manutenção — transação automática,Cartão de Crédito
+2024-03-20,Alimentação,despesa,313.84,Alimentação — transação automática,Pix
+2024-03-31,Impostos,despesa,203.87,Impostos — transação automática,Pix
+2022-02-12,Moradia,despesa,524.15,Moradia — transação automática,Boleto
+2024-09-18,Freelance,receita,1265.59,Freelance — transação automática,Débito
+2022-03-28,Moradia,despesa,336.65,Moradia — transação automática,Transferência
+2023-04-01,Impostos,despesa,387.08,Impostos — transação automática,Débito
+2023-10-24,Assinaturas,despesa,353.24,Assinaturas — transação automática,Débito
+2022-03-08,Assinaturas,despesa,626.45,Assinaturas — transação automática,Boleto
+2023-08-06,Impostos,despesa,5.0,Impostos — transação automática,Pix
+2024-05-02,Vestuário,despesa,294.28,Vestuário — transação automática,Transferência
+2024-02-21,Transporte,despesa,381.38,Transporte — transação automática,Transferência
+2024-12-09,Salário,receita,7016.79,Salário — transação automática,Pix
+2022-10-29,Moradia,despesa,341.02,Moradia — transação automática,Pix
+2024-01-16,Assinaturas,despesa,346.99,Assinaturas — transação automática,Boleto
+2022-12-10,Vestuário,despesa,218.7,Vestuário — transação automática,Transferência
+2024-02-28,Vestuário,despesa,364.39,Vestuário — transação automática,Cartão de Crédito
+2022-05-22,Assinaturas,despesa,289.86,Assinaturas — transação automática,Boleto
+2024-04-19,Alimentação,despesa,5.0,Alimentação — transação automática,Transferência
+2023-05-25,Bônus,receita,5229.55,Bônus — transação automática,Boleto
+2023-12-19,Manutenção,despesa,459.56,Manutenção — transação automática,Boleto
+2024-02-08,Educação,despesa,625.34,Educação — transação automática,Transferência
+2024-05-26,Freelance,receita,1182.16,Freelance — transação automática,Cartão de Crédito
+2022-02-03,Salário,receita,2839.23,Salário — transação automática,Débito
+2023-12-31,Manutenção,despesa,116.83,Manutenção — transação automática,Boleto
+2023-03-30,Saúde,despesa,5.0,Saúde — transação automática,Débito
+2022-07-16,Bônus,receita,4003.56,Bônus — transação automática,Débito
+2022-06-08,Vestuário,despesa,641.13,Vestuário — transação automática,Boleto
+2023-10-18,Bônus,receita,3934.34,Bônus — transação automática,Boleto
+2023-01-05,Impostos,despesa,650.9,Impostos — transação automática,Cartão de Crédito
+2022-10-06,Bônus,receita,7442.89,Bônus — transação automática,Boleto
+2024-07-26,Alimentação,despesa,318.36,Alimentação — transação automática,Pix
+2023-07-27,Manutenção,despesa,296.75,Manutenção — transação automática,Pix
+2022-05-07,Salário,receita,4780.78,Salário — transação automática,Pix
+2024-08-14,Vestuário,despesa,607.31,Vestuário — transação automática,Pix
+2023-06-12,Educação,despesa,322.82,Educação — transação automática,Débito
+2023-05-17,Assinaturas,despesa,956.99,Assinaturas — transação automática,Débito
+2023-11-25,Alimentação,despesa,644.31,Alimentação — transação automática,Pix
+2022-12-31,Lazer,despesa,5.0,Lazer — transação automática,Pix
+2023-09-09,Transporte,despesa,373.09,Transporte — transação automática,Transferência
+2024-02-13,Lazer,despesa,339.54,Lazer — transação automática,Débito
+2022-03-02,Educação,despesa,25.65,Educação — transação automática,Cartão de Crédito
+2023-01-31,Bônus,receita,3891.36,Bônus — transação automática,Pix
+2022-07-11,Assinaturas,despesa,269.65,Assinaturas — transação automática,Pix
+2024-02-08,Salário,receita,4288.61,Salário — transação automática,Transferência
+2022-07-16,Freelance,receita,3281.85,Freelance — transação automática,Pix
+2023-12-26,Saúde,despesa,332.37,Saúde — transação automática,Pix
+2023-09-09,Freelance,receita,3453.22,Freelance — transação automática,Cartão de Crédito
+2022-07-02,Manutenção,despesa,196.55,Manutenção — transação automática,Boleto
+2024-07-20,Assinaturas,despesa,597.15,Assinaturas — transação automática,Pix
+2022-12-09,Transporte,despesa,715.09,Transporte — transação automática,Débito
+2024-03-09,Freelance,receita,7085.47,Freelance — transação automática,Boleto
+2022-08-20,Lazer,despesa,436.21,Lazer — transação automática,Cartão de Crédito
+2023-08-18,Lazer,despesa,136.65,Lazer — transação automática,Débito
+2024-03-17,Impostos,despesa,339.83,Impostos — transação automática,Pix
+2022-09-28,Bônus,receita,4573.69,Bônus — transação automática,Cartão de Crédito
+2023-09-13,Manutenção,despesa,110.15,Manutenção — transação automática,Boleto
+2022-09-15,Assinaturas,despesa,182.43,Assinaturas — transação automática,Boleto
+2024-05-10,Moradia,despesa,-2952.55,Moradia — transação automática [ANOMALIA INJETADA],Transferência
+2023-11-19,Alimentação,despesa,5.0,Alimentação — transação automática,Débito
+2024-10-18,Moradia,despesa,289.93,Moradia — transação automática,Boleto
+2022-03-25,Moradia,despesa,116.82,Moradia — transação automática,Transferência
+2024-02-24,Manutenção,despesa,5.0,Manutenção — transação automática,Transferência
+2024-11-12,Impostos,despesa,432.43,Impostos — transação automática,Cartão de Crédito
+2022-11-18,Manutenção,despesa,622.32,Manutenção — transação automática,Transferência
+2024-11-11,Saúde,despesa,413.71,Saúde — transação automática,Transferência
+2024-01-16,Lazer,despesa,293.43,Lazer — transação automática,Transferência
+2022-07-19,Lazer,despesa,605.8,Lazer — transação automática,Débito
+2023-06-14,Vestuário,despesa,167.95,Vestuário — transação automática,Pix
+2023-01-06,Assinaturas,despesa,311.3,Assinaturas — transação automática,Débito
+2024-10-25,Impostos,despesa,365.07,Impostos — transação automática,Transferência
+2022-10-18,Alimentação,despesa,555.86,Alimentação — transação automática,Cartão de Crédito
+2023-03-18,Moradia,despesa,367.48,Moradia — transação automática,Transferência
+2023-08-07,Rendimentos,receita,1980.94,Rendimentos — transação automática,Transferência
+2023-10-09,Freelance,receita,5721.53,Freelance — transação automática,Cartão de Crédito
+2023-08-01,Saúde,despesa,46.35,Saúde — transação automática,Débito
+2022-04-21,Bônus,receita,5942.53,Bônus — transação automática,Transferência
+2023-10-05,Educação,despesa,266.11,Educação — transação automática,Boleto
+2022-06-24,Lazer,despesa,239.6,Lazer — transação automática,Cartão de Crédito
+2024-06-23,Impostos,despesa,59.88,Impostos — transação automática,Cartão de Crédito
+2022-05-23,Bônus,receita,1998.29,Bônus — transação automática,Cartão de Crédito
+2023-03-18,Bônus,receita,5648.28,Bônus — transação automática,Pix
+2022-07-24,Manutenção,despesa,245.68,Manutenção — transação automática,Boleto
+2024-03-31,Assinaturas,despesa,5.0,Assinaturas — transação automática,Débito
+2024-08-31,Rendimentos,receita,3476.82,Rendimentos — transação automática,Débito
+2022-09-20,Impostos,despesa,466.7,Impostos — transação automática,Transferência
+2022-05-08,Impostos,despesa,408.71,Impostos — transação automática,Boleto
+2024-12-07,Impostos,despesa,5.0,Impostos — transação automática,Cartão de Crédito
+2022-10-15,Salário,receita,1149.31,Salário — transação automática,Transferência
+2023-05-28,Assinaturas,despesa,5.0,Assinaturas — transação automática,Débito
+2024-09-24,Lazer,despesa,602.8,Lazer — transação automática,Pix
+2023-07-23,Assinaturas,despesa,80.55,Assinaturas — transação automática,Débito
+2024-03-26,Educação,despesa,366.73,Educação — transação automática,Cartão de Crédito
+2024-02-07,Saúde,despesa,5.0,Saúde — transação automática,Pix
+2022-07-14,Assinaturas,despesa,388.63,Assinaturas — transação automática,Débito
+2024-06-30,Assinaturas,despesa,199.45,Assinaturas — transação automática,Transferência
+2024-03-11,Salário,receita,1206.91,Salário — transação automática,Boleto
+2022-08-07,Salário,receita,4756.99,Salário — transação automática,Débito
+2024-02-15,Assinaturas,despesa,579.61,Assinaturas — transação automática,Transferência
+2023-01-26,Impostos,despesa,346.85,Impostos — transação automática,Pix
+2024-11-17,Manutenção,despesa,848.28,Manutenção — transação automática,Boleto
+2024-01-22,Salário,receita,3114.45,Salário — transação automática,Transferência
+2023-12-27,Vestuário,despesa,404.72,Vestuário — transação automática,Pix
+2023-07-06,Manutenção,despesa,264.75,Manutenção — transação automática,Transferência
+2023-09-21,Lazer,despesa,203.75,Lazer — transação automática,Débito
+2024-02-26,Saúde,despesa,578.85,Saúde — transação automática,Pix
+2022-04-16,Freelance,receita,6236.57,Freelance — transação automática,Boleto
+2022-04-04,Freelance,receita,2827.82,Freelance — transação automática,Pix
+2024-09-15,Bônus,receita,2642.25,Bônus — transação automática,Débito
+2022-12-05,Impostos,despesa,25.51,Impostos — transação automática,Boleto
+2023-01-13,Impostos,despesa,411.41,Impostos — transação automática,Pix
+2022-06-10,Saúde,despesa,631.16,Saúde — transação automática,Cartão de Crédito
+2024-08-29,Moradia,despesa,548.61,Moradia — transação automática,Boleto
+2024-11-15,Manutenção,despesa,341.96,Manutenção — transação automática,Débito
+2022-12-18,Impostos,despesa,751.76,Impostos — transação automática,Cartão de Crédito
+2022-11-15,Assinaturas,despesa,500.79,Assinaturas — transação automática,Débito
+2024-10-03,Educação,despesa,288.23,Educação — transação automática,Pix
+2024-10-21,Salário,receita,3002.46,Salário — transação automática,Pix
+2023-03-20,Impostos,despesa,431.48,Impostos — transação automática,Transferência
+2023-02-14,Impostos,despesa,121.71,Impostos — transação automática,Cartão de Crédito
+2023-05-25,Saúde,despesa,262.38,Saúde — transação automática,Transferência
+2022-08-07,Rendimentos,receita,3219.57,Rendimentos — transação automática,Transferência
+2022-07-20,Bônus,receita,7424.15,Bônus — transação automática,Boleto
+2024-07-12,Freelance,receita,4413.58,Freelance — transação automática,Transferência
+2023-02-14,Salário,receita,821.83,Salário — transação automática,Boleto
+2022-06-15,Vestuário,despesa,245.5,Vestuário — transação automática,Cartão de Crédito
+2023-06-15,Salário,receita,7123.26,Salário — transação automática,Boleto
+2022-06-11,Bônus,receita,6504.2,Bônus — transação automática,Transferência
+2022-04-19,Impostos,despesa,455.61,Impostos — transação automática,Pix
+2024-12-07,Saúde,despesa,191.14,Saúde — transação automática,Cartão de Crédito
+2023-12-26,Alimentação,despesa,126.35,Alimentação — transação automática,Débito
+2023-02-07,Saúde,despesa,307.18,Saúde — transação automática,Pix
+2024-02-05,Bônus,receita,2660.55,Bônus — transação automática,Boleto
+2022-02-28,Educação,despesa,374.93,Educação — transação automática,Cartão de Crédito
+2024-08-03,Moradia,despesa,447.47,Moradia — transação automática,Boleto
+2024-08-15,Saúde,despesa,157.33,Saúde — transação automática,Cartão de Crédito
+2023-05-12,Vestuário,despesa,644.74,Vestuário — transação automática,Cartão de Crédito
+2022-08-07,Lazer,despesa,171.6,Lazer — transação automática,Boleto
+2022-02-08,Saúde,despesa,361.58,Saúde — transação automática,Transferência
+2023-02-24,Rendimentos,receita,2244.09,Rendimentos — transação automática,Cartão de Crédito
+2022-04-02,Vestuário,despesa,455.21,Vestuário — transação automática,Pix
+2023-07-06,Manutenção,despesa,261.99,Manutenção — transação automática,Boleto
+2023-07-20,Vestuário,despesa,353.9,Vestuário — transação automática,Pix
+2022-07-04,Bônus,receita,1668.15,Bônus — transação automática,Cartão de Crédito
+2022-05-16,Educação,despesa,717.25,Educação — transação automática,Pix
+2023-05-22,Educação,despesa,224.69,Educação — transação automática,Cartão de Crédito
+2022-06-07,Impostos,despesa,439.97,Impostos — transação automática,Débito
+2022-12-08,Salário,receita,7948.6,Salário — transação automática,Pix
+2022-12-04,Assinaturas,despesa,107.32,Assinaturas — transação automática,Cartão de Crédito
+2023-08-27,Manutenção,despesa,5.0,Manutenção — transação automática,Pix
+2022-04-10,Alimentação,despesa,158.77,Alimentação — transação automática,Pix
+2023-12-12,Manutenção,despesa,863.15,Manutenção — transação automática,Cartão de Crédito
+2024-03-15,Bônus,receita,6243.97,Bônus — transação automática,Boleto
+2024-05-12,Educação,despesa,333.65,Educação — transação automática,Transferência
+2024-12-28,Alimentação,despesa,326.37,Alimentação — transação automática,Boleto
+2023-09-11,Impostos,despesa,404.25,Impostos — transação automática,Boleto
+2023-01-25,Manutenção,despesa,488.03,Manutenção — transação automática,Débito
+2022-06-20,Freelance,receita,8097.61,Freelance — transação automática,Boleto
+2023-11-22,Assinaturas,despesa,793.96,Assinaturas — transação automática,Débito
+2024-11-13,Moradia,despesa,271.22,Moradia — transação automática,Boleto
+2024-02-19,Vestuário,despesa,283.41,Vestuário — transação automática,Boleto
+2023-06-17,Saúde,despesa,132.26,Saúde — transação automática,Boleto
+2024-04-26,Alimentação,despesa,494.33,Alimentação — transação automática,Cartão de Crédito
+2022-06-22,Rendimentos,receita,4999.01,Rendimentos — transação automática,Débito
+2022-04-22,Transporte,despesa,744.82,Transporte — transação automática,Pix
+2024-03-12,Saúde,despesa,317.21,Saúde — transação automática,Cartão de Crédito
+2023-11-16,Saúde,despesa,493.73,Saúde — transação automática,Débito
+2024-06-24,Assinaturas,despesa,5.0,Assinaturas — transação automática,Cartão de Crédito
+2022-08-04,Salário,receita,7225.95,Salário — transação automática,Cartão de Crédito
+2023-12-14,Educação,despesa,445.28,Educação — transação automática,Boleto
+2024-05-14,Impostos,despesa,194.5,Impostos — transação automática,Transferência
+2022-06-12,Vestuário,despesa,671.95,Vestuário — transação automática,Boleto
+2023-07-11,Salário,receita,6582.0,Salário — transação automática,Cartão de Crédito
+2023-08-11,Bônus,receita,3396.67,Bônus — transação automática,Pix
+2024-12-22,Alimentação,despesa,691.91,Alimentação — transação automática,Boleto
+2023-02-18,Impostos,despesa,335.34,Impostos — transação automática,Transferência
+2024-05-02,Manutenção,despesa,446.31,Manutenção — transação automática,Cartão de Crédito
+2024-04-18,Salário,receita,3634.58,Salário — transação automática,Pix
+2024-01-24,Lazer,despesa,554.36,Lazer — transação automática,Boleto
+2024-11-23,Lazer,despesa,64.19,Lazer — transação automática,Transferência
+2022-02-27,Alimentação,despesa,535.31,Alimentação — transação automática,Transferência
+2024-01-23,Bônus,receita,3359.56,Bônus — transação automática,Transferência
+2024-02-18,Rendimentos,receita,3475.61,Rendimentos — transação automática,Pix
+2022-10-09,Lazer,despesa,301.89,Lazer — transação automática,Boleto
+2022-07-17,Rendimentos,receita,3200.02,Rendimentos — transação automática,Boleto
+2024-04-27,Freelance,receita,4482.12,Freelance — transação automática,Transferência
+2024-06-11,Impostos,despesa,795.03,Impostos — transação automática,Débito
+2022-02-26,Rendimentos,receita,1366.79,Rendimentos — transação automática,Cartão de Crédito
+2024-05-16,Transporte,despesa,158.67,Transporte — transação automática,Transferência
+2022-04-29,Assinaturas,despesa,224.44,Assinaturas — transação automática,Cartão de Crédito
+2023-07-10,Educação,despesa,176.54,Educação — transação automática,Cartão de Crédito
+2023-05-10,Bônus,receita,8135.46,Bônus — transação automática,Pix
+2024-09-18,Impostos,despesa,369.66,Impostos — transação automática,Débito
+2022-11-20,Impostos,despesa,5.0,Impostos — transação automática,Cartão de Crédito
+2022-12-08,Rendimentos,receita,2334.11,Rendimentos — transação automática,Transferência
+2024-02-22,Alimentação,despesa,314.25,Alimentação — transação automática,Boleto
+2023-03-15,Alimentação,despesa,688.96,Alimentação — transação automática,Débito
+2023-11-14,Freelance,receita,2812.53,Freelance — transação automática,Transferência
+2023-08-02,Educação,despesa,323.12,Educação — transação automática,Débito
+2024-11-01,Alimentação,despesa,572.12,Alimentação — transação automática,Pix
+2023-01-03,Saúde,despesa,768.52,Saúde — transação automática,Boleto
+2022-09-16,Rendimentos,receita,7237.78,Rendimentos — transação automática,Pix
+2023-02-25,Lazer,despesa,250.25,Lazer — transação automática,Boleto
+2022-01-03,Assinaturas,despesa,111.83,Assinaturas — transação automática,Pix
+2024-04-15,Educação,despesa,585.48,Educação — transação automática,Boleto
+2022-07-31,Lazer,despesa,454.3,Lazer — transação automática,Cartão de Crédito
+2022-05-01,Lazer,despesa,514.98,Lazer — transação automática,Débito
+2022-11-13,Alimentação,despesa,643.69,Alimentação — transação automática,Débito
+2022-02-13,Manutenção,despesa,750.26,Manutenção — transação automática,Pix
+2022-04-02,Freelance,receita,3168.65,Freelance — transação automática,Cartão de Crédito
+2023-03-15,Manutenção,despesa,184.44,Manutenção — transação automática,Boleto
+2023-06-23,Moradia,despesa,455.26,Moradia — transação automática,Transferência
+2024-06-17,Salário,receita,6005.78,Salário — transação automática,Cartão de Crédito
+2023-02-13,Freelance,receita,5213.5,Freelance — transação automática,Pix
+2023-12-19,Saúde,despesa,112.54,Saúde — transação automática,Débito
+2023-02-27,Transporte,despesa,676.31,Transporte — transação automática,Débito
+2022-10-22,Manutenção,despesa,431.28,Manutenção — transação automática,Transferência
+2023-10-19,Impostos,despesa,11.36,Impostos — transação automática,Boleto
+2022-01-18,Rendimentos,receita,3002.28,Rendimentos — transação automática,Cartão de Crédito
+2023-11-08,Lazer,despesa,290.67,Lazer — transação automática,Boleto
+2024-01-07,Moradia,despesa,92.37,Moradia — transação automática,Transferência
+2023-02-11,Educação,despesa,679.44,Educação — transação automática,Débito
+2022-10-21,Rendimentos,receita,3587.08,Rendimentos — transação automática,Boleto
+2022-04-08,Moradia,despesa,144.02,Moradia — transação automática,Pix
+2023-04-17,Saúde,despesa,5.0,Saúde — transação automática,Débito
+2022-10-01,Manutenção,despesa,147.89,Manutenção — transação automática,Pix
+2024-01-28,Vestuário,despesa,622.64,Vestuário — transação automática,Pix
+2022-06-28,Assinaturas,despesa,183.26,Assinaturas — transação automática,Transferência
+2023-05-09,Educação,despesa,518.65,Educação — transação automática,Boleto
+2022-09-22,Alimentação,despesa,239.15,Alimentação — transação automática,Pix
+2022-05-28,Impostos,despesa,547.7,Impostos — transação automática,Boleto
+2024-09-30,Saúde,despesa,627.64,Saúde — transação automática,Boleto
+2023-07-09,Transporte,despesa,640.18,Transporte — transação automática,Débito
+2024-05-15,Transporte,despesa,396.61,Transporte — transação automática,Cartão de Crédito
+2023-06-19,Vestuário,despesa,364.64,Vestuário — transação automática,Débito
+2023-11-26,Impostos,despesa,528.4,Impostos — transação automática,Boleto
+2024-12-28,Saúde,despesa,229.4,Saúde — transação automática,Transferência
+2022-03-07,Moradia,despesa,666.41,Moradia — transação automática,Débito
+2022-10-23,Vestuário,despesa,318.19,Vestuário — transação automática,Transferência
+2023-06-02,Freelance,receita,5395.63,Freelance — transação automática,Transferência
+2023-11-15,Rendimentos,receita,4109.44,Rendimentos — transação automática,Boleto
+2024-02-27,Bônus,receita,1428.16,Bônus — transação automática,Cartão de Crédito
+2022-09-06,Freelance,receita,6784.57,Freelance — transação automática,Débito
+2023-06-09,Moradia,despesa,5.0,Moradia — transação automática,Pix
+2024-02-05,Impostos,despesa,387.64,Impostos — transação automática,Boleto
+2022-09-27,Salário,receita,2646.41,Salário — transação automática,Pix
+2022-05-13,Bônus,receita,5217.58,Bônus — transação automática,Transferência
+2023-10-11,Lazer,despesa,224.72,Lazer — transação automática,Boleto
+2022-06-23,Impostos,despesa,659.38,Impostos — transação automática,Pix
+2022-05-06,Freelance,receita,4400.62,Freelance — transação automática,Boleto
+2024-04-28,Manutenção,despesa,74.77,Manutenção — transação automática,Cartão de Crédito
+2023-06-24,Manutenção,despesa,517.62,Manutenção — transação automática,Débito
+2022-05-14,Educação,despesa,611.5,Educação — transação automática,Transferência
+2024-11-23,Bônus,receita,-2607.3,Bônus — transação automática [ANOMALIA INJETADA],Boleto
+2024-09-16,Transporte,despesa,12.04,Transporte — transação automática,Boleto
+2023-05-12,Educação,despesa,451.35,Educação — transação automática,Pix
+2023-10-18,Rendimentos,receita,3593.39,Rendimentos — transação automática,Débito
+2022-05-18,Bônus,receita,1392.42,Bônus — transação automática,Débito
+2024-10-29,Vestuário,despesa,360.93,Vestuário — transação automática,Débito
+2023-09-19,Assinaturas,despesa,5.0,Assinaturas — transação automática,Débito
+2022-05-27,Moradia,despesa,549.84,Moradia — transação automática,Transferência
+2022-08-12,Manutenção,despesa,355.43,Manutenção — transação automática,Transferência
+2023-12-18,Assinaturas,despesa,620.72,Assinaturas — transação automática,Pix
+2023-07-18,Assinaturas,despesa,188.4,Assinaturas — transação automática,Pix
+2024-02-19,Freelance,receita,6479.71,Freelance — transação automática,Cartão de Crédito
+2023-12-20,Saúde,despesa,536.61,Saúde — transação automática,Débito
+2022-01-08,Vestuário,despesa,532.27,Vestuário — transação automática,Boleto
+2023-07-06,Alimentação,despesa,314.17,Alimentação — transação automática,Transferência
+2023-06-09,Vestuário,despesa,306.95,Vestuário — transação automática,Cartão de Crédito
+2024-08-28,Transporte,despesa,260.76,Transporte — transação automática,Cartão de Crédito
+2022-12-08,Moradia,despesa,5.0,Moradia — transação automática,Transferência
+2024-08-20,Moradia,despesa,673.07,Moradia — transação automática,Pix
+2023-01-17,Assinaturas,despesa,600.31,Assinaturas — transação automática,Boleto
+2022-03-01,Freelance,receita,5208.72,Freelance — transação automática,Boleto
+2023-11-09,Rendimentos,receita,5709.6,Rendimentos — transação automática,Débito
+2023-12-30,Transporte,despesa,89.62,Transporte — transação automática,Transferência
+2022-12-22,Vestuário,despesa,374.31,Vestuário — transação automática,Pix
+2023-02-19,Freelance,receita,5503.09,Freelance — transação automática,Cartão de Crédito
+2024-05-18,Impostos,despesa,5.0,Impostos — transação automática,Transferência
+2022-10-05,Impostos,despesa,507.53,Impostos — transação automática,Transferência
+2023-12-18,Saúde,despesa,426.72,Saúde — transação automática,Débito
+2023-03-01,Assinaturas,despesa,147.81,Assinaturas — transação automática,Boleto
+2022-01-14,Moradia,despesa,373.65,Moradia — transação automática,Boleto
+2024-12-20,Saúde,despesa,521.21,Saúde — transação automática,Boleto
+2023-01-07,Assinaturas,despesa,416.9,Assinaturas — transação automática,Boleto
+2024-07-28,Manutenção,despesa,184.32,Manutenção — transação automática,Pix
+2023-09-08,Saúde,despesa,195.0,Saúde — transação automática,Boleto
+2023-11-03,Bônus,receita,1458.58,Bônus — transação automática,Boleto
+2023-02-05,Alimentação,despesa,30.92,Alimentação — transação automática,Pix
+2022-02-23,Vestuário,despesa,535.77,Vestuário — transação automática,Transferência
+2023-03-20,Freelance,receita,5770.12,Freelance — transação automática,Pix
+2023-11-06,Moradia,despesa,446.45,Moradia — transação automática,Cartão de Crédito
+2022-12-03,Saúde,despesa,382.41,Saúde — transação automática,Transferência
+2022-09-01,Lazer,despesa,512.79,Lazer — transação automática,Pix
+2023-05-20,Rendimentos,receita,2194.35,Rendimentos — transação automática,Boleto
+2024-08-26,Lazer,despesa,323.85,Lazer — transação automática,Cartão de Crédito
+2024-11-09,Salário,receita,1715.56,Salário — transação automática,Transferência
+2024-02-20,Lazer,despesa,323.37,Lazer — transação automática,Boleto
+2023-12-16,Impostos,despesa,478.46,Impostos — transação automática,Boleto
+2024-04-05,Transporte,despesa,405.21,Transporte — transação automática,Boleto
+2023-12-17,Moradia,despesa,201.8,Moradia — transação automática,Débito
+2024-04-10,Rendimentos,receita,2536.95,Rendimentos — transação automática,Pix
+2022-11-02,Saúde,despesa,5.0,Saúde — transação automática,Pix
+2022-05-20,Moradia,despesa,250.36,Moradia — transação automática,Boleto
+2022-08-20,Vestuário,despesa,367.93,Vestuário — transação automática,Cartão de Crédito
+2023-04-15,Bônus,receita,9828.17,Bônus — transação automática,Cartão de Crédito
+2023-08-20,Saúde,despesa,224.17,Saúde — transação automática,Cartão de Crédito
+2022-08-22,Vestuário,despesa,554.87,Vestuário — transação automática,Transferência
+2023-11-25,Moradia,despesa,424.19,Moradia — transação automática,Boleto
+2023-07-01,Lazer,despesa,554.09,Lazer — transação automática,Boleto
+2022-03-04,Impostos,despesa,195.49,Impostos — transação automática,Boleto
+2023-07-04,Saúde,despesa,102.9,Saúde — transação automática,Débito
+2022-10-29,Vestuário,despesa,182.85,Vestuário — transação automática,Débito
+2024-06-24,Manutenção,despesa,5.0,Manutenção — transação automática,Cartão de Crédito
+2024-06-23,Salário,receita,6112.69,Salário — transação automática,Débito
+2024-12-30,Assinaturas,despesa,482.37,Assinaturas — transação automática,Débito
+2022-05-13,Educação,despesa,728.71,Educação — transação automática,Cartão de Crédito
+2022-01-08,Educação,despesa,277.31,Educação — transação automática,Boleto
+2024-08-31,Transporte,despesa,883.64,Transporte — transação automática,Débito
+2024-06-29,Lazer,despesa,399.1,Lazer — transação automática,Pix
+2023-06-16,Rendimentos,receita,5070.02,Rendimentos — transação automática,Cartão de Crédito
+2024-06-29,Lazer,despesa,361.64,Lazer — transação automática,Boleto
+2024-03-08,Rendimentos,receita,5678.86,Rendimentos — transação automática,Pix
+2022-06-19,Alimentação,despesa,212.18,Alimentação — transação automática,Transferência
+2024-02-21,Transporte,despesa,307.57,Transporte — transação automática,Cartão de Crédito
+2022-05-01,Lazer,despesa,362.19,Lazer — transação automática,Cartão de Crédito
+2023-10-12,Vestuário,despesa,471.44,Vestuário — transação automática,Transferência
+2022-11-03,Saúde,despesa,563.78,Saúde — transação automática,Boleto
+2024-07-28,Vestuário,despesa,324.15,Vestuário — transação automática,Boleto
+2022-03-01,Saúde,despesa,239.98,Saúde — transação automática,Boleto
+2024-08-07,Transporte,despesa,5.0,Transporte — transação automática,Boleto
+2024-02-04,Freelance,receita,5231.66,Freelance — transação automática,Transferência
+2023-03-23,Freelance,receita,6071.75,Freelance — transação automática,Transferência
+2022-02-26,Moradia,despesa,614.02,Moradia — transação automática,Cartão de Crédito
+2022-02-16,Educação,despesa,607.19,Educação — transação automática,Cartão de Crédito
+2024-01-08,Vestuário,despesa,354.79,Vestuário — transação automática,Pix
+2024-08-05,Freelance,receita,4801.95,Freelance — transação automática,Boleto
+2023-07-14,Rendimentos,receita,3408.26,Rendimentos — transação automática,Cartão de Crédito
+2023-08-15,Vestuário,despesa,25.84,Vestuário — transação automática,Débito
+2023-01-19,Educação,despesa,78.06,Educação — transação automática,Débito
+2024-09-10,Impostos,despesa,453.3,Impostos — transação automática,Cartão de Crédito
+2023-01-05,Educação,despesa,554.79,Educação — transação automática,Cartão de Crédito
+2022-08-06,Transporte,despesa,577.65,Transporte — transação automática,Débito
+2022-03-08,Vestuário,despesa,155.3,Vestuário — transação automática,Pix
+2023-11-01,Transporte,despesa,251.01,Transporte — transação automática,Cartão de Crédito
+2022-12-07,Vestuário,despesa,625.09,Vestuário — transação automática,Boleto
+2023-09-04,Vestuário,despesa,223.62,Vestuário — transação automática,Pix
+2023-01-05,Bônus,receita,6726.62,Bônus — transação automática,Cartão de Crédito
+2022-09-05,Assinaturas,despesa,468.33,Assinaturas — transação automática,Cartão de Crédito
+2022-09-12,Educação,despesa,972.94,Educação — transação automática,Boleto
+2024-09-14,Salário,receita,2150.39,Salário — transação automática,Cartão de Crédito
+2023-09-22,Moradia,despesa,362.18,Moradia — transação automática,Débito
+2022-06-14,Moradia,despesa,200.46,Moradia — transação automática,Pix
+2023-10-27,Alimentação,despesa,519.64,Alimentação — transação automática,Débito
+2024-11-06,Vestuário,despesa,376.1,Vestuário — transação automática,Boleto
+2023-04-09,Vestuário,despesa,448.06,Vestuário — transação automática,Pix
+2024-02-23,Assinaturas,despesa,488.91,Assinaturas — transação automática,Transferência
+2022-09-27,Bônus,receita,6429.89,Bônus — transação automática,Pix
+2023-10-01,Saúde,despesa,120.69,Saúde — transação automática,Pix
+2022-02-27,Lazer,despesa,649.53,Lazer — transação automática,Transferência
+2024-07-04,Impostos,despesa,31.04,Impostos — transação automática,Transferência
+2023-12-12,Educação,despesa,5.0,Educação — transação automática,Cartão de Crédito
+2024-03-28,Assinaturas,despesa,5.0,Assinaturas — transação automática,Cartão de Crédito
+2022-10-10,Freelance,receita,7872.61,Freelance — transação automática,Boleto
+2024-09-16,Transporte,despesa,5.0,Transporte — transação automática,Pix
+2023-11-21,Manutenção,despesa,661.84,Manutenção — transação automática,Pix
+2022-02-22,Manutenção,despesa,72.34,Manutenção — transação automática,Boleto
+2024-10-13,Vestuário,despesa,341.02,Vestuário — transação automática,Pix
+2024-04-16,Salário,receita,4091.26,Salário — transação automática,Débito
+2023-02-13,Transporte,despesa,5.59,Transporte — transação automática,Boleto
+2023-03-05,Transporte,despesa,577.02,Transporte — transação automática,Transferência
+2022-12-02,Moradia,despesa,171.73,Moradia — transação automática,Boleto
+2024-09-22,Manutenção,despesa,142.83,Manutenção — transação automática,Cartão de Crédito
+2022-03-26,Assinaturas,despesa,5.0,Assinaturas — transação automática,Débito
+2022-07-10,Manutenção,despesa,655.77,Manutenção — transação automática,Boleto
+2022-04-27,Freelance,receita,3140.97,Freelance — transação automática,Débito
+2022-09-23,Manutenção,despesa,572.16,Manutenção — transação automática,Transferência
+2022-08-01,Salário,receita,2341.29,Salário — transação automática,Cartão de Crédito
+2023-09-25,Salário,receita,1692.53,Salário — transação automática,Pix
+2024-06-01,Rendimentos,receita,4724.87,Rendimentos — transação automática,Débito
+2022-07-30,Freelance,receita,4979.41,Freelance — transação automática,Pix
+2022-11-14,Freelance,receita,6822.66,Freelance — transação automática,Transferência
+2022-08-02,Freelance,receita,6052.84,Freelance — transação automática,Transferência
+2023-09-21,Assinaturas,despesa,306.17,Assinaturas — transação automática,Pix
+2023-11-24,Bônus,receita,7780.08,Bônus — transação automática,Pix
+2023-12-14,Impostos,despesa,280.53,Impostos — transação automática,Cartão de Crédito
+2024-12-27,Manutenção,despesa,52.05,Manutenção — transação automática,Transferência
+2022-11-23,Lazer,despesa,319.67,Lazer — transação automática,Débito
+2022-07-16,Assinaturas,despesa,506.86,Assinaturas — transação automática,Cartão de Crédito
+2022-12-30,Manutenção,despesa,523.59,Manutenção — transação automática,Débito
+2022-03-05,Manutenção,despesa,5.0,Manutenção — transação automática,Boleto
+2023-07-19,Manutenção,despesa,226.27,Manutenção — transação automática,Transferência
+2022-11-09,Moradia,despesa,5.0,Moradia — transação automática,Débito
+2022-01-16,Saúde,despesa,303.33,Saúde — transação automática,Transferência
+2024-01-19,Moradia,despesa,399.63,Moradia — transação automática,Pix
+2024-04-06,Freelance,receita,-2973.79,Freelance — transação automática [ANOMALIA INJETADA],Pix
+2022-08-31,Assinaturas,despesa,506.14,Assinaturas — transação automática,Débito
+2024-12-10,Rendimentos,receita,4740.79,Rendimentos — transação automática,Boleto
+2023-01-10,Lazer,despesa,115.81,Lazer — transação automática,Boleto
+2024-01-07,Rendimentos,receita,1996.39,Rendimentos — transação automática,Boleto
+2022-04-14,Bônus,receita,3430.82,Bônus — transação automática,Pix
+2023-05-03,Moradia,despesa,449.11,Moradia — transação automática,Débito
+2022-01-20,Transporte,despesa,5.0,Transporte — transação automática,Pix
+2024-09-20,Impostos,despesa,454.61,Impostos — transação automática,Débito
+2022-11-20,Vestuário,despesa,603.41,Vestuário — transação automática,Boleto
+2022-08-13,Freelance,receita,4452.99,Freelance — transação automática,Boleto
+2023-09-13,Vestuário,despesa,588.91,Vestuário — transação automática,Cartão de Crédito
+2022-05-26,Educação,despesa,888.2,Educação — transação automática,Boleto
+2024-06-06,Rendimentos,receita,5341.57,Rendimentos — transação automática,Pix
+2022-06-23,Lazer,despesa,507.53,Lazer — transação automática,Cartão de Crédito
+2023-03-18,Vestuário,despesa,409.67,Vestuário — transação automática,Débito
+2022-01-11,Moradia,despesa,401.88,Moradia — transação automática,Boleto
+2022-08-26,Rendimentos,receita,1261.02,Rendimentos — transação automática,Débito
+2024-06-18,Transporte,despesa,421.9,Transporte — transação automática,Cartão de Crédito
+2023-04-01,Assinaturas,despesa,145.32,Assinaturas — transação automática,Transferência
+2024-07-19,Vestuário,despesa,266.06,Vestuário — transação automática,Transferência
+2022-02-23,Educação,despesa,5.0,Educação — transação automática,Pix
+2023-12-23,Manutenção,despesa,15.1,Manutenção — transação automática,Boleto
+2022-07-02,Saúde,despesa,182.38,Saúde — transação automática,Débito
+2024-04-04,Impostos,despesa,90.13,Impostos — transação automática,Transferência
+2022-12-09,Salário,receita,5136.75,Salário — transação automática,Cartão de Crédito
+2022-10-09,Impostos,despesa,364.07,Impostos — transação automática,Cartão de Crédito
+2024-09-16,Impostos,despesa,104.77,Impostos — transação automática,Boleto
+2024-10-16,Educação,despesa,5.0,Educação — transação automática,Transferência
+2023-02-25,Impostos,despesa,5.0,Impostos — transação automática,Cartão de Crédito
+2024-06-09,Alimentação,despesa,657.36,Alimentação — transação automática,Boleto
+2024-12-14,Educação,despesa,5.0,Educação — transação automática,Pix
+2023-04-08,Rendimentos,receita,4265.1,Rendimentos — transação automática,Pix
+2023-07-20,Impostos,despesa,132.18,Impostos — transação automática,Cartão de Crédito
+2024-12-09,Freelance,receita,4188.25,Freelance — transação automática,Cartão de Crédito
+2023-08-04,Educação,despesa,159.58,Educação — transação automática,Boleto
+2022-07-17,Transporte,despesa,917.07,Transporte — transação automática,Cartão de Crédito
+2022-12-15,Bônus,receita,3524.29,Bônus — transação automática,Transferência
+2022-01-02,Lazer,despesa,581.0,Lazer — transação automática,Pix
+2024-04-02,Moradia,despesa,19.25,Moradia — transação automática,Débito
+2022-01-18,Rendimentos,receita,4655.39,Rendimentos — transação automática,Débito
+2023-08-21,Lazer,despesa,573.3,Lazer — transação automática,Débito
+2022-03-17,Rendimentos,receita,7003.9,Rendimentos — transação automática,Boleto
+2024-04-29,Rendimentos,receita,1082.88,Rendimentos — transação automática,Cartão de Crédito
+2022-04-22,Moradia,despesa,5.0,Moradia — transação automática,Pix
+2022-03-23,Impostos,despesa,189.93,Impostos — transação automática,Boleto
+2023-02-20,Rendimentos,receita,5602.86,Rendimentos — transação automática,Pix
+2023-03-23,Rendimentos,receita,6001.32,Rendimentos — transação automática,Cartão de Crédito
+2024-07-28,Freelance,receita,4548.96,Freelance — transação automática,Débito
+2022-01-02,Saúde,despesa,506.98,Saúde — transação automática,Pix
+2022-10-19,Educação,despesa,181.61,Educação — transação automática,Pix
+2022-04-20,Freelance,receita,24470.95,Freelance — transação automática [ANOMALIA INJETADA],Transferência
+2022-03-10,Alimentação,despesa,187.36,Alimentação — transação automática,Transferência
+2023-05-28,Saúde,despesa,44.39,Saúde — transação automática,Boleto
+2024-05-08,Impostos,despesa,630.09,Impostos — transação automática,Débito
+2024-08-01,Transporte,despesa,1156.83,Transporte — transação automática,Transferência
+2023-06-07,Bônus,receita,4169.16,Bônus — transação automática,Cartão de Crédito
+2024-01-04,Saúde,despesa,301.55,Saúde — transação automática,Transferência
+2022-07-29,Salário,receita,4458.27,Salário — transação automática,Boleto
+2024-01-15,Moradia,despesa,415.41,Moradia — transação automática,Boleto
+2023-03-23,Alimentação,despesa,616.05,Alimentação — transação automática,Cartão de Crédito
+2024-10-11,Freelance,receita,815.65,Freelance — transação automática,Débito
+2023-10-27,Assinaturas,despesa,906.56,Assinaturas — transação automática,Cartão de Crédito
+2022-11-08,Transporte,despesa,298.69,Transporte — transação automática,Cartão de Crédito
+2023-09-07,Transporte,despesa,397.55,Transporte — transação automática,Pix
+2023-12-02,Vestuário,despesa,629.05,Vestuário — transação automática,Pix
+2024-03-31,Moradia,despesa,5.0,Moradia — transação automática,Transferência
+2024-12-13,Transporte,despesa,61.07,Transporte — transação automática,Débito
+2022-03-05,Salário,receita,4239.28,Salário — transação automática,Transferência
+2022-03-19,Vestuário,despesa,268.2,Vestuário — transação automática,Débito
+2022-05-06,Manutenção,despesa,389.62,Manutenção — transação automática,Débito
+2023-01-23,Assinaturas,despesa,84.31,Assinaturas — transação automática,Cartão de Crédito
+2023-10-02,Alimentação,despesa,5.0,Alimentação — transação automática,Transferência
+2024-04-16,Rendimentos,receita,3905.05,Rendimentos — transação automática,Transferência
+2022-09-04,Assinaturas,despesa,242.36,Assinaturas — transação automática,Débito
+2023-06-16,Salário,receita,5715.32,Salário — transação automática,Cartão de Crédito
+2024-03-31,Rendimentos,receita,4964.7,Rendimentos — transação automática,Transferência
+2022-10-26,Rendimentos,receita,3745.15,Rendimentos — transação automática,Transferência
+2022-07-06,Assinaturas,despesa,163.88,Assinaturas — transação automática,Cartão de Crédito
+2023-05-12,Salário,receita,6717.0,Salário — transação automática,Cartão de Crédito
+2023-06-30,Transporte,despesa,197.52,Transporte — transação automática,Débito
+2022-08-29,Bônus,receita,3121.74,Bônus — transação automática,Boleto
+2023-04-16,Moradia,despesa,5.0,Moradia — transação automática,Pix
+2022-01-05,Moradia,despesa,5.0,Moradia — transação automática,Cartão de Crédito
+2023-03-23,Alimentação,despesa,670.68,Alimentação — transação automática,Boleto
+2022-06-15,Freelance,receita,3730.95,Freelance — transação automática,Cartão de Crédito
+2023-11-01,Rendimentos,receita,4085.13,Rendimentos — transação automática,Transferência
+2023-03-18,Transporte,despesa,374.3,Transporte — transação automática,Débito
+2023-03-28,Educação,despesa,587.06,Educação — transação automática,Boleto
+2024-03-06,Educação,despesa,609.9,Educação — transação automática,Cartão de Crédito
+2024-02-21,Rendimentos,receita,5045.3,Rendimentos — transação automática,Cartão de Crédito
+2024-04-06,Impostos,despesa,247.99,Impostos — transação automática,Transferência
+2022-03-02,Assinaturas,despesa,337.5,Assinaturas — transação automática,Transferência
+2024-10-25,Educação,despesa,405.5,Educação — transação automática,Cartão de Crédito
+2024-11-12,Saúde,despesa,5.0,Saúde — transação automática,Pix
+2023-07-15,Impostos,despesa,933.86,Impostos — transação automática,Boleto
+2024-10-11,Rendimentos,receita,4302.45,Rendimentos — transação automática,Pix
+2023-10-02,Lazer,despesa,314.07,Lazer — transação automática,Boleto
+2022-04-18,Alimentação,despesa,409.9,Alimentação — transação automática,Cartão de Crédito
+2024-07-19,Transporte,despesa,675.18,Transporte — transação automática,Pix
+2022-08-21,Assinaturas,despesa,535.92,Assinaturas — transação automática,Cartão de Crédito
+2023-09-24,Impostos,despesa,557.49,Impostos — transação automática,Boleto
+2024-05-18,Freelance,receita,6028.57,Freelance — transação automática,Boleto
+2024-02-24,Salário,receita,5213.71,Salário — transação automática,Débito
+2022-10-25,Manutenção,despesa,266.41,Manutenção — transação automática,Cartão de Crédito
+2024-02-29,Lazer,despesa,235.06,Lazer — transação automática,Transferência
+2022-03-12,Manutenção,despesa,618.37,Manutenção — transação automática,Cartão de Crédito
+2023-12-18,Bônus,receita,4363.11,Bônus — transação automática,Pix
+2022-12-20,Assinaturas,despesa,478.37,Assinaturas — transação automática,Pix
+2022-08-24,Lazer,despesa,636.22,Lazer — transação automática,Boleto
+2024-04-17,Vestuário,despesa,249.68,Vestuário — transação automática,Cartão de Crédito
+2024-02-05,Transporte,despesa,425.08,Transporte — transação automática,Pix
+2022-02-08,Assinaturas,despesa,182.66,Assinaturas — transação automática,Boleto
+2022-04-27,Saúde,despesa,342.71,Saúde — transação automática,Transferência
+2023-10-03,Lazer,despesa,115.21,Lazer — transação automática,Pix
+2024-03-21,Lazer,despesa,306.73,Lazer — transação automática,Cartão de Crédito
+2022-01-17,Bônus,receita,6641.22,Bônus — transação automática,Cartão de Crédito
+2022-03-23,Assinaturas,despesa,550.31,Assinaturas — transação automática,Cartão de Crédito
+2024-04-27,Transporte,despesa,299.61,Transporte — transação automática,Cartão de Crédito
+2022-11-11,Vestuário,despesa,355.26,Vestuário — transação automática,Pix
+2024-12-11,Educação,despesa,333.74,Educação — transação automática,Débito
+2022-07-23,Saúde,despesa,211.84,Saúde — transação automática,Pix
+2024-08-31,Manutenção,despesa,441.68,Manutenção — transação automática,Boleto
+2022-01-21,Manutenção,despesa,477.18,Manutenção — transação automática,Transferência
+2024-10-30,Assinaturas,despesa,431.76,Assinaturas — transação automática,Transferência
+2023-02-02,Alimentação,despesa,804.17,Alimentação — transação automática,Débito
+2023-06-28,Educação,despesa,308.91,Educação — transação automática,Cartão de Crédito
+2024-04-10,Alimentação,despesa,5.0,Alimentação — transação automática,Transferência
+2023-04-11,Assinaturas,despesa,768.68,Assinaturas — transação automática,Pix
+2024-02-27,Moradia,despesa,331.27,Moradia — transação automática,Boleto
+2023-02-20,Salário,receita,5104.03,Salário — transação automática,Boleto
+2023-08-23,Saúde,despesa,423.74,Saúde — transação automática,Transferência
+2024-07-31,Bônus,receita,4659.1,Bônus — transação automática,Pix
+2022-02-14,Assinaturas,despesa,5.0,Assinaturas — transação automática,Débito
+2023-08-07,Vestuário,despesa,185.24,Vestuário — transação automática,Cartão de Crédito
+2024-07-23,Lazer,despesa,559.84,Lazer — transação automática,Boleto
+2023-02-13,Educação,despesa,194.23,Educação — transação automática,Pix
+2022-11-10,Impostos,despesa,543.73,Impostos — transação automática,Transferência
+2024-01-18,Transporte,despesa,537.48,Transporte — transação automática,Boleto
+2022-06-17,Moradia,despesa,359.81,Moradia — transação automática,Transferência
+2024-07-31,Vestuário,despesa,226.57,Vestuário — transação automática,Boleto
+2024-10-04,Salário,receita,4306.1,Salário — transação automática,Boleto
+2023-11-18,Bônus,receita,4132.86,Bônus — transação automática,Boleto
+2022-04-17,Moradia,despesa,464.85,Moradia — transação automática,Cartão de Crédito
+2023-10-25,Salário,receita,6102.49,Salário — transação automática,Cartão de Crédito
+2022-06-09,Impostos,despesa,281.38,Impostos — transação automática,Transferência
+2024-07-01,Bônus,receita,4717.22,Bônus — transação automática,Transferência
+2023-07-29,Rendimentos,receita,7998.54,Rendimentos — transação automática,Boleto
+2022-08-21,Vestuário,despesa,18.7,Vestuário — transação automática,Boleto
+2022-04-22,Impostos,despesa,465.66,Impostos — transação automática,Cartão de Crédito
+2024-06-13,Vestuário,despesa,478.32,Vestuário — transação automática,Débito
+2022-06-28,Alimentação,despesa,486.99,Alimentação — transação automática,Pix
+2022-11-28,Impostos,despesa,408.88,Impostos — transação automática,Transferência
+2024-04-18,Alimentação,despesa,218.57,Alimentação — transação automática,Cartão de Crédito
+2022-06-18,Impostos,despesa,5.0,Impostos — transação automática,Débito
+2024-04-28,Bônus,receita,5474.67,Bônus — transação automática,Transferência
+2024-02-16,Rendimentos,receita,7116.29,Rendimentos — transação automática,Transferência
+2022-06-17,Bônus,receita,6065.08,Bônus — transação automática,Boleto
+2024-10-21,Freelance,receita,3598.79,Freelance — transação automática,Pix
+2023-09-16,Assinaturas,despesa,238.4,Assinaturas — transação automática,Pix
+2024-01-31,Educação,despesa,180.69,Educação — transação automática,Débito
+2023-06-06,Moradia,despesa,96.22,Moradia — transação automática,Pix
+2024-06-11,Assinaturas,despesa,91.07,Assinaturas — transação automática,Pix
+2024-08-27,Educação,despesa,532.51,Educação — transação automática,Boleto
+2023-07-05,Alimentação,despesa,276.0,Alimentação — transação automática,Débito
+2024-12-14,Vestuário,despesa,546.66,Vestuário — transação automática,Transferência
+2022-10-01,Rendimentos,receita,1592.43,Rendimentos — transação automática,Cartão de Crédito
+2023-12-12,Moradia,despesa,5.0,Moradia — transação automática,Débito
+2023-01-05,Impostos,despesa,491.7,Impostos — transação automática,Transferência
+2023-04-21,Manutenção,despesa,71.75,Manutenção — transação automática,Débito
+2024-12-30,Vestuário,despesa,140.22,Vestuário — transação automática,Débito
+2022-02-16,Bônus,receita,2497.71,Bônus — transação automática,Transferência
+2023-03-31,Salário,receita,2557.58,Salário — transação automática,Cartão de Crédito
+2024-09-30,Freelance,receita,2967.48,Freelance — transação automática,Boleto
+2024-12-30,Moradia,despesa,25700.48,Moradia — transação automática [ANOMALIA INJETADA],Débito
+2023-06-19,Lazer,despesa,5.0,Lazer — transação automática,Transferência
+2023-04-05,Salário,receita,6800.67,Salário — transação automática,Cartão de Crédito
+2023-05-17,Assinaturas,despesa,815.15,Assinaturas — transação automática,Transferência
+2024-08-28,Impostos,despesa,443.35,Impostos — transação automática,Boleto
+2023-12-24,Transporte,despesa,5.0,Transporte — transação automática,Transferência
+2023-09-14,Alimentação,despesa,493.75,Alimentação — transação automática,Cartão de Crédito
+2022-03-22,Educação,despesa,158.99,Educação — transação automática,Boleto
+2023-10-19,Salário,receita,5691.29,Salário — transação automática,Transferência
+2024-02-06,Salário,receita,5068.62,Salário — transação automática,Cartão de Crédito
+2024-08-06,Salário,receita,4814.92,Salário — transação automática,Débito
+2024-08-29,Bônus,receita,3532.2,Bônus — transação automática,Boleto
+2023-07-07,Saúde,despesa,603.39,Saúde — transação automática,Cartão de Crédito
+2023-01-18,Impostos,despesa,500.27,Impostos — transação automática,Pix
+2022-07-27,Alimentação,despesa,5.0,Alimentação — transação automática,Boleto
+2023-01-06,Impostos,despesa,881.53,Impostos — transação automática,Transferência
+2022-11-29,Bônus,receita,7480.17,Bônus — transação automática,Débito
+2023-06-12,Salário,receita,1757.11,Salário — transação automática,Débito
+2023-08-09,Assinaturas,despesa,600.05,Assinaturas — transação automática,Débito
+2023-02-28,Manutenção,despesa,229.78,Manutenção — transação automática,Transferência
+2022-12-29,Impostos,despesa,341.84,Impostos — transação automática,Pix
+2024-10-20,Saúde,despesa,178.69,Saúde — transação automática,Transferência
+2023-03-10,Salário,receita,4751.03,Salário — transação automática,Pix
+2024-10-09,Assinaturas,despesa,574.27,Assinaturas — transação automática,Transferência
+2024-07-10,Saúde,despesa,399.07,Saúde — transação automática,Débito
+2024-02-05,Salário,receita,4958.71,Salário — transação automática,Transferência
+2022-10-20,Salário,receita,3835.22,Salário — transação automática,Transferência
+2024-10-29,Moradia,despesa,383.74,Moradia — transação automática,Transferência
+2024-10-08,Saúde,despesa,5.0,Saúde — transação automática,Débito
+2024-10-10,Impostos,despesa,5.0,Impostos — transação automática,Pix
+2024-05-04,Freelance,receita,3105.49,Freelance — transação automática,Transferência
+2024-08-17,Moradia,despesa,354.66,Moradia — transação automática,Boleto
+2023-08-13,Bônus,receita,5930.04,Bônus — transação automática,Débito
+2024-04-16,Alimentação,despesa,237.97,Alimentação — transação automática,Transferência
+2023-04-08,Alimentação,despesa,430.52,Alimentação — transação automática,Pix
+2022-10-22,Transporte,despesa,475.71,Transporte — transação automática,Boleto
+2024-03-06,Lazer,despesa,382.28,Lazer — transação automática,Boleto
+2023-06-19,Moradia,despesa,18.16,Moradia — transação automática,Cartão de Crédito
+2023-03-03,Educação,despesa,485.29,Educação — transação automática,Pix
+2023-12-24,Assinaturas,despesa,460.08,Assinaturas — transação automática,Cartão de Crédito
+2022-08-06,Assinaturas,despesa,5.0,Assinaturas — transação automática,Débito
+2023-12-22,Manutenção,despesa,139.19,Manutenção — transação automática,Cartão de Crédito
+2024-08-30,Alimentação,despesa,523.09,Alimentação — transação automática,Cartão de Crédito
+2023-04-24,Assinaturas,despesa,272.55,Assinaturas — transação automática,Transferência
+2022-10-13,Saúde,despesa,347.56,Saúde — transação automática,Boleto
+2024-05-07,Saúde,despesa,213.69,Saúde — transação automática,Débito
+2023-03-31,Vestuário,despesa,682.09,Vestuário — transação automática,Pix
+2023-01-25,Moradia,despesa,5.0,Moradia — transação automática,Pix
+2024-05-30,Impostos,despesa,523.94,Impostos — transação automática,Transferência
+2023-10-08,Moradia,despesa,555.73,Moradia — transação automática,Cartão de Crédito
+2024-07-04,Assinaturas,despesa,558.71,Assinaturas — transação automática,Débito
+2022-08-29,Freelance,receita,6458.87,Freelance — transação automática,Débito
+2023-11-20,Impostos,despesa,5.0,Impostos — transação automática,Débito
+2023-03-24,Manutenção,despesa,422.2,Manutenção — transação automática,Boleto
+2023-04-30,Saúde,despesa,285.84,Saúde — transação automática,Débito
+2023-10-12,Impostos,despesa,5.0,Impostos — transação automática,Débito
+2024-11-28,Educação,despesa,43.09,Educação — transação automática,Boleto
+2022-12-24,Moradia,despesa,220.21,Moradia — transação automática,Cartão de Crédito
+2024-06-18,Alimentação,despesa,467.34,Alimentação — transação automática,Cartão de Crédito
+2023-12-04,Vestuário,despesa,5.0,Vestuário — transação automática,Transferência
+2024-08-10,Impostos,despesa,432.86,Impostos — transação automática,Boleto
+2022-07-14,Educação,despesa,240.3,Educação — transação automática,Pix
+2022-01-20,Freelance,receita,1224.49,Freelance — transação automática,Transferência
+2024-08-01,Rendimentos,receita,6446.36,Rendimentos — transação automática,Boleto
+2022-09-24,Manutenção,despesa,402.43,Manutenção — transação automática,Pix
+2024-01-10,Saúde,despesa,296.8,Saúde — transação automática,Transferência
+2024-08-30,Lazer,despesa,270.76,Lazer — transação automática,Débito
+2022-06-06,Vestuário,despesa,527.67,Vestuário — transação automática,Transferência
+2022-09-01,Alimentação,despesa,504.27,Alimentação — transação automática,Pix
+2023-06-23,Freelance,receita,7416.79,Freelance — transação automática,Pix
+2022-04-07,Assinaturas,despesa,542.2,Assinaturas — transação automática,Boleto
+2022-08-12,Moradia,despesa,458.13,Moradia — transação automática,Transferência
+2023-03-16,Lazer,despesa,458.36,Lazer — transação automática,Pix
+2023-03-16,Educação,despesa,543.6,Educação — transação automática,Boleto
+2023-10-25,Manutenção,despesa,665.58,Manutenção — transação automática,Boleto
+2024-04-08,Moradia,despesa,323.3,Moradia — transação automática,Boleto
+2024-05-05,Saúde,despesa,304.86,Saúde — transação automática,Débito
+2024-03-08,Impostos,despesa,155.61,Impostos — transação automática,Pix
+2024-05-06,Educação,despesa,383.41,Educação — transação automática,Pix
+2023-03-15,Impostos,despesa,153.82,Impostos — transação automática,Débito
+2022-06-17,Vestuário,despesa,397.49,Vestuário — transação automática,Boleto
+2023-09-25,Alimentação,despesa,5.0,Alimentação — transação automática,Transferência
+2023-11-07,Vestuário,despesa,672.48,Vestuário — transação automática,Débito
+2023-01-28,Alimentação,despesa,5.0,Alimentação — transação automática,Transferência
+2022-07-29,Rendimentos,receita,2261.82,Rendimentos — transação automática,Débito
+2022-03-02,Alimentação,despesa,289.04,Alimentação — transação automática,Pix
+2023-04-29,Salário,receita,2620.06,Salário — transação automática,Transferência
+2022-10-30,Educação,despesa,404.32,Educação — transação automática,Pix
+2022-02-21,Saúde,despesa,447.1,Saúde — transação automática,Boleto
+2022-06-11,Transporte,despesa,488.79,Transporte — transação automática,Cartão de Crédito
+2024-11-06,Assinaturas,despesa,140.84,Assinaturas — transação automática,Débito
+2023-03-28,Salário,receita,5015.73,Salário — transação automática,Débito
+2022-10-03,Alimentação,despesa,438.24,Alimentação — transação automática,Transferência
+2024-06-12,Rendimentos,receita,4198.27,Rendimentos — transação automática,Boleto
+2023-10-11,Vestuário,despesa,86.36,Vestuário — transação automática,Cartão de Crédito
+2024-01-23,Assinaturas,despesa,5.0,Assinaturas — transação automática,Boleto
+2023-11-20,Lazer,despesa,242.83,Lazer — transação automática,Cartão de Crédito
+2023-01-16,Transporte,despesa,650.1,Transporte — transação automática,Cartão de Crédito
+2022-04-16,Manutenção,despesa,644.27,Manutenção — transação automática,Débito
+2024-02-17,Moradia,despesa,451.5,Moradia — transação automática,Cartão de Crédito
+2023-11-18,Bônus,receita,6190.69,Bônus — transação automática,Pix
+2022-05-17,Lazer,despesa,425.6,Lazer — transação automática,Transferência
+2023-06-16,Moradia,despesa,371.89,Moradia — transação automática,Transferência
+2023-03-12,Freelance,receita,2760.38,Freelance — transação automática,Boleto
+2023-01-08,Manutenção,despesa,408.7,Manutenção — transação automática,Boleto
+2023-08-17,Freelance,receita,5633.95,Freelance — transação automática,Débito
+2022-09-28,Educação,despesa,122.61,Educação — transação automática,Cartão de Crédito
+2023-01-22,Moradia,despesa,357.04,Moradia — transação automática,Débito
+2022-07-29,Rendimentos,receita,5216.8,Rendimentos — transação automática,Cartão de Crédito
+2023-05-16,Manutenção,despesa,583.38,Manutenção — transação automática,Cartão de Crédito
+2022-06-02,Educação,despesa,5.0,Educação — transação automática,Boleto
+2024-01-22,Impostos,despesa,494.63,Impostos — transação automática,Boleto
+2022-04-12,Vestuário,despesa,550.0,Vestuário — transação automática,Pix
+2024-12-19,Vestuário,despesa,294.76,Vestuário — transação automática,Débito
+2022-03-09,Rendimentos,receita,5720.53,Rendimentos — transação automática,Cartão de Crédito
+2024-06-15,Educação,despesa,219.23,Educação — transação automática,Pix
+2023-06-26,Manutenção,despesa,145.9,Manutenção — transação automática,Pix
+2022-01-24,Transporte,despesa,342.52,Transporte — transação automática,Transferência
+2023-01-12,Impostos,despesa,698.82,Impostos — transação automática,Pix
+2022-05-08,Lazer,despesa,543.18,Lazer — transação automática,Débito
+2024-07-28,Alimentação,despesa,112.46,Alimentação — transação automática,Pix
+2023-11-08,Freelance,receita,4474.29,Freelance — transação automática,Pix
+2022-06-15,Freelance,receita,5240.5,Freelance — transação automática,Pix
+2024-07-17,Saúde,despesa,453.16,Saúde — transação automática,Transferência
+2022-01-05,Educação,despesa,229.79,Educação — transação automática,Transferência
+2023-03-28,Transporte,despesa,489.46,Transporte — transação automática,Cartão de Crédito
+2023-08-26,Freelance,receita,3678.24,Freelance — transação automática,Boleto
+2023-06-18,Vestuário,despesa,5.0,Vestuário — transação automática,Transferência
+2023-03-01,Transporte,despesa,284.56,Transporte — transação automática,Cartão de Crédito
+2024-04-11,Moradia,despesa,482.71,Moradia — transação automática,Transferência
+2024-08-27,Educação,despesa,613.2,Educação — transação automática,Cartão de Crédito
+2022-08-08,Impostos,despesa,446.85,Impostos — transação automática,Transferência
+2022-05-20,Moradia,despesa,260.74,Moradia — transação automática,Débito
+2022-03-20,Lazer,despesa,423.5,Lazer — transação automática,Débito
+2022-04-25,Educação,despesa,180.55,Educação — transação automática,Transferência
+2024-09-23,Bônus,receita,4127.81,Bônus — transação automática,Boleto
+2022-02-24,Moradia,despesa,300.28,Moradia — transação automática,Boleto
+2024-04-21,Manutenção,despesa,417.86,Manutenção — transação automática,Transferência
